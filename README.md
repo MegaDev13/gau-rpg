@@ -19,6 +19,16 @@ O compêndio foi derivado de exportações do Discord e pode incluir textos de R
 ## Arquivos
 
 - `index.html` — aplicativo completo, versão 0.2
-- `livro-regras.pdf` — livro PDF de referência, versão 0.1
+- `livro-regras.pdf` — livro original com complemento integral de magia, edição 0.2
 - `ficha-preenchivel.pdf` — ficha PDF, versão 0.2
 - `.nojekyll` — evita transformação por Jekyll
+
+## Conferência direta de Sistema — 19/10/2026
+
+Foram consultados 8 canais e 19 tópicos ativos, totalizando 383 mensagens. A pesquisa de tópicos arquivados em todos os canais não retornou outros tópicos acessíveis. As 334 mensagens anteriores foram conferidas, sem alteração de regras; menções a canais foram normalizadas para comparação. Foram adicionadas 49 mensagens dos canais magia e feitiços (incluindo marcadores sem conteúdo).
+
+O capítulo de magia está no livro pesquisável e no complemento do PDF. Criador e ficha calculam PM base por classe e CD a partir de um modificador de conjuração confirmado separadamente, para não misturar as escalas de atributos das fontes. Paladino e Patrulheiro exigem a seleção da habilidade e nível mínimo 5. Reservas de multiclasse não são somadas automaticamente; talentos e outros ajustes continuam explícitos.
+
+Divergência preservada: Mago recebe 5 magias iniciais de nível 0 no texto da classe, mas o capítulo geral indica 4. O catálogo individual de feitiços, equipamentos, combate completo, origens e outras lacunas indicadas continuam pendentes.
+
+Nenhuma credencial, dado de autor ou exportação bruta do Discord integra a publicação.

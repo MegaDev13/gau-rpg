@@ -19,7 +19,7 @@ O compêndio foi derivado de exportações do Discord e pode incluir textos de R
 ## Arquivos
 
 - `index.html` — aplicativo completo, versão 0.2
-- `livro-regras.pdf` — livro original com complemento integral de magia, edição 0.2
+- `livro-regras.pdf` — livro revisado a partir do banco limpo, edição 0.2
 - `ficha-preenchivel.pdf` — ficha PDF, versão 0.2
 - `.nojekyll` — evita transformação por Jekyll
 
@@ -32,3 +32,9 @@ O capítulo de magia está no livro pesquisável e no complemento do PDF. Criado
 Divergência preservada: Mago recebe 5 magias iniciais de nível 0 no texto da classe, mas o capítulo geral indica 4. O catálogo individual de feitiços, equipamentos, combate completo, origens e outras lacunas indicadas continuam pendentes.
 
 Nenhuma credencial, dado de autor ou exportação bruta do Discord integra a publicação.
+
+## Limpeza editorial — 19/10/2026
+
+Foram removidos 93 registros compostos somente por pontos: 18 em Perícias, 47 em Outras Mecânicas e 28 em Feitiços. O livro passa a conter 290 registros úteis: 283 textuais e 7 registros de anexos. O índice foi recalculado para 874 entradas, com referências verificadas e sem registros órfãos.
+
+Foram corrigidos erros ortográficos em 9 mensagens e formatados 16 blocos como tabelas. Efeitos, valores, fórmulas e variantes foram preservados; todas as sequências numéricas do texto foram comparadas com a versão anterior. O PDF foi refeito a partir do mesmo banco limpo, em vez de reaproveitar as páginas com marcadores vazios. A limpeza se aplica à publicação; as mensagens no servidor Discord não foram apagadas.

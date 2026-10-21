@@ -23,6 +23,52 @@ O compêndio foi derivado de exportações do Discord e pode incluir textos de R
 - `ficha-preenchivel.pdf` — ficha PDF editável em 6 páginas (incluindo Conjuração e Grimório), versão 0.2
 - `.nojekyll` — evita transformação por Jekyll
 
+## Edição ilustrada (branch `edicao-ilustrada-teste`) — 21/10/2026
+
+Branch de teste com diagramação de editora, sem alterar nenhuma regra, valor ou estrutura de dados do sistema.
+
+### Direção de arte
+
+Referências: **Tormenta 20** (capitulares, cartões de magia em duas colunas, faixas cromáticas por parte), **Feiticeiros & Maldições** (cartões de talento com energia violeta/carmesim, selos de pré-requisito) e **Ordem Paranormal** (dossiês de perícia e investigação em âmbar/vermelho, quadro de pistas e evidências).
+
+### Tipografia (4 famílias embutidas no próprio arquivo)
+
+| Família | Uso |
+| --- | --- |
+| **Cinzel** (700/900) | títulos de capa, capítulos e destaques solenes |
+| **Oswald** (500/700) | navegação, botões, rótulos, cabeçalhos de tabela |
+| **Crimson Pro** (400/400 itálico/600) | corpo de texto, legendas e descrições |
+| **Special Elite** (400) | carimbos de fonte canônica, selos e notas de registro |
+
+Todas são embutidas como WOFF2 em `index.html` — a plataforma continua funcionando **offline**, sem CDN.
+
+### Ilustrações
+
+- **42 imagens** em `assets/art/` (capa, aberturas de parte, retratos individuais das **7 raças** e das **11 classes**, vinhetas temáticas de combate, investigação, talentos, modelos e grimório).
+- Também embutidas em `index.html` como URIs de dados (otimizadas para ~2,2 MB), garantindo leitura ilustrada mesmo dentro de iframes isolados.
+- **113 imagens** distribuídas pelo `livro-regras.pdf`, integradas ao texto e às tabelas (figuras entre blocos de regras, retratos ao lado de cada raça e classe).
+
+### `livro-regras.pdf` (226 páginas)
+
+- Capa **sangrada** (A4, moldura ornamental, contadores de sistema).
+- **Sumário visual cromático** em 2 páginas com as 7 partes e os 38 capítulos.
+- **7 aberturas de parte** em página inteira (fundo ilustrado, moldura, selo e lista de capítulos).
+- Cada capítulo com **faixa ilustrada**, selo de fonte canônica e corpo em **2 colunas**; tabelas e figuras com `column-span: all`.
+- Cartões de **magia/prece** (faixa de nível, grade de execução/alcance/duração/resistência), cartões de **talento** (selo de pré-requisito), **dossiês de perícia**, **selo de ND** nos modelos, caixas de **traços raciais em pergaminho**.
+- Marcadores (bookmarks) nativos: capa, sumário, 7 partes e 38 capítulos; **fita de borda colorida** e rodapé cerimonial com numeração.
+
+### Plataforma `index.html`
+
+- Herói da tela inicial com a arte de capa; cartões de entrada ilustrados.
+- Livro com **banner de capítulo ilustrado**, cartões por registro com faixa colorida por parte, **figuras integradas ao longo dos capítulos** e **diagramação em 2 colunas** em telas largas.
+- Criador com **galeria de retratos das 11 classes** (seleção por clique na arte) e **retratos nas 7 raças**.
+- Ficha com **faixa ilustrada** do personagem (retrato da classe).
+- Mantém a responsividade: nenhuma rolagem horizontal em 390 px de largura.
+
+### `ficha-preenchivel.pdf`
+
+Ficha editável em 6 páginas com **faixas ilustradas por página**, bordas douradas, selo do grimório na página de feitiços e todos os 160 campos AcroForm preservados.
+
 ## Conferência e inclusão do Grimório (Discord → Livro, Criador e Ficha) — 21/10/2026
 
 Foram conferidos todos os canais e tópicos do servidor `𝗚✦𝗔✦𝗨 | 𝐑𝐏𝐆` na categoria `‼️┊SISTEMA`: **8 canais** e **30 tópicos ativos** (`38` fontes no total). As `28` marcações vazias anteriores em `feitiços` e o cabeçalho provisório `Lista de Magias Universais` foram substituídos na origem pelos índices atualizados de Magias Arcanas e Magias Divinas e por **11 novos tópicos de magias**:

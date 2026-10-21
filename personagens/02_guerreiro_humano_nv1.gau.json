@@ -1,0 +1,79 @@
+{
+  "format": "GAU-CHARACTER",
+  "version": "0.2",
+  "character": {
+    "id": "gau-mvijtumg-dbeyeoix",
+    "version": "0.2",
+    "name": "Aldric Lâmina Rúnica — Nível 1",
+    "player": "Build pronta · G✦A✦U RPG",
+    "concept": "Guerreiro versátil: muitos talentos, pronto para qualquer situação de combate.",
+    "appearance": "",
+    "historyText": "",
+    "race": "Humanos",
+    "origin": "",
+    "divinity": "",
+    "classes": [
+      {
+        "id": "GUERREIRO",
+        "level": 1
+      }
+    ],
+    "attrs": {
+      "for": {
+        "base": 4,
+        "racial": 2,
+        "other": 0
+      },
+      "des": {
+        "base": 1,
+        "racial": 0,
+        "other": 0
+      },
+      "con": {
+        "base": 2,
+        "racial": 2,
+        "other": 0
+      },
+      "int": {
+        "base": 0,
+        "racial": 0,
+        "other": 0
+      },
+      "sab": {
+        "base": 0,
+        "racial": 0,
+        "other": 0
+      },
+      "car": {
+        "base": 0,
+        "racial": 0,
+        "other": 0
+      }
+    },
+    "skills": {},
+    "talents": [
+      "r-1561306396195168378-04",
+      "r-1561306384736190535-01",
+      "r-1561370701548490856-02",
+      "r-1561306421973491766-03"
+    ],
+    "spells": [],
+    "inventory": "",
+    "magics": "",
+    "pmArcano": "",
+    "pmDivino": "",
+    "defense": "10 + Des 1 + armadura completa e escudo (Usar Armaduras e Escudos) · 25 PV (20 + Con 4 + Vitalidade 1)",
+    "speed": "",
+    "attacks": "ESPADA LONGA (1d8+6) — uma mão\nBBA +1 · For +6 · Foco em Arma +1 = +8\nInvestida: +12 (Investida Aprimorada +4)\nAté Acertar: +1 cumulativo em cada erro com a espada\nAtaque Poderoso (se validado For 13): +6 ataque / 1d8+10 dano",
+    "notes": "Classe dá: Usar Armaduras (leves, médias, pesadas), Usar Armas (simples e marciais), Usar Escudos, Fortitude Maior.\nTécnica de Luta: 1 talento de combate no 1º nível e outro no 2º (e a cada 2 níveis). Humano: +2 talentos adicionais.\nTalentos a cada nível ímpar: 3º Especialização em Arma ou Tolerância. Progressão: BBA +1 por nível (20º = +20).\nPRÉ-REQUISITO 'For 13' usa a escala antiga (3e/T20) — validar com o mestre.\n\n--- NÍVEL 1 ---\nESPADA LONGA (1d8+6) — uma mão\nBBA +1 · For +6 · Foco em Arma +1 = +8\nInvestida: +12 (Investida Aprimorada +4)\nAté Acertar: +1 cumulativo em cada erro com a espada\nAtaque Poderoso (se validado For 13): +6 ataque / 1d8+10 dano",
+    "experience": "",
+    "overrides": {},
+    "changeLog": [
+      {
+        "when": "2026-10-21T20:12:39.112Z",
+        "action": "Build criada: 02_guerreiro_humano nível 1"
+      }
+    ],
+    "updatedAt": "2026-10-21T20:12:39.112Z"
+  }
+}

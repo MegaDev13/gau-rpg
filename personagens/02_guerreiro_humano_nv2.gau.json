@@ -1,0 +1,80 @@
+{
+  "format": "GAU-CHARACTER",
+  "version": "0.2",
+  "character": {
+    "id": "gau-mvijtun3-hmvtccy5",
+    "version": "0.2",
+    "name": "Aldric Lâmina Rúnica — Nível 2",
+    "player": "Build pronta · G✦A✦U RPG",
+    "concept": "Guerreiro versátil: muitos talentos, pronto para qualquer situação de combate.",
+    "appearance": "",
+    "historyText": "",
+    "race": "Humanos",
+    "origin": "",
+    "divinity": "",
+    "classes": [
+      {
+        "id": "GUERREIRO",
+        "level": 2
+      }
+    ],
+    "attrs": {
+      "for": {
+        "base": 4,
+        "racial": 2,
+        "other": 0
+      },
+      "des": {
+        "base": 1,
+        "racial": 0,
+        "other": 0
+      },
+      "con": {
+        "base": 2,
+        "racial": 2,
+        "other": 0
+      },
+      "int": {
+        "base": 0,
+        "racial": 0,
+        "other": 0
+      },
+      "sab": {
+        "base": 0,
+        "racial": 0,
+        "other": 0
+      },
+      "car": {
+        "base": 0,
+        "racial": 0,
+        "other": 0
+      }
+    },
+    "skills": {},
+    "talents": [
+      "r-1561306396195168378-04",
+      "r-1561306384736190535-01",
+      "r-1561370701548490856-02",
+      "r-1561306421973491766-03",
+      "r-1561306382827782195-03"
+    ],
+    "spells": [],
+    "inventory": "",
+    "magics": "",
+    "pmArcano": "",
+    "pmDivino": "",
+    "defense": "10 + Des 1 + armadura completa e escudo · 33 PV (+2 de Vitalidade = 35)",
+    "speed": "",
+    "attacks": "ESPADA LONGA (1d8+6)\nBBA +2 · For +6 · Foco em Arma +1 = +9\nInvestida: +13 · Até Acertar: +1 cumulativo\nAtaque Poderoso: +7 ataque / 1d8+14 dano (troca -2/+4)\nGanha Técnica de Luta (Ataque Poderoso) · 33 PV (+2 de Vitalidade = 35)",
+    "notes": "Classe dá: Usar Armaduras (leves, médias, pesadas), Usar Armas (simples e marciais), Usar Escudos, Fortitude Maior.\nTécnica de Luta: 1 talento de combate no 1º nível e outro no 2º (e a cada 2 níveis). Humano: +2 talentos adicionais.\nTalentos a cada nível ímpar: 3º Especialização em Arma ou Tolerância. Progressão: BBA +1 por nível (20º = +20).\nPRÉ-REQUISITO 'For 13' usa a escala antiga (3e/T20) — validar com o mestre.\n\n--- NÍVEL 2 ---\nESPADA LONGA (1d8+6)\nBBA +2 · For +6 · Foco em Arma +1 = +9\nInvestida: +13 · Até Acertar: +1 cumulativo\nAtaque Poderoso: +7 ataque / 1d8+14 dano (troca -2/+4)\nGanha Técnica de Luta (Ataque Poderoso) · 33 PV (+2 de Vitalidade = 35)",
+    "experience": "",
+    "overrides": {},
+    "changeLog": [
+      {
+        "when": "2026-10-21T20:12:39.135Z",
+        "action": "Build criada: 02_guerreiro_humano nível 2"
+      }
+    ],
+    "updatedAt": "2026-10-21T20:12:39.135Z"
+  }
+}

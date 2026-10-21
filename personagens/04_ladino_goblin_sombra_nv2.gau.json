@@ -1,0 +1,78 @@
+{
+  "format": "GAU-CHARACTER",
+  "version": "0.2",
+  "character": {
+    "id": "gau-mvijtuxw-4lz3lc20",
+    "version": "0.2",
+    "name": "Snikk Risco-de-Navalha — Nível 2",
+    "player": "Build pronta · G✦A✦U RPG",
+    "concept": "Acerto altíssimo com Destreza + Ataque Furtivo; no 2º nível destrava magia arcana.",
+    "appearance": "",
+    "historyText": "",
+    "race": "Goblin",
+    "origin": "",
+    "divinity": "",
+    "classes": [
+      {
+        "id": "LADINO",
+        "level": 2
+      }
+    ],
+    "attrs": {
+      "for": {
+        "base": 0,
+        "racial": 0,
+        "other": 0
+      },
+      "des": {
+        "base": 4,
+        "racial": 4,
+        "other": 0
+      },
+      "con": {
+        "base": 2,
+        "racial": 2,
+        "other": 0
+      },
+      "int": {
+        "base": 1,
+        "racial": 0,
+        "other": 0
+      },
+      "sab": {
+        "base": 0,
+        "racial": 0,
+        "other": 0
+      },
+      "car": {
+        "base": 0,
+        "racial": -2,
+        "other": 0
+      }
+    },
+    "skills": {},
+    "talents": [
+      "r-1561306374367871028-02"
+    ],
+    "spells": [
+      "r-1561844423816515615-04"
+    ],
+    "inventory": "",
+    "magics": "",
+    "pmArcano": "2 (Truque Mágico: 1 + Int 1)",
+    "pmDivino": "",
+    "defense": "CA = 10 + Des 8 + 1 + armadura leve · 19 PV (12 + 3 + Con 4)",
+    "speed": "",
+    "attacks": "ESPADA CURTA PEQUENA (1d6)\nBBA +1 · Des +8 · +1 (Pequeno) = +10\nAtaque Furtivo +1d6 · Evasão (Reflexos: sucesso = nenhum dano)\nTÉCNICA LADINA: Truque Mágico → Ataque Certeiro (arcana 1) 2x/dia (PM = 1 + Int 1 = 2)\nCOM ATAQUE CERTEIRO: +30 no próximo ataque + 1d6 furtivo (acerto garantido)",
+    "notes": "Goblin: +4 Des, +2 Con, -2 Car; Pequeno (+1 CA, +1 ataque, +4 Furtividade, armas menores).\nTruque Mágico (Técnica Ladina, 2º nível): 'você pode lançar uma magia arcana de 1º nível à sua escolha; habilidade-chave Inteligência; PM = 1 + mod Int'; pode ser escolhido várias vezes (+1 magia e +1 PM cada).\nATENÇÃO: Des 8 depende de somar o bônus racial (+4) ao valor máximo comprado (4). Se a mesa limitar o total, use Des comprado 2 (total 6) → ataque +8/+9 no 2º nível.\n\n--- NÍVEL 2 ---\nESPADA CURTA PEQUENA (1d6)\nBBA +1 · Des +8 · +1 (Pequeno) = +10\nAtaque Furtivo +1d6 · Evasão (Reflexos: sucesso = nenhum dano)\nTÉCNICA LADINA: Truque Mágico → Ataque Certeiro (arcana 1) 2x/dia (PM = 1 + Int 1 = 2)\nCOM ATAQUE CERTEIRO: +30 no próximo ataque + 1d6 furtivo (acerto garantido)",
+    "experience": "",
+    "overrides": {},
+    "changeLog": [
+      {
+        "when": "2026-10-21T20:12:39.525Z",
+        "action": "Build criada: 04_ladino_goblin_sombra nível 2"
+      }
+    ],
+    "updatedAt": "2026-10-21T20:12:39.525Z"
+  }
+}

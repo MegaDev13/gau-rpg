@@ -1,0 +1,97 @@
+{
+  "format": "GAU-CHARACTER",
+  "version": "0.2",
+  "character": {
+    "id": "gau-mvijtust-uztxr1oy",
+    "version": "0.2",
+    "name": "Vesper, a Chama Íntima — Nível 2",
+    "player": "Build pronta · G✦A✦U RPG",
+    "concept": "Guerreiro mágico: conjura corpo a corpo com toque arcano e defesa de força.",
+    "appearance": "",
+    "historyText": "",
+    "race": "Humanos",
+    "origin": "",
+    "divinity": "",
+    "classes": [
+      {
+        "id": "FEITICEIRO",
+        "level": 2
+      }
+    ],
+    "attrs": {
+      "for": {
+        "base": 0,
+        "racial": 0,
+        "other": 0
+      },
+      "des": {
+        "base": 2,
+        "racial": 2,
+        "other": 0
+      },
+      "con": {
+        "base": 1,
+        "racial": 0,
+        "other": 0
+      },
+      "int": {
+        "base": 0,
+        "racial": 0,
+        "other": 0
+      },
+      "sab": {
+        "base": 0,
+        "racial": 0,
+        "other": 0
+      },
+      "car": {
+        "base": 4,
+        "racial": 2,
+        "other": 0
+      }
+    },
+    "skills": {},
+    "talents": [
+      "r-1561355358235262977-05",
+      "r-1561355370142765066-01",
+      "r-1561306421973491766-03",
+      "r-1561306397268910081-05"
+    ],
+    "spells": [
+      "r-1561844423816515615-04",
+      "r-1561844445165392034-01",
+      "r-1561844423816515615-03",
+      "r-1561844431580176518-03",
+      "r-1561844423816515615-01",
+      "r-1561844423816515615-05",
+      "r-1561844438303514737-03",
+      "r-1561838807349862584-03",
+      "r-1561838807349862584-02",
+      "r-1561838809354600480-04",
+      "r-1561838805579862077-05"
+    ],
+    "inventory": "",
+    "magics": "",
+    "pmArcano": "12",
+    "pmDivino": "",
+    "defense": "CA 18 (Armadura Arcana, 1h) · Escudo Arcano: +22 · 12 PV (+2 de Vitalidade = 14)",
+    "speed": "",
+    "attacks": "TOQUE CHOCANTE (2d8): BBA +1 + Foco em Toque +2 = +3 contra CA DE TOQUE (+3 vs metal)\nCOM ATAQUE CERTEIRO (+20): +23 — acerto garantido\nEspontâneo: lança qualquer magia conhecida sem preparar\nPM: 12 (3 + Car 6 + 3 do nível) · +1 magia conhecida (Mísseis Mágicos)",
+    "notes": "Linhagem elemental (fogo) no 1º nível: escolha entre água, ar, fogo, luz, terra ou trevas.\nCOMBO: rodada 1 lança Ataque Certeiro (1 PM, ação padrão) + Armadura Arcana nos turnos de preparação; rodada 2 descarrega Toque Chocante com +20 (acerto automático, 2d8).\nSem armadura física: a chance de falha arcana (5% a 40%) NÃO se aplica, porque Armadura Arcana é magia, não armadura.\nMagias em Combate: não fica desprevenido ao conjurar. Substituição Elemental (fogo): troca descritores sem custo em PM.\n\n--- NÍVEL 2 ---\nTOQUE CHOCANTE (2d8): BBA +1 + Foco em Toque +2 = +3 contra CA DE TOQUE (+3 vs metal)\nCOM ATAQUE CERTEIRO (+20): +23 — acerto garantido\nEspontâneo: lança qualquer magia conhecida sem preparar\nPM: 12 (3 + Car 6 + 3 do nível) · +1 magia conhecida (Mísseis Mágicos)",
+    "experience": "",
+    "overrides": {},
+    "changeLog": [
+      {
+        "when": "2026-10-21T20:12:39.341Z",
+        "action": "Build criada: 03_feiticeiro_guerreiro_magico nível 2"
+      }
+    ],
+    "updatedAt": "2026-10-21T20:12:39.341Z",
+    "magicMods": {
+      "FEITICEIRO": 6
+    },
+    "magicEnabled": {
+      "FEITICEIRO": true
+    }
+  }
+}

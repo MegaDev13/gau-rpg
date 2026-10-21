@@ -1,0 +1,76 @@
+{
+  "format": "GAU-CHARACTER",
+  "version": "0.2",
+  "character": {
+    "id": "gau-mvijtuir-bfrxil08",
+    "version": "0.2",
+    "name": "Grock Machado-Sedento — Nível 1",
+    "player": "Build pronta · G✦A✦U RPG",
+    "concept": "Vanguarda berserker: o maior bônus de ataque corpo a corpo possível no 1º nível.",
+    "appearance": "",
+    "historyText": "",
+    "race": "Meio-Orc",
+    "origin": "",
+    "divinity": "",
+    "classes": [
+      {
+        "id": "BÁRBARO",
+        "level": 1
+      }
+    ],
+    "attrs": {
+      "for": {
+        "base": 4,
+        "racial": 2,
+        "other": 0
+      },
+      "des": {
+        "base": 1,
+        "racial": 0,
+        "other": 0
+      },
+      "con": {
+        "base": 2,
+        "racial": 2,
+        "other": 0
+      },
+      "int": {
+        "base": 0,
+        "racial": 0,
+        "other": 0
+      },
+      "sab": {
+        "base": 0,
+        "racial": 0,
+        "other": 0
+      },
+      "car": {
+        "base": 0,
+        "racial": 0,
+        "other": 0
+      }
+    },
+    "skills": {},
+    "talents": [
+      "r-1561306396195168378-04"
+    ],
+    "spells": [],
+    "inventory": "",
+    "magics": "",
+    "pmArcano": "",
+    "pmDivino": "",
+    "defense": "10 + Des 1 + armadura (a definir com o mestre) · -2 em Fúria · 28 PV",
+    "speed": "",
+    "attacks": "MACHADO GRANDE (1d12+6)\nBBA +1 · For +6 · Foco em Arma +1 = +8\nEm Fúria: +10 (dano 1d12+8, RD 1, CA -2)\nInvestida: +12 · Investida em Fúria: +14",
+    "notes": "Fúria 1/dia (ação livre): +2 ataque e dano corpo a corpo, RD 1, -2 CA, dura 5 + Con (9) rodadas; não pode lançar magias nem usar Furtividade durante a fúria. Movimento Rápido (+3m). Analfabetismo.\nProgressão: 3º Instinto Selvagem +1, 4º Fúria 2/dia, 5º Esquiva Sobrenatural Aprimorada. Talentos a cada nível ímpar: 3º Investida Aprimorada (+4 na investida).\nESCALA DE ATRIBUTOS: valores comprados (-1 a 4) + bônus raciais aplicados manualmente; confirme com o mestre.\n\n--- NÍVEL 1 ---\nMACHADO GRANDE (1d12+6)\nBBA +1 · For +6 · Foco em Arma +1 = +8\nEm Fúria: +10 (dano 1d12+8, RD 1, CA -2)\nInvestida: +12 · Investida em Fúria: +14",
+    "experience": "",
+    "overrides": {},
+    "changeLog": [
+      {
+        "when": "2026-10-21T20:12:38.979Z",
+        "action": "Build criada: 01_barbaro_meio_orc nível 1"
+      }
+    ],
+    "updatedAt": "2026-10-21T20:12:38.979Z"
+  }
+}

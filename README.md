@@ -69,6 +69,25 @@ Todas são embutidas como WOFF2 em `index.html` — a plataforma continua funcio
 
 Ficha editável em 6 páginas com **faixas ilustradas por página**, bordas douradas, selo do grimório na página de feitiços e todos os 160 campos AcroForm preservados.
 
+## Builds prontas — nível 1 e nível 2 (21/10/2026)
+
+Pasta `personagens/` com quatro personagens jogáveis, montados só com regras já publicadas no servidor, otimizados para **bônus de ataque alto desde o 1º nível**:
+
+| # | Personagem | Raça / Classe | Ataque no 1º nível | Destaque |
+|---|---|---|---|---|
+| 01 | **Grock Machado-Sedento** | Meio-Orc / Bárbaro | **+8** (machado grande) · **+10** em Fúria | Maior bônus corpo a corpo do 1º nível; Fúria 1/dia (+2 ataque/dano, RD 1) |
+| 02 | **Aldric Lâmina Rúnica** | Humano / Guerreiro | **+8** · **+12** em investida | 4 talentos no 1º nível, armadura completa e escudo, Até Acertar crescente |
+| 03 | **Vesper, a Chama Íntima** | Humano / Feiticeiro | **+20** com *Ataque Certeiro* (Toque Chocante 2d8) | **Guerreiro mágico**: conjura corpo a corpo sem armadura física (Armadura Arcana, CA 18) |
+| 04 | **Snikk Risco-de-Navalha** | Goblin / Ladino | **+9** com Acuidade (+1d6 furtivo) | Des 8 (+1 por Pequeno); no 2º nível pega *Truque Mágico* → *Ataque Certeiro* (**+30**) |
+
+Cada build tem duas versões (nível 1 e nível 2), em JSON importável e em PDF preenchível:
+
+- `personagens/<build>_nv1.gau.json` e `<build>_nv2.gau.json` — importe pelo botão **Importar JSON** do Criador
+- `personagens/pdf/<build>_nv1.pdf` e `<build>_nv2.pdf` — fichas prontas de 6 páginas com os campos preenchidos
+- `personagens/GUIA-DE-BUILDS.html` e `pdf/GUIA-DE-BUILDS.pdf` — guia ilustrado com a fórmula de ataque, tabelas de bônus por situação, rotação de combate e alertas de mesa
+
+Fórmula usada: `ataque = BBA + modificador de atributo + talentos + magias + situação`. Pré-requisitos em escala antiga (“For 13”, “Des 13”, “Int 11”) e a soma de bônus raciais ao valor máximo comprado devem ser confirmados com o mestre.
+
 ## Conferência e inclusão do Grimório (Discord → Livro, Criador e Ficha) — 21/10/2026
 
 Foram conferidos todos os canais e tópicos do servidor `𝗚✦𝗔✦𝗨 | 𝐑𝐏𝐆` na categoria `‼️┊SISTEMA`: **8 canais** e **30 tópicos ativos** (`38` fontes no total). As `28` marcações vazias anteriores em `feitiços` e o cabeçalho provisório `Lista de Magias Universais` foram substituídos na origem pelos índices atualizados de Magias Arcanas e Magias Divinas e por **11 novos tópicos de magias**:

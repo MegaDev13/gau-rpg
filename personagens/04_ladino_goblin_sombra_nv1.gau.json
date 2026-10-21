@@ -1,0 +1,76 @@
+{
+  "format": "GAU-CHARACTER",
+  "version": "0.2",
+  "character": {
+    "id": "gau-mvijtuv0-0ib68rrb",
+    "version": "0.2",
+    "name": "Snikk Risco-de-Navalha — Nível 1",
+    "player": "Build pronta · G✦A✦U RPG",
+    "concept": "Acerto altíssimo com Destreza + Ataque Furtivo; no 2º nível destrava magia arcana.",
+    "appearance": "",
+    "historyText": "",
+    "race": "Goblin",
+    "origin": "",
+    "divinity": "",
+    "classes": [
+      {
+        "id": "LADINO",
+        "level": 1
+      }
+    ],
+    "attrs": {
+      "for": {
+        "base": 0,
+        "racial": 0,
+        "other": 0
+      },
+      "des": {
+        "base": 4,
+        "racial": 4,
+        "other": 0
+      },
+      "con": {
+        "base": 2,
+        "racial": 2,
+        "other": 0
+      },
+      "int": {
+        "base": 1,
+        "racial": 0,
+        "other": 0
+      },
+      "sab": {
+        "base": 0,
+        "racial": 0,
+        "other": 0
+      },
+      "car": {
+        "base": 0,
+        "racial": -2,
+        "other": 0
+      }
+    },
+    "skills": {},
+    "talents": [
+      "r-1561306374367871028-02"
+    ],
+    "spells": [],
+    "inventory": "",
+    "magics": "",
+    "pmArcano": "",
+    "pmDivino": "",
+    "defense": "CA = 10 + Des 8 + 1 (Pequeno) + armadura leve · 16 PV (12 + Con 4) · Evasão a partir do 2º nível",
+    "speed": "",
+    "attacks": "ESPADA CURTA PEQUENA (1d6 pequena)\nBBA +0 · Des +8 (Acuidade com Arma) · +1 por tamanho Pequeno = +9\nAtaque Furtivo +1d6 (alvo desprevenido ou flanqueado)\nFurtividade: +4 racial",
+    "notes": "Goblin: +4 Des, +2 Con, -2 Car; Pequeno (+1 CA, +1 ataque, +4 Furtividade, armas menores).\nTruque Mágico (Técnica Ladina, 2º nível): 'você pode lançar uma magia arcana de 1º nível à sua escolha; habilidade-chave Inteligência; PM = 1 + mod Int'; pode ser escolhido várias vezes (+1 magia e +1 PM cada).\nATENÇÃO: Des 8 depende de somar o bônus racial (+4) ao valor máximo comprado (4). Se a mesa limitar o total, use Des comprado 2 (total 6) → ataque +8/+9 no 2º nível.\n\n--- NÍVEL 1 ---\nESPADA CURTA PEQUENA (1d6 pequena)\nBBA +0 · Des +8 (Acuidade com Arma) · +1 por tamanho Pequeno = +9\nAtaque Furtivo +1d6 (alvo desprevenido ou flanqueado)\nFurtividade: +4 racial",
+    "experience": "",
+    "overrides": {},
+    "changeLog": [
+      {
+        "when": "2026-10-21T20:12:39.420Z",
+        "action": "Build criada: 04_ladino_goblin_sombra nível 1"
+      }
+    ],
+    "updatedAt": "2026-10-21T20:12:39.420Z"
+  }
+}

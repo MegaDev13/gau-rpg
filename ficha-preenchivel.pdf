@@ -1,1018 +1,2214 @@
 %PDF-1.4
-%¬µ¬∂
-
+%G A U RPG
 1 0 obj
-<</Type/Font/Subtype/Type1/BaseFont/Helvetica/Encoding/WinAnsiEncoding>>
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
 endobj
-
 2 0 obj
-<</Type/Font/Subtype/Type1/BaseFont/Helvetica-Bold/Encoding/WinAnsiEncoding>>
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
 endobj
-
 3 0 obj
-<</Type/Catalog/Pages 4 0 R/AcroForm 5 0 R/AF[143 0 R]/Names<</EmbeddedFiles<</Names[(Content Credentials)143 0 R]>>>>/PageMode/UseAttachments>>
+<< /Type /Catalog /Pages 4 0 R /AcroForm 5 0 R >>
 endobj
-
 4 0 obj
-<</Type/Pages/Count 5/Kids[6 0 R 7 0 R 8 0 R 9 0 R 10 0 R]>>
+<< /Type /Pages /Count 6 /Kids [6 0 R 7 0 R 8 0 R 9 0 R 10 0 R 11 0 R] >>
 endobj
-
 5 0 obj
-<</Fields[11 0 R 12 0 R 13 0 R 14 0 R 15 0 R 16 0 R 17 0 R 18 0 R 19 0 R 20 0 R 21 0 R 22 0 R 23 0 R 24 0 R 25 0 R 26 0 R 27 0 R 28 0 R 29 0 R 30 0 R 31 0 R 32 0 R 33 0 R 34 0 R 35 0 R 36 0 R 37 0 R 38 0 R 39 0 R 40 0 R 41 0 R 42 0 R 43 0 R 44 0 R 45 0 R 46 0 R 47 0 R 48 0 R 49 0 R 50 0 R 51 0 R 52 0 R 53 0 R 54 0 R 55 0 R 56 0 R 57 0 R 58 0 R 59 0 R 60 0 R 61 0 R 62 0 R 63 0 R 64 0 R 65 0 R 66 0 R 67 0 R 68 0 R 69 0 R 70 0 R 71 0 R 72 0 R 73 0 R 74 0 R 75 0 R 76 0 R 77 0 R 78 0 R 79 0 R 80 0 R 81 0 R 82 0 R 83 0 R 84 0 R 85 0 R 86 0 R 87 0 R 88 0 R 89 0 R 90 0 R 91 0 R 92 0 R 93 0 R 94 0 R 95 0 R 96 0 R 97 0 R 98 0 R 99 0 R 100 0 R 101 0 R 102 0 R 103 0 R 104 0 R 105 0 R 106 0 R 107 0 R 108 0 R 109 0 R 110 0 R 111 0 R 112 0 R 113 0 R 114 0 R 115 0 R 116 0 R 117 0 R 118 0 R 119 0 R 120 0 R 121 0 R 122 0 R 123 0 R 124 0 R 125 0 R 126 0 R 127 0 R 128 0 R 129 0 R 130 0 R 131 0 R 132 0 R 133 0 R 134 0 R 135 0 R 136 0 R]/DA(/F1 9 Tf 0 g)/DR<</Font<</F1 1 0 R>>>>/NeedAppearances true>>
+<< /Fields [13 0 R 15 0 R 17 0 R 19 0 R 21 0 R 23 0 R 25 0 R 27 0 R 29 0 R 31 0 R 33 0 R 35 0 R 37 0 R 39 0 R 41 0 R 43 0 R 45 0 R 47 0 R 49 0 R 51 0 R 53 0 R 55 0 R 57 0 R 59 0 R 61 0 R 63 0 R 65 0 R 67 0 R 69 0 R 71 0 R 73 0 R 75 0 R 77 0 R 79 0 R 81 0 R 83 0 R 85 0 R 87 0 R 89 0 R 91 0 R 93 0 R 95 0 R 97 0 R 99 0 R 101 0 R 103 0 R 105 0 R 107 0 R 109 0 R 111 0 R 113 0 R 115 0 R 117 0 R 119 0 R 121 0 R 123 0 R 125 0 R 127 0 R 129 0 R 131 0 R 133 0 R 135 0 R 137 0 R 139 0 R 141 0 R 143 0 R 145 0 R 147 0 R 149 0 R 151 0 R 153 0 R 155 0 R 157 0 R 159 0 R 161 0 R 163 0 R 165 0 R 167 0 R 169 0 R 171 0 R 173 0 R 175 0 R 177 0 R 179 0 R 181 0 R 183 0 R 185 0 R 187 0 R 189 0 R 191 0 R 193 0 R 195 0 R 197 0 R 199 0 R 201 0 R 203 0 R 205 0 R 207 0 R 209 0 R 211 0 R 213 0 R 215 0 R 217 0 R 219 0 R 221 0 R 223 0 R 225 0 R 227 0 R 229 0 R 231 0 R 233 0 R 235 0 R 237 0 R 239 0 R 241 0 R 243 0 R 245 0 R 247 0 R 249 0 R 251 0 R 253 0 R 255 0 R 257 0 R 259 0 R 261 0 R 263 0 R 265 0 R 267 0 R 269 0 R 271 0 R 273 0 R 275 0 R 277 0 R 279 0 R 281 0 R 283 0 R 285 0 R 287 0 R 289 0 R 291 0 R 293 0 R 295 0 R 297 0 R 299 0 R 301 0 R 303 0 R 305 0 R 307 0 R 309 0 R 311 0 R 313 0 R 315 0 R 317 0 R 319 0 R 321 0 R 323 0 R 325 0 R 327 0 R 329 0 R 331 0 R] /DA (/F1 9 Tf 0 g) /DR << /Font << /F1 1 0 R >> >> /NeedAppearances true >>
 endobj
-
 6 0 obj
-<</Type/Page/Parent 4 0 R/MediaBox[0 0 595 842]/Resources<</Font<</F1 1 0 R/F2 2 0 R>>>>/Contents 137 0 R/Annots[11 0 R 12 0 R 13 0 R 14 0 R 15 0 R 16 0 R 17 0 R 18 0 R 19 0 R 20 0 R 21 0 R 22 0 R 23 0 R 24 0 R 25 0 R 26 0 R 27 0 R 28 0 R 29 0 R 30 0 R 31 0 R 32 0 R 33 0 R 34 0 R 35 0 R 36 0 R 37 0 R 38 0 R 39 0 R 40 0 R 41 0 R 42 0 R 43 0 R 44 0 R]>>
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 332 0 R /Annots [13 0 R 15 0 R 17 0 R 19 0 R 21 0 R 23 0 R 25 0 R 27 0 R 29 0 R 31 0 R 33 0 R 35 0 R 37 0 R 39 0 R 41 0 R 43 0 R 45 0 R 47 0 R 49 0 R 51 0 R 53 0 R 55 0 R 57 0 R 59 0 R 61 0 R 63 0 R 65 0 R 67 0 R 69 0 R 71 0 R 73 0 R 75 0 R 77 0 R 79 0 R] >>
 endobj
-
 7 0 obj
-<</Type/Page/Parent 4 0 R/MediaBox[0 0 595 842]/Resources<</Font<</F1 1 0 R/F2 2 0 R>>>>/Contents 138 0 R/Annots[45 0 R 46 0 R 47 0 R 48 0 R 49 0 R 50 0 R]>>
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 333 0 R /Annots [81 0 R 83 0 R 85 0 R 87 0 R 89 0 R 91 0 R 93 0 R 95 0 R 97 0 R 99 0 R 101 0 R 103 0 R 105 0 R 107 0 R 109 0 R 111 0 R 113 0 R 115 0 R 117 0 R 119 0 R 121 0 R 123 0 R] >>
 endobj
-
 8 0 obj
-<</Type/Page/Parent 4 0 R/MediaBox[0 0 595 842]/Resources<</Font<</F1 1 0 R/F2 2 0 R>>>>/Contents 139 0 R/Annots[51 0 R 52 0 R 53 0 R 54 0 R 55 0 R 56 0 R 57 0 R 58 0 R 59 0 R 60 0 R 61 0 R 62 0 R 63 0 R 64 0 R 65 0 R 66 0 R 67 0 R 68 0 R 69 0 R 70 0 R 71 0 R 72 0 R 73 0 R 74 0 R 75 0 R 76 0 R 77 0 R 78 0 R 79 0 R 80 0 R 81 0 R 82 0 R 83 0 R 84 0 R 85 0 R 86 0 R 87 0 R 88 0 R 89 0 R 90 0 R 91 0 R 92 0 R 93 0 R 94 0 R 95 0 R 96 0 R 97 0 R 98 0 R 99 0 R 100 0 R 101 0 R 102 0 R 103 0 R 104 0 R 105 0 R 106 0 R 107 0 R 108 0 R 109 0 R 110 0 R 111 0 R 112 0 R 113 0 R]>>
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 334 0 R /Annots [125 0 R 127 0 R 129 0 R 131 0 R 133 0 R 135 0 R 137 0 R 139 0 R 141 0 R 143 0 R 145 0 R 147 0 R 149 0 R 151 0 R 153 0 R 155 0 R 157 0 R 159 0 R 161 0 R 163 0 R 165 0 R 167 0 R 169 0 R 171 0 R 173 0 R 175 0 R 177 0 R 179 0 R 181 0 R 183 0 R 185 0 R 187 0 R 189 0 R 191 0 R 193 0 R 195 0 R 197 0 R 199 0 R 201 0 R 203 0 R 205 0 R 207 0 R 209 0 R 211 0 R 213 0 R 215 0 R 217 0 R 219 0 R 221 0 R 223 0 R 225 0 R 227 0 R 229 0 R 231 0 R 233 0 R 235 0 R 237 0 R 239 0 R 241 0 R 243 0 R 245 0 R 247 0 R 249 0 R] >>
 endobj
-
 9 0 obj
-<</Type/Page/Parent 4 0 R/MediaBox[0 0 595 842]/Resources<</Font<</F1 1 0 R/F2 2 0 R>>>>/Contents 140 0 R/Annots[114 0 R 115 0 R 116 0 R 117 0 R 118 0 R 119 0 R 120 0 R 121 0 R 122 0 R 123 0 R 124 0 R 125 0 R 126 0 R 127 0 R 128 0 R 129 0 R 130 0 R 131 0 R]>>
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 335 0 R /Annots [251 0 R 253 0 R 255 0 R 257 0 R 259 0 R 261 0 R 263 0 R 265 0 R 267 0 R 269 0 R 271 0 R 273 0 R 275 0 R 277 0 R 279 0 R 281 0 R 283 0 R 285 0 R] >>
 endobj
-
 10 0 obj
-<</Type/Page/Parent 4 0 R/MediaBox[0 0 595 842]/Resources<</Font<</F1 1 0 R/F2 2 0 R>>>>/Contents 141 0 R/Annots[132 0 R 133 0 R 134 0 R 135 0 R 136 0 R]>>
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 336 0 R /Annots [287 0 R 289 0 R 291 0 R 293 0 R 295 0 R 297 0 R 299 0 R 301 0 R 303 0 R 305 0 R 307 0 R 309 0 R 311 0 R 313 0 R 315 0 R 317 0 R 319 0 R 321 0 R] >>
 endobj
-
 11 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(name)/Rect[35 718 280 741]/F 4/P 6 0 R/V(Valen)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 144 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 337 0 R /Annots [323 0 R 325 0 R 327 0 R 329 0 R 331 0 R] >>
 endobj
-
 12 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(player)/Rect[315 718 560 741]/F 4/P 6 0 R/V(Jogador de teste)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 145 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /XObject /Subtype /Form /BBox [0 0 245 23] /Resources << /Font << /F1 1 0 R >> >> /Length 125 >>
+stream
+q 1 1 1 rg 0 0 245 23 re f 0.75 0.77 0.83 RG .8 w .4 .4 244.2 22.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 10 Tm () Tj ET Q
+endstream
 endobj
-
 13 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(race)/Rect[35 655 280 678]/F 4/P 6 0 R/V(An\365es)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 146 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (name) /Rect [35 718 280 741] /F 4 /P 6 0 R /V () /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 12 0 R >>  >>
 endobj
-
 14 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(origin)/Rect[315 655 560 678]/F 4/P 6 0 R/V()/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 147 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /XObject /Subtype /Form /BBox [0 0 245 23] /Resources << /Font << /F1 1 0 R >> >> /Length 125 >>
+stream
+q 1 1 1 rg 0 0 245 23 re f 0.75 0.77 0.83 RG .8 w .4 .4 244.2 22.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 10 Tm () Tj ET Q
+endstream
 endobj
-
 15 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(divinity)/Rect[35 592 280 615]/F 4/P 6 0 R/V()/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 147 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (player) /Rect [315 718 560 741] /F 4 /P 6 0 R /V () /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 14 0 R >>  >>
 endobj
-
 16 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(classes)/Rect[315 592 560 615]/F 4/P 6 0 R/V(BARDO 4)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 148 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /XObject /Subtype /Form /BBox [0 0 245 23] /Resources << /Font << /F1 1 0 R >> >> /Length 125 >>
+stream
+q 1 1 1 rg 0 0 245 23 re f 0.75 0.77 0.83 RG .8 w .4 .4 244.2 22.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 10 Tm () Tj ET Q
+endstream
 endobj
-
 17 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(level)/Rect[35 529 140 552]/F 4/P 6 0 R/V(4)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 149 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (race) /Rect [35 655 280 678] /F 4 /P 6 0 R /V () /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 16 0 R >>  >>
 endobj
-
 18 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(pv_auto)/Rect[160 529 265 552]/F 4/P 6 0 R/V(21)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 150 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /XObject /Subtype /Form /BBox [0 0 245 23] /Resources << /Font << /F1 1 0 R >> >> /Length 125 >>
+stream
+q 1 1 1 rg 0 0 245 23 re f 0.75 0.77 0.83 RG .8 w .4 .4 244.2 22.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 10 Tm () Tj ET Q
+endstream
 endobj
-
 19 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(pv_final)/Rect[285 529 390 552]/F 4/P 6 0 R/V(21)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 150 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (origin) /Rect [315 655 560 678] /F 4 /P 6 0 R /V () /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 18 0 R >>  >>
 endobj
-
 20 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(bba_final)/Rect[410 529 560 552]/F 4/P 6 0 R/V(3)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 151 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /XObject /Subtype /Form /BBox [0 0 245 23] /Resources << /Font << /F1 1 0 R >> >> /Length 125 >>
+stream
+q 1 1 1 rg 0 0 245 23 re f 0.75 0.77 0.83 RG .8 w .4 .4 244.2 22.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 10 Tm () Tj ET Q
+endstream
 endobj
-
 21 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(for_base)/Rect[170 467 244 489]/F 4/P 6 0 R/V(3)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 152 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (divinity) /Rect [35 592 280 615] /F 4 /P 6 0 R /V () /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 20 0 R >>  >>
 endobj
-
 22 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(for_racial)/Rect[265 467 339 489]/F 4/P 6 0 R/V(0)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 153 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /XObject /Subtype /Form /BBox [0 0 245 23] /Resources << /Font << /F1 1 0 R >> >> /Length 125 >>
+stream
+q 1 1 1 rg 0 0 245 23 re f 0.75 0.77 0.83 RG .8 w .4 .4 244.2 22.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 10 Tm () Tj ET Q
+endstream
 endobj
-
 23 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(for_extra)/Rect[360 467 434 489]/F 4/P 6 0 R/V(0)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 153 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (classes) /Rect [315 592 560 615] /F 4 /P 6 0 R /V () /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 22 0 R >>  >>
 endobj
-
 24 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(for_total)/Rect[455 467 560 489]/F 4/P 6 0 R/V(3)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 154 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /XObject /Subtype /Form /BBox [0 0 105 23] /Resources << /Font << /F1 1 0 R >> >> /Length 125 >>
+stream
+q 1 1 1 rg 0 0 105 23 re f 0.75 0.77 0.83 RG .8 w .4 .4 104.2 22.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 10 Tm () Tj ET Q
+endstream
 endobj
-
 25 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(des_base)/Rect[170 414 244 436]/F 4/P 6 0 R/V(0)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 153 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (level) /Rect [35 529 140 552] /F 4 /P 6 0 R /V () /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 24 0 R >>  >>
 endobj
-
 26 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(des_racial)/Rect[265 414 339 436]/F 4/P 6 0 R/V(0)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 153 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /XObject /Subtype /Form /BBox [0 0 105 23] /Resources << /Font << /F1 1 0 R >> >> /Length 125 >>
+stream
+q 1 1 1 rg 0 0 105 23 re f 0.75 0.77 0.83 RG .8 w .4 .4 104.2 22.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 10 Tm () Tj ET Q
+endstream
 endobj
-
 27 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(des_extra)/Rect[360 414 434 436]/F 4/P 6 0 R/V(0)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 153 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (pv_auto) /Rect [160 529 265 552] /F 4 /P 6 0 R /V () /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 26 0 R >>  >>
 endobj
-
 28 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(des_total)/Rect[455 414 560 436]/F 4/P 6 0 R/V(0)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 155 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /XObject /Subtype /Form /BBox [0 0 105 23] /Resources << /Font << /F1 1 0 R >> >> /Length 125 >>
+stream
+q 1 1 1 rg 0 0 105 23 re f 0.75 0.77 0.83 RG .8 w .4 .4 104.2 22.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 10 Tm () Tj ET Q
+endstream
 endobj
-
 29 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(con_base)/Rect[170 361 244 383]/F 4/P 6 0 R/V(0)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 153 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (pv_final) /Rect [285 529 390 552] /F 4 /P 6 0 R /V () /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 28 0 R >>  >>
 endobj
-
 30 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(con_racial)/Rect[265 361 339 383]/F 4/P 6 0 R/V(0)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 153 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /XObject /Subtype /Form /BBox [0 0 150 23] /Resources << /Font << /F1 1 0 R >> >> /Length 125 >>
+stream
+q 1 1 1 rg 0 0 150 23 re f 0.75 0.77 0.83 RG .8 w .4 .4 149.2 22.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 10 Tm () Tj ET Q
+endstream
 endobj
-
 31 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(con_extra)/Rect[360 361 434 383]/F 4/P 6 0 R/V(0)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 153 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (bba_final) /Rect [410 529 560 552] /F 4 /P 6 0 R /V () /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 30 0 R >>  >>
 endobj
-
 32 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(con_total)/Rect[455 361 560 383]/F 4/P 6 0 R/V(0)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 155 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /XObject /Subtype /Form /BBox [0 0 74 22] /Resources << /Font << /F1 1 0 R >> >> /Length 123 >>
+stream
+q 1 1 1 rg 0 0 74 22 re f 0.75 0.77 0.83 RG .8 w .4 .4 73.2 21.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 9 Tm (0) Tj ET Q
+endstream
 endobj
-
 33 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(int_base)/Rect[170 308 244 330]/F 4/P 6 0 R/V(0)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 153 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (for_base) /Rect [170 467 244 489] /F 4 /P 6 0 R /V (0) /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 32 0 R >>  >>
 endobj
-
 34 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(int_racial)/Rect[265 308 339 330]/F 4/P 6 0 R/V(0)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 153 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /XObject /Subtype /Form /BBox [0 0 74 22] /Resources << /Font << /F1 1 0 R >> >> /Length 123 >>
+stream
+q 1 1 1 rg 0 0 74 22 re f 0.75 0.77 0.83 RG .8 w .4 .4 73.2 21.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 9 Tm (0) Tj ET Q
+endstream
 endobj
-
 35 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(int_extra)/Rect[360 308 434 330]/F 4/P 6 0 R/V(0)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 153 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (for_racial) /Rect [265 467 339 489] /F 4 /P 6 0 R /V (0) /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 34 0 R >>  >>
 endobj
-
 36 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(int_total)/Rect[455 308 560 330]/F 4/P 6 0 R/V(0)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 155 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /XObject /Subtype /Form /BBox [0 0 74 22] /Resources << /Font << /F1 1 0 R >> >> /Length 123 >>
+stream
+q 1 1 1 rg 0 0 74 22 re f 0.75 0.77 0.83 RG .8 w .4 .4 73.2 21.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 9 Tm (0) Tj ET Q
+endstream
 endobj
-
 37 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(sab_base)/Rect[170 255 244 277]/F 4/P 6 0 R/V(0)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 153 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (for_extra) /Rect [360 467 434 489] /F 4 /P 6 0 R /V (0) /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 36 0 R >>  >>
 endobj
-
 38 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(sab_racial)/Rect[265 255 339 277]/F 4/P 6 0 R/V(0)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 153 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /XObject /Subtype /Form /BBox [0 0 105 22] /Resources << /Font << /F1 1 0 R >> >> /Length 125 >>
+stream
+q 1 1 1 rg 0 0 105 22 re f 0.75 0.77 0.83 RG .8 w .4 .4 104.2 21.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 9 Tm (0) Tj ET Q
+endstream
 endobj
-
 39 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(sab_extra)/Rect[360 255 434 277]/F 4/P 6 0 R/V(0)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 153 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (for_total) /Rect [455 467 560 489] /F 4 /P 6 0 R /V (0) /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 38 0 R >>  >>
 endobj
-
 40 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(sab_total)/Rect[455 255 560 277]/F 4/P 6 0 R/V(0)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 155 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /XObject /Subtype /Form /BBox [0 0 74 22] /Resources << /Font << /F1 1 0 R >> >> /Length 123 >>
+stream
+q 1 1 1 rg 0 0 74 22 re f 0.75 0.77 0.83 RG .8 w .4 .4 73.2 21.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 9 Tm (0) Tj ET Q
+endstream
 endobj
-
 41 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(car_base)/Rect[170 202 244 224]/F 4/P 6 0 R/V(0)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 153 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (des_base) /Rect [170 414 244 436] /F 4 /P 6 0 R /V (0) /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 40 0 R >>  >>
 endobj
-
 42 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(car_racial)/Rect[265 202 339 224]/F 4/P 6 0 R/V(0)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 153 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /XObject /Subtype /Form /BBox [0 0 74 22] /Resources << /Font << /F1 1 0 R >> >> /Length 123 >>
+stream
+q 1 1 1 rg 0 0 74 22 re f 0.75 0.77 0.83 RG .8 w .4 .4 73.2 21.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 9 Tm (0) Tj ET Q
+endstream
 endobj
-
 43 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(car_extra)/Rect[360 202 434 224]/F 4/P 6 0 R/V(0)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 153 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (des_racial) /Rect [265 414 339 436] /F 4 /P 6 0 R /V (0) /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 42 0 R >>  >>
 endobj
-
 44 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(car_total)/Rect[455 202 560 224]/F 4/P 6 0 R/V(0)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 155 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /XObject /Subtype /Form /BBox [0 0 74 22] /Resources << /Font << /F1 1 0 R >> >> /Length 123 >>
+stream
+q 1 1 1 rg 0 0 74 22 re f 0.75 0.77 0.83 RG .8 w .4 .4 73.2 21.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 9 Tm (0) Tj ET Q
+endstream
 endobj
-
 45 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(defense)/Rect[35 711 190 734]/F 4/P 7 0 R/V()/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 156 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (des_extra) /Rect [360 414 434 436] /F 4 /P 6 0 R /V (0) /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 44 0 R >>  >>
 endobj
-
 46 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(speed)/Rect[205 711 360 734]/F 4/P 7 0 R/V()/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 156 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /XObject /Subtype /Form /BBox [0 0 105 22] /Resources << /Font << /F1 1 0 R >> >> /Length 125 >>
+stream
+q 1 1 1 rg 0 0 105 22 re f 0.75 0.77 0.83 RG .8 w .4 .4 104.2 21.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 9 Tm (0) Tj ET Q
+endstream
 endobj
-
 47 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(bba_auto)/Rect[375 711 560 734]/F 4/P 7 0 R/V(3)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 157 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (des_total) /Rect [455 414 560 436] /F 4 /P 6 0 R /V (0) /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 46 0 R >>  >>
 endobj
-
 48 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(pmArcano)/Rect[35 645 280 668]/F 4/P 7 0 R/V()/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 147 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /XObject /Subtype /Form /BBox [0 0 74 22] /Resources << /Font << /F1 1 0 R >> >> /Length 123 >>
+stream
+q 1 1 1 rg 0 0 74 22 re f 0.75 0.77 0.83 RG .8 w .4 .4 73.2 21.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 9 Tm (0) Tj ET Q
+endstream
 endobj
-
 49 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(pmDivino)/Rect[315 645 560 668]/F 4/P 7 0 R/V()/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 147 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (con_base) /Rect [170 361 244 383] /F 4 /P 6 0 R /V (0) /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 48 0 R >>  >>
 endobj
-
 50 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(attacks)/Rect[35 555 560 600]/F 4/P 7 0 R/V()/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 158 0 R>>/Ff 4096/BS<</S/S/W 1>>>>
+<< /Type /XObject /Subtype /Form /BBox [0 0 74 22] /Resources << /Font << /F1 1 0 R >> >> /Length 123 >>
+stream
+q 1 1 1 rg 0 0 74 22 re f 0.75 0.77 0.83 RG .8 w .4 .4 73.2 21.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 9 Tm (0) Tj ET Q
+endstream
 endobj
-
 51 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(skill_Acrobacia)/Rect[35 714 285 731]/F 4/P 8 0 R/V(+0)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 159 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (con_racial) /Rect [265 361 339 383] /F 4 /P 6 0 R /V (0) /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 50 0 R >>  >>
 endobj
-
 52 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(trained_Acrobacia)/Rect[300 714 415 731]/F 4/P 8 0 R/V(Nao)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 160 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /XObject /Subtype /Form /BBox [0 0 74 22] /Resources << /Font << /F1 1 0 R >> >> /Length 123 >>
+stream
+q 1 1 1 rg 0 0 74 22 re f 0.75 0.77 0.83 RG .8 w .4 .4 73.2 21.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 9 Tm (0) Tj ET Q
+endstream
 endobj
-
 53 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(extra_Acrobacia)/Rect[430 714 560 731]/F 4/P 8 0 R/V(0)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 161 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (con_extra) /Rect [360 361 434 383] /F 4 /P 6 0 R /V (0) /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 52 0 R >>  >>
 endobj
-
 54 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(skill_Adestrar Animais)/Rect[35 684 285 701]/F 4/P 8 0 R/V(+0)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 159 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /XObject /Subtype /Form /BBox [0 0 105 22] /Resources << /Font << /F1 1 0 R >> >> /Length 125 >>
+stream
+q 1 1 1 rg 0 0 105 22 re f 0.75 0.77 0.83 RG .8 w .4 .4 104.2 21.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 9 Tm (0) Tj ET Q
+endstream
 endobj
-
 55 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(trained_Adestrar Animais)/Rect[300 684 415 701]/F 4/P 8 0 R/V(Nao)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 160 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (con_total) /Rect [455 361 560 383] /F 4 /P 6 0 R /V (0) /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 54 0 R >>  >>
 endobj
-
 56 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(extra_Adestrar Animais)/Rect[430 684 560 701]/F 4/P 8 0 R/V(0)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 161 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /XObject /Subtype /Form /BBox [0 0 74 22] /Resources << /Font << /F1 1 0 R >> >> /Length 123 >>
+stream
+q 1 1 1 rg 0 0 74 22 re f 0.75 0.77 0.83 RG .8 w .4 .4 73.2 21.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 9 Tm (0) Tj ET Q
+endstream
 endobj
-
 57 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(skill_Atletismo)/Rect[35 654 285 671]/F 4/P 8 0 R/V(+3)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 162 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (int_base) /Rect [170 308 244 330] /F 4 /P 6 0 R /V (0) /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 56 0 R >>  >>
 endobj
-
 58 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(trained_Atletismo)/Rect[300 654 415 671]/F 4/P 8 0 R/V(Nao)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 160 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /XObject /Subtype /Form /BBox [0 0 74 22] /Resources << /Font << /F1 1 0 R >> >> /Length 123 >>
+stream
+q 1 1 1 rg 0 0 74 22 re f 0.75 0.77 0.83 RG .8 w .4 .4 73.2 21.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 9 Tm (0) Tj ET Q
+endstream
 endobj
-
 59 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(extra_Atletismo)/Rect[430 654 560 671]/F 4/P 8 0 R/V(0)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 161 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (int_racial) /Rect [265 308 339 330] /F 4 /P 6 0 R /V (0) /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 58 0 R >>  >>
 endobj
-
 60 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(skill_Atua\347\343o)/Rect[35 624 285 641]/F 4/P 8 0 R/V(+0)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 159 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /XObject /Subtype /Form /BBox [0 0 74 22] /Resources << /Font << /F1 1 0 R >> >> /Length 123 >>
+stream
+q 1 1 1 rg 0 0 74 22 re f 0.75 0.77 0.83 RG .8 w .4 .4 73.2 21.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 9 Tm (0) Tj ET Q
+endstream
 endobj
-
 61 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(trained_Atua\347\343o)/Rect[300 624 415 641]/F 4/P 8 0 R/V(Nao)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 160 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (int_extra) /Rect [360 308 434 330] /F 4 /P 6 0 R /V (0) /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 60 0 R >>  >>
 endobj
-
 62 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(extra_Atua\347\343o)/Rect[430 624 560 641]/F 4/P 8 0 R/V(0)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 161 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /XObject /Subtype /Form /BBox [0 0 105 22] /Resources << /Font << /F1 1 0 R >> >> /Length 125 >>
+stream
+q 1 1 1 rg 0 0 105 22 re f 0.75 0.77 0.83 RG .8 w .4 .4 104.2 21.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 9 Tm (0) Tj ET Q
+endstream
 endobj
-
 63 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(skill_Cavalgar)/Rect[35 594 285 611]/F 4/P 8 0 R/V(+0)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 159 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (int_total) /Rect [455 308 560 330] /F 4 /P 6 0 R /V (0) /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 62 0 R >>  >>
 endobj
-
 64 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(trained_Cavalgar)/Rect[300 594 415 611]/F 4/P 8 0 R/V(Nao)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 160 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /XObject /Subtype /Form /BBox [0 0 74 22] /Resources << /Font << /F1 1 0 R >> >> /Length 123 >>
+stream
+q 1 1 1 rg 0 0 74 22 re f 0.75 0.77 0.83 RG .8 w .4 .4 73.2 21.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 9 Tm (0) Tj ET Q
+endstream
 endobj
-
 65 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(extra_Cavalgar)/Rect[430 594 560 611]/F 4/P 8 0 R/V(0)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 161 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (sab_base) /Rect [170 255 244 277] /F 4 /P 6 0 R /V (0) /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 64 0 R >>  >>
 endobj
-
 66 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(skill_Conhecimento)/Rect[35 564 285 581]/F 4/P 8 0 R/V(+0)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 159 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /XObject /Subtype /Form /BBox [0 0 74 22] /Resources << /Font << /F1 1 0 R >> >> /Length 123 >>
+stream
+q 1 1 1 rg 0 0 74 22 re f 0.75 0.77 0.83 RG .8 w .4 .4 73.2 21.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 9 Tm (0) Tj ET Q
+endstream
 endobj
-
 67 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(trained_Conhecimento)/Rect[300 564 415 581]/F 4/P 8 0 R/V(Nao)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 160 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (sab_racial) /Rect [265 255 339 277] /F 4 /P 6 0 R /V (0) /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 66 0 R >>  >>
 endobj
-
 68 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(extra_Conhecimento)/Rect[430 564 560 581]/F 4/P 8 0 R/V(0)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 161 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /XObject /Subtype /Form /BBox [0 0 74 22] /Resources << /Font << /F1 1 0 R >> >> /Length 123 >>
+stream
+q 1 1 1 rg 0 0 74 22 re f 0.75 0.77 0.83 RG .8 w .4 .4 73.2 21.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 9 Tm (0) Tj ET Q
+endstream
 endobj
-
 69 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(skill_Cura)/Rect[35 534 285 551]/F 4/P 8 0 R/V(+0)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 159 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (sab_extra) /Rect [360 255 434 277] /F 4 /P 6 0 R /V (0) /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 68 0 R >>  >>
 endobj
-
 70 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(trained_Cura)/Rect[300 534 415 551]/F 4/P 8 0 R/V(Nao)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 160 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /XObject /Subtype /Form /BBox [0 0 105 22] /Resources << /Font << /F1 1 0 R >> >> /Length 125 >>
+stream
+q 1 1 1 rg 0 0 105 22 re f 0.75 0.77 0.83 RG .8 w .4 .4 104.2 21.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 9 Tm (0) Tj ET Q
+endstream
 endobj
-
 71 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(extra_Cura)/Rect[430 534 560 551]/F 4/P 8 0 R/V(0)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 161 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (sab_total) /Rect [455 255 560 277] /F 4 /P 6 0 R /V (0) /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 70 0 R >>  >>
 endobj
-
 72 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(skill_Diplomacia)/Rect[35 504 285 521]/F 4/P 8 0 R/V(+0)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 159 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /XObject /Subtype /Form /BBox [0 0 74 22] /Resources << /Font << /F1 1 0 R >> >> /Length 123 >>
+stream
+q 1 1 1 rg 0 0 74 22 re f 0.75 0.77 0.83 RG .8 w .4 .4 73.2 21.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 9 Tm (0) Tj ET Q
+endstream
 endobj
-
 73 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(trained_Diplomacia)/Rect[300 504 415 521]/F 4/P 8 0 R/V(Nao)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 160 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (car_base) /Rect [170 202 244 224] /F 4 /P 6 0 R /V (0) /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 72 0 R >>  >>
 endobj
-
 74 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(extra_Diplomacia)/Rect[430 504 560 521]/F 4/P 8 0 R/V(0)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 161 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /XObject /Subtype /Form /BBox [0 0 74 22] /Resources << /Font << /F1 1 0 R >> >> /Length 123 >>
+stream
+q 1 1 1 rg 0 0 74 22 re f 0.75 0.77 0.83 RG .8 w .4 .4 73.2 21.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 9 Tm (0) Tj ET Q
+endstream
 endobj
-
 75 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(skill_Engana\347\343o)/Rect[35 474 285 491]/F 4/P 8 0 R/V(+0)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 159 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (car_racial) /Rect [265 202 339 224] /F 4 /P 6 0 R /V (0) /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 74 0 R >>  >>
 endobj
-
 76 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(trained_Engana\347\343o)/Rect[300 474 415 491]/F 4/P 8 0 R/V(Nao)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 160 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /XObject /Subtype /Form /BBox [0 0 74 22] /Resources << /Font << /F1 1 0 R >> >> /Length 123 >>
+stream
+q 1 1 1 rg 0 0 74 22 re f 0.75 0.77 0.83 RG .8 w .4 .4 73.2 21.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 9 Tm (0) Tj ET Q
+endstream
 endobj
-
 77 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(extra_Engana\347\343o)/Rect[430 474 560 491]/F 4/P 8 0 R/V(0)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 161 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (car_extra) /Rect [360 202 434 224] /F 4 /P 6 0 R /V (0) /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 76 0 R >>  >>
 endobj
-
 78 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(skill_Furtividade)/Rect[35 444 285 461]/F 4/P 8 0 R/V(+0)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 159 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /XObject /Subtype /Form /BBox [0 0 105 22] /Resources << /Font << /F1 1 0 R >> >> /Length 125 >>
+stream
+q 1 1 1 rg 0 0 105 22 re f 0.75 0.77 0.83 RG .8 w .4 .4 104.2 21.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 9 Tm (0) Tj ET Q
+endstream
 endobj
-
 79 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(trained_Furtividade)/Rect[300 444 415 461]/F 4/P 8 0 R/V(Nao)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 160 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (car_total) /Rect [455 202 560 224] /F 4 /P 6 0 R /V (0) /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 78 0 R >>  >>
 endobj
-
 80 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(extra_Furtividade)/Rect[430 444 560 461]/F 4/P 8 0 R/V(0)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 161 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /XObject /Subtype /Form /BBox [0 0 155 23] /Resources << /Font << /F1 1 0 R >> >> /Length 125 >>
+stream
+q 1 1 1 rg 0 0 155 23 re f 0.75 0.77 0.83 RG .8 w .4 .4 154.2 22.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 10 Tm () Tj ET Q
+endstream
 endobj
-
 81 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(skill_Identificar Magia)/Rect[35 414 285 431]/F 4/P 8 0 R/V(+0)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 159 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (defense) /Rect [35 711 190 734] /F 4 /P 7 0 R /V () /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 80 0 R >>  >>
 endobj
-
 82 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(trained_Identificar Magia)/Rect[300 414 415 431]/F 4/P 8 0 R/V(Nao)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 160 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /XObject /Subtype /Form /BBox [0 0 155 23] /Resources << /Font << /F1 1 0 R >> >> /Length 125 >>
+stream
+q 1 1 1 rg 0 0 155 23 re f 0.75 0.77 0.83 RG .8 w .4 .4 154.2 22.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 10 Tm () Tj ET Q
+endstream
 endobj
-
 83 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(extra_Identificar Magia)/Rect[430 414 560 431]/F 4/P 8 0 R/V(0)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 161 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (speed) /Rect [205 711 360 734] /F 4 /P 7 0 R /V () /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 82 0 R >>  >>
 endobj
-
 84 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(skill_Iniciativa)/Rect[35 384 285 401]/F 4/P 8 0 R/V(+0)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 159 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /XObject /Subtype /Form /BBox [0 0 185 23] /Resources << /Font << /F1 1 0 R >> >> /Length 125 >>
+stream
+q 1 1 1 rg 0 0 185 23 re f 0.75 0.77 0.83 RG .8 w .4 .4 184.2 22.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 10 Tm () Tj ET Q
+endstream
 endobj
-
 85 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(trained_Iniciativa)/Rect[300 384 415 401]/F 4/P 8 0 R/V(Nao)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 160 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (bba_auto) /Rect [375 711 560 734] /F 4 /P 7 0 R /V () /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 84 0 R >>  >>
 endobj
-
 86 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(extra_Iniciativa)/Rect[430 384 560 401]/F 4/P 8 0 R/V(0)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 161 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /XObject /Subtype /Form /BBox [0 0 245 23] /Resources << /Font << /F1 1 0 R >> >> /Length 125 >>
+stream
+q 1 1 1 rg 0 0 245 23 re f 0.75 0.77 0.83 RG .8 w .4 .4 244.2 22.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 10 Tm () Tj ET Q
+endstream
 endobj
-
 87 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(skill_Intui\347\343o)/Rect[35 354 285 371]/F 4/P 8 0 R/V(+0)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 159 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (pmArcano) /Rect [35 645 280 668] /F 4 /P 7 0 R /V () /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 86 0 R >>  >>
 endobj
-
 88 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(trained_Intui\347\343o)/Rect[300 354 415 371]/F 4/P 8 0 R/V(Nao)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 160 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /XObject /Subtype /Form /BBox [0 0 245 23] /Resources << /Font << /F1 1 0 R >> >> /Length 125 >>
+stream
+q 1 1 1 rg 0 0 245 23 re f 0.75 0.77 0.83 RG .8 w .4 .4 244.2 22.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 10 Tm () Tj ET Q
+endstream
 endobj
-
 89 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(extra_Intui\347\343o)/Rect[430 354 560 371]/F 4/P 8 0 R/V(0)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 161 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (pmDivino) /Rect [315 645 560 668] /F 4 /P 7 0 R /V () /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 88 0 R >>  >>
 endobj
-
 90 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(skill_Ladinagem)/Rect[35 324 285 341]/F 4/P 8 0 R/V(+0)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 159 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /XObject /Subtype /Form /BBox [0 0 525 60] /Resources << /Font << /F1 1 0 R >> >> /Length 125 >>
+stream
+q 1 1 1 rg 0 0 525 60 re f 0.75 0.77 0.83 RG .8 w .4 .4 524.2 59.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 47 Tm () Tj ET Q
+endstream
 endobj
-
 91 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(trained_Ladinagem)/Rect[300 324 415 341]/F 4/P 8 0 R/V(Nao)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 160 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (attacks) /Rect [35 540 560 600] /F 4 /P 7 0 R /V () /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 90 0 R >> /Ff 4096 >>
 endobj
-
 92 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(extra_Ladinagem)/Rect[430 324 560 341]/F 4/P 8 0 R/V(0)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 161 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /XObject /Subtype /Form /BBox [0 0 205 20] /Resources << /Font << /F1 1 0 R >> >> /Length 124 >>
+stream
+q 1 1 1 rg 0 0 205 20 re f 0.75 0.77 0.83 RG .8 w .4 .4 204.2 19.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 7 Tm () Tj ET Q
+endstream
 endobj
-
 93 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(skill_Medita\347\343o)/Rect[35 294 285 311]/F 4/P 8 0 R/V(+0)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 159 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (caster_class_1) /Rect [35 462 240 482] /F 4 /P 7 0 R /V () /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 92 0 R >>  >>
 endobj
-
 94 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(trained_Medita\347\343o)/Rect[300 294 415 311]/F 4/P 8 0 R/V(Nao)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 160 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /XObject /Subtype /Form /BBox [0 0 115 20] /Resources << /Font << /F1 1 0 R >> >> /Length 124 >>
+stream
+q 1 1 1 rg 0 0 115 20 re f 0.75 0.77 0.83 RG .8 w .4 .4 114.2 19.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 7 Tm () Tj ET Q
+endstream
 endobj
-
 95 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(extra_Medita\347\343o)/Rect[430 294 560 311]/F 4/P 8 0 R/V(0)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 161 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (caster_mod_1) /Rect [255 462 370 482] /F 4 /P 7 0 R /V () /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 94 0 R >>  >>
 endobj
-
 96 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(skill_Of\355cio)/Rect[35 264 285 281]/F 4/P 8 0 R/V(+0)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 159 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /XObject /Subtype /Form /BBox [0 0 75 20] /Resources << /Font << /F1 1 0 R >> >> /Length 122 >>
+stream
+q 1 1 1 rg 0 0 75 20 re f 0.75 0.77 0.83 RG .8 w .4 .4 74.2 19.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 7 Tm () Tj ET Q
+endstream
 endobj
-
 97 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(trained_Of\355cio)/Rect[300 264 415 281]/F 4/P 8 0 R/V(Nao)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 160 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (caster_pm_1) /Rect [385 462 460 482] /F 4 /P 7 0 R /V () /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 96 0 R >>  >>
 endobj
-
 98 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(extra_Of\355cio)/Rect[430 264 560 281]/F 4/P 8 0 R/V(0)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 161 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /XObject /Subtype /Form /BBox [0 0 85 20] /Resources << /Font << /F1 1 0 R >> >> /Length 122 >>
+stream
+q 1 1 1 rg 0 0 85 20 re f 0.75 0.77 0.83 RG .8 w .4 .4 84.2 19.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 7 Tm () Tj ET Q
+endstream
 endobj
-
 99 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(skill_Percep\347\343o)/Rect[35 234 285 251]/F 4/P 8 0 R/V(+0)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 159 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (caster_cd_1) /Rect [475 462 560 482] /F 4 /P 7 0 R /V () /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 98 0 R >>  >>
 endobj
-
 100 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(trained_Percep\347\343o)/Rect[300 234 415 251]/F 4/P 8 0 R/V(Nao)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 160 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /XObject /Subtype /Form /BBox [0 0 205 20] /Resources << /Font << /F1 1 0 R >> >> /Length 124 >>
+stream
+q 1 1 1 rg 0 0 205 20 re f 0.75 0.77 0.83 RG .8 w .4 .4 204.2 19.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 7 Tm () Tj ET Q
+endstream
 endobj
-
 101 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(extra_Percep\347\343o)/Rect[430 234 560 251]/F 4/P 8 0 R/V(0)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 161 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (caster_class_2) /Rect [35 414 240 434] /F 4 /P 7 0 R /V () /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 100 0 R >>  >>
 endobj
-
 102 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(skill_Sobreviv\352ncia)/Rect[35 204 285 221]/F 4/P 8 0 R/V(+0)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 159 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /XObject /Subtype /Form /BBox [0 0 115 20] /Resources << /Font << /F1 1 0 R >> >> /Length 124 >>
+stream
+q 1 1 1 rg 0 0 115 20 re f 0.75 0.77 0.83 RG .8 w .4 .4 114.2 19.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 7 Tm () Tj ET Q
+endstream
 endobj
-
 103 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(trained_Sobreviv\352ncia)/Rect[300 204 415 221]/F 4/P 8 0 R/V(Nao)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 160 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (caster_mod_2) /Rect [255 414 370 434] /F 4 /P 7 0 R /V () /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 102 0 R >>  >>
 endobj
-
 104 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(extra_Sobreviv\352ncia)/Rect[430 204 560 221]/F 4/P 8 0 R/V(0)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 161 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /XObject /Subtype /Form /BBox [0 0 75 20] /Resources << /Font << /F1 1 0 R >> >> /Length 122 >>
+stream
+q 1 1 1 rg 0 0 75 20 re f 0.75 0.77 0.83 RG .8 w .4 .4 74.2 19.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 7 Tm () Tj ET Q
+endstream
 endobj
-
 105 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(skill_Intimida\347\343o)/Rect[35 174 285 191]/F 4/P 8 0 R/V(+0)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 159 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (caster_pm_2) /Rect [385 414 460 434] /F 4 /P 7 0 R /V () /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 104 0 R >>  >>
 endobj
-
 106 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(trained_Intimida\347\343o)/Rect[300 174 415 191]/F 4/P 8 0 R/V(Nao)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 160 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /XObject /Subtype /Form /BBox [0 0 85 20] /Resources << /Font << /F1 1 0 R >> >> /Length 122 >>
+stream
+q 1 1 1 rg 0 0 85 20 re f 0.75 0.77 0.83 RG .8 w .4 .4 84.2 19.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 7 Tm () Tj ET Q
+endstream
 endobj
-
 107 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(extra_Intimida\347\343o)/Rect[430 174 560 191]/F 4/P 8 0 R/V(0)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 161 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (caster_cd_2) /Rect [475 414 560 434] /F 4 /P 7 0 R /V () /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 106 0 R >>  >>
 endobj
-
 108 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(skill_Jogatina)/Rect[35 144 285 161]/F 4/P 8 0 R/V(+0)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 159 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /XObject /Subtype /Form /BBox [0 0 205 20] /Resources << /Font << /F1 1 0 R >> >> /Length 124 >>
+stream
+q 1 1 1 rg 0 0 205 20 re f 0.75 0.77 0.83 RG .8 w .4 .4 204.2 19.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 7 Tm () Tj ET Q
+endstream
 endobj
-
 109 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(trained_Jogatina)/Rect[300 144 415 161]/F 4/P 8 0 R/V(Nao)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 160 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (caster_class_3) /Rect [35 366 240 386] /F 4 /P 7 0 R /V () /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 108 0 R >>  >>
 endobj
-
 110 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(extra_Jogatina)/Rect[430 144 560 161]/F 4/P 8 0 R/V(0)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 161 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /XObject /Subtype /Form /BBox [0 0 115 20] /Resources << /Font << /F1 1 0 R >> >> /Length 124 >>
+stream
+q 1 1 1 rg 0 0 115 20 re f 0.75 0.77 0.83 RG .8 w .4 .4 114.2 19.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 7 Tm () Tj ET Q
+endstream
 endobj
-
 111 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(skill_Obter Informa\347\343o)/Rect[35 114 285 131]/F 4/P 8 0 R/V(+0)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 159 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (caster_mod_3) /Rect [255 366 370 386] /F 4 /P 7 0 R /V () /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 110 0 R >>  >>
 endobj
-
 112 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(trained_Obter Informa\347\343o)/Rect[300 114 415 131]/F 4/P 8 0 R/V(Nao)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 160 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /XObject /Subtype /Form /BBox [0 0 75 20] /Resources << /Font << /F1 1 0 R >> >> /Length 122 >>
+stream
+q 1 1 1 rg 0 0 75 20 re f 0.75 0.77 0.83 RG .8 w .4 .4 74.2 19.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 7 Tm () Tj ET Q
+endstream
 endobj
-
 113 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(extra_Obter Informa\347\343o)/Rect[430 114 560 131]/F 4/P 8 0 R/V(0)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 161 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (caster_pm_3) /Rect [385 366 460 386] /F 4 /P 7 0 R /V () /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 112 0 R >>  >>
 endobj
-
 114 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(talent_1)/Rect[35 721 560 739]/F 4/P 9 0 R/V(Acerto Cr\355tico Aprimorado)/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 163 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /XObject /Subtype /Form /BBox [0 0 85 20] /Resources << /Font << /F1 1 0 R >> >> /Length 122 >>
+stream
+q 1 1 1 rg 0 0 85 20 re f 0.75 0.77 0.83 RG .8 w .4 .4 84.2 19.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 7 Tm () Tj ET Q
+endstream
 endobj
-
 115 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(talent_2)/Rect[35 683 560 701]/F 4/P 9 0 R/V()/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 164 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (caster_cd_3) /Rect [475 366 560 386] /F 4 /P 7 0 R /V () /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 114 0 R >>  >>
 endobj
-
 116 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(talent_3)/Rect[35 645 560 663]/F 4/P 9 0 R/V()/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 164 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /XObject /Subtype /Form /BBox [0 0 205 20] /Resources << /Font << /F1 1 0 R >> >> /Length 124 >>
+stream
+q 1 1 1 rg 0 0 205 20 re f 0.75 0.77 0.83 RG .8 w .4 .4 204.2 19.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 7 Tm () Tj ET Q
+endstream
 endobj
-
 117 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(talent_4)/Rect[35 607 560 625]/F 4/P 9 0 R/V()/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 164 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (caster_class_4) /Rect [35 318 240 338] /F 4 /P 7 0 R /V () /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 116 0 R >>  >>
 endobj
-
 118 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(talent_5)/Rect[35 569 560 587]/F 4/P 9 0 R/V()/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 164 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /XObject /Subtype /Form /BBox [0 0 115 20] /Resources << /Font << /F1 1 0 R >> >> /Length 124 >>
+stream
+q 1 1 1 rg 0 0 115 20 re f 0.75 0.77 0.83 RG .8 w .4 .4 114.2 19.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 7 Tm () Tj ET Q
+endstream
 endobj
-
 119 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(talent_6)/Rect[35 531 560 549]/F 4/P 9 0 R/V()/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 164 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (caster_mod_4) /Rect [255 318 370 338] /F 4 /P 7 0 R /V () /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 118 0 R >>  >>
 endobj
-
 120 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(talent_7)/Rect[35 493 560 511]/F 4/P 9 0 R/V()/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 164 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /XObject /Subtype /Form /BBox [0 0 75 20] /Resources << /Font << /F1 1 0 R >> >> /Length 122 >>
+stream
+q 1 1 1 rg 0 0 75 20 re f 0.75 0.77 0.83 RG .8 w .4 .4 74.2 19.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 7 Tm () Tj ET Q
+endstream
 endobj
-
 121 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(talent_8)/Rect[35 455 560 473]/F 4/P 9 0 R/V()/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 164 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (caster_pm_4) /Rect [385 318 460 338] /F 4 /P 7 0 R /V () /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 120 0 R >>  >>
 endobj
-
 122 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(talent_9)/Rect[35 417 560 435]/F 4/P 9 0 R/V()/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 164 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /XObject /Subtype /Form /BBox [0 0 85 20] /Resources << /Font << /F1 1 0 R >> >> /Length 122 >>
+stream
+q 1 1 1 rg 0 0 85 20 re f 0.75 0.77 0.83 RG .8 w .4 .4 84.2 19.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 7 Tm () Tj ET Q
+endstream
 endobj
-
 123 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(talent_10)/Rect[35 379 560 397]/F 4/P 9 0 R/V()/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 164 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (caster_cd_4) /Rect [475 318 560 338] /F 4 /P 7 0 R /V () /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 122 0 R >>  >>
 endobj
-
 124 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(talent_11)/Rect[35 341 560 359]/F 4/P 9 0 R/V()/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 164 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /XObject /Subtype /Form /BBox [0 0 250 17] /Resources << /Font << /F1 1 0 R >> >> /Length 126 >>
+stream
+q 1 1 1 rg 0 0 250 17 re f 0.75 0.77 0.83 RG .8 w .4 .4 249.2 16.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 4 Tm (+0) Tj ET Q
+endstream
 endobj
-
 125 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(talent_12)/Rect[35 303 560 321]/F 4/P 9 0 R/V()/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 164 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (skill_Acrobacia) /Rect [35 714 285 731] /F 4 /P 8 0 R /V (+0) /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 124 0 R >>  >>
 endobj
-
 126 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(talent_13)/Rect[35 265 560 283]/F 4/P 9 0 R/V()/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 164 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /XObject /Subtype /Form /BBox [0 0 115 17] /Resources << /Font << /F1 1 0 R >> >> /Length 127 >>
+stream
+q 1 1 1 rg 0 0 115 17 re f 0.75 0.77 0.83 RG .8 w .4 .4 114.2 16.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 4 Tm (Nao) Tj ET Q
+endstream
 endobj
-
 127 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(talent_14)/Rect[35 227 560 245]/F 4/P 9 0 R/V()/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 164 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (trained_Acrobacia) /Rect [300 714 415 731] /F 4 /P 8 0 R /V (Nao) /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 126 0 R >>  >>
 endobj
-
 128 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(talent_15)/Rect[35 189 560 207]/F 4/P 9 0 R/V()/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 164 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /XObject /Subtype /Form /BBox [0 0 130 17] /Resources << /Font << /F1 1 0 R >> >> /Length 125 >>
+stream
+q 1 1 1 rg 0 0 130 17 re f 0.75 0.77 0.83 RG .8 w .4 .4 129.2 16.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 4 Tm (0) Tj ET Q
+endstream
 endobj
-
 129 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(talent_16)/Rect[35 151 560 169]/F 4/P 9 0 R/V()/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 164 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (extra_Acrobacia) /Rect [430 714 560 731] /F 4 /P 8 0 R /V (0) /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 128 0 R >>  >>
 endobj
-
 130 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(talent_17)/Rect[35 113 560 131]/F 4/P 9 0 R/V()/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 164 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /XObject /Subtype /Form /BBox [0 0 250 17] /Resources << /Font << /F1 1 0 R >> >> /Length 126 >>
+stream
+q 1 1 1 rg 0 0 250 17 re f 0.75 0.77 0.83 RG .8 w .4 .4 249.2 16.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 4 Tm (+0) Tj ET Q
+endstream
 endobj
-
 131 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(talent_18)/Rect[35 75 560 93]/F 4/P 9 0 R/V()/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 164 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (skill_Adestrar Animais) /Rect [35 684 285 701] /F 4 /P 8 0 R /V (+0) /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 130 0 R >>  >>
 endobj
-
 132 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(inventory)/Rect[35 604 560 732]/F 4/P 10 0 R/V()/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 165 0 R>>/Ff 4096/BS<</S/S/W 1>>>>
+<< /Type /XObject /Subtype /Form /BBox [0 0 115 17] /Resources << /Font << /F1 1 0 R >> >> /Length 127 >>
+stream
+q 1 1 1 rg 0 0 115 17 re f 0.75 0.77 0.83 RG .8 w .4 .4 114.2 16.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 4 Tm (Nao) Tj ET Q
+endstream
 endobj
-
 133 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(magics)/Rect[35 430 560 558]/F 4/P 10 0 R/V()/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 165 0 R>>/Ff 4096/BS<</S/S/W 1>>>>
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (trained_Adestrar Animais) /Rect [300 684 415 701] /F 4 /P 8 0 R /V (Nao) /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 132 0 R >>  >>
 endobj
-
 134 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(concept)/Rect[35 320 560 375]/F 4/P 10 0 R/V()/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 166 0 R>>/Ff 4096/BS<</S/S/W 1>>>>
+<< /Type /XObject /Subtype /Form /BBox [0 0 130 17] /Resources << /Font << /F1 1 0 R >> >> /Length 125 >>
+stream
+q 1 1 1 rg 0 0 130 17 re f 0.75 0.77 0.83 RG .8 w .4 .4 129.2 16.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 4 Tm (0) Tj ET Q
+endstream
 endobj
-
 135 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(notes)/Rect[35 100 560 253]/F 4/P 10 0 R/V( )/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 167 0 R>>/Ff 4096/BS<</S/S/W 1>>>>
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (extra_Adestrar Animais) /Rect [430 684 560 701] /F 4 /P 8 0 R /V (0) /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 134 0 R >>  >>
 endobj
-
 136 0 obj
-<</Type/Annot/Subtype/Widget/FT/Tx/T(exp)/Rect[35 39 185 59]/F 4/P 10 0 R/V()/DA(0 0 0 rg /Helv 9 Tf)/AP<</N 168 0 R>>/BS<</S/S/W 1>>/Ff 0>>
+<< /Type /XObject /Subtype /Form /BBox [0 0 250 17] /Resources << /Font << /F1 1 0 R >> >> /Length 126 >>
+stream
+q 1 1 1 rg 0 0 250 17 re f 0.75 0.77 0.83 RG .8 w .4 .4 249.2 16.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 4 Tm (+0) Tj ET Q
+endstream
 endobj
-
 137 0 obj
-<</Length 524/Filter/FlateDecode>>
-stream
-xú•ñ¡é⁄0ÜÔ}ä9∂∞ù8Né@`K’b≥Ωªƒ§ÆBR%ÅC_¨‘√J}ä:ƒ^vQ%‰AëåêÚ˝3˛b;!#Q⁄ö¡Å'"Û_¡˛›4ÉÒÇ#êÌÅû/sü!ÃE!‡ í≤ºÄ	<¡vÛ≤0œi“IFq_E03$—uDÃŒÀtæ ñÈ$ù√&Ÿv9} ÷èoÚ(à!éˆIîõÅWqlhh°wﬂ%l“®\wÚ§J¯'sø˘9∂
->f_>√OŸH3—ù,w«R6~µ8%ÆÿF#†c~ﬂlVÑ—9`Uî'L/Ùß∫êy}›˛ÌÍQú˘≠‹IˇÍé^7∫Pˇ‚˝¢2x™O∫ eéòøãòï≤mU;^Èì“≠w'úã·!ºÙ£iD^ÕW∞)Ø˝RXÃ_ßÏu%=˚È•èÈtÚü≥…M°∞õßnû=W¬$:ê≠Á”d°Õj‘æÛ¢Kıı±kjœUÚK˝¨ÓPÓÿ∞S’vç˙Ö—“{ÙY≠œÚh}ñGÍƒpöÃÍ™Ìtw‘œ<wQØ0à„;:´–ÒXÖé«*¥«·≤ÍT©ãøïôB°I∫C°•—
--èVhy§BgË£¸¶Ã„èŸœú?Gc˝9ÎœÒXt8Cg≤—Ìcœ~Q!ÌYmœÚh{ñcÔÜÎê”
-endstream
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (skill_Atletismo) /Rect [35 654 285 671] /F 4 /P 8 0 R /V (+0) /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 136 0 R >>  >>
 endobj
-
 138 0 obj
-<</Length 282/Filter/FlateDecode>>
+<< /Type /XObject /Subtype /Form /BBox [0 0 115 17] /Resources << /Font << /F1 1 0 R >> >> /Length 127 >>
 stream
-xúï“AnÉ0–}OÒóÌl#«∞B“EQq`ÅI®H“B¬’zΩ°(J6≤4ñ%œõÒ»Ãa>ò√˘⁄=îíêÅƒÇŒ’K§·ÆÉÆ¿oãÓQ-OBÙØkÑÿ!œ÷o–üHÙîI:e2«™(A!X<æ∏Ò&çBù Aûƒª|ªŸ>Xj§¯†pIAxOîõY’≈¡ [Æ`À˙bz€‡=›ßÌ⁄YºÎÙ_¶5Ù»¬4≈µ1ÌºZí≥©XfˆÑ+ü ˇﬂfï7qK[ŸŒÃ3ª#K€5Á¬ÌÈrûŸâ∫+Q‚o Â\f¯4ﬁ8ë¶-ÃiÆ¿à≤ÓÎŸ	4îA/Ê˚j;Xî‘I79øÍÌÆ·
+q 1 1 1 rg 0 0 115 17 re f 0.75 0.77 0.83 RG .8 w .4 .4 114.2 16.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 4 Tm (Nao) Tj ET Q
 endstream
 endobj
-
 139 0 obj
-<</Length 594/Filter/FlateDecode>>
-stream
-xú•ñKn€0Ü˜=≈,€ç√áûK7±S1b$ÍhâVXËa–í–õı@](–;î∂)u¥öÅ 
-4?Á√à˙Ãf,6„¸∏ƒ`K`«!Ñië˚≠a˜Ê}7KÇA∂~∫‹sÆ¬]dqöBV√€{ò√'x⁄‹øÉÏ3,≤±“•ªJ6Kéªƒ¬-itëàSƒfÒ¥∫]ÕüK‡ü¯±ñánÚ*@ú[Xö¸E¡Ên	∫0ùt_apœª[–![?¿^YÂ–rUÂ}•Ï¥ΩBŒ∆Õ6™úÅº	Øí6ÀË0œmªUπQªDdVõF˘ö∞¯“Ÿ©8Ê
-}pıÊç©ï9 HôÑQH¢ÿìtïÓÃ°nß#åxÑ1âåΩ˙˛ê ?Wﬂ™AUÂGÚ8ôÄS¬ƒ¥ÕãŒM≠õ1á1O1& )BO—O.>víªI›ãsıùŸWmç˚ÆéAaR_›î™¡Ê1èpiáù´óΩÌÃ`
-UhDDÜàHﬁé´¬ùd≥3πS‹ZïòW* ´: ©:z\5∆	7Y“I“2∫ﬁ†NÖ$;Zí-Ω T·ˆ/uç@ [Zí,-Ω!◊ßˇ÷∏)ê5-Iö^èèªüπAÙ/»Ç$A/»ç∂πﬁ£F »ñ$KÔ«Ávkı`ÜJ‘Ç,jA5O/_$S;…°f¡…™Ê$UsÔ»èmÈƒ– ∆¿…ûÊ$OsØ∆«mß-¨ö]kk‰,»öÊ”Ù/∫J˚,
-endstream
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (trained_Atletismo) /Rect [300 654 415 671] /F 4 /P 8 0 R /V (Nao) /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 138 0 R >>  >>
 endobj
-
 140 0 obj
-<</Length 333/Filter/FlateDecode>>
+<< /Type /XObject /Subtype /Form /BBox [0 0 130 17] /Resources << /Font << /F1 1 0 R >> >> /Length 125 >>
 stream
-xúïìMn¬0F˜=≈∑l7¡c«vº§"–-∏pCÄTÈè(pµ^ØD•"≈’»“Xñ<ol=}"DFt,€5¨’–N√ƒsÉ’ÕΩ«`,!¸
-tZÒ^Ïàã†4¨so∏ù`àgÃ´…¸+JÈåÙÿ)≤‚8≈ XúπFÚÑ√i˘‰gî®f£r^.˛∞ˆå¢#Öt,R]°‰˘1„∂ﬁT£1öeªá¶√7Ò~‹ˆ_¸„üa‚'Î–’˚.ly≥4âÀ∞*¨3‰}(˛}¨ÕÛÛøC◊ºÔ>0¿&º¥]ªÀƒ«	”èìlú1E?NÒqJÙ„r6N;Ÿè„´–:°¬qîPaŸ∏‹&T|\ûP·¯8ëPAÇÕS&~.îL» ~0dë∞A¸dHù–A¸hHJ˘‡gÉl ?§R>¯Èp)øÈ¯0n´L
+q 1 1 1 rg 0 0 130 17 re f 0.75 0.77 0.83 RG .8 w .4 .4 129.2 16.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 4 Tm (0) Tj ET Q
 endstream
 endobj
-
 141 0 obj
-<</Length 270/Filter/FlateDecode>>
-stream
-xúùëAOÑ0ÖÔ˛äw‘€K·à
-+â b◊{É]¨Aÿ∞,Òü˘˜,ê=,Éô‰MöÃ˚ﬁ4C‚É8îé"–U ÇÉû}kÏØÓ$61#ê{–©Ïúuÿ¢p9D@~·zã;˘ˆÚë<;-›:â„è)ÇY	º%¬g"zŸ%yòFô|~EÑ,,äP&o·ëBÃ@:≤(∑¬‹êÕ+≈¶¸P»bËw”´A◊¯¡`Ám;5e˙ÑÉÍî˝j©ÍÚT´n]ß‰ñ´ ﬂ¿ˇsY·ä	ê4Énz’ôv5Ç{ÓÑHUe‘qµ›ı…døoõRõ~}>„˛»⁄˛ÒﬁÌ|˝ÔÉÓånJ£Œà_∑õû
-endstream
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (extra_Atletismo) /Rect [430 654 560 671] /F 4 /P 8 0 R /V (0) /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 140 0 R >>  >>
 endobj
-
 142 0 obj
-<</Type/EmbeddedFile/Subtype/application#2Fc2pa/Length 10714/Filter/FlateDecode>>
+<< /Type /XObject /Subtype /Form /BBox [0 0 250 17] /Resources << /Font << /F1 1 0 R >> >> /Length 126 >>
 stream
-xúÌzy8‘›ﬂˇcWñ(K4ñím|fü!Ö)í}/Dcf0ˆfd+BB)
-IB(•M•îKTH*î$)mñ≤T*ï¯ùœòÓªª˚˛˛æœÛ\œs=œﬁ◊Âö9ÁÛ>ÔÛ^_Ôs>ÅÿÏÉ@ T¡'ìÅ£#d“Òƒ	Â‡FAﬁ·UœÁ≤ò·
-˛+◊&Nà!Ãià«˚Pqë¢è%BL}ù@“ßê8}ûEÅò8GÜ•HT≈iœà£sˇ∂)ÜŒÂ≤8·Ï–.‡ªÃ_†/0iëƒ]›π∫‡òÑNÁ¯V{fõ8||ô>v0›èe¿ç”ç
-Ç%D˙∞ô>À¿:íÕ˜7V'cIÍh€œ?ú?à`≥"ÕB£å’!4Ñ3hﬁ¨/;(»X=$4Ñ•é≤B∏∆Í˛··aÜëëëòH<&î„gÄÉ ﬁM}π¯≤0z∏?öi¨nCÑ(2Åä∆c…<ïJ#bI2ôå∆Q¿K@√œ©T,Gƒc(ö@!b*áá08
-éF a1d
-çÉHã&‡(<	ç•R0*çü82û˜òä√”dá«¢±S–xlã∆í¡êHZ`1X<∆càTGªC∞8XF Z1"î≈QqhÅo6ÛÅ•ÕLc˘\X˛*∞9,ÀJ‰oB•ÕlJÊÎS'0ÊÈà„ÎL‡€@†ÕÿDö1ëHÂõåGœ∏‡ßK¯.¢ux.#Ú]à„ªèûqÒåÀ	ñ˜úL§·ÒTÅÄCÅ20O⁄SHh"å±d4"`à8 è√@d*çÄbHd4áÎÄÁI`{P®âá’ Qx€Õ|i3Ûx>Åø=#ÜƒK·oC¢ÕlK‚´A‰´º√Sè˛5qŒïü@Ó62‹‹A  3I4Ö∆¿|∞/H,l'á!Î	Tx»Ö¿<gM¿1D8;D À±80DÎG¡!Í/c‡m8'f¯≠zèj‡\qd2œúü”82É•¬è)hE∆c x‘ É\"c1<ŸÇEÓ˘Éâ‘ ÄO†6>"| ?7„u`5ñ?cıjæ‹mD2,êüuÎôl‚	ÎäßÄy
-—˙'œˇxúıå?AÖÃ<wÂÛ[ˇ&œ›G‚Ì@≈ê®xéDƒ‡ ‡@(<∞o∆∞Äƒ	T\íp⁄ÉíƒK@≠ ?Å\^$¬ã à.˜aAM‡xQ¡[„¡<Ñ%ºO≈ìi8∏&@¡ÚÇKÛT8ÿò k˜Àòå!S)Æx†$põ5$%D^ Ç, ∞É#ë@Ù`å÷c—?ç¬®<wˇ9&É˝…Æ3∆b˘üx‡h¶àg¨#–pÉ„)@ i¿0` úT8é N8æ◊®T™+û  8è?˚."`„Å}@XêÃx‡d"<à5∞-ò˛Å≥§Hú0Ç √"à|¬YN%˝ÉËBX‡GÍ?Œ`–∞≠A†Å¿Ω$¿Ü,d/û¬sà˘Õj‡^˙g“ëÜ√¡À¿nDF·d≈H·Ì∏`ßP·1®1‡a†=®!· Äí`ÂÒ`Ré %í˘è1(1< ÒvÎüXg0ÖHr%ÄƒÇqˆèyÄ( Åq Ü8ÉÿÛç•RÅSTk <>AÑp4ÿGÄ€∞è√Òr	è„#	\¬<õq36ØÊ{ ‡Æ@X,	: – º„…p ﬁ6D†.√>dÄ_ÿ∏SÅ]»0Z+@ì¡#± s*ËpŸÅœ∞å[x (@k^"QhpFPp§ﬂ¸" 9º»2˜ÁÑíB&ªÇ™ VQ≠·1	‡ûˆ!ìiêq$Px^E¡ÎgÃ¬ì`~¸/c–®Æ3Ê˘ü8wõÉp|˚∞4"úí∞{qXPÇ S∞p
-ÇçaƒÛ˝T(uà˘Û∞#‡ÊK ¡çÄ¬+Y*ÉRÅS(¡Ärwg∞/ +kú=‰‹…E äÂuE~t<ë±¸1Æ(PqpÀá˘âDk Ã jÊôAÅÅÙ/
-nÉ π‡8?ÄÇ˛Õl˜üá$ü :#P› úÅ‡≥–rq©˛óìûO(ÁNzﬁ1ÅÉèoÔa¶?˛d¬ﬂôoA<VáEg172Ÿ~ÏpzêSË&ÉÂ∆ä2Áü…vX8Éw(aEr°L◊ÄœœÂÒá~Épù¬bö˘Örÿ·˛¡lÜã…¶sC}√#Èñ©+$ºÑBfÖ¯ÖÖÎìÙ√˝Ÿ!ÅÏ?øá4˙möÈœ
-âR‡N“«B˙Xä3ñjà≈Ç£_b©ÓzPêÈåYñ!å†MLs|îÔ°•ˇ⁄C˛tÆ?ÜIáè‚àòß4ÄDpy>*aq√Èúp%Rcüo–7‹_—k`FwX∏/:ò¬ˆ\zêü/◊üé#íò∞–µh€˜Ωû–Öçã€˝Oˇÿ £,≥úa±hæÆGëˇŒÍ¥ù/at¶	!∞ÉØ•÷ÃâùÙw-AtvL‹a%è∞CÄf!ñÂ (Ω®‡0C6õiHá(,
-é¿“ß2âpG`‡Ù©†ÕÈÒ,ÇëâWj8Oñ7àãCÂx≥C|CÛ,Ú£˘”√-ÏùôyøÑ±â•…e˘j,5˛ÌÓ`«’ÄoÔ¶Âc∆nBÿÃÛe∂o≠Uø_ﬂ•~I+≤Û>I†ëEíy˘>ê∆b∏ŒDò≤±πløz¯&+ Êóçxí˛S7üe˛«·g≥˜üÍn˚Ô7hF¢Œøì¯gÚÂ.^¨±◊˛±nÛh∫±ÿÒJπFJ@õ€àâw:#™K§£vFÆˆøì˚GÍÚ≈^œ(ù3gçdè~Ãk•QëP˚F‰©iÚéîrˇ⁄	ú?ìaŒb±y78L”˜ó§E Ï))„Æéx∞Ÿã¬ôÿû¥Nb†I—TPK\'î
-%
-%AâÇAEÇHiâ“…¡πaª>≈cGV.dr°9¬b:…´ìøÃA"%Ñ–¨¥HX–%(©‡‰dçaÑ£i8{S¥%ÕÌüpD¨4fóî,hZ(',§.pVÉüœpqÇTÃÁ9@M"›¡êÜxﬁê‡Y¸Ö´-òë*m∆
-1µD€Ö—Bı–÷÷4¨
-§<£ìˇ¿–N,Nõ¡ÇëÍø⁄ÅB&"•`^\ âD\	ê≥∂ÿ?î∞„‚¸∂Øµ∂Û9≈û±Â6ny≠¶—ë∞®Ñòo}XvÕ≤—›⁄7ÃÚGIVlMw∆Ω°Ò=¨'[êÀv˜M]¬Gû—Í5B^êb§‰*∑⁄‰+’^ÿäóYy¬"õWâ¸»ã^)¡us9,»êŸ¢"˚Ù‘ZÉ71ÂΩ•πÛ≤lWèπO<ﬂr$”Ía–ï€ıB:Mô5õd˚U∫Õ9êAzè\Ëª⁄ù."¢TºV—
-m3∆ø?„—VÒv*Mqt˛ïGd±}'ô˙öSÚ&÷bÓ˜3‚sîÚ¢ã»Y§√ƒÊ’Õzπ°¡ïâ™ß.ãs
-R…˜Á6â´RÔ[~D"êáë~¿#H∏Re9çÄº`´h†@H„Â®∆“=˚3Œ§n∂·*®¥æ9R™Ö
-ãÍ
-#ÖÑDêH¢C‘ücH Yˇg'‚ÑÎœ§#7N~ÍË√©£o©Ôà≈0XHÛè•»d˛“P7Ï/kyY†ÇFICsÅ™‚`
-πm¿âÑ¥·ãQÍ˙ßA‘ﬂ4ˇd@B*0Î\‘|î‹«iõsZ
-8Ê‚
-• ˛v·–\¯±Ïî†Äp§(,ˆs± ÍóM≈!¸üèP®%íöñÍ√ @x}"ÉI÷7^™>›óE“˜e˙`¡ıöÃ◊˙ﬂäJ0Q âH§Ïb-*&#îﬂV
-øÚ®á*Òì_ê“=]_∂IÎß…véÎ≥€˚ñM¯*Ùö—å'Ñ¢ä¸Uó*Ó8]9≤uÚÆ}WïwP|»[è-˚=†˛yR≥*¡[aySSh±SDÛáE¢ª,W≈7\…\‰“àró/m€}0«⁄JŸ=!yBÏ∏i)~ø&»¡Q<ÿÿÚ¨|KcÚZë;=#Öò¡["‘*º'∫[v·Üw∆Ñ-]≥X€.s¶˝€¬ß~òò˚(™√ïmÜ›©q{4ˆd~ÚYõ˜∫æåõ\x≥k„‡®Ç'sÛﬁ)≤ADnî+≥?‘¨M:6ym˚¸Ä–`EÊˆÆiıú·À£˜=ïÑíb˝◊=¨Œ›dØû-¸∆?ΩË=◊–z¢N3˙ıQˇÁ£ä?:˜tbÙM%ôõ§]Ω≥≤/ÁÔPZv±n ¯„MZÑûˇÇ#ﬁ¥§•Óõ? ≥Y^á£ô m¨vãl∞8˛è⁄•?,Ü˙ææF}˜∞_¨[ú∏˚È©OŸú`èuc©≤èwÀN|1P~˛òË÷3ÎÂ“úQùÇÚ®S/Ôú*õ¥/-”!€ûúº∑ˆ†V™æ:"˘®j!»≠ãAcö_4I;?)ŒúoW£IÃù2b˜(WŸºÏ1P˙t}Áãé)Nd«º2›n˚À%%ÑS∫(dM÷EŸÎÑù†Da;(EûÅb9-]F”˝ÉIú†Ò|/úCyÔÔplá]™Ü}*ÅcG'é∞¸ü≈dp§òL¡íÒ¿dp-#˛øˇ˛À0, X%—bx°µ*øeæ∂kUÙ1’â¿œ_ª28GsÁ)ù‘1Ì¶´b,D´U√j÷£ﬁ≈$^¨˚˛Mj@´4m` Á£‰Ü˜Çﬁ´ïnsë[π˚^)⁄Ü‹±ç!ˆÆïÈ{î∏†ß}æ-Ú‡≥’ä©—áSè¨≥ızn+a±ˇ√&≥G∆∑QÔπ∫Ë«|WßCcÂ•òY_5¥∆»⁄o⁄V‰?ÿ-iÈñ|ù!Ì„uSÕ2äÊ.gC±Ö„ÚgW1È5!yÆ‹ÈË∂z˙™LËëáCÈı™è∂t]ªÀÆ-ZÑ∞…Zet ›~YxH˚™˘cπ(îÉw»˜ 
-˛ˆö∞fm‘yÌ†ı[™6)Ô[v Rms◊Ö5oª[E≈;QÕ%ΩÂ˚œ_t»ÈŒ<ÿPq’˛∆‘≈#÷Ç˚÷Îgÿ˘º~ÆÛÖ]§úèzx9—›v’kÆË\;—[gæj[ﬂoFΩ{˚±b£˝Ê-ˇΩ_ÌS´"â]≠≈}è:¥˚◊‹Jq^ßYÔW,"F|rÂÆBïyÈsâ¥ÓæcáÓnòﬂ.-{„Àı^En¥ÀÛ∞£Cwß"Ó∞ıgßÍK7òóËº⁄∫ÎÅlæõπ˛Züá∑Àæ≈M‘?¶Ão!Æ/ :\¡*3ÕÌüåª≤z¸DÒ∆…¨3[áéŸ*pSŸÕÍæ&en∑ìnq>ol8ÒTõ%}õVòSï≤6Gm¥mÔÊümi	ØÅÀ˛—ñD!a‰Ø8ç˛ØuÄÏjˇ≤…¸⁄'u÷l2åˇvÄë5∆u{Wìu6∂a3ıK?Ç˛ÉMÕÏóÆI˙uM∏∫ı·r”µŒküˇ–UÓíæ-ï !ÈßüëqÒùﬁºUPw"–ıSÀi’jùÑ”•GÔ€^.óı*KFí˝’Æ≤ê7dg—˘/Áøc˘.]Ü7.Q +π⁄Í«\”_ÆÜ*i8π‰Üë^∑ÀÂ∂®Áª£í∑›7∫iA6Ây≤ûÊ‘úc˚ZÂ9 YŸSL€ôµ˚;˚«ΩQçeÅ˜$™©»ì¬ª≤ 2éIE¨[ﬁá ¸ÙÂÒws°ì!!RÕãŒËxó⁄vO<òºÛ¯≤„ë´î≈ØÕΩLmπSº±N'Qvc«´œã_8®w ?{Â¥;tMÏÇtØ∫+íÁFF´%ƒ‹˛≤PÂ`˙≈äùfÆÅ¶:sßÛ”Fî/ΩÁ˝q>Sµs§~áï¬€Ã{üŒ‘k	ŸTÌ-&/>ÊG|œ¯µFÚÊöH}øµc˝Á”6æ^)],≠ÿ¥‹C#Œ®√˘®·Â∆;s‚Âc"∂Lπu≥'$óØuŒ@¶m6o`~[4|c´AXíÓg◊ƒÒc-öèÇº47V_k§ √>üü—>ù≤‰j√…UçNB9˘ï∑ÃOz}öLMSÙ?LîzΩ%`´Ú‰€À”W™û\cQq˜ùº¡ÅX˘ë3˘í67öÔ"?·å3æ,!HL©ß≈ıÚÚÛvêÛx¢È˙Ωm]Ò•ﬁ˘yæb€í1ﬂDb„ˆE\ÈªÖ¥˝Ûß√~‡‡Ã«≥√π·Œ°Å,pG.fD–É÷…•Aâr)§åà@Q¢\ò
-@"±Rp2mH^çd	¢ 0C	)¬|N1i$™(
-¡ú?k£µÅ˝m
-M
-Ï~€¯⁄˚≈«˜ù¶- Ø=ãΩh±«=NŸ‹A C\4[‘:î/©Æ ø/¿B†”P±X"C"A8ú;$èD∂˜Ÿvµúé+1Eâ“æ†I~w/~£§?1_ä€πk˜·KµS^
-≠ÿxÈ˜Fπ˘Øw	˛@TRÄfäù…¡…9NÙ¥9‹“Ÿ\FËˇÔ¬!	â√è$$ùùL±™–¬ôñ(œgìhK.w;ƒ4‡üÙP	GÇõ*"CT˛⁄Ù?©øJJ˝¢ú5ãºà,˘˚µ(æÌ◊¢ƒ–Ìõß≥å˝–:‘uåé∫==WõÆÛΩ8µ’ª¨d¡‹i{õ];õ≥«Xt°K‚ıútRÄ¸ÈÏÅ=OÙV‚∂ïâ∑Fæ&åî1=¶™ûßÙ†ãó6üì&™≥Ÿüw!â[áŸr‹ﬁbi—Ö1ˆ¢±≥)⁄1Î¶§‰‰àf_≥¨Aì?¯ﬂëzØ)1≠l%3◊\÷”¯à\rï’*_Jâ≠ç÷Ì}W6Iﬁ±M	8ﬁÄñBjzœπÁY>•ÚqëƒæaƒﬁgÀ>%‘ëıö€)µ˛”Êosölöì‹,ı^Q∏J´¨Gn}ºt±Îi¿ÒªË+Î;ox•ô5dúV¯§≥Ñd÷áÈ>hKXÂ8†‰6Ïnææ{}D˛‚hiˇmGrì6ÌÂ‰∫LwΩ§˘úf˚iô^ªôÒ!@DwõÂ@üæaÓU™»øÍ˚Tõ*™W˘µrê©Ÿﬁ.V¬zßœóékûâ\æm'”!cÔ.Ijé’Y„Úo®≈Àvè’, c>1*g˙_Ò€ïÏ˜€…|^◊É«p‰∂;—_Z‹-ÁƒíùÒõço&∑Æ{\øÌÄC‘_:Ÿπ±≥çúç5h€{nsÔs‚ç´ ˛÷O@J†øk⁄ô÷’]À≠¿…¢•w£¨& ⁄›0wç;∂|≈≈RçØ:´ó?w(X¥ $Í˙’m∂YˆÕµr¸üŸ‹˝ya{Ù…—°Îã∫W| ]'˙&¨u«¯àE⁄âñw”ª‚‰˙Ãªˆæ…ØR}E0ü¶∑GMƒR®/áïΩ}∏ué—´≤ìÈ… :á…j_çûmˆtÓ≤n–±⁄zèæA(û{∏π-ÚL ÒïÁíBjSuÓÊÁù,)L\-"Iæ)¿pÿˇƒqK®™_3[‘Ï·ΩOﬂO+{•ÌyÒ\4zFyﬁ∂Ä¬“Å≈¶€•ë√ØÆÓû*p¥WMÈÌc∂∫|UC?ª®=zH+§Ì
-¡¸‰uª~˘»ß´4û“ıÎ±⁄7.«Eüº‡ˆ‡˙ª{*¬}ûõYñgﬂ⁄ú<“®eb{ÙBe∆Ω-h«":º ∆HŸÇr‚“pÊIw‚K√Â∂‚ÙN»Üvp⁄sKÌÚrC=¥¢¥) ùiUr_¨m˛£"ø%¶¡~ÇaUãó∏~›ªD´¡ Jä»ÁÀG>‘n‘Ì[7%nv+ûΩˆﬁVf_È–5≈ﬂë/Í\î¡’ò.≤øÄˇﬁ°É=)ñ7Ò˝Ø¢ÚøÉø◊\~—T,QCø⁄ªåÈw¨&?X∫„8$≤dj¸y ö˙la¯x	Ktır2n[˙Ò5Eu	AEuπ≠∫áJ«[∂<ñZ“◊lS2 ÿ˚ÊÛ∫≤v‰7€Øè)∫Ós[7∏Á&‰ñ=r∫ıR±≥˙ÕMl0˚É≈◊†U;Â7\˙Rn‡UB¥›NŸŒ>D(∏o”E3n%O2≤&;¬ÆÆà∞ıµ,ûúP®Õ[p©,Ú‘Ë% ùÀt7"§:Md"[¶◊/–7ÈËM[Vß–i"gz†%{Ö^,"–q≤∂˝%1ãUÚ}B.ﬂŒŸÖ:ÁÓèΩ2·ﬂßæ0¶gÁ^Zö¸Eå,Ìúœ¬¢ö€öÈò—⁄#m6U+∞˜ñﬂDÿ}x¨âf?‰b¬¢NÙ∫.˙˙ æd‡ÙôœﬂÀ{∂¯ü\˘ä¸pÉË|+Â˚‹≤¬çsWÕ˚ÚŒ^Í˚T'
-ª‰Í˝6ÙfOŒ4ËÜxÎ**øyqvt∑Á ÷Eu‹ÿåí¡Í‡ƒkãYI¢{X~˛6C—ˇ°£ˇºô£ˇøB¿∏_pmΩI—2ã›≤7!e{s“sö.=~ıO'ÍÃwdœﬁ†∑ÃÓÚb1àSﬁ√˝dtM*∆∏ÛVü¡Ám¯ÿÅEn&
-∂÷N>8X.ÌI`ßıƒÌ˚Î≈EOç‘ïöﬂS˙>g	k]+∂ˆˆ[?M<âm∑YÊÅ	çlWü§úÖŸ$u∂D%.è4—w?Òº=≠‚πKu|v”:G€5·ΩÎW≠=xÈt¬®«‚⁄CåﬁeäC/⁄˝“Só”∆fœRÔΩ˜ü‚"∏_Í’ÿø∑Æﬂo™Á®¯«RsôÛ∑ ﬁ€}∆˚•BSï…≠Íó_;≠6ﬁgÆÕ¨∑™Ûäl3nÙ(îø∑˘Gvv?“J‘°˚;s¸§Ã1˚˝Áö8›πO+ÚåÌü⁄7‰0”ÉOJr-6BEﬁﬂ?∫ Ó„m˛v€≈„ÙE◊%ñOƒá÷ødÀCoÇ∑ÆÃ‘Œ’?”C∏^S™≥∫?•©ó"Yâíƒﬂ~ôdˆæB’™w∑›ÁΩä=ﬁ€øΩ”ˆËˆ±ëá>´Ei'åΩ[âîN>bhµõ˘@w}@DÛqŸµÖR´jXÁäí1Ò◊÷YŸ§-
-æ(È˘‰ÿ√&˙û9¥ÙyÔ’ñ%≠û2ÍÏ“†ÆíVŸ8ÁÓGQ¸æïïvà◊·?^ÿ¶pí««ê)™¢’*uâA¬“ôGå
-Æ¸®3…è®ó|®@›jŸ˝2{·r{—ÄG÷/v–FﬂﬁªŸ`C¸ ]>œ≥7
-⁄±kLSØóÒ≈.˝{l‚;Âˇ´L¸ÅâÓˇã∫˝ª∑?ü3€ÂÆú.ÏS:µ©ÃUπÎƒπÛôﬁ9—ü2/…ÈkN‘÷)ùŸPs=Ø5:Ø'(oäîw=w˛ëØÙ
-Æîñ⁄sœã◊U˙x√“ ™∫˝›µ˛„€î§>—KÙv,æÌ ,≥‡ÎbÈ¸ˆ[„;nò ŒùZ¢⁄Ll}wï∏¡§lªCÕÁë=πÔu∫
-b§c3>æñÛ‘æô¨~}ÁBˇ÷∑î¬„ˆ9¥Ôîi≥-FÜ≈ãõW˜`ßÌ9#c[ä#[BËW‘Ü¥+ü;*Jzà˚>YÊu–ÛÈSÏÎt÷Ù¸Ñ”ªK±N∑hwW£Bb;ôÛœkKø∫Ä1º‰ÏŒqu˚X´:˙ÜæË)´iÓj1À∏1Òí;O≥Nß4™∑£œç÷´G"FÕÒ%ÖÔŒ
-c}/¯ÜVÏ»*ä€7WJÌÆÈÑ◊X˙`ÎÂ∫á¯ıQ˜ÔkaÔŸCÆäjw@}]÷Ω”=RÃîœﬂEmS#>-ùŒ‘;âë¯,‹ì{±@L–«∏íXcÜ∑˚`‹Í9b∫ï™;∑)£>x»/”ì<≥∑§¿Ùí£€%≈⁄≥u›v™G¥OßÏﬁËπt◊Ó‘√ãÂ´∫Ñ&7”3ÇÃùç<õœ&ûŸ÷tNc≈¬CJ#%èú+uú ØnrÙ€˛¬wI;8cLöÁ_‹æ÷¬„Ω&ùZb›€u´L˝Ca≠áµ^À¸˚BÃÄ‰ﬂ‡ˇO§ˇG ˇØ ˝⁄âÑΩíπÇËSM…*ùI*G;k™éÆó\oŸRU¨›™_PµˆÎX“„e°]–)q…ÛK8‡UÈ,˘=œ<˛•Ä¬©nÆ‡ıT∑ﬁ—Dó∏ó„±
-o•ñLnõV+ª~™˜âr÷I≈÷˚PÑÇaV¡›~Çs®Jò¯g¡cqÛ"áÏM”(∆AØü/1x¬t&y…‘¯¨∫ÿ¶v!~Ÿ.Ö∑›˘ùké?tfy∂≠ç´≥Ly˚÷ ;S“(˚Q^ÚÁ‚uw-∆(ßŒng∂’9ü€º4∞o.{ˇÑÄÇ‰“FZ”ÂG§ø∞Zä∆á.Wgﬂ]˘"˜ú¯jˇó„j•2¶nw∆∂mNFÁœ˝XuˇV∑	¶)AH¬”ßLÁ˙w◊~Öhëtô3Ô^?Èõ2ø√(cæ_6x¶îyÕ´vª®æÍŸª//wëy‰x5,-π‡;¶V¸sªãÆÜô.ÕÛ]q"}≈Ωç√gøÏ|’RølÚT‰•ã=ËÎ÷É;*§*∂6ƒe2ÛE+ìzÔ‰¸ÿq÷™í€>x:˘á‚c˝C’àë∫Æ[VÀÔùk+Â∑ΩŸGÙz≥óÀ˚œ¬∑4‹BGSj‰–Ê—5ŸÁö–KˆÌL]‚"‰Î8™∞ı±’ï2wπ¡zΩ”á$<Õ>“bFo‹%Ó^¯„Ú◊U—"a™}Çï‰úÙµ?V’:/ﬁµM–XÍÒº∆˝µëG´∞âÇ˛ Èôp∫%d˝ØûUˇı;é_ﬁ∂%"CJ‰±ò vŒ_ﬁŸ@>Ca’QhbLupËäÀÅ
-ûΩq%nù%í™gVsÊ«6P«cov„°Ñáø0¿&‹ÑÍ°ÑZ(·
-]mwπbèu…/5d‘¥/x
-ıX]§†÷#sÕ˝íÃ’c†Ñ˝–÷#±ˇG˝ˆK±£ëÒ≈∂b‰¬=/MÆsØÍ*¢ﬂﬁ*5/q≈ŒùÊ‰I¬çï7—;?ñö˘˜ƒ<Xò:‹π˝˘à„Y“aﬂ©±≈åœÙñÀ¡WNKt4mÙ(ººh!Y¨§·~ä&ΩGÂºÙ”˘~Q}iHz{´tèÛºV∂#—˛◊%Ω‘àDô]1«+‘N)9+˘tÜ÷À¯^›8‘dÑ]Ú“\¿ŸØ2¬ät=´Í∏Úé‚¬›áu¨'◊V∫ú˚¿r1®[ù’≤}Ö∂íÁ‰À`Wçˆ•€ﬁTÔ\>}Ÿe§DÕÏ›∏o6=¸ÍÍÄn°Õ¢ﬁÅ±≈ÓYËÆgÔ‘+4_◊]∞Ó◊m;7ò#Ô˘^∂”¨ñı-[Ákk˚ˆÜﬁùdß∞…©°<±î*üÉn≠Ô[çœ3}sŒ@0x)·JSœºÈ«’Xì[AX1}µ≠*¡âáCΩˆ™=Ù<eùTù›ÆµrL◊ﬂ12ﬂ4gùınÓm[ëö–´áó/:}´øÃ˝ÛΩ∑:5+›c⁄<€éÕ¡Z ”Èï±2¡Â^kXWz∑ÿ~1KX'ÚJÈGÇ¥πæ6Ò˛œ {çéD%ä\SïP¬`	@¸Öﬂ›JÍî≠n]*LsŸcÏ«§≠'ùô∑âd"±ÓPB.î∞≤È'§;WP@	^ÓY"Ÿ…À©Ó9 Xì¯~”õ>q≈˛á¿ﬂè¯€E2?ßpﬁ‰^ˇÄ^ıO›ÖQ<,ºå _V¨¡ˇT˚ÉG %ãíﬂAöPË”ıPé~Êód¥˝üﬁ∆\`.4\˚Ëmy_È*ëVÌ≤‘û…mõ5I'M2á‹#œOî^ôÁ÷!5}x˜k’Ü£=Êª◊DR∫„$â©:¯.ëcWUK|·⁄1Txkü…µ•s_ü-èÏ_>ê6rÊÉ}q]&¿Ã¢º}uÕ)âÀUíä≤(üEg^˚úœ~h≤ùpLp"®…«NÁÎC	)ÑAH`˙VÆÃÙúoÛÈ:j∑˝Ì[≥XÛw6¨∑<t8ë√‹¯˝ï•vL“è]B-6Ød5fÚkß5H˘˙æ«´õÌ:|á$^)ö!Ó0h(l)·i&aÇ™Ç÷c"‹©;≠¬”>lìSª‰ûø˘`D 9Ê≠™%íΩp√ÇË≥ó‹£q!hôœ√"ÀRC£'4Tûxö`íÃÏk∂Ø Ò=1ø„hﬁÂCì.'˙ÂÀ¶Êti‰¨–9UçÍoµË∏›ûÒ¯ò•äWCàç«ÆÙeÜjK"X
-ÀÁeJ"jSr2ñ-ÏÕ÷—ú˜§"ﬂªÎRÈyŸ.óSEâBXp–⁄†S»C√‡}Ò\hsN´‘;ÚÈ°àø›˛˚Cá≈bâ¸ﬂ–¸‹!õø¢Ø$5#U‘…)à'´À˚Ø–E˝üt±£9Ÿ£Y‹∞–&ãÛoﬂô‹KM”~|"ÉiÛY¡k˙˘âçß“VÙîñ6E1uÂOπù\—–Ì)R∏§BÆæœﬂ4‹Ω◊ÚπÇlì¬ÿÕáO¬«Ø?‡∆E…˚®˘.—R9Új0ıX·ìuãZ-Ú–r	)[µ…ä˙—
-ı$˙ó/:/Oä…°ó∏—ô‚O≈±ÀπO≠üñ±›å\;¯‡t”'°CÑLªßÚ≤Ÿq{lRãÏÏ≤ø<à–R<™p¥´„∞Œ€/£]≈êã,≥K7p[ÍÉL?ﬁãâŒ>-3>Ω7™ø„ºGÿìÈ	=;ÔXº(YsMVÚJ©£kùÒ±îmüb'Ônàæ±◊}úõ›Æ4ªm˜!¥⁄'ã)ö«=I/˝ÚòoÎ¨k=Ÿ‹™Î°‚~IΩ6ÜBıê·¬'nﬁ⁄ÓÌ≠ÂL˚¬ÜÒxıéùßKÆ¶m,Ë´Z|¡Àq”Îo˘zZ¢ïı÷ûFˆ≠ßN)òFe>eÈ/øËnòù∂;Ø˚hD‹ØwÛe»Ÿ=‚K7ÆoÏå~˛FkÊ–úê%$˝g«#ı' 	°@ö˛√±_ŒŸˇÑ∫=ñãƒˇ”±˚∫2pkÑÚ£˙':±Éã2 {åˆ™æIàÍ'-vÙê	ÙLg+Í ‚[sR˚íÉ/?r- :™^¯¿’Y;ªªßWøkH”Ÿõ†Û»…∑æ÷‚ÛÙªÇáBÇ©TS 4*{ä¥0≈zìÚ≠,≈[lê√J)Ô„âﬂÌE2Ì‹Âøo´…cLµ§ƒ%´Â¨O∏„ñ2Êº$‚iYÈªçßUˆ£…⁄J€’Í≤Ìµd˛x\È~Vœ∞vEçcâÇˆÉ·≥òùz k4∞ﬂéùMæò∫Ôl˜ûeõ€}Mı ‰≠nqXû[Ω•‚FÂ†°VN7«R˜∏ˆô|}≥~·æÍπ¨+_7„6ØΩ˛˛§Îm˚(#≤xíéYJ_»«g[ÆJ†Ω∑≈Æ,Ë∫Y±¶Úµ‚˝¯‘˚«ç»\4+ozØ≈á”-—vﬁñ¶¨˙kív'›¬w{4vÌPH;:ÁπR5”˜ﬁ˘â¸'úÉ=¢eœ∑L£[WΩ¥Jo⁄5u|[{b~&;„∆NkÆÁO¸P}ktßi®“—NÙ∏Fì‡—õÖº©“Âña“®ÆdˇíìÚÌ∆ıI5´‰…∏⁄Ãªd∆N°j/⁄ $7Ú˘HÍ≥*3ßc1è^M<vgÔ;dp„N„F€Æå”nÎïÉæ€“6j"]>f6pæ£w√i>õ⁄H˘êør“∏æ_‡kw4≥Q^˛Ì∫%õ≥4K≥4K≥4K≥4K≥4K≥4K≥4K≥4K≥4K≥4K≥4K≥4K≥4K≥4K≥4K≥4K≥4K≥4K≥4KˇQ˙ºâ†c“π√sÓWl;Ï]ô52≤òcö∑oŒì∂=√_Æ_ôNª/–ª—=ÚÙÊôu’≤JØx˝Z![ùûyr>≤WM»)˜ôåÈ©1ÍV∑#l≈7É9w∑
-˙j#çÜN/—–¸ ô¯µíº_±ª»Ob≥‚√:dﬂë˙ÕyÖÑ%m≠ÆÌ{%èúT -!rÚÁ“ﬁÂ≠Ôäø˛6~^∫˛ÏßÙ‹ïG≈õz∂ÆTíﬂøx˚¿µí·éÌõú◊e#éwH;o'G&â?w5ﬁV≈¨<{gé ÎÙ·¡(_Az˘1˚]~Wæ≠∫•˙Ï,-n˚ßUß™”ÍºíoU≈<ßÆm.ªöõjëÙˇ K⁄@¯
+q 1 1 1 rg 0 0 250 17 re f 0.75 0.77 0.83 RG .8 w .4 .4 249.2 16.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 4 Tm (+0) Tj ET Q
 endstream
 endobj
-
 143 0 obj
-<</Type/Filespec/Subtype(application/c2pa)/AFRelationship/C2PA_Manifest/Desc(Content Credentials)/F(Content Credentials)/EF<</F 142 0 R>>/UF(Content Credentials)>>
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (skill_AtuaÁ„o) /Rect [35 624 285 641] /F 4 /P 8 0 R /V (+0) /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 142 0 R >>  >>
 endobj
-
 144 0 obj
-<</Type/XObject/Subtype/Form/BBox[0 0 245 23]/Matrix[1 0 0 1 0 0]/Resources<</Font<</Helv 1 0 R>>>>/Length 88/Filter/FlateDecode>>
+<< /Type /XObject /Subtype /Form /BBox [0 0 115 17] /Resources << /Font << /F1 1 0 R >> >> /Length 127 >>
 stream
-xú”©PpÚuÊ*‰2T(bC#c#CÖ¢TÆpÆ<.ß.,JÁ2R∞–3∑Öê.}è‘ú2 3çK#,1'5OS!$ãÀ5Ñ+êÀh  tèE
+q 1 1 1 rg 0 0 115 17 re f 0.75 0.77 0.83 RG .8 w .4 .4 114.2 16.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 4 Tm (Nao) Tj ET Q
 endstream
 endobj
-
 145 0 obj
-<</Type/XObject/Subtype/Form/BBox[0 0 245 23]/Matrix[1 0 0 1 0 0]/Resources<</Font<</Helv 1 0 R>>>>/Length 99/Filter/FlateDecode>>
-stream
-xú”©PpÚuÊ*‰2T(bC#c#CÖ¢TÆpÆ<.ß.,JÁ2R∞–3∑Öê.}è‘ú2 3çK√+?=1%øH!%U°$µ∏$US!$ãÀ5Ñ+êÀh6 ÅŸC
-endstream
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (trained_AtuaÁ„o) /Rect [300 624 415 641] /F 4 /P 8 0 R /V (Nao) /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 144 0 R >>  >>
 endobj
-
 146 0 obj
-<</Type/XObject/Subtype/Form/BBox[0 0 245 23]/Matrix[1 0 0 1 0 0]/Resources<</Font<</Helv 1 0 R>>>>/Length 88/Filter/FlateDecode>>
+<< /Type /XObject /Subtype /Form /BBox [0 0 130 17] /Resources << /Font << /F1 1 0 R >> >> /Length 125 >>
 stream
-xú”©PpÚuÊ*‰2T(bC#c#CÖ¢TÆpÆ<.ß.,JÁ2R∞–3∑Öê.}è‘ú2 3çK√1Ôkj±¶BHókW ó+–@ }NÀ
+q 1 1 1 rg 0 0 130 17 re f 0.75 0.77 0.83 RG .8 w .4 .4 129.2 16.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 4 Tm (0) Tj ET Q
 endstream
 endobj
-
 147 0 obj
-<</Type/XObject/Subtype/Form/BBox[0 0 245 23]/Matrix[1 0 0 1 0 0]/Resources<</Font<</Helv 1 0 R>>>>/Length 67/Filter/FlateDecode>>
-stream
-xú”©PpÚuÊ*‰2T(bC#c#CÖ¢TÆpÆ<.ß.,JÁ2R∞–3∑Öê.◊Æ@.W†V ÁT
-endstream
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (extra_AtuaÁ„o) /Rect [430 624 560 641] /F 4 /P 8 0 R /V (0) /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 146 0 R >>  >>
 endobj
-
 148 0 obj
-<</Type/XObject/Subtype/Form/BBox[0 0 245 23]/Matrix[1 0 0 1 0 0]/Resources<</Font<</Helv 1 0 R>>>>/Length 90/Filter/FlateDecode>>
+<< /Type /XObject /Subtype /Form /BBox [0 0 250 17] /Resources << /Font << /F1 1 0 R >> >> /Length 126 >>
 stream
-xú”©PpÚuÊ*‰2T(bC#c#CÖ¢TÆpÆ<.ß.,JÁ2R∞–3∑Öê.}è‘ú2 3çK√…1»≈_¡DS!$ãÀ5Ñ+êÀh$ ë÷
+q 1 1 1 rg 0 0 250 17 re f 0.75 0.77 0.83 RG .8 w .4 .4 249.2 16.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 4 Tm (+0) Tj ET Q
 endstream
 endobj
-
 149 0 obj
-<</Type/XObject/Subtype/Form/BBox[0 0 105 23]/Matrix[1 0 0 1 0 0]/Resources<</Font<</Helv 1 0 R>>>>/Length 83/Filter/FlateDecode>>
-stream
-xú”©PpÚuÊ*‰2T(b 40V02T(JÂ
-Á „r
-·2P ¡¢t.#=sKPI·“˜HÕ)S 2”∏4L4B≤∏\C∏π\ÅÜ ™~
-endstream
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (skill_Cavalgar) /Rect [35 594 285 611] /F 4 /P 8 0 R /V (+0) /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 148 0 R >>  >>
 endobj
-
 150 0 obj
-<</Type/XObject/Subtype/Form/BBox[0 0 105 23]/Matrix[1 0 0 1 0 0]/Resources<</Font<</Helv 1 0 R>>>>/Length 84/Filter/FlateDecode>>
+<< /Type /XObject /Subtype /Form /BBox [0 0 115 17] /Resources << /Font << /F1 1 0 R >> >> /Length 127 >>
 stream
-xú”©PpÚuÊ*‰2T(b 40V02T(JÂ
-Á „r
-·2P ¡¢t.#=sKPI·“˜HÕ)S 2”∏4å5B≤∏\C∏π\Å¶ )˘≠
+q 1 1 1 rg 0 0 115 17 re f 0.75 0.77 0.83 RG .8 w .4 .4 114.2 16.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 4 Tm (Nao) Tj ET Q
 endstream
 endobj
-
 151 0 obj
-<</Type/XObject/Subtype/Form/BBox[0 0 150 23]/Matrix[1 0 0 1 0 0]/Resources<</Font<</Helv 1 0 R>>>>/Length 83/Filter/FlateDecode>>
-stream
-xú”©PpÚuÊ*‰2T(b 4±P02T(JÂ
-Á „r
-·2P ¡¢t.#=sKPI·“˜HÕ)S 2”∏4å5B≤∏\C∏π\ÅÜ ËÜ
-endstream
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (trained_Cavalgar) /Rect [300 594 415 611] /F 4 /P 8 0 R /V (Nao) /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 150 0 R >>  >>
 endobj
-
 152 0 obj
-<</Type/XObject/Subtype/Form/BBox[0 0 74 22]/Matrix[1 0 0 1 0 0]/Resources<</Font<</Helv 1 0 R>>>>/Length 83/Filter/FlateDecode>>
+<< /Type /XObject /Subtype /Form /BBox [0 0 130 17] /Resources << /Font << /F1 1 0 R >> >> /Length 125 >>
 stream
-xú”©PpÚuÊ*‰2T(bCs##Ö¢TÆpÆ<.ß.,JÁ2R∞–3≤Öê.}è‘ú2 3çK√XS!$ãÀ5Ñ+êÀh wL
+q 1 1 1 rg 0 0 130 17 re f 0.75 0.77 0.83 RG .8 w .4 .4 129.2 16.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 4 Tm (0) Tj ET Q
 endstream
 endobj
-
 153 0 obj
-<</Type/XObject/Subtype/Form/BBox[0 0 74 22]/Matrix[1 0 0 1 0 0]/Resources<</Font<</Helv 1 0 R>>>>/Length 83/Filter/FlateDecode>>
-stream
-xú”©PpÚuÊ*‰2T(bCs##Ö¢TÆpÆ<.ß.,JÁ2R∞–3≤Öê.}è‘ú2 3çK√@S!$ãÀ5Ñ+êÀh JI
-endstream
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (extra_Cavalgar) /Rect [430 594 560 611] /F 4 /P 8 0 R /V (0) /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 152 0 R >>  >>
 endobj
-
 154 0 obj
-<</Type/XObject/Subtype/Form/BBox[0 0 105 22]/Matrix[1 0 0 1 0 0]/Resources<</Font<</Helv 1 0 R>>>>/Length 83/Filter/FlateDecode>>
+<< /Type /XObject /Subtype /Form /BBox [0 0 250 17] /Resources << /Font << /F1 1 0 R >> >> /Length 126 >>
 stream
-xú”©PpÚuÊ*‰2T(b 40V02P(JÂ
-Á „r
-·2P ¡¢t.#=#KPI·“˜HÕ)S 2”∏4å5B≤∏\C∏π\ÅÜ §w
+q 1 1 1 rg 0 0 250 17 re f 0.75 0.77 0.83 RG .8 w .4 .4 249.2 16.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 4 Tm (+0) Tj ET Q
 endstream
 endobj
-
 155 0 obj
-<</Type/XObject/Subtype/Form/BBox[0 0 105 22]/Matrix[1 0 0 1 0 0]/Resources<</Font<</Helv 1 0 R>>>>/Length 83/Filter/FlateDecode>>
-stream
-xú”©PpÚuÊ*‰2T(b 40V02P(JÂ
-Á „r
-·2P ¡¢t.#=#KPI·“˜HÕ)S 2”∏44B≤∏\C∏π\ÅÜ wt
-endstream
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (skill_Conhecimento) /Rect [35 564 285 581] /F 4 /P 8 0 R /V (+0) /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 154 0 R >>  >>
 endobj
-
 156 0 obj
-<</Type/XObject/Subtype/Form/BBox[0 0 155 23]/Matrix[1 0 0 1 0 0]/Resources<</Font<</Helv 1 0 R>>>>/Length 66/Filter/FlateDecode>>
+<< /Type /XObject /Subtype /Form /BBox [0 0 115 17] /Resources << /Font << /F1 1 0 R >> >> /Length 127 >>
 stream
-xú”©PpÚuÊ*‰2T(b 45V02T(JÂ
-Á „r
-·2P ¡¢t.#=sKPI·r·
-‰rj ÁS
+q 1 1 1 rg 0 0 115 17 re f 0.75 0.77 0.83 RG .8 w .4 .4 114.2 16.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 4 Tm (Nao) Tj ET Q
 endstream
 endobj
-
 157 0 obj
-<</Type/XObject/Subtype/Form/BBox[0 0 185 23]/Matrix[1 0 0 1 0 0]/Resources<</Font<</Helv 1 0 R>>>>/Length 83/Filter/FlateDecode>>
-stream
-xú”©PpÚuÊ*‰2T(b ¥0V02T(JÂ
-Á „r
-·2P ¡¢t.#=sKPI·“˜HÕ)S 2”∏4å5B≤∏\C∏π\ÅÜ ´Ö
-endstream
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (trained_Conhecimento) /Rect [300 564 415 581] /F 4 /P 8 0 R /V (Nao) /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 156 0 R >>  >>
 endobj
-
 158 0 obj
-<</Type/XObject/Subtype/Form/BBox[0 0 525 45]/Matrix[1 0 0 1 0 0]/Resources<</Font<</Helv 1 0 R>>>>/Length 62/Filter/FlateDecode>>
+<< /Type /XObject /Subtype /Form /BBox [0 0 130 17] /Resources << /Font << /F1 1 0 R >> >> /Length 125 >>
 stream
-xú”©PpÚuÊ*‰2T(bCS#ccÖ¢TÆpÆ<.ß.,JÁ2âá§pπÜprπ5 ñÕ
+q 1 1 1 rg 0 0 130 17 re f 0.75 0.77 0.83 RG .8 w .4 .4 129.2 16.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 4 Tm (0) Tj ET Q
 endstream
 endobj
-
 159 0 obj
-<</Type/XObject/Subtype/Form/BBox[0 0 250 17]/Matrix[1 0 0 1 0 0]/Resources<</Font<</Helv 1 0 R>>>>/Length 85/Filter/FlateDecode>>
-stream
-xú”©PpÚuÊ*‰2T(bC#CSÖ¢TÆpÆ<.ß.,JÁ2R0’3∑Öê.}è‘ú2 3çKC€@S!$ãÀ5Ñ+êÀh ?Ë
-endstream
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (extra_Conhecimento) /Rect [430 564 560 581] /F 4 /P 8 0 R /V (0) /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 158 0 R >>  >>
 endobj
-
 160 0 obj
-<</Type/XObject/Subtype/Form/BBox[0 0 115 17]/Matrix[1 0 0 1 0 0]/Resources<</Font<</Helv 1 0 R>>>>/Length 85/Filter/FlateDecode>>
+<< /Type /XObject /Subtype /Form /BBox [0 0 250 17] /Resources << /Font << /F1 1 0 R >> >> /Length 126 >>
 stream
-xú”©PpÚuÊ*‰2T(b 44V04U(JÂ
-Á „r
-·2P ¡¢t.#S=sK0PI·“˜HÕ)S 2”∏4¸Û5B≤∏\C∏π\ÅÊ Xá¢
+q 1 1 1 rg 0 0 250 17 re f 0.75 0.77 0.83 RG .8 w .4 .4 249.2 16.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 4 Tm (+0) Tj ET Q
 endstream
 endobj
-
 161 0 obj
-<</Type/XObject/Subtype/Form/BBox[0 0 130 17]/Matrix[1 0 0 1 0 0]/Resources<</Font<</Helv 1 0 R>>>>/Length 83/Filter/FlateDecode>>
-stream
-xú”©PpÚuÊ*‰2T(b 4≤P04U(JÂ
-Á „r
-·2P ¡¢t.#S=sK0PI·“˜HÕ)S 2”∏44B≤∏\C∏π\Å¶ +˘∫
-endstream
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (skill_Cura) /Rect [35 534 285 551] /F 4 /P 8 0 R /V (+0) /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 160 0 R >>  >>
 endobj
-
 162 0 obj
-<</Type/XObject/Subtype/Form/BBox[0 0 250 17]/Matrix[1 0 0 1 0 0]/Resources<</Font<</Helv 1 0 R>>>>/Length 85/Filter/FlateDecode>>
+<< /Type /XObject /Subtype /Form /BBox [0 0 115 17] /Resources << /Font << /F1 1 0 R >> >> /Length 127 >>
 stream
-xú”©PpÚuÊ*‰2T(bC#CSÖ¢TÆpÆ<.ß.,JÁ2R0’3∑Öê.}è‘ú2 3çKC€XS!$ãÀ5Ñ+êÀh ??Î
+q 1 1 1 rg 0 0 115 17 re f 0.75 0.77 0.83 RG .8 w .4 .4 114.2 16.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 4 Tm (Nao) Tj ET Q
 endstream
 endobj
-
 163 0 obj
-<</Type/XObject/Subtype/Form/BBox[0 0 525 18]/Matrix[1 0 0 1 0 0]/Resources<</Font<</Helv 1 0 R>>>>/Length 108/Filter/FlateDecode>>
-stream
-xú”©PpÚuÊ*‰2T(bCS#cC3Ö¢TÆpÆ<.ß.,JÁ2R0”3≤Öê.}è‘ú2 3çK√19µ®$_¡πËmIfræÇcAQfn~QbJæ¶BHókW ó+– ìJ
-endstream
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (trained_Cura) /Rect [300 534 415 551] /F 4 /P 8 0 R /V (Nao) /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 162 0 R >>  >>
 endobj
-
 164 0 obj
-<</Type/XObject/Subtype/Form/BBox[0 0 525 18]/Matrix[1 0 0 1 0 0]/Resources<</Font<</Helv 1 0 R>>>>/Length 67/Filter/FlateDecode>>
+<< /Type /XObject /Subtype /Form /BBox [0 0 130 17] /Resources << /Font << /F1 1 0 R >> >> /Length 125 >>
 stream
-xú”©PpÚuÊ*‰2T(bCS#cC3Ö¢TÆpÆ<.ß.,JÁ2R0”3≤Öê.◊Æ@.W†V Á≠
+q 1 1 1 rg 0 0 130 17 re f 0.75 0.77 0.83 RG .8 w .4 .4 129.2 16.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 4 Tm (0) Tj ET Q
 endstream
 endobj
-
 165 0 obj
-<</Type/XObject/Subtype/Form/BBox[0 0 525 128]/Matrix[1 0 0 1 0 0]/Resources<</Font<</Helv 1 0 R>>>>/Length 63/Filter/FlateDecode>>
-stream
-xú”©PpÚuÊ*‰2T(bCS#cC#3Ö¢TÆpÆ<.ß.,JÁ2KÑ§pπÜprπµ Ør1
-endstream
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (extra_Cura) /Rect [430 534 560 551] /F 4 /P 8 0 R /V (0) /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 164 0 R >>  >>
 endobj
-
 166 0 obj
-<</Type/XObject/Subtype/Form/BBox[0 0 525 55]/Matrix[1 0 0 1 0 0]/Resources<</Font<</Helv 1 0 R>>>>/Length 62/Filter/FlateDecode>>
+<< /Type /XObject /Subtype /Form /BBox [0 0 250 17] /Resources << /Font << /F1 1 0 R >> >> /Length 126 >>
 stream
-xú”©PpÚuÊ*‰2T(bCS#cScÖ¢TÆpÆ<.ß.,JÁ2âá§pπÜprπ5 ñFœ
+q 1 1 1 rg 0 0 250 17 re f 0.75 0.77 0.83 RG .8 w .4 .4 249.2 16.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 4 Tm (+0) Tj ET Q
 endstream
 endobj
-
 167 0 obj
-<</Type/XObject/Subtype/Form/BBox[0 0 525 153]/Matrix[1 0 0 1 0 0]/Resources<</Font<</Helv 1 0 R>>>>/Length 92/Filter/FlateDecode>>
-stream
-xú”©PpÚuÊ*‰2T(bCS#cCSCÖ¢TÆpÆ<.ß.,JÁ2KÑ§ EtÙLL¿|}è‘ú2KÖê4.MÖê,.◊Æ@.W†¡ Hò
-endstream
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (skill_Diplomacia) /Rect [35 504 285 521] /F 4 /P 8 0 R /V (+0) /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 166 0 R >>  >>
 endobj
-
 168 0 obj
-<</Type/XObject/Subtype/Form/BBox[0 0 150 20]/Matrix[1 0 0 1 0 0]/Resources<</Font<</Helv 1 0 R>>>>/Length 66/Filter/FlateDecode>>
+<< /Type /XObject /Subtype /Form /BBox [0 0 115 17] /Resources << /Font << /F1 1 0 R >> >> /Length 127 >>
 stream
-xú”©PpÚuÊ*‰2T(b 4±P0¥P(JÂ
-Á „r
-·2P ¡¢t.#s=#KPI·r·
-‰rj Ë°
+q 1 1 1 rg 0 0 115 17 re f 0.75 0.77 0.83 RG .8 w .4 .4 114.2 16.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 4 Tm (Nao) Tj ET Q
 endstream
 endobj
+169 0 obj
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (trained_Diplomacia) /Rect [300 504 415 521] /F 4 /P 8 0 R /V (Nao) /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 168 0 R >>  >>
+endobj
+170 0 obj
+<< /Type /XObject /Subtype /Form /BBox [0 0 130 17] /Resources << /Font << /F1 1 0 R >> >> /Length 125 >>
+stream
+q 1 1 1 rg 0 0 130 17 re f 0.75 0.77 0.83 RG .8 w .4 .4 129.2 16.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 4 Tm (0) Tj ET Q
+endstream
+endobj
+171 0 obj
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (extra_Diplomacia) /Rect [430 504 560 521] /F 4 /P 8 0 R /V (0) /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 170 0 R >>  >>
+endobj
+172 0 obj
+<< /Type /XObject /Subtype /Form /BBox [0 0 250 17] /Resources << /Font << /F1 1 0 R >> >> /Length 126 >>
+stream
+q 1 1 1 rg 0 0 250 17 re f 0.75 0.77 0.83 RG .8 w .4 .4 249.2 16.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 4 Tm (+0) Tj ET Q
+endstream
+endobj
+173 0 obj
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (skill_EnganaÁ„o) /Rect [35 474 285 491] /F 4 /P 8 0 R /V (+0) /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 172 0 R >>  >>
+endobj
+174 0 obj
+<< /Type /XObject /Subtype /Form /BBox [0 0 115 17] /Resources << /Font << /F1 1 0 R >> >> /Length 127 >>
+stream
+q 1 1 1 rg 0 0 115 17 re f 0.75 0.77 0.83 RG .8 w .4 .4 114.2 16.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 4 Tm (Nao) Tj ET Q
+endstream
+endobj
+175 0 obj
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (trained_EnganaÁ„o) /Rect [300 474 415 491] /F 4 /P 8 0 R /V (Nao) /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 174 0 R >>  >>
+endobj
+176 0 obj
+<< /Type /XObject /Subtype /Form /BBox [0 0 130 17] /Resources << /Font << /F1 1 0 R >> >> /Length 125 >>
+stream
+q 1 1 1 rg 0 0 130 17 re f 0.75 0.77 0.83 RG .8 w .4 .4 129.2 16.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 4 Tm (0) Tj ET Q
+endstream
+endobj
+177 0 obj
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (extra_EnganaÁ„o) /Rect [430 474 560 491] /F 4 /P 8 0 R /V (0) /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 176 0 R >>  >>
+endobj
+178 0 obj
+<< /Type /XObject /Subtype /Form /BBox [0 0 250 17] /Resources << /Font << /F1 1 0 R >> >> /Length 126 >>
+stream
+q 1 1 1 rg 0 0 250 17 re f 0.75 0.77 0.83 RG .8 w .4 .4 249.2 16.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 4 Tm (+0) Tj ET Q
+endstream
+endobj
+179 0 obj
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (skill_Furtividade) /Rect [35 444 285 461] /F 4 /P 8 0 R /V (+0) /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 178 0 R >>  >>
+endobj
+180 0 obj
+<< /Type /XObject /Subtype /Form /BBox [0 0 115 17] /Resources << /Font << /F1 1 0 R >> >> /Length 127 >>
+stream
+q 1 1 1 rg 0 0 115 17 re f 0.75 0.77 0.83 RG .8 w .4 .4 114.2 16.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 4 Tm (Nao) Tj ET Q
+endstream
+endobj
+181 0 obj
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (trained_Furtividade) /Rect [300 444 415 461] /F 4 /P 8 0 R /V (Nao) /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 180 0 R >>  >>
+endobj
+182 0 obj
+<< /Type /XObject /Subtype /Form /BBox [0 0 130 17] /Resources << /Font << /F1 1 0 R >> >> /Length 125 >>
+stream
+q 1 1 1 rg 0 0 130 17 re f 0.75 0.77 0.83 RG .8 w .4 .4 129.2 16.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 4 Tm (0) Tj ET Q
+endstream
+endobj
+183 0 obj
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (extra_Furtividade) /Rect [430 444 560 461] /F 4 /P 8 0 R /V (0) /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 182 0 R >>  >>
+endobj
+184 0 obj
+<< /Type /XObject /Subtype /Form /BBox [0 0 250 17] /Resources << /Font << /F1 1 0 R >> >> /Length 126 >>
+stream
+q 1 1 1 rg 0 0 250 17 re f 0.75 0.77 0.83 RG .8 w .4 .4 249.2 16.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 4 Tm (+0) Tj ET Q
+endstream
+endobj
+185 0 obj
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (skill_Identificar Magia) /Rect [35 414 285 431] /F 4 /P 8 0 R /V (+0) /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 184 0 R >>  >>
+endobj
+186 0 obj
+<< /Type /XObject /Subtype /Form /BBox [0 0 115 17] /Resources << /Font << /F1 1 0 R >> >> /Length 127 >>
+stream
+q 1 1 1 rg 0 0 115 17 re f 0.75 0.77 0.83 RG .8 w .4 .4 114.2 16.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 4 Tm (Nao) Tj ET Q
+endstream
+endobj
+187 0 obj
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (trained_Identificar Magia) /Rect [300 414 415 431] /F 4 /P 8 0 R /V (Nao) /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 186 0 R >>  >>
+endobj
+188 0 obj
+<< /Type /XObject /Subtype /Form /BBox [0 0 130 17] /Resources << /Font << /F1 1 0 R >> >> /Length 125 >>
+stream
+q 1 1 1 rg 0 0 130 17 re f 0.75 0.77 0.83 RG .8 w .4 .4 129.2 16.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 4 Tm (0) Tj ET Q
+endstream
+endobj
+189 0 obj
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (extra_Identificar Magia) /Rect [430 414 560 431] /F 4 /P 8 0 R /V (0) /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 188 0 R >>  >>
+endobj
+190 0 obj
+<< /Type /XObject /Subtype /Form /BBox [0 0 250 17] /Resources << /Font << /F1 1 0 R >> >> /Length 126 >>
+stream
+q 1 1 1 rg 0 0 250 17 re f 0.75 0.77 0.83 RG .8 w .4 .4 249.2 16.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 4 Tm (+0) Tj ET Q
+endstream
+endobj
+191 0 obj
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (skill_Iniciativa) /Rect [35 384 285 401] /F 4 /P 8 0 R /V (+0) /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 190 0 R >>  >>
+endobj
+192 0 obj
+<< /Type /XObject /Subtype /Form /BBox [0 0 115 17] /Resources << /Font << /F1 1 0 R >> >> /Length 127 >>
+stream
+q 1 1 1 rg 0 0 115 17 re f 0.75 0.77 0.83 RG .8 w .4 .4 114.2 16.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 4 Tm (Nao) Tj ET Q
+endstream
+endobj
+193 0 obj
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (trained_Iniciativa) /Rect [300 384 415 401] /F 4 /P 8 0 R /V (Nao) /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 192 0 R >>  >>
+endobj
+194 0 obj
+<< /Type /XObject /Subtype /Form /BBox [0 0 130 17] /Resources << /Font << /F1 1 0 R >> >> /Length 125 >>
+stream
+q 1 1 1 rg 0 0 130 17 re f 0.75 0.77 0.83 RG .8 w .4 .4 129.2 16.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 4 Tm (0) Tj ET Q
+endstream
+endobj
+195 0 obj
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (extra_Iniciativa) /Rect [430 384 560 401] /F 4 /P 8 0 R /V (0) /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 194 0 R >>  >>
+endobj
+196 0 obj
+<< /Type /XObject /Subtype /Form /BBox [0 0 250 17] /Resources << /Font << /F1 1 0 R >> >> /Length 126 >>
+stream
+q 1 1 1 rg 0 0 250 17 re f 0.75 0.77 0.83 RG .8 w .4 .4 249.2 16.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 4 Tm (+0) Tj ET Q
+endstream
+endobj
+197 0 obj
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (skill_IntuiÁ„o) /Rect [35 354 285 371] /F 4 /P 8 0 R /V (+0) /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 196 0 R >>  >>
+endobj
+198 0 obj
+<< /Type /XObject /Subtype /Form /BBox [0 0 115 17] /Resources << /Font << /F1 1 0 R >> >> /Length 127 >>
+stream
+q 1 1 1 rg 0 0 115 17 re f 0.75 0.77 0.83 RG .8 w .4 .4 114.2 16.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 4 Tm (Nao) Tj ET Q
+endstream
+endobj
+199 0 obj
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (trained_IntuiÁ„o) /Rect [300 354 415 371] /F 4 /P 8 0 R /V (Nao) /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 198 0 R >>  >>
+endobj
+200 0 obj
+<< /Type /XObject /Subtype /Form /BBox [0 0 130 17] /Resources << /Font << /F1 1 0 R >> >> /Length 125 >>
+stream
+q 1 1 1 rg 0 0 130 17 re f 0.75 0.77 0.83 RG .8 w .4 .4 129.2 16.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 4 Tm (0) Tj ET Q
+endstream
+endobj
+201 0 obj
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (extra_IntuiÁ„o) /Rect [430 354 560 371] /F 4 /P 8 0 R /V (0) /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 200 0 R >>  >>
+endobj
+202 0 obj
+<< /Type /XObject /Subtype /Form /BBox [0 0 250 17] /Resources << /Font << /F1 1 0 R >> >> /Length 126 >>
+stream
+q 1 1 1 rg 0 0 250 17 re f 0.75 0.77 0.83 RG .8 w .4 .4 249.2 16.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 4 Tm (+0) Tj ET Q
+endstream
+endobj
+203 0 obj
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (skill_Ladinagem) /Rect [35 324 285 341] /F 4 /P 8 0 R /V (+0) /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 202 0 R >>  >>
+endobj
+204 0 obj
+<< /Type /XObject /Subtype /Form /BBox [0 0 115 17] /Resources << /Font << /F1 1 0 R >> >> /Length 127 >>
+stream
+q 1 1 1 rg 0 0 115 17 re f 0.75 0.77 0.83 RG .8 w .4 .4 114.2 16.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 4 Tm (Nao) Tj ET Q
+endstream
+endobj
+205 0 obj
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (trained_Ladinagem) /Rect [300 324 415 341] /F 4 /P 8 0 R /V (Nao) /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 204 0 R >>  >>
+endobj
+206 0 obj
+<< /Type /XObject /Subtype /Form /BBox [0 0 130 17] /Resources << /Font << /F1 1 0 R >> >> /Length 125 >>
+stream
+q 1 1 1 rg 0 0 130 17 re f 0.75 0.77 0.83 RG .8 w .4 .4 129.2 16.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 4 Tm (0) Tj ET Q
+endstream
+endobj
+207 0 obj
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (extra_Ladinagem) /Rect [430 324 560 341] /F 4 /P 8 0 R /V (0) /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 206 0 R >>  >>
+endobj
+208 0 obj
+<< /Type /XObject /Subtype /Form /BBox [0 0 250 17] /Resources << /Font << /F1 1 0 R >> >> /Length 126 >>
+stream
+q 1 1 1 rg 0 0 250 17 re f 0.75 0.77 0.83 RG .8 w .4 .4 249.2 16.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 4 Tm (+0) Tj ET Q
+endstream
+endobj
+209 0 obj
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (skill_MeditaÁ„o) /Rect [35 294 285 311] /F 4 /P 8 0 R /V (+0) /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 208 0 R >>  >>
+endobj
+210 0 obj
+<< /Type /XObject /Subtype /Form /BBox [0 0 115 17] /Resources << /Font << /F1 1 0 R >> >> /Length 127 >>
+stream
+q 1 1 1 rg 0 0 115 17 re f 0.75 0.77 0.83 RG .8 w .4 .4 114.2 16.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 4 Tm (Nao) Tj ET Q
+endstream
+endobj
+211 0 obj
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (trained_MeditaÁ„o) /Rect [300 294 415 311] /F 4 /P 8 0 R /V (Nao) /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 210 0 R >>  >>
+endobj
+212 0 obj
+<< /Type /XObject /Subtype /Form /BBox [0 0 130 17] /Resources << /Font << /F1 1 0 R >> >> /Length 125 >>
+stream
+q 1 1 1 rg 0 0 130 17 re f 0.75 0.77 0.83 RG .8 w .4 .4 129.2 16.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 4 Tm (0) Tj ET Q
+endstream
+endobj
+213 0 obj
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (extra_MeditaÁ„o) /Rect [430 294 560 311] /F 4 /P 8 0 R /V (0) /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 212 0 R >>  >>
+endobj
+214 0 obj
+<< /Type /XObject /Subtype /Form /BBox [0 0 250 17] /Resources << /Font << /F1 1 0 R >> >> /Length 126 >>
+stream
+q 1 1 1 rg 0 0 250 17 re f 0.75 0.77 0.83 RG .8 w .4 .4 249.2 16.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 4 Tm (+0) Tj ET Q
+endstream
+endobj
+215 0 obj
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (skill_OfÌcio) /Rect [35 264 285 281] /F 4 /P 8 0 R /V (+0) /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 214 0 R >>  >>
+endobj
+216 0 obj
+<< /Type /XObject /Subtype /Form /BBox [0 0 115 17] /Resources << /Font << /F1 1 0 R >> >> /Length 127 >>
+stream
+q 1 1 1 rg 0 0 115 17 re f 0.75 0.77 0.83 RG .8 w .4 .4 114.2 16.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 4 Tm (Nao) Tj ET Q
+endstream
+endobj
+217 0 obj
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (trained_OfÌcio) /Rect [300 264 415 281] /F 4 /P 8 0 R /V (Nao) /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 216 0 R >>  >>
+endobj
+218 0 obj
+<< /Type /XObject /Subtype /Form /BBox [0 0 130 17] /Resources << /Font << /F1 1 0 R >> >> /Length 125 >>
+stream
+q 1 1 1 rg 0 0 130 17 re f 0.75 0.77 0.83 RG .8 w .4 .4 129.2 16.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 4 Tm (0) Tj ET Q
+endstream
+endobj
+219 0 obj
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (extra_OfÌcio) /Rect [430 264 560 281] /F 4 /P 8 0 R /V (0) /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 218 0 R >>  >>
+endobj
+220 0 obj
+<< /Type /XObject /Subtype /Form /BBox [0 0 250 17] /Resources << /Font << /F1 1 0 R >> >> /Length 126 >>
+stream
+q 1 1 1 rg 0 0 250 17 re f 0.75 0.77 0.83 RG .8 w .4 .4 249.2 16.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 4 Tm (+0) Tj ET Q
+endstream
+endobj
+221 0 obj
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (skill_PercepÁ„o) /Rect [35 234 285 251] /F 4 /P 8 0 R /V (+0) /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 220 0 R >>  >>
+endobj
+222 0 obj
+<< /Type /XObject /Subtype /Form /BBox [0 0 115 17] /Resources << /Font << /F1 1 0 R >> >> /Length 127 >>
+stream
+q 1 1 1 rg 0 0 115 17 re f 0.75 0.77 0.83 RG .8 w .4 .4 114.2 16.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 4 Tm (Nao) Tj ET Q
+endstream
+endobj
+223 0 obj
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (trained_PercepÁ„o) /Rect [300 234 415 251] /F 4 /P 8 0 R /V (Nao) /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 222 0 R >>  >>
+endobj
+224 0 obj
+<< /Type /XObject /Subtype /Form /BBox [0 0 130 17] /Resources << /Font << /F1 1 0 R >> >> /Length 125 >>
+stream
+q 1 1 1 rg 0 0 130 17 re f 0.75 0.77 0.83 RG .8 w .4 .4 129.2 16.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 4 Tm (0) Tj ET Q
+endstream
+endobj
+225 0 obj
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (extra_PercepÁ„o) /Rect [430 234 560 251] /F 4 /P 8 0 R /V (0) /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 224 0 R >>  >>
+endobj
+226 0 obj
+<< /Type /XObject /Subtype /Form /BBox [0 0 250 17] /Resources << /Font << /F1 1 0 R >> >> /Length 126 >>
+stream
+q 1 1 1 rg 0 0 250 17 re f 0.75 0.77 0.83 RG .8 w .4 .4 249.2 16.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 4 Tm (+0) Tj ET Q
+endstream
+endobj
+227 0 obj
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (skill_SobrevivÍncia) /Rect [35 204 285 221] /F 4 /P 8 0 R /V (+0) /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 226 0 R >>  >>
+endobj
+228 0 obj
+<< /Type /XObject /Subtype /Form /BBox [0 0 115 17] /Resources << /Font << /F1 1 0 R >> >> /Length 127 >>
+stream
+q 1 1 1 rg 0 0 115 17 re f 0.75 0.77 0.83 RG .8 w .4 .4 114.2 16.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 4 Tm (Nao) Tj ET Q
+endstream
+endobj
+229 0 obj
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (trained_SobrevivÍncia) /Rect [300 204 415 221] /F 4 /P 8 0 R /V (Nao) /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 228 0 R >>  >>
+endobj
+230 0 obj
+<< /Type /XObject /Subtype /Form /BBox [0 0 130 17] /Resources << /Font << /F1 1 0 R >> >> /Length 125 >>
+stream
+q 1 1 1 rg 0 0 130 17 re f 0.75 0.77 0.83 RG .8 w .4 .4 129.2 16.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 4 Tm (0) Tj ET Q
+endstream
+endobj
+231 0 obj
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (extra_SobrevivÍncia) /Rect [430 204 560 221] /F 4 /P 8 0 R /V (0) /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 230 0 R >>  >>
+endobj
+232 0 obj
+<< /Type /XObject /Subtype /Form /BBox [0 0 250 17] /Resources << /Font << /F1 1 0 R >> >> /Length 126 >>
+stream
+q 1 1 1 rg 0 0 250 17 re f 0.75 0.77 0.83 RG .8 w .4 .4 249.2 16.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 4 Tm (+0) Tj ET Q
+endstream
+endobj
+233 0 obj
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (skill_IntimidaÁ„o) /Rect [35 174 285 191] /F 4 /P 8 0 R /V (+0) /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 232 0 R >>  >>
+endobj
+234 0 obj
+<< /Type /XObject /Subtype /Form /BBox [0 0 115 17] /Resources << /Font << /F1 1 0 R >> >> /Length 127 >>
+stream
+q 1 1 1 rg 0 0 115 17 re f 0.75 0.77 0.83 RG .8 w .4 .4 114.2 16.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 4 Tm (Nao) Tj ET Q
+endstream
+endobj
+235 0 obj
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (trained_IntimidaÁ„o) /Rect [300 174 415 191] /F 4 /P 8 0 R /V (Nao) /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 234 0 R >>  >>
+endobj
+236 0 obj
+<< /Type /XObject /Subtype /Form /BBox [0 0 130 17] /Resources << /Font << /F1 1 0 R >> >> /Length 125 >>
+stream
+q 1 1 1 rg 0 0 130 17 re f 0.75 0.77 0.83 RG .8 w .4 .4 129.2 16.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 4 Tm (0) Tj ET Q
+endstream
+endobj
+237 0 obj
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (extra_IntimidaÁ„o) /Rect [430 174 560 191] /F 4 /P 8 0 R /V (0) /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 236 0 R >>  >>
+endobj
+238 0 obj
+<< /Type /XObject /Subtype /Form /BBox [0 0 250 17] /Resources << /Font << /F1 1 0 R >> >> /Length 126 >>
+stream
+q 1 1 1 rg 0 0 250 17 re f 0.75 0.77 0.83 RG .8 w .4 .4 249.2 16.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 4 Tm (+0) Tj ET Q
+endstream
+endobj
+239 0 obj
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (skill_Jogatina) /Rect [35 144 285 161] /F 4 /P 8 0 R /V (+0) /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 238 0 R >>  >>
+endobj
+240 0 obj
+<< /Type /XObject /Subtype /Form /BBox [0 0 115 17] /Resources << /Font << /F1 1 0 R >> >> /Length 127 >>
+stream
+q 1 1 1 rg 0 0 115 17 re f 0.75 0.77 0.83 RG .8 w .4 .4 114.2 16.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 4 Tm (Nao) Tj ET Q
+endstream
+endobj
+241 0 obj
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (trained_Jogatina) /Rect [300 144 415 161] /F 4 /P 8 0 R /V (Nao) /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 240 0 R >>  >>
+endobj
+242 0 obj
+<< /Type /XObject /Subtype /Form /BBox [0 0 130 17] /Resources << /Font << /F1 1 0 R >> >> /Length 125 >>
+stream
+q 1 1 1 rg 0 0 130 17 re f 0.75 0.77 0.83 RG .8 w .4 .4 129.2 16.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 4 Tm (0) Tj ET Q
+endstream
+endobj
+243 0 obj
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (extra_Jogatina) /Rect [430 144 560 161] /F 4 /P 8 0 R /V (0) /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 242 0 R >>  >>
+endobj
+244 0 obj
+<< /Type /XObject /Subtype /Form /BBox [0 0 250 17] /Resources << /Font << /F1 1 0 R >> >> /Length 126 >>
+stream
+q 1 1 1 rg 0 0 250 17 re f 0.75 0.77 0.83 RG .8 w .4 .4 249.2 16.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 4 Tm (+0) Tj ET Q
+endstream
+endobj
+245 0 obj
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (skill_Obter InformaÁ„o) /Rect [35 114 285 131] /F 4 /P 8 0 R /V (+0) /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 244 0 R >>  >>
+endobj
+246 0 obj
+<< /Type /XObject /Subtype /Form /BBox [0 0 115 17] /Resources << /Font << /F1 1 0 R >> >> /Length 127 >>
+stream
+q 1 1 1 rg 0 0 115 17 re f 0.75 0.77 0.83 RG .8 w .4 .4 114.2 16.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 4 Tm (Nao) Tj ET Q
+endstream
+endobj
+247 0 obj
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (trained_Obter InformaÁ„o) /Rect [300 114 415 131] /F 4 /P 8 0 R /V (Nao) /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 246 0 R >>  >>
+endobj
+248 0 obj
+<< /Type /XObject /Subtype /Form /BBox [0 0 130 17] /Resources << /Font << /F1 1 0 R >> >> /Length 125 >>
+stream
+q 1 1 1 rg 0 0 130 17 re f 0.75 0.77 0.83 RG .8 w .4 .4 129.2 16.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 4 Tm (0) Tj ET Q
+endstream
+endobj
+249 0 obj
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (extra_Obter InformaÁ„o) /Rect [430 114 560 131] /F 4 /P 8 0 R /V (0) /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 248 0 R >>  >>
+endobj
+250 0 obj
+<< /Type /XObject /Subtype /Form /BBox [0 0 525 18] /Resources << /Font << /F1 1 0 R >> >> /Length 124 >>
+stream
+q 1 1 1 rg 0 0 525 18 re f 0.75 0.77 0.83 RG .8 w .4 .4 524.2 17.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 5 Tm () Tj ET Q
+endstream
+endobj
+251 0 obj
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (talent_1) /Rect [35 721 560 739] /F 4 /P 9 0 R /V () /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 250 0 R >>  >>
+endobj
+252 0 obj
+<< /Type /XObject /Subtype /Form /BBox [0 0 525 18] /Resources << /Font << /F1 1 0 R >> >> /Length 124 >>
+stream
+q 1 1 1 rg 0 0 525 18 re f 0.75 0.77 0.83 RG .8 w .4 .4 524.2 17.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 5 Tm () Tj ET Q
+endstream
+endobj
+253 0 obj
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (talent_2) /Rect [35 683 560 701] /F 4 /P 9 0 R /V () /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 252 0 R >>  >>
+endobj
+254 0 obj
+<< /Type /XObject /Subtype /Form /BBox [0 0 525 18] /Resources << /Font << /F1 1 0 R >> >> /Length 124 >>
+stream
+q 1 1 1 rg 0 0 525 18 re f 0.75 0.77 0.83 RG .8 w .4 .4 524.2 17.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 5 Tm () Tj ET Q
+endstream
+endobj
+255 0 obj
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (talent_3) /Rect [35 645 560 663] /F 4 /P 9 0 R /V () /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 254 0 R >>  >>
+endobj
+256 0 obj
+<< /Type /XObject /Subtype /Form /BBox [0 0 525 18] /Resources << /Font << /F1 1 0 R >> >> /Length 124 >>
+stream
+q 1 1 1 rg 0 0 525 18 re f 0.75 0.77 0.83 RG .8 w .4 .4 524.2 17.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 5 Tm () Tj ET Q
+endstream
+endobj
+257 0 obj
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (talent_4) /Rect [35 607 560 625] /F 4 /P 9 0 R /V () /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 256 0 R >>  >>
+endobj
+258 0 obj
+<< /Type /XObject /Subtype /Form /BBox [0 0 525 18] /Resources << /Font << /F1 1 0 R >> >> /Length 124 >>
+stream
+q 1 1 1 rg 0 0 525 18 re f 0.75 0.77 0.83 RG .8 w .4 .4 524.2 17.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 5 Tm () Tj ET Q
+endstream
+endobj
+259 0 obj
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (talent_5) /Rect [35 569 560 587] /F 4 /P 9 0 R /V () /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 258 0 R >>  >>
+endobj
+260 0 obj
+<< /Type /XObject /Subtype /Form /BBox [0 0 525 18] /Resources << /Font << /F1 1 0 R >> >> /Length 124 >>
+stream
+q 1 1 1 rg 0 0 525 18 re f 0.75 0.77 0.83 RG .8 w .4 .4 524.2 17.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 5 Tm () Tj ET Q
+endstream
+endobj
+261 0 obj
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (talent_6) /Rect [35 531 560 549] /F 4 /P 9 0 R /V () /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 260 0 R >>  >>
+endobj
+262 0 obj
+<< /Type /XObject /Subtype /Form /BBox [0 0 525 18] /Resources << /Font << /F1 1 0 R >> >> /Length 124 >>
+stream
+q 1 1 1 rg 0 0 525 18 re f 0.75 0.77 0.83 RG .8 w .4 .4 524.2 17.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 5 Tm () Tj ET Q
+endstream
+endobj
+263 0 obj
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (talent_7) /Rect [35 493 560 511] /F 4 /P 9 0 R /V () /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 262 0 R >>  >>
+endobj
+264 0 obj
+<< /Type /XObject /Subtype /Form /BBox [0 0 525 18] /Resources << /Font << /F1 1 0 R >> >> /Length 124 >>
+stream
+q 1 1 1 rg 0 0 525 18 re f 0.75 0.77 0.83 RG .8 w .4 .4 524.2 17.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 5 Tm () Tj ET Q
+endstream
+endobj
+265 0 obj
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (talent_8) /Rect [35 455 560 473] /F 4 /P 9 0 R /V () /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 264 0 R >>  >>
+endobj
+266 0 obj
+<< /Type /XObject /Subtype /Form /BBox [0 0 525 18] /Resources << /Font << /F1 1 0 R >> >> /Length 124 >>
+stream
+q 1 1 1 rg 0 0 525 18 re f 0.75 0.77 0.83 RG .8 w .4 .4 524.2 17.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 5 Tm () Tj ET Q
+endstream
+endobj
+267 0 obj
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (talent_9) /Rect [35 417 560 435] /F 4 /P 9 0 R /V () /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 266 0 R >>  >>
+endobj
+268 0 obj
+<< /Type /XObject /Subtype /Form /BBox [0 0 525 18] /Resources << /Font << /F1 1 0 R >> >> /Length 124 >>
+stream
+q 1 1 1 rg 0 0 525 18 re f 0.75 0.77 0.83 RG .8 w .4 .4 524.2 17.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 5 Tm () Tj ET Q
+endstream
+endobj
+269 0 obj
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (talent_10) /Rect [35 379 560 397] /F 4 /P 9 0 R /V () /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 268 0 R >>  >>
+endobj
+270 0 obj
+<< /Type /XObject /Subtype /Form /BBox [0 0 525 18] /Resources << /Font << /F1 1 0 R >> >> /Length 124 >>
+stream
+q 1 1 1 rg 0 0 525 18 re f 0.75 0.77 0.83 RG .8 w .4 .4 524.2 17.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 5 Tm () Tj ET Q
+endstream
+endobj
+271 0 obj
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (talent_11) /Rect [35 341 560 359] /F 4 /P 9 0 R /V () /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 270 0 R >>  >>
+endobj
+272 0 obj
+<< /Type /XObject /Subtype /Form /BBox [0 0 525 18] /Resources << /Font << /F1 1 0 R >> >> /Length 124 >>
+stream
+q 1 1 1 rg 0 0 525 18 re f 0.75 0.77 0.83 RG .8 w .4 .4 524.2 17.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 5 Tm () Tj ET Q
+endstream
+endobj
+273 0 obj
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (talent_12) /Rect [35 303 560 321] /F 4 /P 9 0 R /V () /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 272 0 R >>  >>
+endobj
+274 0 obj
+<< /Type /XObject /Subtype /Form /BBox [0 0 525 18] /Resources << /Font << /F1 1 0 R >> >> /Length 124 >>
+stream
+q 1 1 1 rg 0 0 525 18 re f 0.75 0.77 0.83 RG .8 w .4 .4 524.2 17.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 5 Tm () Tj ET Q
+endstream
+endobj
+275 0 obj
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (talent_13) /Rect [35 265 560 283] /F 4 /P 9 0 R /V () /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 274 0 R >>  >>
+endobj
+276 0 obj
+<< /Type /XObject /Subtype /Form /BBox [0 0 525 18] /Resources << /Font << /F1 1 0 R >> >> /Length 124 >>
+stream
+q 1 1 1 rg 0 0 525 18 re f 0.75 0.77 0.83 RG .8 w .4 .4 524.2 17.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 5 Tm () Tj ET Q
+endstream
+endobj
+277 0 obj
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (talent_14) /Rect [35 227 560 245] /F 4 /P 9 0 R /V () /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 276 0 R >>  >>
+endobj
+278 0 obj
+<< /Type /XObject /Subtype /Form /BBox [0 0 525 18] /Resources << /Font << /F1 1 0 R >> >> /Length 124 >>
+stream
+q 1 1 1 rg 0 0 525 18 re f 0.75 0.77 0.83 RG .8 w .4 .4 524.2 17.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 5 Tm () Tj ET Q
+endstream
+endobj
+279 0 obj
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (talent_15) /Rect [35 189 560 207] /F 4 /P 9 0 R /V () /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 278 0 R >>  >>
+endobj
+280 0 obj
+<< /Type /XObject /Subtype /Form /BBox [0 0 525 18] /Resources << /Font << /F1 1 0 R >> >> /Length 124 >>
+stream
+q 1 1 1 rg 0 0 525 18 re f 0.75 0.77 0.83 RG .8 w .4 .4 524.2 17.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 5 Tm () Tj ET Q
+endstream
+endobj
+281 0 obj
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (talent_16) /Rect [35 151 560 169] /F 4 /P 9 0 R /V () /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 280 0 R >>  >>
+endobj
+282 0 obj
+<< /Type /XObject /Subtype /Form /BBox [0 0 525 18] /Resources << /Font << /F1 1 0 R >> >> /Length 124 >>
+stream
+q 1 1 1 rg 0 0 525 18 re f 0.75 0.77 0.83 RG .8 w .4 .4 524.2 17.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 5 Tm () Tj ET Q
+endstream
+endobj
+283 0 obj
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (talent_17) /Rect [35 113 560 131] /F 4 /P 9 0 R /V () /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 282 0 R >>  >>
+endobj
+284 0 obj
+<< /Type /XObject /Subtype /Form /BBox [0 0 525 18] /Resources << /Font << /F1 1 0 R >> >> /Length 124 >>
+stream
+q 1 1 1 rg 0 0 525 18 re f 0.75 0.77 0.83 RG .8 w .4 .4 524.2 17.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 5 Tm () Tj ET Q
+endstream
+endobj
+285 0 obj
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (talent_18) /Rect [35 75 560 93] /F 4 /P 9 0 R /V () /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 284 0 R >>  >>
+endobj
+286 0 obj
+<< /Type /XObject /Subtype /Form /BBox [0 0 525 18] /Resources << /Font << /F1 1 0 R >> >> /Length 124 >>
+stream
+q 1 1 1 rg 0 0 525 18 re f 0.75 0.77 0.83 RG .8 w .4 .4 524.2 17.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 5 Tm () Tj ET Q
+endstream
+endobj
+287 0 obj
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (spell_1) /Rect [35 721 560 739] /F 4 /P 10 0 R /V () /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 286 0 R >>  >>
+endobj
+288 0 obj
+<< /Type /XObject /Subtype /Form /BBox [0 0 525 18] /Resources << /Font << /F1 1 0 R >> >> /Length 124 >>
+stream
+q 1 1 1 rg 0 0 525 18 re f 0.75 0.77 0.83 RG .8 w .4 .4 524.2 17.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 5 Tm () Tj ET Q
+endstream
+endobj
+289 0 obj
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (spell_2) /Rect [35 683 560 701] /F 4 /P 10 0 R /V () /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 288 0 R >>  >>
+endobj
+290 0 obj
+<< /Type /XObject /Subtype /Form /BBox [0 0 525 18] /Resources << /Font << /F1 1 0 R >> >> /Length 124 >>
+stream
+q 1 1 1 rg 0 0 525 18 re f 0.75 0.77 0.83 RG .8 w .4 .4 524.2 17.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 5 Tm () Tj ET Q
+endstream
+endobj
+291 0 obj
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (spell_3) /Rect [35 645 560 663] /F 4 /P 10 0 R /V () /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 290 0 R >>  >>
+endobj
+292 0 obj
+<< /Type /XObject /Subtype /Form /BBox [0 0 525 18] /Resources << /Font << /F1 1 0 R >> >> /Length 124 >>
+stream
+q 1 1 1 rg 0 0 525 18 re f 0.75 0.77 0.83 RG .8 w .4 .4 524.2 17.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 5 Tm () Tj ET Q
+endstream
+endobj
+293 0 obj
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (spell_4) /Rect [35 607 560 625] /F 4 /P 10 0 R /V () /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 292 0 R >>  >>
+endobj
+294 0 obj
+<< /Type /XObject /Subtype /Form /BBox [0 0 525 18] /Resources << /Font << /F1 1 0 R >> >> /Length 124 >>
+stream
+q 1 1 1 rg 0 0 525 18 re f 0.75 0.77 0.83 RG .8 w .4 .4 524.2 17.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 5 Tm () Tj ET Q
+endstream
+endobj
+295 0 obj
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (spell_5) /Rect [35 569 560 587] /F 4 /P 10 0 R /V () /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 294 0 R >>  >>
+endobj
+296 0 obj
+<< /Type /XObject /Subtype /Form /BBox [0 0 525 18] /Resources << /Font << /F1 1 0 R >> >> /Length 124 >>
+stream
+q 1 1 1 rg 0 0 525 18 re f 0.75 0.77 0.83 RG .8 w .4 .4 524.2 17.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 5 Tm () Tj ET Q
+endstream
+endobj
+297 0 obj
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (spell_6) /Rect [35 531 560 549] /F 4 /P 10 0 R /V () /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 296 0 R >>  >>
+endobj
+298 0 obj
+<< /Type /XObject /Subtype /Form /BBox [0 0 525 18] /Resources << /Font << /F1 1 0 R >> >> /Length 124 >>
+stream
+q 1 1 1 rg 0 0 525 18 re f 0.75 0.77 0.83 RG .8 w .4 .4 524.2 17.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 5 Tm () Tj ET Q
+endstream
+endobj
+299 0 obj
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (spell_7) /Rect [35 493 560 511] /F 4 /P 10 0 R /V () /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 298 0 R >>  >>
+endobj
+300 0 obj
+<< /Type /XObject /Subtype /Form /BBox [0 0 525 18] /Resources << /Font << /F1 1 0 R >> >> /Length 124 >>
+stream
+q 1 1 1 rg 0 0 525 18 re f 0.75 0.77 0.83 RG .8 w .4 .4 524.2 17.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 5 Tm () Tj ET Q
+endstream
+endobj
+301 0 obj
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (spell_8) /Rect [35 455 560 473] /F 4 /P 10 0 R /V () /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 300 0 R >>  >>
+endobj
+302 0 obj
+<< /Type /XObject /Subtype /Form /BBox [0 0 525 18] /Resources << /Font << /F1 1 0 R >> >> /Length 124 >>
+stream
+q 1 1 1 rg 0 0 525 18 re f 0.75 0.77 0.83 RG .8 w .4 .4 524.2 17.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 5 Tm () Tj ET Q
+endstream
+endobj
+303 0 obj
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (spell_9) /Rect [35 417 560 435] /F 4 /P 10 0 R /V () /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 302 0 R >>  >>
+endobj
+304 0 obj
+<< /Type /XObject /Subtype /Form /BBox [0 0 525 18] /Resources << /Font << /F1 1 0 R >> >> /Length 124 >>
+stream
+q 1 1 1 rg 0 0 525 18 re f 0.75 0.77 0.83 RG .8 w .4 .4 524.2 17.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 5 Tm () Tj ET Q
+endstream
+endobj
+305 0 obj
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (spell_10) /Rect [35 379 560 397] /F 4 /P 10 0 R /V () /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 304 0 R >>  >>
+endobj
+306 0 obj
+<< /Type /XObject /Subtype /Form /BBox [0 0 525 18] /Resources << /Font << /F1 1 0 R >> >> /Length 124 >>
+stream
+q 1 1 1 rg 0 0 525 18 re f 0.75 0.77 0.83 RG .8 w .4 .4 524.2 17.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 5 Tm () Tj ET Q
+endstream
+endobj
+307 0 obj
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (spell_11) /Rect [35 341 560 359] /F 4 /P 10 0 R /V () /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 306 0 R >>  >>
+endobj
+308 0 obj
+<< /Type /XObject /Subtype /Form /BBox [0 0 525 18] /Resources << /Font << /F1 1 0 R >> >> /Length 124 >>
+stream
+q 1 1 1 rg 0 0 525 18 re f 0.75 0.77 0.83 RG .8 w .4 .4 524.2 17.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 5 Tm () Tj ET Q
+endstream
+endobj
+309 0 obj
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (spell_12) /Rect [35 303 560 321] /F 4 /P 10 0 R /V () /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 308 0 R >>  >>
+endobj
+310 0 obj
+<< /Type /XObject /Subtype /Form /BBox [0 0 525 18] /Resources << /Font << /F1 1 0 R >> >> /Length 124 >>
+stream
+q 1 1 1 rg 0 0 525 18 re f 0.75 0.77 0.83 RG .8 w .4 .4 524.2 17.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 5 Tm () Tj ET Q
+endstream
+endobj
+311 0 obj
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (spell_13) /Rect [35 265 560 283] /F 4 /P 10 0 R /V () /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 310 0 R >>  >>
+endobj
+312 0 obj
+<< /Type /XObject /Subtype /Form /BBox [0 0 525 18] /Resources << /Font << /F1 1 0 R >> >> /Length 124 >>
+stream
+q 1 1 1 rg 0 0 525 18 re f 0.75 0.77 0.83 RG .8 w .4 .4 524.2 17.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 5 Tm () Tj ET Q
+endstream
+endobj
+313 0 obj
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (spell_14) /Rect [35 227 560 245] /F 4 /P 10 0 R /V () /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 312 0 R >>  >>
+endobj
+314 0 obj
+<< /Type /XObject /Subtype /Form /BBox [0 0 525 18] /Resources << /Font << /F1 1 0 R >> >> /Length 124 >>
+stream
+q 1 1 1 rg 0 0 525 18 re f 0.75 0.77 0.83 RG .8 w .4 .4 524.2 17.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 5 Tm () Tj ET Q
+endstream
+endobj
+315 0 obj
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (spell_15) /Rect [35 189 560 207] /F 4 /P 10 0 R /V () /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 314 0 R >>  >>
+endobj
+316 0 obj
+<< /Type /XObject /Subtype /Form /BBox [0 0 525 18] /Resources << /Font << /F1 1 0 R >> >> /Length 124 >>
+stream
+q 1 1 1 rg 0 0 525 18 re f 0.75 0.77 0.83 RG .8 w .4 .4 524.2 17.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 5 Tm () Tj ET Q
+endstream
+endobj
+317 0 obj
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (spell_16) /Rect [35 151 560 169] /F 4 /P 10 0 R /V () /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 316 0 R >>  >>
+endobj
+318 0 obj
+<< /Type /XObject /Subtype /Form /BBox [0 0 525 18] /Resources << /Font << /F1 1 0 R >> >> /Length 124 >>
+stream
+q 1 1 1 rg 0 0 525 18 re f 0.75 0.77 0.83 RG .8 w .4 .4 524.2 17.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 5 Tm () Tj ET Q
+endstream
+endobj
+319 0 obj
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (spell_17) /Rect [35 113 560 131] /F 4 /P 10 0 R /V () /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 318 0 R >>  >>
+endobj
+320 0 obj
+<< /Type /XObject /Subtype /Form /BBox [0 0 525 18] /Resources << /Font << /F1 1 0 R >> >> /Length 124 >>
+stream
+q 1 1 1 rg 0 0 525 18 re f 0.75 0.77 0.83 RG .8 w .4 .4 524.2 17.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 5 Tm () Tj ET Q
+endstream
+endobj
+321 0 obj
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (spell_18) /Rect [35 75 560 93] /F 4 /P 10 0 R /V () /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 320 0 R >>  >>
+endobj
+322 0 obj
+<< /Type /XObject /Subtype /Form /BBox [0 0 525 128] /Resources << /Font << /F1 1 0 R >> >> /Length 128 >>
+stream
+q 1 1 1 rg 0 0 525 128 re f 0.75 0.77 0.83 RG .8 w .4 .4 524.2 127.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 115 Tm () Tj ET Q
+endstream
+endobj
+323 0 obj
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (inventory) /Rect [35 604 560 732] /F 4 /P 11 0 R /V () /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 322 0 R >> /Ff 4096 >>
+endobj
+324 0 obj
+<< /Type /XObject /Subtype /Form /BBox [0 0 525 128] /Resources << /Font << /F1 1 0 R >> >> /Length 128 >>
+stream
+q 1 1 1 rg 0 0 525 128 re f 0.75 0.77 0.83 RG .8 w .4 .4 524.2 127.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 115 Tm () Tj ET Q
+endstream
+endobj
+325 0 obj
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (magics) /Rect [35 430 560 558] /F 4 /P 11 0 R /V () /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 324 0 R >> /Ff 4096 >>
+endobj
+326 0 obj
+<< /Type /XObject /Subtype /Form /BBox [0 0 525 55] /Resources << /Font << /F1 1 0 R >> >> /Length 125 >>
+stream
+q 1 1 1 rg 0 0 525 55 re f 0.75 0.77 0.83 RG .8 w .4 .4 524.2 54.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 42 Tm () Tj ET Q
+endstream
+endobj
+327 0 obj
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (concept) /Rect [35 320 560 375] /F 4 /P 11 0 R /V () /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 326 0 R >> /Ff 4096 >>
+endobj
+328 0 obj
+<< /Type /XObject /Subtype /Form /BBox [0 0 525 153] /Resources << /Font << /F1 1 0 R >> >> /Length 128 >>
+stream
+q 1 1 1 rg 0 0 525 153 re f 0.75 0.77 0.83 RG .8 w .4 .4 524.2 152.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 140 Tm () Tj ET Q
+endstream
+endobj
+329 0 obj
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (notes) /Rect [35 100 560 253] /F 4 /P 11 0 R /V () /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 328 0 R >> /Ff 4096 >>
+endobj
+330 0 obj
+<< /Type /XObject /Subtype /Form /BBox [0 0 150 20] /Resources << /Font << /F1 1 0 R >> >> /Length 124 >>
+stream
+q 1 1 1 rg 0 0 150 20 re f 0.75 0.77 0.83 RG .8 w .4 .4 149.2 19.2 re S BT /F1 9 Tf 0.1 0.1 0.2 rg 1 0 0 1 5 7 Tm () Tj ET Q
+endstream
+endobj
+331 0 obj
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (exp) /Rect [35 39 185 59] /F 4 /P 11 0 R /V () /DA (/F1 9 Tf 0 0 0 rg) /AP << /N 330 0 R >>  >>
+endobj
+332 0 obj
+<< /Length 5766 >>
+stream
+0.08 0.11 0.17 rg 0 775 595 67 re f
+BT /F2 20 Tf 1 1 1 rg 1 0 0 1 35 799 Tm (G A U RPG) Tj ET
+BT /F2 11 Tf 0.81 0.72 0.96 rg 1 0 0 1 35 782 Tm (IDENTIDADE E ATRIBUTOS) Tj ET
+BT /F1 7 Tf 0.12 0.15 0.23 rg 1 0 0 1 35 29 Tm (Ficha PDF editavel ∑ v0.2 ∑ use HTML para recalcular) Tj ET
+BT /F1 7 Tf 0.12 0.15 0.23 rg 1 0 0 1 510 29 Tm (Pag. 1/6) Tj ET
+0.985 0.988 0.995 rg 35 718 245 23 re f 0.68 0.72 0.79 RG 0.7 w 35 718 245 23 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 35 746 Tm (Nome) Tj ET
+0.985 0.988 0.995 rg 315 718 245 23 re f 0.68 0.72 0.79 RG 0.7 w 315 718 245 23 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 315 746 Tm (Jogador) Tj ET
+0.985 0.988 0.995 rg 35 655 245 23 re f 0.68 0.72 0.79 RG 0.7 w 35 655 245 23 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 35 683 Tm (Raca) Tj ET
+0.985 0.988 0.995 rg 315 655 245 23 re f 0.68 0.72 0.79 RG 0.7 w 315 655 245 23 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 315 683 Tm (Origem) Tj ET
+0.985 0.988 0.995 rg 35 592 245 23 re f 0.68 0.72 0.79 RG 0.7 w 35 592 245 23 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 35 620 Tm (Divindade) Tj ET
+0.985 0.988 0.995 rg 315 592 245 23 re f 0.68 0.72 0.79 RG 0.7 w 315 592 245 23 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 315 620 Tm (Classes/Niveis) Tj ET
+0.985 0.988 0.995 rg 35 529 105 23 re f 0.68 0.72 0.79 RG 0.7 w 35 529 105 23 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 35 557 Tm (Nivel) Tj ET
+0.985 0.988 0.995 rg 160 529 105 23 re f 0.68 0.72 0.79 RG 0.7 w 160 529 105 23 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 160 557 Tm (PV calculado) Tj ET
+0.985 0.988 0.995 rg 285 529 105 23 re f 0.68 0.72 0.79 RG 0.7 w 285 529 105 23 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 285 557 Tm (PV final) Tj ET
+0.985 0.988 0.995 rg 410 529 150 23 re f 0.68 0.72 0.79 RG 0.7 w 410 529 150 23 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 410 557 Tm (BBA final) Tj ET
+BT /F2 10 Tf 0.12 0.15 0.23 rg 1 0 0 1 35 479 Tm (ForÁa) Tj ET
+0.985 0.988 0.995 rg 170 467 74 22 re f 0.68 0.72 0.79 RG 0.7 w 170 467 74 22 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 170 494 Tm (Base) Tj ET
+0.985 0.988 0.995 rg 265 467 74 22 re f 0.68 0.72 0.79 RG 0.7 w 265 467 74 22 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 265 494 Tm (Racial) Tj ET
+0.985 0.988 0.995 rg 360 467 74 22 re f 0.68 0.72 0.79 RG 0.7 w 360 467 74 22 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 360 494 Tm (Outros) Tj ET
+0.985 0.988 0.995 rg 455 467 105 22 re f 0.68 0.72 0.79 RG 0.7 w 455 467 105 22 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 455 494 Tm (Total) Tj ET
+BT /F2 10 Tf 0.12 0.15 0.23 rg 1 0 0 1 35 426 Tm (Destreza) Tj ET
+0.985 0.988 0.995 rg 170 414 74 22 re f 0.68 0.72 0.79 RG 0.7 w 170 414 74 22 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 170 441 Tm (Base) Tj ET
+0.985 0.988 0.995 rg 265 414 74 22 re f 0.68 0.72 0.79 RG 0.7 w 265 414 74 22 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 265 441 Tm (Racial) Tj ET
+0.985 0.988 0.995 rg 360 414 74 22 re f 0.68 0.72 0.79 RG 0.7 w 360 414 74 22 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 360 441 Tm (Outros) Tj ET
+0.985 0.988 0.995 rg 455 414 105 22 re f 0.68 0.72 0.79 RG 0.7 w 455 414 105 22 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 455 441 Tm (Total) Tj ET
+BT /F2 10 Tf 0.12 0.15 0.23 rg 1 0 0 1 35 373 Tm (ConstituiÁ„o) Tj ET
+0.985 0.988 0.995 rg 170 361 74 22 re f 0.68 0.72 0.79 RG 0.7 w 170 361 74 22 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 170 388 Tm (Base) Tj ET
+0.985 0.988 0.995 rg 265 361 74 22 re f 0.68 0.72 0.79 RG 0.7 w 265 361 74 22 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 265 388 Tm (Racial) Tj ET
+0.985 0.988 0.995 rg 360 361 74 22 re f 0.68 0.72 0.79 RG 0.7 w 360 361 74 22 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 360 388 Tm (Outros) Tj ET
+0.985 0.988 0.995 rg 455 361 105 22 re f 0.68 0.72 0.79 RG 0.7 w 455 361 105 22 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 455 388 Tm (Total) Tj ET
+BT /F2 10 Tf 0.12 0.15 0.23 rg 1 0 0 1 35 320 Tm (InteligÍncia) Tj ET
+0.985 0.988 0.995 rg 170 308 74 22 re f 0.68 0.72 0.79 RG 0.7 w 170 308 74 22 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 170 335 Tm (Base) Tj ET
+0.985 0.988 0.995 rg 265 308 74 22 re f 0.68 0.72 0.79 RG 0.7 w 265 308 74 22 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 265 335 Tm (Racial) Tj ET
+0.985 0.988 0.995 rg 360 308 74 22 re f 0.68 0.72 0.79 RG 0.7 w 360 308 74 22 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 360 335 Tm (Outros) Tj ET
+0.985 0.988 0.995 rg 455 308 105 22 re f 0.68 0.72 0.79 RG 0.7 w 455 308 105 22 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 455 335 Tm (Total) Tj ET
+BT /F2 10 Tf 0.12 0.15 0.23 rg 1 0 0 1 35 267 Tm (Sabedoria) Tj ET
+0.985 0.988 0.995 rg 170 255 74 22 re f 0.68 0.72 0.79 RG 0.7 w 170 255 74 22 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 170 282 Tm (Base) Tj ET
+0.985 0.988 0.995 rg 265 255 74 22 re f 0.68 0.72 0.79 RG 0.7 w 265 255 74 22 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 265 282 Tm (Racial) Tj ET
+0.985 0.988 0.995 rg 360 255 74 22 re f 0.68 0.72 0.79 RG 0.7 w 360 255 74 22 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 360 282 Tm (Outros) Tj ET
+0.985 0.988 0.995 rg 455 255 105 22 re f 0.68 0.72 0.79 RG 0.7 w 455 255 105 22 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 455 282 Tm (Total) Tj ET
+BT /F2 10 Tf 0.12 0.15 0.23 rg 1 0 0 1 35 214 Tm (Carisma) Tj ET
+0.985 0.988 0.995 rg 170 202 74 22 re f 0.68 0.72 0.79 RG 0.7 w 170 202 74 22 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 170 229 Tm (Base) Tj ET
+0.985 0.988 0.995 rg 265 202 74 22 re f 0.68 0.72 0.79 RG 0.7 w 265 202 74 22 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 265 229 Tm (Racial) Tj ET
+0.985 0.988 0.995 rg 360 202 74 22 re f 0.68 0.72 0.79 RG 0.7 w 360 202 74 22 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 360 229 Tm (Outros) Tj ET
+0.985 0.988 0.995 rg 455 202 105 22 re f 0.68 0.72 0.79 RG 0.7 w 455 202 105 22 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 455 229 Tm (Total) Tj ET
 
+endstream
+endobj
+333 0 obj
+<< /Length 3981 >>
+stream
+0.08 0.11 0.17 rg 0 775 595 67 re f
+BT /F2 20 Tf 1 1 1 rg 1 0 0 1 35 799 Tm (G A U RPG) Tj ET
+BT /F2 11 Tf 0.81 0.72 0.96 rg 1 0 0 1 35 782 Tm (COMBATE, CONJURACAO E RECURSOS) Tj ET
+BT /F1 7 Tf 0.12 0.15 0.23 rg 1 0 0 1 35 29 Tm (Ficha PDF editavel ∑ v0.2 ∑ use HTML para recalcular) Tj ET
+BT /F1 7 Tf 0.12 0.15 0.23 rg 1 0 0 1 510 29 Tm (Pag. 2/6) Tj ET
+0.985 0.988 0.995 rg 35 711 155 23 re f 0.68 0.72 0.79 RG 0.7 w 35 711 155 23 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 35 739 Tm (CA / Defesa) Tj ET
+0.985 0.988 0.995 rg 205 711 155 23 re f 0.68 0.72 0.79 RG 0.7 w 205 711 155 23 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 205 739 Tm (Deslocamento) Tj ET
+0.985 0.988 0.995 rg 375 711 185 23 re f 0.68 0.72 0.79 RG 0.7 w 375 711 185 23 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 375 739 Tm (BBA calculado) Tj ET
+0.985 0.988 0.995 rg 35 645 245 23 re f 0.68 0.72 0.79 RG 0.7 w 35 645 245 23 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 35 673 Tm (PM arcano) Tj ET
+0.985 0.988 0.995 rg 315 645 245 23 re f 0.68 0.72 0.79 RG 0.7 w 315 645 245 23 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 315 673 Tm (PM divino) Tj ET
+0.985 0.988 0.995 rg 35 540 525 60 re f 0.68 0.72 0.79 RG 0.7 w 35 540 525 60 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 35 605 Tm (Ataques e danos) Tj ET
+BT /F2 9 Tf 0.12 0.15 0.23 rg 1 0 0 1 35 505 Tm (CONJURACAO POR CLASSE \(MODIFICADOR CONFIRMADO, PM BASE E CD\)) Tj ET
+0.985 0.988 0.995 rg 35 462 205 20 re f 0.68 0.72 0.79 RG 0.7 w 35 462 205 20 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 35 487 Tm (Classe / modo 1) Tj ET
+0.985 0.988 0.995 rg 255 462 115 20 re f 0.68 0.72 0.79 RG 0.7 w 255 462 115 20 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 255 487 Tm (Hab.-chave / mod.) Tj ET
+0.985 0.988 0.995 rg 385 462 75 20 re f 0.68 0.72 0.79 RG 0.7 w 385 462 75 20 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 385 487 Tm (PM base) Tj ET
+0.985 0.988 0.995 rg 475 462 85 20 re f 0.68 0.72 0.79 RG 0.7 w 475 462 85 20 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 475 487 Tm (CD base) Tj ET
+0.985 0.988 0.995 rg 35 414 205 20 re f 0.68 0.72 0.79 RG 0.7 w 35 414 205 20 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 35 439 Tm (Classe / modo 2) Tj ET
+0.985 0.988 0.995 rg 255 414 115 20 re f 0.68 0.72 0.79 RG 0.7 w 255 414 115 20 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 255 439 Tm (Hab.-chave / mod.) Tj ET
+0.985 0.988 0.995 rg 385 414 75 20 re f 0.68 0.72 0.79 RG 0.7 w 385 414 75 20 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 385 439 Tm (PM base) Tj ET
+0.985 0.988 0.995 rg 475 414 85 20 re f 0.68 0.72 0.79 RG 0.7 w 475 414 85 20 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 475 439 Tm (CD base) Tj ET
+0.985 0.988 0.995 rg 35 366 205 20 re f 0.68 0.72 0.79 RG 0.7 w 35 366 205 20 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 35 391 Tm (Classe / modo 3) Tj ET
+0.985 0.988 0.995 rg 255 366 115 20 re f 0.68 0.72 0.79 RG 0.7 w 255 366 115 20 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 255 391 Tm (Hab.-chave / mod.) Tj ET
+0.985 0.988 0.995 rg 385 366 75 20 re f 0.68 0.72 0.79 RG 0.7 w 385 366 75 20 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 385 391 Tm (PM base) Tj ET
+0.985 0.988 0.995 rg 475 366 85 20 re f 0.68 0.72 0.79 RG 0.7 w 475 366 85 20 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 475 391 Tm (CD base) Tj ET
+0.985 0.988 0.995 rg 35 318 205 20 re f 0.68 0.72 0.79 RG 0.7 w 35 318 205 20 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 35 343 Tm (Classe / modo 4) Tj ET
+0.985 0.988 0.995 rg 255 318 115 20 re f 0.68 0.72 0.79 RG 0.7 w 255 318 115 20 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 255 343 Tm (Hab.-chave / mod.) Tj ET
+0.985 0.988 0.995 rg 385 318 75 20 re f 0.68 0.72 0.79 RG 0.7 w 385 318 75 20 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 385 343 Tm (PM base) Tj ET
+0.985 0.988 0.995 rg 475 318 85 20 re f 0.68 0.72 0.79 RG 0.7 w 475 318 85 20 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 475 343 Tm (CD base) Tj ET
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 35 250 Tm (Custo basico: 1 PM por nivel da magia \(nivel 0 = 0 PM\). Preparacao: 1h ∑ Descanso: 8h.) Tj ET
+
+endstream
+endobj
+334 0 obj
+<< /Length 9763 >>
+stream
+0.08 0.11 0.17 rg 0 775 595 67 re f
+BT /F2 20 Tf 1 1 1 rg 1 0 0 1 35 799 Tm (G A U RPG) Tj ET
+BT /F2 11 Tf 0.81 0.72 0.96 rg 1 0 0 1 35 782 Tm (PERICIAS) Tj ET
+BT /F1 7 Tf 0.12 0.15 0.23 rg 1 0 0 1 35 29 Tm (Ficha PDF editavel ∑ v0.2 ∑ use HTML para recalcular) Tj ET
+BT /F1 7 Tf 0.12 0.15 0.23 rg 1 0 0 1 510 29 Tm (Pag. 3/6) Tj ET
+0.985 0.988 0.995 rg 35 714 250 17 re f 0.68 0.72 0.79 RG 0.7 w 35 714 250 17 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 35 736 Tm (Acrobacia) Tj ET
+0.985 0.988 0.995 rg 300 714 115 17 re f 0.68 0.72 0.79 RG 0.7 w 300 714 115 17 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 300 736 Tm (Treinada) Tj ET
+0.985 0.988 0.995 rg 430 714 130 17 re f 0.68 0.72 0.79 RG 0.7 w 430 714 130 17 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 430 736 Tm (Extra) Tj ET
+0.985 0.988 0.995 rg 35 684 250 17 re f 0.68 0.72 0.79 RG 0.7 w 35 684 250 17 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 35 706 Tm (Adestrar Animais) Tj ET
+0.985 0.988 0.995 rg 300 684 115 17 re f 0.68 0.72 0.79 RG 0.7 w 300 684 115 17 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 300 706 Tm (Treinada) Tj ET
+0.985 0.988 0.995 rg 430 684 130 17 re f 0.68 0.72 0.79 RG 0.7 w 430 684 130 17 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 430 706 Tm (Extra) Tj ET
+0.985 0.988 0.995 rg 35 654 250 17 re f 0.68 0.72 0.79 RG 0.7 w 35 654 250 17 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 35 676 Tm (Atletismo) Tj ET
+0.985 0.988 0.995 rg 300 654 115 17 re f 0.68 0.72 0.79 RG 0.7 w 300 654 115 17 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 300 676 Tm (Treinada) Tj ET
+0.985 0.988 0.995 rg 430 654 130 17 re f 0.68 0.72 0.79 RG 0.7 w 430 654 130 17 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 430 676 Tm (Extra) Tj ET
+0.985 0.988 0.995 rg 35 624 250 17 re f 0.68 0.72 0.79 RG 0.7 w 35 624 250 17 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 35 646 Tm (AtuaÁ„o) Tj ET
+0.985 0.988 0.995 rg 300 624 115 17 re f 0.68 0.72 0.79 RG 0.7 w 300 624 115 17 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 300 646 Tm (Treinada) Tj ET
+0.985 0.988 0.995 rg 430 624 130 17 re f 0.68 0.72 0.79 RG 0.7 w 430 624 130 17 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 430 646 Tm (Extra) Tj ET
+0.985 0.988 0.995 rg 35 594 250 17 re f 0.68 0.72 0.79 RG 0.7 w 35 594 250 17 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 35 616 Tm (Cavalgar) Tj ET
+0.985 0.988 0.995 rg 300 594 115 17 re f 0.68 0.72 0.79 RG 0.7 w 300 594 115 17 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 300 616 Tm (Treinada) Tj ET
+0.985 0.988 0.995 rg 430 594 130 17 re f 0.68 0.72 0.79 RG 0.7 w 430 594 130 17 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 430 616 Tm (Extra) Tj ET
+0.985 0.988 0.995 rg 35 564 250 17 re f 0.68 0.72 0.79 RG 0.7 w 35 564 250 17 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 35 586 Tm (Conhecimento) Tj ET
+0.985 0.988 0.995 rg 300 564 115 17 re f 0.68 0.72 0.79 RG 0.7 w 300 564 115 17 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 300 586 Tm (Treinada) Tj ET
+0.985 0.988 0.995 rg 430 564 130 17 re f 0.68 0.72 0.79 RG 0.7 w 430 564 130 17 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 430 586 Tm (Extra) Tj ET
+0.985 0.988 0.995 rg 35 534 250 17 re f 0.68 0.72 0.79 RG 0.7 w 35 534 250 17 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 35 556 Tm (Cura) Tj ET
+0.985 0.988 0.995 rg 300 534 115 17 re f 0.68 0.72 0.79 RG 0.7 w 300 534 115 17 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 300 556 Tm (Treinada) Tj ET
+0.985 0.988 0.995 rg 430 534 130 17 re f 0.68 0.72 0.79 RG 0.7 w 430 534 130 17 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 430 556 Tm (Extra) Tj ET
+0.985 0.988 0.995 rg 35 504 250 17 re f 0.68 0.72 0.79 RG 0.7 w 35 504 250 17 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 35 526 Tm (Diplomacia) Tj ET
+0.985 0.988 0.995 rg 300 504 115 17 re f 0.68 0.72 0.79 RG 0.7 w 300 504 115 17 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 300 526 Tm (Treinada) Tj ET
+0.985 0.988 0.995 rg 430 504 130 17 re f 0.68 0.72 0.79 RG 0.7 w 430 504 130 17 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 430 526 Tm (Extra) Tj ET
+0.985 0.988 0.995 rg 35 474 250 17 re f 0.68 0.72 0.79 RG 0.7 w 35 474 250 17 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 35 496 Tm (EnganaÁ„o) Tj ET
+0.985 0.988 0.995 rg 300 474 115 17 re f 0.68 0.72 0.79 RG 0.7 w 300 474 115 17 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 300 496 Tm (Treinada) Tj ET
+0.985 0.988 0.995 rg 430 474 130 17 re f 0.68 0.72 0.79 RG 0.7 w 430 474 130 17 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 430 496 Tm (Extra) Tj ET
+0.985 0.988 0.995 rg 35 444 250 17 re f 0.68 0.72 0.79 RG 0.7 w 35 444 250 17 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 35 466 Tm (Furtividade) Tj ET
+0.985 0.988 0.995 rg 300 444 115 17 re f 0.68 0.72 0.79 RG 0.7 w 300 444 115 17 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 300 466 Tm (Treinada) Tj ET
+0.985 0.988 0.995 rg 430 444 130 17 re f 0.68 0.72 0.79 RG 0.7 w 430 444 130 17 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 430 466 Tm (Extra) Tj ET
+0.985 0.988 0.995 rg 35 414 250 17 re f 0.68 0.72 0.79 RG 0.7 w 35 414 250 17 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 35 436 Tm (Identificar Magia) Tj ET
+0.985 0.988 0.995 rg 300 414 115 17 re f 0.68 0.72 0.79 RG 0.7 w 300 414 115 17 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 300 436 Tm (Treinada) Tj ET
+0.985 0.988 0.995 rg 430 414 130 17 re f 0.68 0.72 0.79 RG 0.7 w 430 414 130 17 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 430 436 Tm (Extra) Tj ET
+0.985 0.988 0.995 rg 35 384 250 17 re f 0.68 0.72 0.79 RG 0.7 w 35 384 250 17 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 35 406 Tm (Iniciativa) Tj ET
+0.985 0.988 0.995 rg 300 384 115 17 re f 0.68 0.72 0.79 RG 0.7 w 300 384 115 17 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 300 406 Tm (Treinada) Tj ET
+0.985 0.988 0.995 rg 430 384 130 17 re f 0.68 0.72 0.79 RG 0.7 w 430 384 130 17 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 430 406 Tm (Extra) Tj ET
+0.985 0.988 0.995 rg 35 354 250 17 re f 0.68 0.72 0.79 RG 0.7 w 35 354 250 17 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 35 376 Tm (IntuiÁ„o) Tj ET
+0.985 0.988 0.995 rg 300 354 115 17 re f 0.68 0.72 0.79 RG 0.7 w 300 354 115 17 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 300 376 Tm (Treinada) Tj ET
+0.985 0.988 0.995 rg 430 354 130 17 re f 0.68 0.72 0.79 RG 0.7 w 430 354 130 17 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 430 376 Tm (Extra) Tj ET
+0.985 0.988 0.995 rg 35 324 250 17 re f 0.68 0.72 0.79 RG 0.7 w 35 324 250 17 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 35 346 Tm (Ladinagem) Tj ET
+0.985 0.988 0.995 rg 300 324 115 17 re f 0.68 0.72 0.79 RG 0.7 w 300 324 115 17 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 300 346 Tm (Treinada) Tj ET
+0.985 0.988 0.995 rg 430 324 130 17 re f 0.68 0.72 0.79 RG 0.7 w 430 324 130 17 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 430 346 Tm (Extra) Tj ET
+0.985 0.988 0.995 rg 35 294 250 17 re f 0.68 0.72 0.79 RG 0.7 w 35 294 250 17 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 35 316 Tm (MeditaÁ„o) Tj ET
+0.985 0.988 0.995 rg 300 294 115 17 re f 0.68 0.72 0.79 RG 0.7 w 300 294 115 17 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 300 316 Tm (Treinada) Tj ET
+0.985 0.988 0.995 rg 430 294 130 17 re f 0.68 0.72 0.79 RG 0.7 w 430 294 130 17 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 430 316 Tm (Extra) Tj ET
+0.985 0.988 0.995 rg 35 264 250 17 re f 0.68 0.72 0.79 RG 0.7 w 35 264 250 17 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 35 286 Tm (OfÌcio) Tj ET
+0.985 0.988 0.995 rg 300 264 115 17 re f 0.68 0.72 0.79 RG 0.7 w 300 264 115 17 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 300 286 Tm (Treinada) Tj ET
+0.985 0.988 0.995 rg 430 264 130 17 re f 0.68 0.72 0.79 RG 0.7 w 430 264 130 17 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 430 286 Tm (Extra) Tj ET
+0.985 0.988 0.995 rg 35 234 250 17 re f 0.68 0.72 0.79 RG 0.7 w 35 234 250 17 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 35 256 Tm (PercepÁ„o) Tj ET
+0.985 0.988 0.995 rg 300 234 115 17 re f 0.68 0.72 0.79 RG 0.7 w 300 234 115 17 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 300 256 Tm (Treinada) Tj ET
+0.985 0.988 0.995 rg 430 234 130 17 re f 0.68 0.72 0.79 RG 0.7 w 430 234 130 17 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 430 256 Tm (Extra) Tj ET
+0.985 0.988 0.995 rg 35 204 250 17 re f 0.68 0.72 0.79 RG 0.7 w 35 204 250 17 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 35 226 Tm (SobrevivÍncia) Tj ET
+0.985 0.988 0.995 rg 300 204 115 17 re f 0.68 0.72 0.79 RG 0.7 w 300 204 115 17 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 300 226 Tm (Treinada) Tj ET
+0.985 0.988 0.995 rg 430 204 130 17 re f 0.68 0.72 0.79 RG 0.7 w 430 204 130 17 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 430 226 Tm (Extra) Tj ET
+0.985 0.988 0.995 rg 35 174 250 17 re f 0.68 0.72 0.79 RG 0.7 w 35 174 250 17 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 35 196 Tm (IntimidaÁ„o) Tj ET
+0.985 0.988 0.995 rg 300 174 115 17 re f 0.68 0.72 0.79 RG 0.7 w 300 174 115 17 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 300 196 Tm (Treinada) Tj ET
+0.985 0.988 0.995 rg 430 174 130 17 re f 0.68 0.72 0.79 RG 0.7 w 430 174 130 17 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 430 196 Tm (Extra) Tj ET
+0.985 0.988 0.995 rg 35 144 250 17 re f 0.68 0.72 0.79 RG 0.7 w 35 144 250 17 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 35 166 Tm (Jogatina) Tj ET
+0.985 0.988 0.995 rg 300 144 115 17 re f 0.68 0.72 0.79 RG 0.7 w 300 144 115 17 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 300 166 Tm (Treinada) Tj ET
+0.985 0.988 0.995 rg 430 144 130 17 re f 0.68 0.72 0.79 RG 0.7 w 430 144 130 17 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 430 166 Tm (Extra) Tj ET
+0.985 0.988 0.995 rg 35 114 250 17 re f 0.68 0.72 0.79 RG 0.7 w 35 114 250 17 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 35 136 Tm (Obter InformaÁ„o) Tj ET
+0.985 0.988 0.995 rg 300 114 115 17 re f 0.68 0.72 0.79 RG 0.7 w 300 114 115 17 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 300 136 Tm (Treinada) Tj ET
+0.985 0.988 0.995 rg 430 114 130 17 re f 0.68 0.72 0.79 RG 0.7 w 430 114 130 17 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 430 136 Tm (Extra) Tj ET
+
+endstream
+endobj
+335 0 obj
+<< /Length 3265 >>
+stream
+0.08 0.11 0.17 rg 0 775 595 67 re f
+BT /F2 20 Tf 1 1 1 rg 1 0 0 1 35 799 Tm (G A U RPG) Tj ET
+BT /F2 11 Tf 0.81 0.72 0.96 rg 1 0 0 1 35 782 Tm (TALENTOS E PODERES) Tj ET
+BT /F1 7 Tf 0.12 0.15 0.23 rg 1 0 0 1 35 29 Tm (Ficha PDF editavel ∑ v0.2 ∑ use HTML para recalcular) Tj ET
+BT /F1 7 Tf 0.12 0.15 0.23 rg 1 0 0 1 510 29 Tm (Pag. 4/6) Tj ET
+0.985 0.988 0.995 rg 35 721 525 18 re f 0.68 0.72 0.79 RG 0.7 w 35 721 525 18 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 35 744 Tm (Talento / habilidade 1) Tj ET
+0.985 0.988 0.995 rg 35 683 525 18 re f 0.68 0.72 0.79 RG 0.7 w 35 683 525 18 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 35 706 Tm (Talento / habilidade 2) Tj ET
+0.985 0.988 0.995 rg 35 645 525 18 re f 0.68 0.72 0.79 RG 0.7 w 35 645 525 18 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 35 668 Tm (Talento / habilidade 3) Tj ET
+0.985 0.988 0.995 rg 35 607 525 18 re f 0.68 0.72 0.79 RG 0.7 w 35 607 525 18 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 35 630 Tm (Talento / habilidade 4) Tj ET
+0.985 0.988 0.995 rg 35 569 525 18 re f 0.68 0.72 0.79 RG 0.7 w 35 569 525 18 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 35 592 Tm (Talento / habilidade 5) Tj ET
+0.985 0.988 0.995 rg 35 531 525 18 re f 0.68 0.72 0.79 RG 0.7 w 35 531 525 18 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 35 554 Tm (Talento / habilidade 6) Tj ET
+0.985 0.988 0.995 rg 35 493 525 18 re f 0.68 0.72 0.79 RG 0.7 w 35 493 525 18 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 35 516 Tm (Talento / habilidade 7) Tj ET
+0.985 0.988 0.995 rg 35 455 525 18 re f 0.68 0.72 0.79 RG 0.7 w 35 455 525 18 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 35 478 Tm (Talento / habilidade 8) Tj ET
+0.985 0.988 0.995 rg 35 417 525 18 re f 0.68 0.72 0.79 RG 0.7 w 35 417 525 18 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 35 440 Tm (Talento / habilidade 9) Tj ET
+0.985 0.988 0.995 rg 35 379 525 18 re f 0.68 0.72 0.79 RG 0.7 w 35 379 525 18 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 35 402 Tm (Talento / habilidade 10) Tj ET
+0.985 0.988 0.995 rg 35 341 525 18 re f 0.68 0.72 0.79 RG 0.7 w 35 341 525 18 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 35 364 Tm (Talento / habilidade 11) Tj ET
+0.985 0.988 0.995 rg 35 303 525 18 re f 0.68 0.72 0.79 RG 0.7 w 35 303 525 18 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 35 326 Tm (Talento / habilidade 12) Tj ET
+0.985 0.988 0.995 rg 35 265 525 18 re f 0.68 0.72 0.79 RG 0.7 w 35 265 525 18 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 35 288 Tm (Talento / habilidade 13) Tj ET
+0.985 0.988 0.995 rg 35 227 525 18 re f 0.68 0.72 0.79 RG 0.7 w 35 227 525 18 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 35 250 Tm (Talento / habilidade 14) Tj ET
+0.985 0.988 0.995 rg 35 189 525 18 re f 0.68 0.72 0.79 RG 0.7 w 35 189 525 18 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 35 212 Tm (Talento / habilidade 15) Tj ET
+0.985 0.988 0.995 rg 35 151 525 18 re f 0.68 0.72 0.79 RG 0.7 w 35 151 525 18 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 35 174 Tm (Talento / habilidade 16) Tj ET
+0.985 0.988 0.995 rg 35 113 525 18 re f 0.68 0.72 0.79 RG 0.7 w 35 113 525 18 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 35 136 Tm (Talento / habilidade 17) Tj ET
+0.985 0.988 0.995 rg 35 75 525 18 re f 0.68 0.72 0.79 RG 0.7 w 35 75 525 18 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 35 98 Tm (Talento / habilidade 18) Tj ET
+
+endstream
+endobj
+336 0 obj
+<< /Length 3185 >>
+stream
+0.08 0.11 0.17 rg 0 775 595 67 re f
+BT /F2 20 Tf 1 1 1 rg 1 0 0 1 35 799 Tm (G A U RPG) Tj ET
+BT /F2 11 Tf 0.81 0.72 0.96 rg 1 0 0 1 35 782 Tm (GRIMORIO - FEITICOS E PRECES) Tj ET
+BT /F1 7 Tf 0.12 0.15 0.23 rg 1 0 0 1 35 29 Tm (Ficha PDF editavel ∑ v0.2 ∑ use HTML para recalcular) Tj ET
+BT /F1 7 Tf 0.12 0.15 0.23 rg 1 0 0 1 510 29 Tm (Pag. 5/6) Tj ET
+0.985 0.988 0.995 rg 35 721 525 18 re f 0.68 0.72 0.79 RG 0.7 w 35 721 525 18 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 35 744 Tm (Feitico / prece 1) Tj ET
+0.985 0.988 0.995 rg 35 683 525 18 re f 0.68 0.72 0.79 RG 0.7 w 35 683 525 18 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 35 706 Tm (Feitico / prece 2) Tj ET
+0.985 0.988 0.995 rg 35 645 525 18 re f 0.68 0.72 0.79 RG 0.7 w 35 645 525 18 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 35 668 Tm (Feitico / prece 3) Tj ET
+0.985 0.988 0.995 rg 35 607 525 18 re f 0.68 0.72 0.79 RG 0.7 w 35 607 525 18 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 35 630 Tm (Feitico / prece 4) Tj ET
+0.985 0.988 0.995 rg 35 569 525 18 re f 0.68 0.72 0.79 RG 0.7 w 35 569 525 18 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 35 592 Tm (Feitico / prece 5) Tj ET
+0.985 0.988 0.995 rg 35 531 525 18 re f 0.68 0.72 0.79 RG 0.7 w 35 531 525 18 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 35 554 Tm (Feitico / prece 6) Tj ET
+0.985 0.988 0.995 rg 35 493 525 18 re f 0.68 0.72 0.79 RG 0.7 w 35 493 525 18 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 35 516 Tm (Feitico / prece 7) Tj ET
+0.985 0.988 0.995 rg 35 455 525 18 re f 0.68 0.72 0.79 RG 0.7 w 35 455 525 18 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 35 478 Tm (Feitico / prece 8) Tj ET
+0.985 0.988 0.995 rg 35 417 525 18 re f 0.68 0.72 0.79 RG 0.7 w 35 417 525 18 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 35 440 Tm (Feitico / prece 9) Tj ET
+0.985 0.988 0.995 rg 35 379 525 18 re f 0.68 0.72 0.79 RG 0.7 w 35 379 525 18 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 35 402 Tm (Feitico / prece 10) Tj ET
+0.985 0.988 0.995 rg 35 341 525 18 re f 0.68 0.72 0.79 RG 0.7 w 35 341 525 18 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 35 364 Tm (Feitico / prece 11) Tj ET
+0.985 0.988 0.995 rg 35 303 525 18 re f 0.68 0.72 0.79 RG 0.7 w 35 303 525 18 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 35 326 Tm (Feitico / prece 12) Tj ET
+0.985 0.988 0.995 rg 35 265 525 18 re f 0.68 0.72 0.79 RG 0.7 w 35 265 525 18 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 35 288 Tm (Feitico / prece 13) Tj ET
+0.985 0.988 0.995 rg 35 227 525 18 re f 0.68 0.72 0.79 RG 0.7 w 35 227 525 18 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 35 250 Tm (Feitico / prece 14) Tj ET
+0.985 0.988 0.995 rg 35 189 525 18 re f 0.68 0.72 0.79 RG 0.7 w 35 189 525 18 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 35 212 Tm (Feitico / prece 15) Tj ET
+0.985 0.988 0.995 rg 35 151 525 18 re f 0.68 0.72 0.79 RG 0.7 w 35 151 525 18 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 35 174 Tm (Feitico / prece 16) Tj ET
+0.985 0.988 0.995 rg 35 113 525 18 re f 0.68 0.72 0.79 RG 0.7 w 35 113 525 18 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 35 136 Tm (Feitico / prece 17) Tj ET
+0.985 0.988 0.995 rg 35 75 525 18 re f 0.68 0.72 0.79 RG 0.7 w 35 75 525 18 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 35 98 Tm (Feitico / prece 18) Tj ET
+
+endstream
+endobj
+337 0 obj
+<< /Length 1150 >>
+stream
+0.08 0.11 0.17 rg 0 775 595 67 re f
+BT /F2 20 Tf 1 1 1 rg 1 0 0 1 35 799 Tm (G A U RPG) Tj ET
+BT /F2 11 Tf 0.81 0.72 0.96 rg 1 0 0 1 35 782 Tm (EQUIPAMENTOS E NARRATIVA) Tj ET
+BT /F1 7 Tf 0.12 0.15 0.23 rg 1 0 0 1 35 29 Tm (Ficha PDF editavel ∑ v0.2 ∑ use HTML para recalcular) Tj ET
+BT /F1 7 Tf 0.12 0.15 0.23 rg 1 0 0 1 510 29 Tm (Pag. 6/6) Tj ET
+0.985 0.988 0.995 rg 35 604 525 128 re f 0.68 0.72 0.79 RG 0.7 w 35 604 525 128 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 35 737 Tm (Inventario e moedas) Tj ET
+0.985 0.988 0.995 rg 35 430 525 128 re f 0.68 0.72 0.79 RG 0.7 w 35 430 525 128 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 35 563 Tm (Anotacoes de conjuracao e magias preparadas) Tj ET
+0.985 0.988 0.995 rg 35 320 525 55 re f 0.68 0.72 0.79 RG 0.7 w 35 320 525 55 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 35 380 Tm (Conceito) Tj ET
+0.985 0.988 0.995 rg 35 100 525 153 re f 0.68 0.72 0.79 RG 0.7 w 35 100 525 153 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 35 258 Tm (Notas e historico) Tj ET
+0.985 0.988 0.995 rg 35 39 150 20 re f 0.68 0.72 0.79 RG 0.7 w 35 39 150 20 re S
+BT /F1 8 Tf 0.12 0.15 0.23 rg 1 0 0 1 35 64 Tm (Experiencia) Tj ET
+
+endstream
+endobj
 xref
-0 169
+0 338
 0000000000 65535 f 
-0000000016 00000 n 
-0000000105 00000 n 
-0000000199 00000 n 
-0000000360 00000 n 
-0000000437 00000 n 
-0000001448 00000 n 
-0000001818 00000 n 
-0000001992 00000 n 
-0000002579 00000 n 
-0000002855 00000 n 
-0000003028 00000 n 
-0000003193 00000 n 
-0000003372 00000 n 
-0000003540 00000 n 
-0000003703 00000 n 
-0000003867 00000 n 
-0000004038 00000 n 
-0000004200 00000 n 
-0000004366 00000 n 
-0000004533 00000 n 
-0000004700 00000 n 
-0000004866 00000 n 
-0000005034 00000 n 
-0000005201 00000 n 
-0000005368 00000 n 
-0000005534 00000 n 
-0000005702 00000 n 
-0000005869 00000 n 
-0000006036 00000 n 
-0000006202 00000 n 
-0000006370 00000 n 
-0000006537 00000 n 
-0000006704 00000 n 
-0000006870 00000 n 
-0000007038 00000 n 
-0000007205 00000 n 
-0000007372 00000 n 
-0000007538 00000 n 
-0000007706 00000 n 
-0000007873 00000 n 
-0000008040 00000 n 
-0000008206 00000 n 
-0000008374 00000 n 
-0000008541 00000 n 
-0000008708 00000 n 
-0000008871 00000 n 
-0000009033 00000 n 
-0000009199 00000 n 
-0000009363 00000 n 
-0000009528 00000 n 
-0000009694 00000 n 
-0000009867 00000 n 
-0000010044 00000 n 
-0000010217 00000 n 
-0000010397 00000 n 
-0000010581 00000 n 
-0000010761 00000 n 
-0000010934 00000 n 
-0000011111 00000 n 
-0000011284 00000 n 
-0000011461 00000 n 
-0000011642 00000 n 
-0000011819 00000 n 
-0000011991 00000 n 
-0000012167 00000 n 
-0000012339 00000 n 
-0000012515 00000 n 
-0000012695 00000 n 
-0000012871 00000 n 
-0000013039 00000 n 
-0000013211 00000 n 
-0000013379 00000 n 
-0000013553 00000 n 
-0000013731 00000 n 
-0000013905 00000 n 
-0000014084 00000 n 
-0000014267 00000 n 
-0000014446 00000 n 
-0000014621 00000 n 
-0000014800 00000 n 
-0000014975 00000 n 
-0000015156 00000 n 
-0000015341 00000 n 
-0000015522 00000 n 
-0000015696 00000 n 
-0000015874 00000 n 
-0000016048 00000 n 
-0000016226 00000 n 
-0000016408 00000 n 
-0000016586 00000 n 
-0000016759 00000 n 
-0000016936 00000 n 
-0000017109 00000 n 
-0000017288 00000 n 
-0000017471 00000 n 
-0000017650 00000 n 
-0000017823 00000 n 
-0000018000 00000 n 
-0000018173 00000 n 
-0000018352 00000 n 
-0000018536 00000 n 
-0000018716 00000 n 
-0000018897 00000 n 
-0000019082 00000 n 
-0000019263 00000 n 
-0000019445 00000 n 
-0000019631 00000 n 
-0000019813 00000 n 
-0000019986 00000 n 
-0000020163 00000 n 
+0000000020 00000 n 
+0000000117 00000 n 
+0000000219 00000 n 
+0000000284 00000 n 
+0000000373 00000 n 
+0000001713 00000 n 
+0000002099 00000 n 
+0000002413 00000 n 
+0000003065 00000 n 
+0000003357 00000 n 
+0000003650 00000 n 
+0000003839 00000 n 
+0000004104 00000 n 
+0000004262 00000 n 
+0000004527 00000 n 
+0000004688 00000 n 
+0000004953 00000 n 
+0000005111 00000 n 
+0000005376 00000 n 
+0000005537 00000 n 
+0000005802 00000 n 
+0000005964 00000 n 
+0000006229 00000 n 
+0000006391 00000 n 
+0000006656 00000 n 
+0000006815 00000 n 
+0000007080 00000 n 
+0000007242 00000 n 
+0000007507 00000 n 
+0000007670 00000 n 
+0000007935 00000 n 
+0000008099 00000 n 
+0000008361 00000 n 
+0000008525 00000 n 
+0000008787 00000 n 
+0000008953 00000 n 
+0000009215 00000 n 
+0000009380 00000 n 
+0000009645 00000 n 
+0000009810 00000 n 
+0000010072 00000 n 
+0000010236 00000 n 
+0000010498 00000 n 
+0000010664 00000 n 
+0000010926 00000 n 
+0000011091 00000 n 
+0000011356 00000 n 
+0000011521 00000 n 
+0000011783 00000 n 
+0000011947 00000 n 
+0000012209 00000 n 
+0000012375 00000 n 
+0000012637 00000 n 
+0000012802 00000 n 
+0000013067 00000 n 
+0000013232 00000 n 
+0000013494 00000 n 
+0000013658 00000 n 
+0000013920 00000 n 
+0000014086 00000 n 
+0000014348 00000 n 
+0000014513 00000 n 
+0000014778 00000 n 
+0000014943 00000 n 
+0000015205 00000 n 
+0000015369 00000 n 
+0000015631 00000 n 
+0000015797 00000 n 
+0000016059 00000 n 
+0000016224 00000 n 
+0000016489 00000 n 
+0000016654 00000 n 
+0000016916 00000 n 
+0000017080 00000 n 
+0000017342 00000 n 
+0000017508 00000 n 
+0000017770 00000 n 
+0000017935 00000 n 
+0000018200 00000 n 
+0000018365 00000 n 
+0000018630 00000 n 
+0000018791 00000 n 
+0000019056 00000 n 
+0000019216 00000 n 
+0000019481 00000 n 
+0000019644 00000 n 
+0000019909 00000 n 
+0000020071 00000 n 
 0000020336 00000 n 
-0000020523 00000 n 
-0000020714 00000 n 
-0000020901 00000 n 
-0000021094 00000 n 
-0000021259 00000 n 
-0000021424 00000 n 
-0000021589 00000 n 
-0000021754 00000 n 
-0000021919 00000 n 
-0000022084 00000 n 
-0000022249 00000 n 
-0000022414 00000 n 
-0000022580 00000 n 
-0000022746 00000 n 
-0000022912 00000 n 
-0000023078 00000 n 
-0000023244 00000 n 
-0000023410 00000 n 
-0000023576 00000 n 
-0000023742 00000 n 
-0000023906 00000 n 
-0000024076 00000 n 
-0000024243 00000 n 
-0000024411 00000 n 
-0000024578 00000 n 
-0000024737 00000 n 
-0000025332 00000 n 
-0000025685 00000 n 
-0000026350 00000 n 
-0000026754 00000 n 
-0000027095 00000 n 
-0000037927 00000 n 
-0000038109 00000 n 
-0000038364 00000 n 
-0000038630 00000 n 
-0000038885 00000 n 
-0000039119 00000 n 
-0000039376 00000 n 
-0000039626 00000 n 
-0000039877 00000 n 
-0000040127 00000 n 
-0000040376 00000 n 
-0000040625 00000 n 
-0000040875 00000 n 
-0000041125 00000 n 
-0000041358 00000 n 
-0000041608 00000 n 
-0000041837 00000 n 
-0000042089 00000 n 
-0000042341 00000 n 
-0000042591 00000 n 
-0000042843 00000 n 
-0000043119 00000 n 
-0000043353 00000 n 
-0000043584 00000 n 
-0000043813 00000 n 
-0000044073 00000 n 
-
+0000020499 00000 n 
+0000020764 00000 n 
+0000020933 00000 n 
+0000021197 00000 n 
+0000021365 00000 n 
+0000021629 00000 n 
+0000021796 00000 n 
+0000022057 00000 n 
+0000022223 00000 n 
+0000022484 00000 n 
+0000022650 00000 n 
+0000022915 00000 n 
+0000023085 00000 n 
+0000023350 00000 n 
+0000023519 00000 n 
+0000023781 00000 n 
+0000023949 00000 n 
+0000024211 00000 n 
+0000024379 00000 n 
+0000024644 00000 n 
+0000024814 00000 n 
+0000025079 00000 n 
+0000025248 00000 n 
+0000025510 00000 n 
+0000025678 00000 n 
+0000025940 00000 n 
+0000026108 00000 n 
+0000026373 00000 n 
+0000026543 00000 n 
+0000026808 00000 n 
+0000026977 00000 n 
+0000027239 00000 n 
+0000027407 00000 n 
+0000027669 00000 n 
+0000027837 00000 n 
+0000028104 00000 n 
+0000028277 00000 n 
+0000028545 00000 n 
+0000028722 00000 n 
+0000028988 00000 n 
+0000029161 00000 n 
+0000029428 00000 n 
+0000029608 00000 n 
+0000029876 00000 n 
+0000030060 00000 n 
+0000030326 00000 n 
+0000030506 00000 n 
+0000030773 00000 n 
+0000030946 00000 n 
+0000031214 00000 n 
+0000031391 00000 n 
+0000031657 00000 n 
+0000031830 00000 n 
+0000032097 00000 n 
+0000032268 00000 n 
+0000032536 00000 n 
+0000032711 00000 n 
+0000032977 00000 n 
+0000033148 00000 n 
+0000033415 00000 n 
+0000033587 00000 n 
+0000033855 00000 n 
+0000034031 00000 n 
+0000034297 00000 n 
+0000034469 00000 n 
+0000034736 00000 n 
+0000034912 00000 n 
+0000035180 00000 n 
+0000035360 00000 n 
+0000035626 00000 n 
+0000035802 00000 n 
+0000036069 00000 n 
+0000036237 00000 n 
+0000036505 00000 n 
+0000036677 00000 n 
+0000036943 00000 n 
+0000037111 00000 n 
+0000037378 00000 n 
+0000037552 00000 n 
+0000037820 00000 n 
+0000037998 00000 n 
+0000038264 00000 n 
+0000038438 00000 n 
+0000038705 00000 n 
+0000038878 00000 n 
+0000039146 00000 n 
+0000039323 00000 n 
+0000039589 00000 n 
+0000039762 00000 n 
+0000040029 00000 n 
+0000040204 00000 n 
+0000040472 00000 n 
+0000040651 00000 n 
+0000040917 00000 n 
+0000041092 00000 n 
+0000041359 00000 n 
+0000041540 00000 n 
+0000041808 00000 n 
+0000041993 00000 n 
+0000042259 00000 n 
+0000042440 00000 n 
+0000042707 00000 n 
+0000042881 00000 n 
+0000043149 00000 n 
+0000043327 00000 n 
+0000043593 00000 n 
+0000043767 00000 n 
+0000044034 00000 n 
+0000044206 00000 n 
+0000044474 00000 n 
+0000044650 00000 n 
+0000044916 00000 n 
+0000045088 00000 n 
+0000045355 00000 n 
+0000045528 00000 n 
+0000045796 00000 n 
+0000045973 00000 n 
+0000046239 00000 n 
+0000046412 00000 n 
+0000046679 00000 n 
+0000046852 00000 n 
+0000047120 00000 n 
+0000047297 00000 n 
+0000047563 00000 n 
+0000047736 00000 n 
+0000048003 00000 n 
+0000048173 00000 n 
+0000048441 00000 n 
+0000048615 00000 n 
+0000048881 00000 n 
+0000049051 00000 n 
+0000049318 00000 n 
+0000049491 00000 n 
+0000049759 00000 n 
+0000049936 00000 n 
+0000050202 00000 n 
+0000050375 00000 n 
+0000050642 00000 n 
+0000050819 00000 n 
+0000051087 00000 n 
+0000051268 00000 n 
+0000051534 00000 n 
+0000051711 00000 n 
+0000051978 00000 n 
+0000052153 00000 n 
+0000052421 00000 n 
+0000052600 00000 n 
+0000052866 00000 n 
+0000053041 00000 n 
+0000053308 00000 n 
+0000053480 00000 n 
+0000053748 00000 n 
+0000053924 00000 n 
+0000054190 00000 n 
+0000054362 00000 n 
+0000054629 00000 n 
+0000054809 00000 n 
+0000055077 00000 n 
+0000055261 00000 n 
+0000055527 00000 n 
+0000055707 00000 n 
+0000055972 00000 n 
+0000056136 00000 n 
+0000056401 00000 n 
+0000056565 00000 n 
+0000056830 00000 n 
+0000056994 00000 n 
+0000057259 00000 n 
+0000057423 00000 n 
+0000057688 00000 n 
+0000057852 00000 n 
+0000058117 00000 n 
+0000058281 00000 n 
+0000058546 00000 n 
+0000058710 00000 n 
+0000058975 00000 n 
+0000059139 00000 n 
+0000059404 00000 n 
+0000059568 00000 n 
+0000059833 00000 n 
+0000059998 00000 n 
+0000060263 00000 n 
+0000060428 00000 n 
+0000060693 00000 n 
+0000060858 00000 n 
+0000061123 00000 n 
+0000061288 00000 n 
+0000061553 00000 n 
+0000061718 00000 n 
+0000061983 00000 n 
+0000062148 00000 n 
+0000062413 00000 n 
+0000062578 00000 n 
+0000062843 00000 n 
+0000063008 00000 n 
+0000063273 00000 n 
+0000063436 00000 n 
+0000063701 00000 n 
+0000063865 00000 n 
+0000064130 00000 n 
+0000064294 00000 n 
+0000064559 00000 n 
+0000064723 00000 n 
+0000064988 00000 n 
+0000065152 00000 n 
+0000065417 00000 n 
+0000065581 00000 n 
+0000065846 00000 n 
+0000066010 00000 n 
+0000066275 00000 n 
+0000066439 00000 n 
+0000066704 00000 n 
+0000066868 00000 n 
+0000067133 00000 n 
+0000067297 00000 n 
+0000067562 00000 n 
+0000067727 00000 n 
+0000067992 00000 n 
+0000068157 00000 n 
+0000068422 00000 n 
+0000068587 00000 n 
+0000068852 00000 n 
+0000069017 00000 n 
+0000069282 00000 n 
+0000069447 00000 n 
+0000069712 00000 n 
+0000069877 00000 n 
+0000070142 00000 n 
+0000070307 00000 n 
+0000070572 00000 n 
+0000070737 00000 n 
+0000071002 00000 n 
+0000071165 00000 n 
+0000071435 00000 n 
+0000071609 00000 n 
+0000071879 00000 n 
+0000072050 00000 n 
+0000072316 00000 n 
+0000072488 00000 n 
+0000072758 00000 n 
+0000072928 00000 n 
+0000073193 00000 n 
+0000073351 00000 n 
+0000079171 00000 n 
+0000083206 00000 n 
+0000093023 00000 n 
+0000096342 00000 n 
+0000099581 00000 n 
 trailer
-<</Size 169/Root 3 0 R/ID[<6CC3A63827C2AE7877C2A478C29A36C2><0127762BB0BFB7F378E3C8AA81EFD954>]>>
+<< /Size 338 /Root 3 0 R >>
 startxref
-44306
+100785
 %%EOF

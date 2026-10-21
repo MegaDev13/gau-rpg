@@ -1,6 +1,6 @@
 # G✦A✦U RPG — plataforma digital v0.2
 
-Plataforma offline/online com livro pesquisável, criador de personagens e ficha automatizada. **Edição preliminar:** partes das regras ainda não foram fornecidas.
+Plataforma offline/online com livro pesquisável, criador de personagens, grimório catalogado e ficha automatizada. **Edição preliminar:** partes das regras ainda aguardam publicação no servidor oficial.
 
 ## Como publicar no GitHub Pages
 
@@ -18,23 +18,40 @@ O compêndio foi derivado de exportações do Discord e pode incluir textos de R
 
 ## Arquivos
 
-- `index.html` — aplicativo completo, versão 0.2
-- `livro-regras.pdf` — livro revisado a partir do banco limpo, edição 0.2
-- `ficha-preenchivel.pdf` — ficha PDF, versão 0.2
+- `index.html` — aplicativo completo (livro pesquisável, criador em 10 etapas, grimório e ficha automática), versão 0.2
+- `livro-regras.pdf` — livro completo revisado em 38 capítulos (450 registros úteis e 410 entradas no grimório), edição 0.2
+- `ficha-preenchivel.pdf` — ficha PDF editável em 6 páginas (incluindo Conjuração e Grimório), versão 0.2
 - `.nojekyll` — evita transformação por Jekyll
+
+## Conferência e inclusão do Grimório (Discord → Livro, Criador e Ficha) — 21/10/2026
+
+Foram conferidos todos os canais e tópicos do servidor `𝗚✦𝗔✦𝗨 | 𝐑𝐏𝐆` na categoria `‼️┊SISTEMA`: **8 canais** e **30 tópicos ativos** (`38` fontes no total). As `28` marcações vazias anteriores em `feitiços` e o cabeçalho provisório `Lista de Magias Universais` foram substituídos na origem pelos índices atualizados de Magias Arcanas e Magias Divinas e por **11 novos tópicos de magias**:
+
+- `Truques` (`6` mensagens · `23` entradas)
+- `Magias Arcanas de 1° Nível` (`15` mensagens · `45` entradas)
+- `Magias Arcanas de 2° Nível` (`20` mensagens · `65` entradas)
+- `Magias Arcanas de 3° Nível` (`18` mensagens · `51` entradas)
+- `Magias Arcanas de 4° Nível` (`20` mensagens · `53` entradas)
+- `Magias Arcanas de 5° Nível` (`25` mensagens · `50` entradas)
+- `Magias Arcanas de 6° Nível` (`15` mensagens · `36` entradas)
+- `Magias Arcanas de 7° Nível` (`11` mensagens · `24` entradas)
+- `Magias Arcanas de 8° Nível` (`14` mensagens · `27` entradas)
+- `Magias Arcanas de 9° Nível` (`14` mensagens · `24` entradas)
+- `Preces` (`3` mensagens · `12` entradas)
+
+Totais consolidados na publicação:
+
+- **38 capítulos** (`8` canais e `30` tópicos ativos)
+- **450 registros úteis** (`443` textuais e `7` registros de anexos; os `65` marcadores compostos apenas por pontos em `perícias` [18] e `outras-mecânicas` [47] permanecem excluídos)
+- **1.289 entradas únicas** no índice alfabético e no grafo de referências cruzadas, preservando variantes homônimas e unindo integralmente as 6 magias longas divididas entre mensagens (`Recipiente Arcano`, `Símbolo da Dor`, `Prisão`, `Desejo`, `Esfera Prismática` e `Portal`)
+- **410 entradas catalogadas no Grimório** (`406` arcanas e `122` com acesso divino explícito), integradas com busca e filtros no **Criador (Etapa VIII)**, gestão direta na **Ficha Automática** e página dedicada **Grimório — Feitiços e Preces** na **Ficha PDF Preenchível (6 páginas)**
+
+Lacunas que permanecem pendentes na origem oficial: tópicos exclusivos de `Magias Divinas de 1° a 9° Nível`, equipamentos e preços, sistema completo de combate, origens/antecedentes, experiência geral, divindades consolidadas, 3 classes restantes e 10 raças restantes. Nenhuma credencial, dado de autor ou exportação bruta do Discord integra o repositório.
 
 ## Conferência direta de Sistema — 19/10/2026
 
-Foram consultados 8 canais e 19 tópicos ativos, totalizando 383 mensagens. A pesquisa de tópicos arquivados em todos os canais não retornou outros tópicos acessíveis. As 334 mensagens anteriores foram conferidas, sem alteração de regras; menções a canais foram normalizadas para comparação. Foram adicionadas 49 mensagens dos canais magia e feitiços (incluindo marcadores sem conteúdo).
-
-O capítulo de magia está no livro pesquisável e no complemento do PDF. Criador e ficha calculam PM base por classe e CD a partir de um modificador de conjuração confirmado separadamente, para não misturar as escalas de atributos das fontes. Paladino e Patrulheiro exigem a seleção da habilidade e nível mínimo 5. Reservas de multiclasse não são somadas automaticamente; talentos e outros ajustes continuam explícitos.
-
-Divergência preservada: Mago recebe 5 magias iniciais de nível 0 no texto da classe, mas o capítulo geral indica 4. O catálogo individual de feitiços, equipamentos, combate completo, origens e outras lacunas indicadas continuam pendentes.
-
-Nenhuma credencial, dado de autor ou exportação bruta do Discord integra a publicação.
+Foram consultados 8 canais e 19 tópicos ativos, totalizando 383 mensagens. O capítulo de magia foi incorporado com cálculos de PM base por classe e CD a partir de modificador de conjuração confirmado separadamente, preservando a divergência entre o capítulo geral de magia (4 magias iniciais de nível 0) e a classe Mago (5 magias iniciais de nível 0).
 
 ## Limpeza editorial — 19/10/2026
 
-Foram removidos 93 registros compostos somente por pontos: 18 em Perícias, 47 em Outras Mecânicas e 28 em Feitiços. O livro passa a conter 290 registros úteis: 283 textuais e 7 registros de anexos. O índice foi recalculado para 874 entradas, com referências verificadas e sem registros órfãos.
-
-Foram corrigidos erros ortográficos em 9 mensagens e formatados 16 blocos como tabelas. Efeitos, valores, fórmulas e variantes foram preservados; todas as sequências numéricas do texto foram comparadas com a versão anterior. O PDF foi refeito a partir do mesmo banco limpo, em vez de reaproveitar as páginas com marcadores vazios. A limpeza se aplica à publicação; as mensagens no servidor Discord não foram apagadas.
+Foram removidos os marcadores compostos somente por pontos, revisada a ortografia, normalizadas ligaduras tipográficas e formatadas tabelas legíveis sem alterar números, fórmulas, custos ou efeitos das regras.

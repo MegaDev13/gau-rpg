@@ -1,0 +1,97 @@
+{
+  "format": "GAU-CHARACTER",
+  "version": "0.2",
+  "character": {
+    "id": "gau-mvik7vkx-zc27218h",
+    "version": "0.2",
+    "name": "Aeliana, a Lâmina Estelar — Nível 2",
+    "player": "Build pronta · G✦A✦U RPG",
+    "concept": "Guerreiro mágico élfico: conjura por Inteligência (Tradição Perdida), Foco em Arma gratuito e CD +2 racial em toda magia arcana.",
+    "appearance": "",
+    "historyText": "",
+    "race": "Elfos",
+    "origin": "",
+    "divinity": "",
+    "classes": [
+      {
+        "id": "FEITICEIRO",
+        "level": 2
+      }
+    ],
+    "attrs": {
+      "for": {
+        "base": 0,
+        "racial": 0,
+        "other": 0
+      },
+      "des": {
+        "base": 2,
+        "racial": 4,
+        "other": 0
+      },
+      "con": {
+        "base": 1,
+        "racial": -2,
+        "other": 0
+      },
+      "int": {
+        "base": 4,
+        "racial": 2,
+        "other": 0
+      },
+      "sab": {
+        "base": 0,
+        "racial": 0,
+        "other": 0
+      },
+      "car": {
+        "base": 0,
+        "racial": 0,
+        "other": 0
+      }
+    },
+    "skills": {},
+    "talents": [
+      "r-1561370702689337466-07",
+      "r-1561306396195168378-04",
+      "r-1561355358235262977-05",
+      "r-1561306415585296517-03"
+    ],
+    "spells": [
+      "r-1561844423816515615-04",
+      "r-1561844445165392034-01",
+      "r-1561844423816515615-03",
+      "r-1561844431580176518-03",
+      "r-1561844423816515615-02",
+      "r-1561844423816515615-01",
+      "r-1561844423816515615-05",
+      "r-1561838807349862584-03",
+      "r-1561838807349862584-02",
+      "r-1561838809354600480-04",
+      "r-1561838805579862077-05"
+    ],
+    "inventory": "",
+    "magics": "",
+    "pmArcano": "12",
+    "pmDivino": "",
+    "defense": "CA 20 (Armadura Arcana) · Escudo Arcano: +24 · PV 8 + 2 + Con -1 = 9",
+    "speed": "",
+    "attacks": "1) Toque Chocante: BBA +1 = +1 vs CA DE TOQUE (+3 vs metal)\n2) Espada longa: BBA +1 + Foco +1 = +2 (+3 com Arma Mágica)\n3) Arco longo: BBA +1 + Des 6 + Tiro Certeiro +1 (até 9m) = +8\nCOM ATAQUE CERTEIRO: +21/+22/+28 — acerto garantido\nPM: 3 + Int 6 + 3 do nível = 12 · CD 18 (+2 racial) para 1º nível",
+    "notes": "TRADIÇÃO PERDIDA (talento racial, somente no 1º nível, não humano): escolha uma habilidade básica — aqui Inteligência — e 'sua quantidade de pontos de magia e magias conhecidas são calculadas usando essa habilidade, em vez daquela normalmente exigida pela classe'. Resultado: PM = 3 + Int 6 = 9 e magias conhecidas de 1º nível = 1 + Int 6 = 7.\nELFO: Foco em Arma gratuito para espada curta/longa, florete ou arco (aqui, espada longa) + proficiência nessas armas; qualquer magia arcana lançada por um elfo tem CD +2 para resistir.\nCUSTO: -2 de Constituição (PV 7 no 1º nível) e nenhum bônus de Carisma — por isso a conjuração foi movida para Inteligência.\nCOMBO: Armadura Arcana (CA 20) → Ataque Certeiro (1 PM) → Toque Chocante com +20 (2d8) ou espada longa com Arma Mágica. Contra grupos, use o arco (+6/+8) enquanto mantém a CA alta.\n\n--- NÍVEL 2 ---\n1) Toque Chocante: BBA +1 = +1 vs CA DE TOQUE (+3 vs metal)\n2) Espada longa: BBA +1 + Foco +1 = +2 (+3 com Arma Mágica)\n3) Arco longo: BBA +1 + Des 6 + Tiro Certeiro +1 (até 9m) = +8\nCOM ATAQUE CERTEIRO: +21/+22/+28 — acerto garantido\nPM: 3 + Int 6 + 3 do nível = 12 · CD 18 (+2 racial) para 1º nível",
+    "experience": "",
+    "overrides": {},
+    "changeLog": [
+      {
+        "when": "2026-10-21T20:23:33.537Z",
+        "action": "Build criada: 07_feiticeiro_elfo_guerreiro_magico nível 2"
+      }
+    ],
+    "updatedAt": "2026-10-21T20:23:33.537Z",
+    "magicMods": {
+      "FEITICEIRO": 6
+    },
+    "magicEnabled": {
+      "FEITICEIRO": true
+    }
+  }
+}

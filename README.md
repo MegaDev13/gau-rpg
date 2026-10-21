@@ -71,7 +71,7 @@ Ficha editável em 6 páginas com **faixas ilustradas por página**, bordas dour
 
 ## Builds prontas — nível 1 e nível 2 (21/10/2026)
 
-Pasta `personagens/` com quatro personagens jogáveis, montados só com regras já publicadas no servidor, otimizados para **bônus de ataque alto desde o 1º nível**:
+Pasta `personagens/` com **sete** personagens jogáveis, montados só com regras já publicadas no servidor, otimizados para **bônus de ataque alto desde o 1º nível** — incluindo três builds de **Elfo e Meio-Elfo**:
 
 | # | Personagem | Raça / Classe | Ataque no 1º nível | Destaque |
 |---|---|---|---|---|
@@ -79,12 +79,28 @@ Pasta `personagens/` com quatro personagens jogáveis, montados só com regras j
 | 02 | **Aldric Lâmina Rúnica** | Humano / Guerreiro | **+8** · **+12** em investida | 4 talentos no 1º nível, armadura completa e escudo, Até Acertar crescente |
 | 03 | **Vesper, a Chama Íntima** | Humano / Feiticeiro | **+20** com *Ataque Certeiro* (Toque Chocante 2d8) | **Guerreiro mágico**: conjura corpo a corpo sem armadura física (Armadura Arcana, CA 18) |
 | 04 | **Snikk Risco-de-Navalha** | Goblin / Ladino | **+9** com Acuidade (+1d6 furtivo) | Des 8 (+1 por Pequeno); no 2º nível pega *Truque Mágico* → *Ataque Certeiro* (**+30**) |
+| 05 | **Liriel Folha-Cinzenta** | **Elfo** / Ladino | **+9** (espada curta) · **+8** (arco longo) | *Foco em Arma* racial grátis; Des 8, CA 19; no 2º nível **+10** corpo a corpo e **+30** com *Ataque Certeiro* |
+| 06 | **Vesper, a Chama Íntima (Meio-Elfa)** | **Meio-Elfo** / Feiticeiro | **+20** com *Ataque Certeiro* (Toque Chocante 2d8) | Mesmos números da versão humana (PM 9, CA 18) com **1 talento a menos**; talento racial *Arcano Completo* |
+| 07 | **Aeliana, a Lâmina Estelar** | **Elfo** / Feiticeiro | **+20** com *Ataque Certeiro* · **CD 18** | *Tradição Perdida*: conjura por **Inteligência** (PM 12) e toda magia arcana de elfo ganha **CD +2**; **CA 20** com Armadura Arcana |
+
 
 Cada build tem duas versões (nível 1 e nível 2), em JSON importável e em PDF preenchível:
 
 - `personagens/<build>_nv1.gau.json` e `<build>_nv2.gau.json` — importe pelo botão **Importar JSON** do Criador
 - `personagens/pdf/<build>_nv1.pdf` e `<build>_nv2.pdf` — fichas prontas de 6 páginas com os campos preenchidos
 - `personagens/GUIA-DE-BUILDS.html` e `pdf/GUIA-DE-BUILDS.pdf` — guia ilustrado com a fórmula de ataque, tabelas de bônus por situação, rotação de combate e alertas de mesa
+
+### Por que o Vesper (build 03) era humano?
+
+Foi escolha de **economia de talentos**, não de requisito. O Feiticeiro quer três talentos já no 1º nível (*Magias em Combate*, *Substituição Elemental*, *Vitalidade*) e Carisma 6; **Humano** é a única raça que entrega **+2 talentos** e **+2 em duas habilidades**. Nada impede Elfo ou Meio-Elfo — eles resolvem o mesmo problema por caminhos diferentes:
+
+| Raça | PM no 1º nível | CA com Armadura Arcana | Talentos no 1º nível |
+|---|---|---|---|
+| **Humano** | 9 (Car) | 18 | 3 |
+| **Meio-Elfo** | 9 (Car) | 18 | 2 (+1 perícia) |
+| **Elfo** | 9 → **12** com *Tradição Perdida* (Int) | **20** | 2 + *Foco em Arma* grátis (custo: −2 Con) |
+
+Compatibilidade: **Bárbaro** → Meio-Elfo ok, Elfo desfavorável; **Guerreiro** → Meio-Elfo ok, Elfo fraco; **Feiticeiro** → Meio-Elfo e Elfo excelentes (builds 06 e 07); **Ladino** → ambos excelentes (build 05).
 
 Fórmula usada: `ataque = BBA + modificador de atributo + talentos + magias + situação`. Pré-requisitos em escala antiga (“For 13”, “Des 13”, “Int 11”) e a soma de bônus raciais ao valor máximo comprado devem ser confirmados com o mestre.
 

@@ -1,0 +1,77 @@
+{
+  "format": "GAU-CHARACTER",
+  "version": "0.2",
+  "character": {
+    "id": "gau-mvik7v9k-qr2wz5b2",
+    "version": "0.2",
+    "name": "Liriel Folha-Cinzenta — Nível 1",
+    "player": "Build pronta · G✦A✦U RPG",
+    "concept": "Ladino elfo: Destreza 8, Foco em Arma gratuito e Truque Mágico turbinado pela Inteligência élfica.",
+    "appearance": "",
+    "historyText": "",
+    "race": "Elfos",
+    "origin": "",
+    "divinity": "",
+    "classes": [
+      {
+        "id": "LADINO",
+        "level": 1
+      }
+    ],
+    "attrs": {
+      "for": {
+        "base": 0,
+        "racial": 0,
+        "other": 0
+      },
+      "des": {
+        "base": 4,
+        "racial": 4,
+        "other": 0
+      },
+      "con": {
+        "base": 2,
+        "racial": -2,
+        "other": 0
+      },
+      "int": {
+        "base": 1,
+        "racial": 2,
+        "other": 0
+      },
+      "sab": {
+        "base": 0,
+        "racial": 0,
+        "other": 0
+      },
+      "car": {
+        "base": 0,
+        "racial": 0,
+        "other": 0
+      }
+    },
+    "skills": {},
+    "talents": [
+      "r-1561306374367871028-02",
+      "r-1561306396195168378-04"
+    ],
+    "spells": [],
+    "inventory": "",
+    "magics": "",
+    "pmArcano": "",
+    "pmDivino": "",
+    "defense": "CA 10 + Des 8 + armadura leve · PV 12 + Con 0 = 12 · imune a Sono · +4 em Vontade contra Encantamentos · +4 em Identificar Magia e Percepção",
+    "speed": "",
+    "attacks": "ESPADA CURTA (elfo: proficiência + Foco em Arma GRATuito)\nBBA +0 · Des +8 (Acuidade com Arma) · Foco em Arma +1 = +9\nAtaque Furtivo +1d6 (alvo desprevenido ou flanqueado)\nARCO LONGO (proficiência élfica): BBA +0 + Des 8 = +8 à distância",
+    "notes": "Elfos: +4 Des, +2 Int, -2 Con; Visão na Penumbra; sabem usar espadas curtas/longas, floretes e arcos e recebem FOCO EM ARMA para uma delas como talento adicional; +4 em Vontade contra Encantamentos e imunidade a Sono; +4 em Identificar Magia e Percepção; qualquer magia arcana lançada por um elfo tem CD +2 para resistir.\nAqui o Foco em Arma gratuito vai para a espada curta, liberando o talento do 1º nível para Acuidade com Arma.\nVantagem sobre o goblin: +2 Int (mais perícias e mais PM no Truque Mágico), imunidades élficas e proficiência em arco. Desvantagem: -2 de Constituição (PV 12 em vez de 16) e sem o +1 de ataque de Pequeno.\n\n--- NÍVEL 1 ---\nESPADA CURTA (elfo: proficiência + Foco em Arma GRATuito)\nBBA +0 · Des +8 (Acuidade com Arma) · Foco em Arma +1 = +9\nAtaque Furtivo +1d6 (alvo desprevenido ou flanqueado)\nARCO LONGO (proficiência élfica): BBA +0 + Des 8 = +8 à distância",
+    "experience": "",
+    "overrides": {},
+    "changeLog": [
+      {
+        "when": "2026-10-21T20:23:33.128Z",
+        "action": "Build criada: 05_ladino_elfo_sombra nível 1"
+      }
+    ],
+    "updatedAt": "2026-10-21T20:23:33.128Z"
+  }
+}

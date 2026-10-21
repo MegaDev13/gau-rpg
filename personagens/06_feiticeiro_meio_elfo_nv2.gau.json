@@ -1,0 +1,97 @@
+{
+  "format": "GAU-CHARACTER",
+  "version": "0.2",
+  "character": {
+    "id": "gau-mvik7vha-0cgktm67",
+    "version": "0.2",
+    "name": "Vesper, a Chama Íntima (Meio-Elfa) — Nível 2",
+    "player": "Build pronta · G✦A✦U RPG",
+    "concept": "Mesma conjuradora, agora meio-elfa: mesmos PM e CA, um talento a menos, mais perícia e Visão na Penumbra.",
+    "appearance": "",
+    "historyText": "",
+    "race": "Meio-Elfo",
+    "origin": "",
+    "divinity": "",
+    "classes": [
+      {
+        "id": "FEITICEIRO",
+        "level": 2
+      }
+    ],
+    "attrs": {
+      "for": {
+        "base": 0,
+        "racial": 0,
+        "other": 0
+      },
+      "des": {
+        "base": 2,
+        "racial": 2,
+        "other": 0
+      },
+      "con": {
+        "base": 1,
+        "racial": 0,
+        "other": 0
+      },
+      "int": {
+        "base": 0,
+        "racial": 0,
+        "other": 0
+      },
+      "sab": {
+        "base": 0,
+        "racial": 0,
+        "other": 0
+      },
+      "car": {
+        "base": 4,
+        "racial": 2,
+        "other": 0
+      }
+    },
+    "skills": {},
+    "talents": [
+      "r-1561355358235262977-05",
+      "r-1561306421973491766-03",
+      "r-1561370675397001247-03",
+      "r-1561306397268910081-05"
+    ],
+    "spells": [
+      "r-1561844423816515615-04",
+      "r-1561844445165392034-01",
+      "r-1561844423816515615-03",
+      "r-1561844431580176518-03",
+      "r-1561844423816515615-01",
+      "r-1561844423816515615-05",
+      "r-1561844438303514737-03",
+      "r-1561838807349862584-03",
+      "r-1561838807349862584-02",
+      "r-1561838809354600480-04",
+      "r-1561838805579862077-05"
+    ],
+    "inventory": "",
+    "magics": "",
+    "pmArcano": "12",
+    "pmDivino": "",
+    "defense": "CA 18 (Armadura Arcana) · Escudo Arcano: +22 · PV 12 + Vitalidade 2 = 14",
+    "speed": "",
+    "attacks": "TOQUE CHOCANTE: BBA +1 · Foco em Toque +2 = +3 contra CA DE TOQUE (+3 vs metal)\nCOM ATAQUE CERTEIRO: +23 — acerto garantido\nPM: 12 · +1 magia conhecida (Mísseis Mágicos)",
+    "notes": "Meio-Elfo: +2 Des, +2 em outra habilidade (exceto Constituição) — aqui em Carisma, mantendo Car 6 igual à versão humana —, 1 talento adicional, 1 perícia extra, Visão na Penumbra, +2 em Vontade contra Encantamentos e +2 em Identificar Magia e Percepção.\nComparado ao humano: mesmos atributos e mesmos PM/CA, mas 1 talento a menos (o humano tem 2 extras) em troca de +1 perícia, Visão na Penumbra e os bônus de resistência/percepção.\nTalento racial usado: Arcano Completo (+8 em Identificar Magia). Se preferir, troque por Tradição Perdida no 1º nível para conjurar por outra habilidade.\nCOMBO: Armadura Arcana antes da luta (é magia, não armadura — não há chance de falha arcana) → Ataque Certeiro → Toque Chocante com +20.\n\n--- NÍVEL 2 ---\nTOQUE CHOCANTE: BBA +1 · Foco em Toque +2 = +3 contra CA DE TOQUE (+3 vs metal)\nCOM ATAQUE CERTEIRO: +23 — acerto garantido\nPM: 12 · +1 magia conhecida (Mísseis Mágicos)",
+    "experience": "",
+    "overrides": {},
+    "changeLog": [
+      {
+        "when": "2026-10-21T20:23:33.406Z",
+        "action": "Build criada: 06_feiticeiro_meio_elfo nível 2"
+      }
+    ],
+    "updatedAt": "2026-10-21T20:23:33.406Z",
+    "magicMods": {
+      "FEITICEIRO": 6
+    },
+    "magicEnabled": {
+      "FEITICEIRO": true
+    }
+  }
+}

@@ -1,4 +1,4 @@
-# G✦A✦U RPG — plataforma digital v0.2
+# G✦A✦U RPG — plataforma digital v0.3
 
 Plataforma offline/online com livro pesquisável, criador de personagens, grimório catalogado e ficha automatizada. **Edição preliminar:** partes das regras ainda aguardam publicação no servidor oficial.
 
@@ -18,10 +18,35 @@ O compêndio foi derivado de exportações do Discord e pode incluir textos de R
 
 ## Arquivos
 
-- `index.html` — aplicativo completo (livro pesquisável, criador em 10 etapas, grimório e ficha automática), versão 0.2
-- `livro-regras.pdf` — livro completo revisado em 38 capítulos (450 registros úteis e 410 entradas no grimório), edição 0.2
+- `index.html` — aplicativo completo (livro pesquisável, criador em 10 etapas, grimório e ficha automática), versão 0.3
+- `livro-regras.pdf` — livro completo revisado em 44 capítulos (1.464 registros úteis e 525 entradas no grimório), edição 0.3
 - `ficha-preenchivel.pdf` — ficha PDF editável em 6 páginas (incluindo Conjuração e Grimório), versão 0.2
 - `.nojekyll` — evita transformação por Jekyll
+
+## Atualização do servidor — 22/10/2026
+
+Nova varredura completa do servidor `𝗚✦𝗔✦𝗨 | 𝐑𝐏𝐆` (canais de texto + tópicos), comparada registro por registro com a versão anterior:
+
+| Item | Antes | Depois |
+|---|---|---|
+| Fontes (canais + tópicos) | 38 | **44** |
+| Mensagens com conteúdo | 450 | **501** |
+| Registros (entradas) | 1.289 | **1.464** |
+| Magias catalogadas | 410 | **525** |
+| Talentos | 494 | 494 |
+
+**Conteúdo novo incluído:**
+
+- `Magias Divinas de 1° Nível` — `13` mensagens · `43` entradas
+- `Magias Divinas de 2° Nível` — `16` mensagens · `53` entradas
+- `Magias Divinas de 3° Nível` — `16` mensagens · `44` entradas
+- `Magias Divinas de 4° Nível` — `11` mensagens · `33` entradas
+- `Equipamentos` (tópico em `chat_rpg`) — análise de comércio, guildas e preços
+- `Categorias de Personagens` (tópico em `chat_rpg`) — método alternativo de criação por pontuação
+
+**Atualizações em conteúdo existente:** 42 mensagens foram editadas na origem (classes, talentos, perícias, mecânicas e grimório arcano) e tiveram seus registros re-parseados. Nenhuma entrada antiga foi perdida.
+
+**Observações:** 56 magias divinas já existiam como versões arcanas de mesmo nome — os registros foram **fundidos** (mesma magia passa a listar `arcana X` e `divina Y`) em vez de duplicados no compêndio. Permanecem pendentes no servidor: Magias Divinas de 5º a 9º nível, sistema de combate completo, tabela de preços detalhada, origens, progressão, divindades, 3 classes e 10 raças.
 
 ## Conferência e inclusão do Grimório (Discord → Livro, Criador e Ficha) — 21/10/2026
 

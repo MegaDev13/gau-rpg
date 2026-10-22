@@ -1,82 +1,50 @@
-# G✦A✦U RPG — plataforma digital v0.3
+# S.I.G.E.A — Máscaras · Livro de Regras (branch `sigea-livro`)
 
-Plataforma offline/online com livro pesquisável, criador de personagens, grimório catalogado e ficha automatizada. **Edição preliminar:** partes das regras ainda aguardam publicação no servidor oficial.
+Livro completo em HTML do RPG do servidor **S.I.G.E.A — Máscaras** (Discord), construído no mesmo molde do projeto GAU: documento único, busca, navegação lateral e **ficha automática**.
 
-## Como publicar no GitHub Pages
+O arquivo é **`index.html`** nesta branch — abre direto no navegador, sem servidor e sem internet (todas as imagens vão embutidas em base64).
 
-1. Crie um repositório público chamado `gau-rpg` na conta `MegaDev13` (ou escolha outro nome).
-2. Envie **os arquivos desta pasta diretamente para a raiz do repositório**; não envie somente o `.zip`.
-3. Abra **Settings → Pages → Build and deployment → Source: Deploy from a branch**.
-4. Selecione **Branch: main**, pasta **/(root)**, e **Save**.
-5. Caso use o nome sugerido, o endereço padrão será `https://megadev13.github.io/gau-rpg/` (disponível apenas após a publicação efetiva).
+## O que tem dentro
 
-`index.html` contém todo o JavaScript e as regras necessárias; não há servidor nem instalação de dependências. Arquivos PDF são disponibilizados como links na tela inicial.
+| # | Capítulo | Conteúdo |
+|---|----------|----------|
+| 01 | Depois do C.R.E.P. | Mundo em 3048, meta-humanos desde 2030, Nova Vera Cruz, Avalon, Khalamit |
+| 02 | A S.I.G.E.A. | A escola, doutrina, rotina, instalações, hierarquia, Black Guard |
+| 03 | Restrição de Poderes | Regras da casa transcritas + **auditoria dos 59 canais** |
+| 04 | Como Se Joga | Mecânica básica, graus de sucesso, medidas, rodada, condições, PH, dano |
+| 05 | Criando um Cadete | NP/PP (15 × NP), limites, nove passos, arquétipos, complicações |
+| 06 | Habilidades & Defesas | 8 habilidades e 5 defesas |
+| 07 | Perícias | 16 perícias com usos e avaliação escolar |
+| 08 | Vantagens | 67 vantagens completas com tipo e graduações |
+| 09 | Poderes | 61 efeitos (tabela de custos), 35 extras, 21 falhas, descritores |
+| 10 | Equipamento | Armas, armaduras, escudos, veículos, quartel-general |
+| 11 | Combate | Ataques, manobras, área/multiataque/crítico, recuperação |
+| 12 | Mestrando | Motores de campanha, capítulos das temporadas 1–2, vilões |
+| 13 | Elenco | 55 NPCs (Vanguarda, docentes, 1º/2º/3º ano, Black Guard, Guren) + party |
+| 14 | Conquistas | Treinamento, relacionamento, faíscas, clubes, estágios, pets, casal |
+| 15 | Ficha Automática | Calculadora de PP, validação de NP, dado, salvar/exportar/imprimir |
+| 16 | Licença | Créditos e OGL 1.0a |
 
-## Aviso de conteúdo
+## Ficha automática
 
-O compêndio foi derivado de exportações do Discord e pode incluir textos de RPGs de terceiros, referências a mensagens e links para anexos do Discord. Antes de tornar o repositório público, revise direitos de publicação e quais informações deseja divulgar. Nenhuma licença de redistribuição foi presumida. Os arquivos brutos de mensagens não foram incluídos neste pacote de publicação.
+- Orçamento **15 × NP** com **ajuste SIGEA de –6** (regra do Mestre publicada em `#regras`).
+- Soma habilidades (2 PP), defesas (1 PP), perícias (0,5 PP), vantagens (1 PP) e poderes `((base + extras − falhas) × graduação) + fixos`.
+- Valida limites do NP (defesas, Resistência, 2×NP, graduação de efeito).
+- Salva em `localStorage`, exporta/importa `.json`, imprime.
+- Dado flutuante com d20 + modificador.
 
-## Arquivos
+## Fontes
 
-- `index.html` — aplicativo completo (livro pesquisável, criador em 10 etapas, grimório e ficha automática), versão 0.3
-- `livro-regras.pdf` — livro completo revisado em 44 capítulos (1.464 registros úteis e 525 entradas no grimório), edição 0.3
-- `ficha-preenchivel.pdf` — ficha PDF editável em 6 páginas (incluindo Conjuração e Grimório), versão 0.2
-- `.nojekyll` — evita transformação por Jekyll
+- **Cenário, elenco, campanha e regras da casa:** servidor *S.I.G.E.A — Máscaras* — canais `#história`, `#escola`, `#regras`, `#cápitulos`, `#corpo-docente-e-profissionais`, `#turma-do-primeiro/segundo/terceiro-ano`, `#black-guard`, `#guren`, `#vanguarda`, `#conquistas` e fichas.
+- **Sistema mecânico:** *Mutantes & Malfeitores 3ª Edição* (Green Ronin Publishing), Open Game Content sob **OGL 1.0a**. Custos, tabelas e terminologia conferidos na edição em português disponibilizada pelo próprio servidor no canal `#drive`.
+- **Imagens:** materiais publicados pelos membros do servidor.
 
-## Atualização do servidor — 22/10/2026
+## Auditoria de restrição de poderes
 
-Nova varredura completa do servidor `𝗚✦𝗔✦𝗨 | 𝐑𝐏𝐆` (canais de texto + tópicos), comparada registro por registro com a versão anterior:
+Varredura de **9.428 mensagens em 59 canais**: a normativa está concentrada em `#regras` (7 ocorrências) — Limitações de Poderes (movimentação, Nulificar, Imortalidade, Regeneração), Holding Back, Complicações, ajuste de criação e Filler. Os outros 5 canais com ocorrências são ruído (conversa, citações, biografia). Detalhamento no capítulo 03.
 
-| Item | Antes | Depois |
-|---|---|---|
-| Fontes (canais + tópicos) | 38 | **44** |
-| Mensagens com conteúdo | 450 | **501** |
-| Registros (entradas) | 1.289 | **1.464** |
-| Magias catalogadas | 410 | **525** |
-| Talentos | 494 | 494 |
+## Licença
 
-**Conteúdo novo incluído:**
+Conteúdo mecânico derivado de material Open Game Content, publicado sob a **Open Game License 1.0a** (texto completo no capítulo 16). Nomes, cenário e personagens do S.I.G.E.A permanecem *Product Identity* de seus autores. Material de fã, sem fins comerciais.
 
-- `Magias Divinas de 1° Nível` — `13` mensagens · `43` entradas
-- `Magias Divinas de 2° Nível` — `16` mensagens · `53` entradas
-- `Magias Divinas de 3° Nível` — `16` mensagens · `44` entradas
-- `Magias Divinas de 4° Nível` — `11` mensagens · `33` entradas
-- `Equipamentos` (tópico em `chat_rpg`) — análise de comércio, guildas e preços
-- `Categorias de Personagens` (tópico em `chat_rpg`) — método alternativo de criação por pontuação
-
-**Atualizações em conteúdo existente:** 42 mensagens foram editadas na origem (classes, talentos, perícias, mecânicas e grimório arcano) e tiveram seus registros re-parseados. Nenhuma entrada antiga foi perdida.
-
-**Observações:** 56 magias divinas já existiam como versões arcanas de mesmo nome — os registros foram **fundidos** (mesma magia passa a listar `arcana X` e `divina Y`) em vez de duplicados no compêndio. Permanecem pendentes no servidor: Magias Divinas de 5º a 9º nível, sistema de combate completo, tabela de preços detalhada, origens, progressão, divindades, 3 classes e 10 raças.
-
-## Conferência e inclusão do Grimório (Discord → Livro, Criador e Ficha) — 21/10/2026
-
-Foram conferidos todos os canais e tópicos do servidor `𝗚✦𝗔✦𝗨 | 𝐑𝐏𝐆` na categoria `‼️┊SISTEMA`: **8 canais** e **30 tópicos ativos** (`38` fontes no total). As `28` marcações vazias anteriores em `feitiços` e o cabeçalho provisório `Lista de Magias Universais` foram substituídos na origem pelos índices atualizados de Magias Arcanas e Magias Divinas e por **11 novos tópicos de magias**:
-
-- `Truques` (`6` mensagens · `23` entradas)
-- `Magias Arcanas de 1° Nível` (`15` mensagens · `45` entradas)
-- `Magias Arcanas de 2° Nível` (`20` mensagens · `65` entradas)
-- `Magias Arcanas de 3° Nível` (`18` mensagens · `51` entradas)
-- `Magias Arcanas de 4° Nível` (`20` mensagens · `53` entradas)
-- `Magias Arcanas de 5° Nível` (`25` mensagens · `50` entradas)
-- `Magias Arcanas de 6° Nível` (`15` mensagens · `36` entradas)
-- `Magias Arcanas de 7° Nível` (`11` mensagens · `24` entradas)
-- `Magias Arcanas de 8° Nível` (`14` mensagens · `27` entradas)
-- `Magias Arcanas de 9° Nível` (`14` mensagens · `24` entradas)
-- `Preces` (`3` mensagens · `12` entradas)
-
-Totais consolidados na publicação:
-
-- **38 capítulos** (`8` canais e `30` tópicos ativos)
-- **450 registros úteis** (`443` textuais e `7` registros de anexos; os `65` marcadores compostos apenas por pontos em `perícias` [18] e `outras-mecânicas` [47] permanecem excluídos)
-- **1.289 entradas únicas** no índice alfabético e no grafo de referências cruzadas, preservando variantes homônimas e unindo integralmente as 6 magias longas divididas entre mensagens (`Recipiente Arcano`, `Símbolo da Dor`, `Prisão`, `Desejo`, `Esfera Prismática` e `Portal`)
-- **410 entradas catalogadas no Grimório** (`406` arcanas e `122` com acesso divino explícito), integradas com busca e filtros no **Criador (Etapa VIII)**, gestão direta na **Ficha Automática** e página dedicada **Grimório — Feitiços e Preces** na **Ficha PDF Preenchível (6 páginas)**
-
-Lacunas que permanecem pendentes na origem oficial: tópicos exclusivos de `Magias Divinas de 1° a 9° Nível`, equipamentos e preços, sistema completo de combate, origens/antecedentes, experiência geral, divindades consolidadas, 3 classes restantes e 10 raças restantes. Nenhuma credencial, dado de autor ou exportação bruta do Discord integra o repositório.
-
-## Conferência direta de Sistema — 19/10/2026
-
-Foram consultados 8 canais e 19 tópicos ativos, totalizando 383 mensagens. O capítulo de magia foi incorporado com cálculos de PM base por classe e CD a partir de modificador de conjuração confirmado separadamente, preservando a divergência entre o capítulo geral de magia (4 magias iniciais de nível 0) e a classe Mago (5 magias iniciais de nível 0).
-
-## Limpeza editorial — 19/10/2026
-
-Foram removidos os marcadores compostos somente por pontos, revisada a ortografia, normalizadas ligaduras tipográficas e formatadas tabelas legíveis sem alterar números, fórmulas, custos ou efeitos das regras.
+> A branch `main` continua com o livro do GAU, intacta. Este livro vive apenas em `sigea-livro`.

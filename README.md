@@ -23,6 +23,8 @@ O arquivo é **`index.html`** nesta branch — abre direto no navegador, sem ser
 | 13 | Elenco | 55 NPCs (Vanguarda, docentes, 1º/2º/3º ano, Black Guard, Guren) + party |
 | 14 | Conquistas | Treinamento, relacionamento, faíscas, clubes, estágios, pets, casal |
 | 15 | Ficha Automática | Calculadora de PP, validação de NP, dado, salvar/exportar/imprimir |
+| **A** | Heróis Adolescentes | Apêndice opcional a partir do *Hero High*: NP por era, benchmarks teen, perícias, vantagens, 13 arquétipos, escola como cenário |
+| **B** | Linha do Tempo | Temporadas 1–2, calendário de mesa (2026), progressão da party e lacunas do registro |
 | 16 | Licença | Créditos e OGL 1.0a |
 
 ## Ficha automática
@@ -37,6 +39,8 @@ O arquivo é **`index.html`** nesta branch — abre direto no navegador, sem ser
 
 - **Cenário, elenco, campanha e regras da casa:** servidor *S.I.G.E.A — Máscaras* — canais `#história`, `#escola`, `#regras`, `#cápitulos`, `#corpo-docente-e-profissionais`, `#turma-do-primeiro/segundo/terceiro-ano`, `#black-guard`, `#guren`, `#vanguarda`, `#conquistas` e fichas.
 - **Sistema mecânico:** *Mutantes & Malfeitores 3ª Edição* (Green Ronin Publishing), Open Game Content sob **OGL 1.0a**. Custos, tabelas e terminologia conferidos na edição em português disponibilizada pelo próprio servidor no canal `#drive`.
+- **Apêndice A:** *Hero High* (Green Ronin), suplemento de M&amp;M 3ª Edição — fonte direta das regras **Holding Back** e **Exemplos de Complicações** já publicadas em `#regras`. Material de referência, não Open Game Content além da OGL.
+- **Apêndice B:** reconstruído dos canais `#cápitulos`, `#conquistas`, `#rolagens`, `#rolagens-vilões` e do calendário de publicação das mensagens.
 - **Imagens:** materiais publicados pelos membros do servidor.
 
 ## Auditoria de restrição de poderes

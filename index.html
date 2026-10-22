@@ -157,6 +157,15 @@ table.tight td,table.tight th{padding:6px 8px;font-size:14px}
 .van .tagv{font-family:var(--f-mono);font-size:9.5px;letter-spacing:.16em;color:var(--sangue);text-transform:uppercase;display:block;margin-bottom:7px}
 .van p{margin:0;font-size:14.5px;line-height:1.5;color:var(--tinta2)}
 
+/* linha do tempo */
+.tl{position:relative;margin:28px 0 28px 12px;padding-left:26px;border-left:2px solid rgba(142,20,24,.45)}
+.tl-i{position:relative;margin:0 0 24px}
+.tl-i::before{content:"";position:absolute;left:-33px;top:7px;width:10px;height:10px;border-radius:50%;background:var(--sangue);box-shadow:0 0 0 3px var(--papel)}
+.tl-i:last-child{margin-bottom:0}
+.tl-d{display:block;font-family:var(--f-mono);font-size:10px;letter-spacing:.18em;color:var(--sangue);text-transform:uppercase}
+.tl-i b{display:block;font-family:var(--f-head);font-size:16.5px;margin:3px 0 4px;text-transform:uppercase;letter-spacing:.005em;line-height:1.15}
+.tl-i p{margin:0;font-size:15.5px;color:var(--tinta2)}
+
 /* cards */
 .grid{display:grid;gap:16px;margin:24px 0}
 .g2{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -276,7 +285,7 @@ footer.foot b{color:var(--papel);font-weight:400}
 <div class="wrap">
   <aside class="side">
     <div class="rot">Sumário</div>
-    <nav class="nav"><a href="#capa"><span class="n">00</span>Capa</a><a href="#cap1"><span class="n">01</span>Depois do C.R.E.P.</a><a href="#cap2"><span class="n">02</span>A S.I.G.E.A.</a><a href="#cap3"><span class="n">03</span>Restrição de Poderes</a><a href="#cap4"><span class="n">04</span>Como Se Joga</a><a href="#cap5"><span class="n">05</span>Criando um Cadete</a><a href="#cap6"><span class="n">06</span>Habilidades &amp; Defesas</a><a href="#cap7"><span class="n">07</span>Perícias</a><a href="#cap8"><span class="n">08</span>Vantagens</a><a href="#cap9"><span class="n">09</span>Poderes</a><a href="#cap10"><span class="n">10</span>Equipamento</a><a href="#cap11"><span class="n">11</span>Combate</a><a href="#cap12"><span class="n">12</span>Mestrando</a><a href="#cap13"><span class="n">13</span>Elenco</a><a href="#cap14"><span class="n">14</span>Conquistas</a><a href="#cap15"><span class="n">15</span>Ficha Automática</a><a href="#cap16"><span class="n">16</span>Licença</a></nav>
+    <nav class="nav"><a href="#capa"><span class="n">00</span>Capa</a><a href="#cap1"><span class="n">01</span>Depois do C.R.E.P.</a><a href="#cap2"><span class="n">02</span>A S.I.G.E.A.</a><a href="#cap3"><span class="n">03</span>Restrição de Poderes</a><a href="#cap4"><span class="n">04</span>Como Se Joga</a><a href="#cap5"><span class="n">05</span>Criando um Cadete</a><a href="#cap6"><span class="n">06</span>Habilidades &amp; Defesas</a><a href="#cap7"><span class="n">07</span>Perícias</a><a href="#cap8"><span class="n">08</span>Vantagens</a><a href="#cap9"><span class="n">09</span>Poderes</a><a href="#cap10"><span class="n">10</span>Equipamento</a><a href="#cap11"><span class="n">11</span>Combate</a><a href="#cap12"><span class="n">12</span>Mestrando</a><a href="#cap13"><span class="n">13</span>Elenco</a><a href="#cap14"><span class="n">14</span>Conquistas</a><a href="#cap15"><span class="n">15</span>Ficha Automática</a><a href="#apA"><span class="n">A</span>Heróis Adolescentes</a><a href="#apB"><span class="n">B</span>Linha do Tempo</a><a href="#cap16"><span class="n">16</span>Licença</a></nav>
     <div class="grp">Referência rápida</div>
     <div class="nav">
       <a href="#cap9"><span class="n">P</span>Efeitos de poder</a>
@@ -1857,6 +1866,265 @@ footer.foot b{color:var(--papel);font-weight:400}
   </div>
 </section>
 
+<!-- ============ APÊNDICE A ============ -->
+<section class="ch" id="apA">
+  <div class="ch-head">
+    <div class="num">A</div>
+    <div class="tag">Apêndice · Fonte das Regras da Casa</div>
+    <h2>Heróis Adolescentes</h2>
+    <p>O suplemento que sustenta metade das regras do SIGEA: benchmarks teen, arquétipos, escola como cenário e a mecânica de segurar o próprio poder.</p>
+  </div>
+  <div class="ch-body">
+
+    <p class="dropcap">Este apêndice condensa o <strong><em>Hero High</em></strong> (Green Ronin, 177 pp., OGL 1.0a), o suplemento de Mutantes &amp; Malfeitores dedicado a campanhas de jovens heróis. Ele não é material opcional de sabor: é a <strong>fonte direta</strong> de parte do que está no <code>#regras</code> do servidor.</p>
+
+    <div class="box warn">
+      <span class="bt">Conferência de fonte</span>
+      <p>As regras <strong>Holding Back</strong> e <strong>Exemplos de Complicações</strong> (Berserk, Host, Hunted, Inert, Monstrosity, Power Unleashed) publicadas no <code>#regras</code> do SIGEA são <strong>tradução quase literal</strong> das páginas 21–22 do <em>Hero High</em>. A regra da casa não foi inventada pelo Mestre: foi importada do suplemento. Este apêndice mostra o resto do que ficou de fora.</p>
+    </div>
+
+    <h3 class="sec"><span class="h-num">A.1</span>Nível de Poder Inicial</h3>
+    <p>O suplemento recomenda um NP inicial por <strong>era da série</strong> —a lógica é que heróis adolescentes começam abaixo dos adultos daquele mundo e crescem até alcançá-los.</p>
+    <table class="tight">
+      <thead><tr><th>Era</th><th>NP recomendado</th><th>Leitura</th></tr></thead>
+      <tbody>
+        <tr><td>Idade Mítica</td><td class="num">5–8</td><td>Deuses no 15+, monstros no 10+; adolescentes começam em 5</td></tr>
+        <tr><td>Era Pulp</td><td class="num">3–5</td><td>Poderes raros e modestos</td></tr>
+        <tr><td>Era de Ouro</td><td class="num">4–6</td><td>Heróis icônicos, mas ainda "possíveis"</td></tr>
+        <tr><td>Era de Prata</td><td class="num">5–7</td><td>Escala cósmica começando</td></tr>
+        <tr><td>Era de Bronze</td><td class="num">6–8</td><td>Conflito social e psicológico</td></tr>
+        <tr><td>Era de Ferro</td><td class="num">7–9</td><td>Violência e anti-heróis</td></tr>
+        <tr><td><strong>Era Moderna</strong></td><td class="num"><strong>8–10</strong></td><td>Padrão do gênero hoje — adultos em 10</td></tr>
+        <tr><td>Era Sombria Urbana</td><td class="num">4–8</td><td>Poderes baixos, rua e crime</td></tr>
+        <tr><td>Era Apocalíptica</td><td class="num">8–12</td><td>Mundo destruído, sobreviventes poderosos</td></tr>
+        <tr><td>Redux da Era de Ouro</td><td class="num">10+</td><td>Retorno ao heroísmo clássico em escala alta</td></tr>
+      </tbody>
+    </table>
+    <div class="box master">
+      <span class="bt">Como o SIGEA se encaixa</span>
+      <p>O servidor joga na <strong>Era Moderna</strong> (adultos em NP 10–12), mas a party começou em <strong>NP 6</strong> — dois a quatro níveis abaixo do padrão do gênero, propositalmente. Isso é exatamente o que o <em>Hero High</em> chama de "você ainda está crescendo": os professores são NP 10+, os alunos são NP 6. A distância é a tensão da campanha.</p>
+    </div>
+
+    <h3 class="sec"><span class="h-num">A.2</span>Benchmarks de Habilidade</h3>
+    <p>Adultos começam com habilidade base 0. Adolescentes podem começar abaixo — e o suplemento oferece quatro formas de representar isso:</p>
+    <table class="tight">
+      <thead><tr><th>Opção</th><th>Base</th><th>Custo</th><th>Uso</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Status Quo</strong></td><td>0 em tudo</td><td>—</td><td>Padrão do livro; teens mais velhos ou experientes</td></tr>
+        <tr><td><strong>Teens Típicos</strong></td><td>–1 em tudo</td><td>0 PP; subir para 0 custa 2 PP por habilidade</td><td>Séries duras, onde cada ponto pesa</td></tr>
+        <tr><td><strong>Teens Superdotados</strong></td><td>–1 em tudo, <strong>uma</strong> em 0</td><td>0 PP</td><td>Um talento natural por personagem</td></tr>
+        <tr><td><strong>Teens Imaturos</strong></td><td>0 em tudo, <strong>uma</strong> em –1</td><td>0 PP</td><td>Humor; a fraqueza é ligada à idade</td></tr>
+      </tbody>
+    </table>
+    <p class="small">Regra de recuperação: quando o personagem envelhece e a base sobe, ele <strong>recebe de volta</strong> os pontos gastos para compensar a base antiga (exemplo do livro: Tommy Flex, Vigor –1 → 1 aos 13 anos, base 0 aos 16, +2 PP de volta).</p>
+
+    <h3 class="sec"><span class="h-num">A.3</span>Perícias Teen</h3>
+    <table class="tight">
+      <thead><tr><th>Opção</th><th>Efeito</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Status Quo</strong></td><td>Sem restrição — padrão para séries com teens mais velhos</td></tr>
+        <tr><td><strong>Treinadas Limitadas</strong></td><td>Só pode aprender perícias "treinadas" cuja habilidade-chave seja ≥ 0; o dobro do modificador indica quantas perícias extras daquela habilidade ele conhece</td></tr>
+        <tr><td><strong>Sem Ensino Superior</strong></td><td>Proíbe perícias que exigem formação universitária (Especialidade em direito, história, ciência avançada…), salvo se o conceito do personagem for justamente esse (jovem cientista, engenheiro prodígio)</td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="sec"><span class="h-num">A.4</span>Vantagens do Suplemento</h3>
+    <div class="grid g2">
+      <div class="box rule"><span class="bt">Cool · Perícia · graduações</span>
+        <p>Você tem estilo, e isso funciona com qualquer um abaixo de 20 anos: <strong>+5 circunstancial</strong> em uma perícia de Presença contra adolescentes. Adultos são imunes. Cada graduação adicional cobre mais uma perícia de Presença (respeitando o limite de perícia do NP).</p></div>
+
+      <div class="box rule"><span class="bt">Disarming · Sorte · graduações (10)</span>
+        <p>Você parece inocente demais para ser atacado com força total. Gastando <strong>1 Ponto Heroico</strong>, force um vilão a um teste de Vontade com CD <strong>10 + 2 × graduações</strong>. Se falhar, ele ataca mesmo assim, mas "segura" o golpe: <strong>–2</strong> na graduação do ataque (1 grau de falha), <strong>–5</strong> (2 graus) ou <strong>–10</strong> (3+ graus).</p></div>
+
+      <div class="box rule" style="grid-column:1/-1"><span class="bt">Holding Back · Sorte · graduações (6) — já em uso no SIGEA</span>
+        <p>Poder real muito acima do que você demonstra, contido por medo legítimo. Gaste <strong>1 PH</strong>; exija que <strong>mais da metade da equipe esteja incapacitada</strong> ou muitas vidas em risco, e passe em <strong>Vontade CD 10 + sua Defesa de Vontade</strong> (+1 por graduação após a primeira, máx. +5). Se conseguir: <strong>+4 de NP</strong> e <strong>60 pontos</strong> para gastar naquele encontro; ao fim, sofre uma Complicação escolhida pelo Mestre e <strong>não ganha PH por ela</strong>.</p></div>
+    </div>
+
+    <h3 class="sec"><span class="h-num">A.5</span>Os Treze Arquétipos Teen</h3>
+    <p>Cada arquétipo é um conceito pronto de estudante com poder — use como molde de ficha ou como NPC de turma.</p>
+    <table class="tight">
+      <thead><tr><th>Arquétipo</th><th>Conceito</th><th>Encaixe no SIGEA</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Exilado Alienígena</strong></td><td>Príncipe/herdeiro de outro mundo, ingênuo nos costumes humanos</td><td>Intercâmbio de Khalamit ou de colônia fora de Nova Vera Cruz</td></tr>
+        <tr><td><strong>Híbrido Alienígena</strong></td><td>Metade humano, metade algo; nunca pertenceu a lugar nenhum</td><td>Filho de meta-humano registrado com origem não explicada</td></tr>
+        <tr><td><strong>Filho das Trevas</strong></td><td>Herança demoníaca ou sombria, tentando não virar o que teme</td><td>Candidato natural a <em>Host</em> ou <em>Monstrosity</em></td></tr>
+        <tr><td><strong>Construto</strong></td><td>Não nasceu: foi feito — e agora pergunta se conta como pessoa</td><td>Projeto de laboratório da própria escola</td></tr>
+        <tr><td><strong>Emissário</strong></td><td>Representante de um povo ou instituição, longe de casa</td><td>Aluno enviado por Avalon ou pelas Nações Unidas</td></tr>
+        <tr><td><strong>Paragão do Futuro</strong></td><td>Poder imenso e a expectativa de que ele salve tudo</td><td>O aluno que a Vanguarda já monitora</td></tr>
+        <tr><td><strong>O Herdeiro</strong></td><td>Filho de um grande herói; vive à sombra do nome</td><td>Nicholas Flamberg, Marin Steelheart</td></tr>
+        <tr><td><strong>O Descontrolado</strong></td><td>Poder explosivo, sem freio; o dano colateral é o tema</td><td>Candidato a <em>Berserk</em> / <em>Power Unleashed</em></td></tr>
+        <tr><td><strong>O Aliado Místico</strong></td><td>Não tem poder próprio: serve a uma entidade que tem</td><td>Aluno com pacto — e a escola sabe</td></tr>
+        <tr><td><strong>O Jovem Mago</strong></td><td>Estuda magia de verdade, com regras, custos e professores</td><td>Turma de Especialidade: Magia</td></tr>
+        <tr><td><strong>O Protegido</strong></td><td>Treinado por um herói profissional desde criança</td><td>Aluno com estágio antecipado</td></tr>
+        <tr><td><strong>O Cabeça-de-Tecnologia</strong></td><td>Gênio de engenharia; o poder é o que ele constrói</td><td>Dispositivos, invenções e o clube de tecnologia</td></tr>
+        <tr><td><strong>O Vaso</strong></td><td>Hospedeiro de algo antigo que fala, aconselha e cobra</td><td>Literalmente a complicação <em>Host</em>, com voz própria</td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="sec"><span class="h-num">A.6</span>A Escola Como Cenário</h3>
+    <p>O capítulo de mestrado do <em>Hero High</em> classifica escolas de meta-humanos em cinco modelos. O SIGEA é um híbrido — e saber disso ajuda a decidir que tipo de cena cabe no prédio.</p>
+    <table class="tight">
+      <thead><tr><th>Modelo</th><th>Como funciona</th><th>No SIGEA</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Propriedade de elite</strong> ("escondida à vista de todos")</td><td>Parece um internato caro; ninguém de fora sabe o que acontece lá</td><td><strong>Sim</strong> — fachada de instituição de excelência</td></tr>
+        <tr><td><strong>Instalação secreta</strong></td><td>Escondida do mundo; isolamento total</td><td><strong>Parcial</strong> — os blocos restritos e a ala de contenção</td></tr>
+        <tr><td><strong>Escola pública</strong></td><td>Meta-humanos concentrados num prédio comum; estigma social</td><td>Não é o caso da sede, mas é o pano de fundo do mundo</td></tr>
+        <tr><td><strong>Instituição de governo</strong></td><td>Formação oficial, currículo regulado, carreira garantida</td><td><strong>Sim</strong> — autorização, registro e missões de campo</td></tr>
+        <tr><td><strong>Centro de doutrinação</strong></td><td>O objetivo não é educar: é produzir lealdade</td><td><strong>Tensão latente</strong> — é o que os alunos temem que seja</td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="sec"><span class="h-num">A.7</span>A Sala de Aula Como Cena</h3>
+    <p>A parte mais útil do suplemento para uma campanha escolar: cada espaço do prédio rende uma cena de jogo. Use como tabela de improviso.</p>
+    <div class="grid g2">
+      <div class="box rule"><span class="bt">Sala de aula</span><p>Prova surpresa com poder contido; professor que humilha; colega que cola usando habilidade. Teste de perícia com a complicação de não poder usar o poder.</p></div>
+      <div class="box rule"><span class="bt">Refeitório / pátio</span><p>Política de mesa, panelinhas, briga que começa social e vira física. Relacionamento muda aqui.</p></div>
+      <div class="box rule"><span class="bt">Vestiário</span><p>O lugar onde as máscaras caem: segredos, cicatrizes, o colega que esconde o próprio poder.</p></div>
+      <div class="box rule"><span class="bt">Campo / quadra</span><p>Treino vira competição; competição vira acidente; acidente vira relatório. +5 de treino se o desafio seguinte combinar.</p></div>
+      <div class="box rule"><span class="bt">Sala dos professores</span><p>Nunca entre sem motivo — e sempre há um motivo. Aqui se descobre o que a direção sabe.</p></div>
+      <div class="box rule"><span class="bt">Corredor / escada</span><p>Cena de perseguição curta, encontro proibido, boato correndo mais rápido que o velocista.</p></div>
+      <div class="box rule"><span class="bt">Biblioteca / laboratório</span><p>Investigação, pesquisa, dispositivo improvisado. Tecnologia e Especialidade brilham.</p></div>
+      <div class="box rule"><span class="bt">Telhado</span><p>Onde todo adolescente com poder vai pensar. Confissões, pactos, a vista da cidade.</p></div>
+    </div>
+
+    <h3 class="sec"><span class="h-num">A.8</span>Vida Social, Rituais e Cliques</h3>
+    <p>O suplemento trata a vida social como <strong>sistema de cenário</strong>, não como decoração: cliques delimitam quem fala com quem, rituais marcam passagem de fase (formatura, primeiro voo autorizado, primeira missão), e o drama interpessoal é o que mantém a mesa engajada entre combates.</p>
+    <ul>
+      <li><strong>Cliques</strong> — no SIGEA, cada turma já funciona como clique: 1º ano (calouros), 2º ano (consolidados), 3º ano (campo). Clubes atravessam as turmas e criam pontes.</li>
+      <li><strong>Rituais de passagem</strong> — primeira autorização de poder, primeiro treino com passe, primeira missão de campo, interescolar, formatura. Cada um deve ser uma cena, não uma linha de ficha.</li>
+      <li><strong>Cultura popular</strong> — música, cinema, jogos e moda existem em 3048; o suplemento recomenda usá-los para dar textura. O servidor já tem canais de <code>#música</code> e <code>#imagens</code> — use-os como "trilha oficial" da campanha.</li>
+    </ul>
+    <div class="box master">
+      <span class="bt">Ponte direta com o sistema do SIGEA</span>
+      <p>O <em>Hero High</em> sugere tratar relacionamentos como <strong>vantagens sociais circunstanciais</strong>. O SIGEA já resolveu isso melhor: use o <strong>Capítulo 14</strong> (relacionamento –5 a 10, estrelas, faíscas) como a versão de mesa do que o suplemento descreve em prosa. Onde o livro diz "o drama importa", o SIGEA diz "o NPC tem valor e estrelas".</p>
+    </div>
+
+    <h3 class="sec"><span class="h-num">A.9</span>Vilões Que Fazem Crescer</h3>
+    <p>O capítulo de vilões do <em>Hero High</em> parte de uma regra simples: <strong>um vilão de campanha adolescente deve espelhar uma escolha</strong>, não apenas um nível de poder. O antagonista serve para forçar o protagonista a decidir quem ele vai ser.</p>
+    <table class="tight">
+      <thead><tr><th>Tipo</th><th>Função</th><th>Exemplo no SIGEA</th></tr></thead>
+      <tbody>
+        <tr><td><strong>O espelho</strong></td><td>Mesmo poder, escolha oposta</td><td>Um aluno que aceitou virar arma do sistema</td></tr>
+        <tr><td><strong>O adulto que falhou</strong></td><td>Mostra o que acontece com quem não aguenta</td><td>Veterano da Vanguarda queimado em campo</td></tr>
+        <tr><td><strong>A instituição</strong></td><td>Não tem rosto; tem protocolo</td><td>A própria direção, quando decide esconder algo</td></tr>
+        <tr><td><strong>O coletivo</strong></td><td>Não se vence, se sobrevive</td><td>Guren (onze figuras, sem rosto)</td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="sec"><span class="h-num">A.10</span>O que Vale Importar — e o que Não Vale</h3>
+    <table class="tight">
+      <thead><tr><th>Do <em>Hero High</em></th><th>Veredito para o SIGEA</th></tr></thead>
+      <tbody>
+        <tr><td>Benchmarks de habilidade e perícias teen</td><td><strong>Importar</strong> — especialmente "Teens Típicos" para NPCs mais novos</td></tr>
+        <tr><td>Vantagens <em>Cool</em>, <em>Disarming</em> e <em>Holding Back</em></td><td><strong>Importar</strong> — a terceira já é regra da casa</td></tr>
+        <tr><td>Arquétipos teen</td><td><strong>Importar como moldes de NPC</strong></td></tr>
+        <tr><td>Tipos de escola e cenas de prédio</td><td><strong>Importar</strong> — é o mapa do SIGEA</td></tr>
+        <tr><td>Claremont Academy e Elysian Academy</td><td><strong>Não importar</strong> — são cenários próprios do M&amp;M (Product Identity), não do SIGEA</td></tr>
+        <tr><td>Personagens do suplemento (Next-Gen, etc.)</td><td><strong>Não importar</strong> — o elenco do SIGEA é o do Capítulo 13</td></tr>
+      </tbody>
+    </table>
+
+  </div>
+</section>
+
+<!-- ============ APÊNDICE B ============ -->
+<section class="ch" id="apB">
+  <div class="ch-head">
+    <div class="num">B</div>
+    <div class="tag">Apêndice · Registro de Campanha</div>
+    <h2>Linha do Tempo</h2>
+    <p>Duas temporadas, quatorze capítulos registrados e quatorze datas de mesa. O que aconteceu, quando — e o que ficou em aberto.</p>
+  </div>
+  <div class="ch-body">
+
+    <p class="dropcap">A cronologia abaixo foi montada a partir de três rastros deixados no servidor: o canal <code>#cápitulos</code> (título e data interna de cada capítulo), o calendário real de publicação das mensagens e a atividade de rolagem em <code>#rolagens-vilões</code> e <code>#rolagens</code>. Onde não havia registro, não inventei — está listado em B.6.</p>
+
+    <h3 class="sec"><span class="h-num">B.1</span>Cronologia Interna — Temporada 1</h3>
+    <p>Datas do mundo. A temporada cobre <strong>fevereiro e março</strong> do ano letivo.</p>
+    <div class="tl">
+      <div class="tl-i"><span class="tl-d">2 de fevereiro</span><b>Capítulo 1 — Bem-Vindos à S.I.G.E.A.</b><p>Chegada dos calouros. Apresentação da escola, das regras e do que acontece com quem ignora a autorização.</p></div>
+      <div class="tl-i"><span class="tl-d">28 de fevereiro</span><b>Capítulo 2 — Provação pro Mundo</b><p>Primeira avaliação séria: o que a escola chama de "prova" e o que os alunos descobrem que é.</p></div>
+      <div class="tl-i"><span class="tl-d">28 de fevereiro</span><b>Capítulo 2.5 — “Eu Gosto de Você”</b><p>O primeiro capítulo declaradamente de relação: vínculos que depois viram número no sistema de relacionamento.</p></div>
+      <div class="tl-i"><span class="tl-d">4 de março</span><b>Capítulo 3 — Uma Nova Era</b><p>Virada de arco: o mundo reage ao que os alunos fizeram (ou deixaram de fazer).</p></div>
+      <div class="tl-i"><span class="tl-d">4 de março</span><b>Capítulo 3.5 — “Cai Pra Dentro!”</b><p>Fecho leve de temporada, com a party ainda inteira e sem noção do que vem.</p></div>
+    </div>
+
+    <h3 class="sec"><span class="h-num">B.2</span>Cronologia Interna — Temporada 2</h3>
+    <p>A temporada começa em <strong>1º de maio</strong> e concentra seis capítulos no dia <strong>2 de maio</strong> — um único dia de mundo que rendeu o arco mais pesado da campanha.</p>
+    <div class="tl">
+      <div class="tl-i"><span class="tl-d">1 de maio</span><b>Capítulo 1 — Caos na Prisão</b><p>Primeiro grande deslocamento: a party sai do prédio da escola e entra em território de contenção.</p></div>
+      <div class="tl-i"><span class="tl-d">1 de maio</span><b>Capítulo 1.5 — “Eu Vou Matar Cada Um de Vocês”</b><p>A ameaça deixa de ser institucional e passa a ser pessoal.</p></div>
+      <div class="tl-i"><span class="tl-d">2 de maio</span><b>Capítulo 2 — “STRIIIIIIKE 3!”</b><p>Combate de grande escala. O maior volume de rolagens de vilão do servidor está concentrado neste arco.</p></div>
+      <div class="tl-i"><span class="tl-d">2 de maio</span><b>Capítulo 2.1 — “Eu Não Vou Deixar Ninguém Fazer Mal a Você…”</b><p>O eixo emocional da temporada: proteção, promessa e o custo de ambas.</p></div>
+      <div class="tl-i"><span class="tl-d">2 de maio</span><b>Capítulo 2.5 — <s>“Véspera”</s> de um Fim</b><p>O título riscado diz o que o capítulo faz: prepara uma perda que o grupo tenta evitar.</p></div>
+      <div class="tl-i"><span class="tl-d">2 de maio</span><b>Capítulo 2.9 — A Verdadeira Vanguarda</b><p>Os pilares entram em cena. A distância entre "aluno" e "herói profissional" vira assunto de mesa.</p></div>
+      <div class="tl-i"><span class="tl-d">2 de maio</span><b>Capítulo 3 — Ajuda Cronometrada</b><p>Corrida contra o relógio: a primeira missão em que o tempo, e não o inimigo, é o antagonista.</p></div>
+      <div class="tl-i"><span class="tl-d">2 de maio</span><b>Capítulo 3.5 — “Quebra de Clima”</b><p>Respiro e reorganização de vínculos depois do pico de tensão.</p></div>
+      <div class="tl-i"><span class="tl-d">10 de maio</span><b>Capítulo 4 — Boas Festas, Nova Vera Cruz</b><p>Festa nacional: a escola em modo público, e todo mundo usando máscara — no sentido social.</p></div>
+    </div>
+
+    <h3 class="sec"><span class="h-num">B.3</span>Calendário de Mesa — 2026</h3>
+    <p>Datas reais, tiradas dos registros de mensagem. Servem para reconstruir o ritmo da campanha: quando o material foi publicado, quando houve sessão e quando houve combate.</p>
+    <table class="tight">
+      <thead><tr><th style="width:110px">Data</th><th>Tipo</th><th>Registro</th></tr></thead>
+      <tbody>
+        <tr><td class="mono">23/06</td><td>Publicação</td><td>Conquistas base: Áreas de Treinamento, Relacionamento e Clubes</td></tr>
+        <tr><td class="mono">09/08</td><td>Publicação</td><td>Faíscas (5 estrelas) e Estágios</td></tr>
+        <tr><td class="mono">12/08</td><td>Publicação</td><td>Pets — Parceiro e Agente</td></tr>
+        <tr><td class="mono">16/08</td><td>Publicação</td><td>Casal (bônus de vínculo 10 com estrela)</td></tr>
+        <tr><td class="mono">17/08</td><td>Sessão + publicação</td><td>Temporada 1 completa e T2 caps. 1–2 publicados · <strong>72 rolagens de vilão</strong></td></tr>
+        <tr><td class="mono">18/08</td><td>Publicação</td><td>T2 Cap. 2.1</td></tr>
+        <tr><td class="mono">23/08</td><td>Sessão</td><td>6 rolagens de vilão (cena curta)</td></tr>
+        <tr><td class="mono">28/08</td><td>Publicação</td><td>T2 Cap. 2.5 — “Véspera de um Fim”</td></tr>
+        <tr><td class="mono">05/09</td><td>Sessão</td><td>2 rolagens de vilão</td></tr>
+        <tr><td class="mono">08/09</td><td>Publicação</td><td>T2 Cap. 2.9 — A Verdadeira Vanguarda</td></tr>
+        <tr><td class="mono">13/09</td><td>Sessão</td><td><strong>139 rolagens de vilão</strong> — o maior combate registrado no servidor</td></tr>
+        <tr><td class="mono">30/09</td><td>Publicação</td><td>T2 Cap. 3 — Ajuda Cronometrada</td></tr>
+        <tr><td class="mono">18/10</td><td>Publicação</td><td>T2 Cap. 3.5 — “Quebra de Clima” e Cap. 4 — Boas Festas, Nova Vera Cruz</td></tr>
+      </tbody>
+    </table>
+    <p class="small">Ritmo observado: o material narrativo era publicado em blocos, e os capítulos novos apareciam depois das sessões correspondentes — o canal funciona como <em>registro</em>, não como <em>programação</em>.</p>
+
+    <h3 class="sec"><span class="h-num">B.4</span>Progressão da Party</h3>
+    <table class="tight">
+      <thead><tr><th>Indicador</th><th>Valor</th><th>Leitura</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Nível de Poder</strong></td><td class="mono">8 → 11 (travado)</td><td>Subiu, mas o 11 está travado pelo XP</td></tr>
+        <tr><td><strong>XP</strong></td><td class="mono">120 / 135</td><td>Faltam 15 para destravar o NP 11</td></tr>
+        <tr><td><strong>Pontos Escolares</strong></td><td class="mono">125</td><td>Moeda de acesso da escola (treinos, estágios, missões)</td></tr>
+        <tr><td>Benefícios ativos</td><td>—</td><td>Acesso a missões de campo · treinamento especializado com professores</td></tr>
+        <tr><td>Evento pendente</td><td>—</td><td>Lavínia, Any e Angelina representam a escola no <strong>interescolar</strong></td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="sec"><span class="h-num">B.5</span>Ganchos Abertos</h3>
+    <div class="grid g2">
+      <div class="box master"><span class="bt">Interescolar</span><p>Três alunas escaladas para representar a S.I.G.E.A. fora do prédio. É o primeiro contato oficial com outras escolas de meta-humanos — e o tipo de evento em que reputação institucional está em jogo.</p></div>
+      <div class="box master"><span class="bt">Black Guard</span><p>Unidade de alunos do 3º ano já atuando em campo sob sigilo. Nenhum capítulo registrado tratou diretamente da unidade — o que a deixa inteira para a próxima temporada.</p></div>
+      <div class="box master"><span class="bt">Guren</span><p>Onze figuras, cartas com um “G” e uma kitsune. O servidor tem a lore completa e nenhum confronto registrado: é o antagonista de longo prazo esperando entrada.</p></div>
+      <div class="box master"><span class="bt">A prisão</span><p>A Temporada 2 abre com “Caos na Prisão”. O que aconteceu lá dentro ficou registrado apenas nos capítulos — e nenhum deles explica como a party saiu.</p></div>
+    </div>
+
+    <h3 class="sec"><span class="h-num">B.6</span>Lacunas do Registro</h3>
+    <p>Transparência sobre o que <strong>não</strong> existe no servidor e, portanto, não entrou nesta linha do tempo:</p>
+    <table class="tight">
+      <thead><tr><th>Fonte</th><th>Situação</th></tr></thead>
+      <tbody>
+        <tr><td><code>#história-angelina</code>, <code>#história-any</code>, <code>#história-erwin</code>, <code>#história-aidan</code>, <code>#história-kay</code></td><td>Vazios (0 mensagens) — não há diários ou resumos por personagem</td></tr>
+        <tr><td><code>#apresentação-de-vilões</code>, <code>#as-entidades</code>, <code>#os-mais-fortes</code>, <code>#invocações</code>, <code>#sindicato</code>, <code>#alpha-1</code></td><td>Vazios — lore planejada e nunca publicada</td></tr>
+        <tr><td><code>#rolagens</code> (3.243 msgs)</td><td>Só resultados de dados, sem rótulo de cena — serve para datar atividade, não para narrar</td></tr>
+        <tr><td>Resumos de sessão</td><td>Não existem em canal próprio; o que há são os títulos e as artes dos capítulos</td></tr>
+      </tbody>
+    </table>
+
+    <div class="box warn">
+      <span class="bt">Nota de leitura</span>
+      <p>As datas do mundo (fevereiro a maio) e as datas reais (junho a outubro de 2026) <strong>não coincidem</strong> e não devem ser lidas como se coincidissem: o calendário interno é ficção; o externo é quando o material foi publicado. Misturar os dois produz uma cronologia que nunca aconteceu.</p>
+    </div>
+
+  </div>
+</section>
+
 <!-- ============ CAP 16 ============ -->
 <section class="ch" id="cap16">
   <div class="ch-head">
@@ -1909,7 +2177,7 @@ footer.foot b{color:var(--papel);font-weight:400}
   'use strict';
 
   /* ---------------- NAVEGAÇÃO ---------------- */
-  var links = Array.prototype.slice.call(document.querySelectorAll('.nav a')).filter(function(a){return a.querySelector('.n') && a.querySelector('.n').textContent.length===2;});
+  var links = Array.prototype.slice.call(document.querySelectorAll('.nav a')).filter(function(a){var n=a.querySelector('.n'); return n && /^(\d{2}|[AB])$/.test(n.textContent);});
   var secs = links.map(function (a) { return document.querySelector(a.getAttribute('href')); });
   function ativo() {
     var y = window.scrollY + 140, idx = 0;
@@ -1923,7 +2191,9 @@ footer.foot b{color:var(--papel);font-weight:400}
   var idx = [];
   document.querySelectorAll('.ch h2, .ch h3.sec, .ch h4, .power > header h4, .card h5').forEach(function (el) {
     var ch = el.closest('.ch'); if (!ch) return;
+    var hn = el.querySelector('.h-num');
     var t = el.textContent.replace(/\s+/g, ' ').trim();
+    if (hn) t = hn.textContent.trim() + ' · ' + t.slice(hn.textContent.trim().length).trim();
     idx.push({ t: t, id: ch.id, kind: el.tagName === 'H2' ? 'Capítulo' : 'Seção', anchor: el.id || '' });
   });
   document.querySelectorAll('.ch p, .ch li, .power .desc p, .card .frase').forEach(function (el) {
@@ -1947,7 +2217,7 @@ footer.foot b{color:var(--papel);font-weight:400}
     res.sort(function (a, b) { return (a.kind === 'Texto') - (b.kind === 'Texto') || a.t.length - b.t.length; });
     panel.innerHTML = res.slice(0, 40).map(function (r) {
       var t = r.t.length > 190 ? r.t.slice(0, 190) + '…' : r.t;
-      return '<a class="r" href="#' + r.id + '"><small>' + r.kind + ' · ' + r.id.toUpperCase() + '</small>' + esc(t) + '</a>';
+      return '<a class="r" href="#' + r.id + '"><small>' + r.kind + ' · ' + (r.id.indexOf('cap') === 0 ? 'CAP ' + r.id.slice(3) : r.id.toUpperCase()) + '</small>' + esc(t) + '</a>';
     }).join('') || '<div class="empty">Nada encontrado para “' + esc(q) + '”.</div>';
     panel.classList.add('on');
   }

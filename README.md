@@ -1,4 +1,4 @@
-# G✦A✦U RPG — plataforma digital v0.4
+# G✦A✦U RPG — plataforma digital v0.5
 
 Plataforma offline/online com livro pesquisável, criador de personagens, grimório catalogado e ficha automatizada. **Edição preliminar:** partes das regras ainda aguardam publicação no servidor oficial.
 
@@ -18,10 +18,36 @@ O compêndio foi derivado de exportações do Discord e pode incluir textos de R
 
 ## Arquivos
 
-- `index.html` — aplicativo completo (livro pesquisável, criador em 10 etapas, grimório e ficha automática), versão 0.4
+- `index.html` — aplicativo completo (livro pesquisável, criador em 10 etapas, grimório e ficha automática), versão 0.5
 - `livro-regras.pdf` — livro completo revisado em 44 capítulos (1.464 registros úteis e 525 entradas no grimório), edição 0.3 — **não regenerado nesta rodada**; o HTML está na edição 0.4
 - `ficha-preenchivel.pdf` — ficha PDF editável em 6 páginas (incluindo Conjuração e Grimório), versão 0.2
 - `.nojekyll` — evita transformação por Jekyll
+
+## Atualização do servidor — 26/10/2026 (v0.5)
+
+Terceira varredura sobre a edição 0.4. O servidor mexeu em quatro canais: dois ganharam seções novas de regra, um ganhou arte e um recebeu correções pontuais.
+
+| Item | Antes | Depois |
+|---|---|---|
+| Fontes (canais + tópicos) | 50 | 50 |
+| Mensagens com conteúdo | 581 | **594** |
+| Registros (entradas) | 1.617 | **1.635** |
+| Magias catalogadas | 642 | 642 |
+| Ilustrações embutidas | 0 | **7** |
+
+**Conteúdo novo:**
+
+- `#「📕」perícias` — **4 mensagens · 9 entradas**: como funcionam as graduações e o teste de perícia (`1d20 + graduações + modificador de habilidade + BBA`), perícias que exigem treinamento, penalidade de armadura, novas tentativas, condições favoráveis e desfavoráveis e testes opostos, com a tabela de classes de dificuldade de 0 a 40.
+- `#「📕」outras-mecânicas` — **2 mensagens · 9 entradas**: **Tendências** — o eixo ético (bondade, neutralidade, maldade) e o eixo moral (lealdade, neutralidade, caos).
+- `#「📕」raças` — **7 ilustrações** (um casal de cada raça, publicadas em 15/10) embutidas no capítulo **II — Povos**, uma imediatamente antes do bloco da sua raça.
+
+**Editadas na origem (6 mensagens re-sincronizadas):** *Humanos* (Valkaria → **Tzeki**), *Determinação e Resiliência* (Arton → “o continente”), *Jogatina* (swashbucklers → pistoleiros), *Jogo de Azar* (menção de canal), *Pergaminhos* (TO → **PO** nas nove linhas da tabela de preços) e *Cura* (dano não letal).
+
+**Descartado:** 67 mensagens com apenas `.` (45 em `outras-mecânicas`, 22 em `combate`) — marcadores vazios, não são regra.
+
+**Correções editoriais (2):** a edição feita no servidor quebrou duas frases e elas foram restauradas — “o sonho secreto incutido **nos continentes** em seus corações” voltou a citar **Tzeki**, e a regra de morte de *Dano Não-Letal*, sobrescrita por “-1 à -13”, voltou à redação do restante do capítulo (“metade dos PV totais”).
+
+**Observação para a próxima rodada:** o servidor começou o reskin do cenário — Valkaria já virou Tzeki e Arton virou “o continente” em `raças`; os demais canais (magias, talentos, Poderes Concedidos) continuam com os nomes canônicos de Arton.
 
 ## Atualização do servidor — 22/10/2026 (v0.4)
 

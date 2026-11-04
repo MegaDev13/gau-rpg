@@ -1,5 +1,6 @@
 extends VBoxContainer
 
+const Icons = preload("res://veyrath/pixel_icons.gd")
 const Sim = preload("res://veyrath/defense_sim.gd")
 const GOLD := Color("d6b47d")
 var game
@@ -9,6 +10,10 @@ var sim
 var accumulator := 0.0
 var grid: GridContainer
 var cells: Array = []
+var tokens: Dictionary = {}
+var base_style: StyleBoxFlat
+var path_style: StyleBoxFlat
+var hit_style: StyleBoxFlat
 var status: Label
 var report: Label
 var wave_button: Button
@@ -23,6 +28,16 @@ func configure(game_engine, return_callback: Callable) -> void:
 
 func _ready() -> void:
 	add_theme_constant_override("separation",12)
+	texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
+	base_style = tile_style(Color("233945"),Color("866542"))
+	path_style = tile_style(Color("25303a"),Color("53566a"))
+	hit_style = tile_style(Color("683845"),Color("c28d63"))
+	var colors := {
+		"bolt": Color("75d9bd"), "cannon": Color("e7ac6b"), "build": Color("c2b399"),
+		"road": Color("8f8e82"), "enemy": Color("f48d83"), "heavy": Color("f1b278")
+	}
+	for kind in colors:
+		tokens[kind] = Icons.icon(kind,colors[kind],5)
 	text_label("DEFESA DO POSTO",32,GOLD)
 	text_label("Proteja o posto local de saqueadores. Escolha uma torre e toque nas casas acima ou abaixo da estrada.",20,Color("d7dfeb"))
 	status = text_label("",21,GOLD)
@@ -40,7 +55,7 @@ func _ready() -> void:
 	for i in range(24):
 		var cell := ui_button("",cell_pressed.bind(i))
 		cell.custom_minimum_size = Vector2(52,68)
-		cell.add_theme_font_size_override("font_size",22)
+		cell.icon_alignment = HORIZONTAL_ALIGNMENT_CENTER
 		grid.add_child(cell)
 		cells.append(cell)
 	report = text_label("",19,Color("b7c5c6"))
@@ -69,6 +84,14 @@ func ui_button(value: String, action: Callable) -> Button:
 	item.add_theme_font_size_override("font_size",19)
 	item.pressed.connect(action)
 	return item
+
+func tile_style(fill: Color, edge: Color) -> StyleBoxFlat:
+	var box := StyleBoxFlat.new()
+	box.bg_color = fill
+	box.border_color = edge
+	box.set_border_width_all(2)
+	box.set_border_width(SIDE_BOTTOM,4)
+	return box
 
 func select_tower(kind: String) -> void:
 	selected = kind
@@ -139,15 +162,22 @@ func refresh() -> void:
 		var b: Button = cells[index]
 		if index >= 8 and index < 16:
 			b.disabled = true
-			b.text = "·"
+			b.icon = tokens.road
+			var threatened := false
 			if moving:
 				for enemy in sim.enemies:
 					if int(enemy.x) == index - 8:
-						b.text = "◆" if enemy.heavy else "●"
+						b.icon = tokens.heavy if enemy.heavy else tokens.enemy
+						threatened = true
+						break
+			b.add_theme_stylebox_override("disabled",hit_style if threatened else path_style)
 		else:
 			var tile := index if index < 8 else index - 8
 			var type: String = fort.layout[tile]
-			b.text = "✦" if type == "arcana" else ("▣" if type == "steam" else "+")
+			b.icon = tokens.bolt if type == "arcana" else (tokens.cannon if type == "steam" else tokens.build)
+			b.tooltip_text = "Bobina arcana" if type == "arcana" else ("Canhão a vapor" if type == "steam" else "Terreno de construção")
+			b.add_theme_stylebox_override("normal",base_style)
+			b.add_theme_stylebox_override("disabled",base_style)
 			b.disabled = moving or type != ""
 
 func return_to_story() -> void:

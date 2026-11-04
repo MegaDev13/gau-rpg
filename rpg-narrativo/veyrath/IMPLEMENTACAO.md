@@ -47,3 +47,13 @@ A campanha solo foi reescrita como uma crônica em três capítulos. O terceiro 
 A interface usa seis ilustrações estáticas originais, tipografia Latin Modern Roman, tamanho de leitura ajustável e um menu dedicado aos registros da campanha. A versão do APK subiu para 0.8.0. O nível de compatibilidade dos pacotes remotos permanece 7 porque o formato e as capacidades do instalador não mudaram.
 
 Os testes de sistemas verificam a retomada de um save no arquivo, a reatividade do texto, a condição de acesso à coleta e o custo da barreira. O teste de navegação verifica também o carregamento das seis ilustrações e da fonte. A campanha ainda cobre uma crise local. A expansão para outros arcos, famílias e instituições, a integração do Mestre com consequências mecânicas e a validação em aparelhos Android continuam pendentes.
+
+## Atualização 0.9 — Direção definitiva em pixel art
+
+O jogo usa um canvas de referência de 720 × 1280 unidades. Os fundos narrativos têm 360 × 212 pixels, a capa 360 × 640 e os retratos 112 × 112. A composição usa filtragem nearest e amplia as artes em escala inteira no canvas sempre que o enquadramento permite. O Android adapta o canvas à janela, portanto a escala física pode ser fracionária. Os arquivos-fonte estão em `assets/pixel/`.
+
+A capa, oito cenários e seis retratos foram refeitos. A leitura usa parágrafos navegáveis, retrato integrado, escolhas com custos conhecidos e menu de registros. A pressão arcana do save altera luz e partículas em locais pertinentes. Há configuração de movimento reduzido. Os retratos atuais têm base por papel e um adorno determinístico derivado da seed do NPC. A forma facial continua fixa em cada base. Envelhecimento, figurinos e expressões faciais modulares ainda precisam de dados e recursos próprios.
+
+A ficha mostra a vida real, o inventário apresenta o curativo como item ilustrado, o grimório pode acionar a leitura de Eco quando o motor permite, e o atlas apresenta os dois assentamentos jogáveis e o estado da localidade atual. A defesa usa ícones de terreno, torres e inimigos sem alterar a simulação. Atlas político com fronteiras, genealogias, talentos, guerras e apresentação de grandes eventos continuam pendentes.
+
+O protocolo remoto e o formato dos saves permanecem compatíveis. O multiplayer continua usando o backend existente. A validação de efeitos do Mestre e o Mestre solo online não fazem parte desta atualização. O workflow usa `VEYRATH_DEBUG_KEYSTORE_BASE64`, quando configurado, para repetir a assinatura de desenvolvimento. A chave precisa usar o alias e as credenciais de debug do Godot já configurados no workflow. Sem o segredo, a chave é efêmera. Nenhuma chave privada é versionada.

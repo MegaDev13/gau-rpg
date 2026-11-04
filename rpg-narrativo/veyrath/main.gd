@@ -1,21 +1,34 @@
 extends Control
 
 const VeyrathEngine = preload("res://veyrath/engine.gd")
-const Art = preload("res://veyrath/art.gd")
+const Stage = preload("res://veyrath/pixel_stage.gd")
+const Icons = preload("res://veyrath/pixel_icons.gd")
 const DefenseUI = preload("res://veyrath/defense_ui.gd")
 const MultiplayerUI = preload("res://veyrath/multiplayer_ui.gd")
 const UpdatesUI = preload("res://veyrath/updates/updates_ui.gd")
 const GOLD := Color("d6b47d")
 const TEXT := Color("f1e6d3")
 const MUTED := Color("bcb3a3")
-const INK := Color("141615")
-const PANEL := Color("222522")
-const RULE := Color("625340")
+const INK := Color("0d121b")
+const PANEL := Color("192331")
+const RULE := Color("82613f")
 const EDITION := "res://veyrath/assets/edition/"
 const ILLUSTRATIONS := {
-	"city": "veyra.webp", "council": "conselho.webp", "workshop": "oficina.webp",
-	"river": "margem.webp", "quarry": "pedreira.webp", "archive": "arquivo.webp",
+	"cover": "capa.png", "city": "valdoria.png", "council": "conselho.png",
+	"workshop": "oficina.png", "river": "margem.png", "quarry": "pedreira.png",
+	"archive": "arquivo.png", "highlands": "tharvok.png", "fort": "posto.png",
 }
+const ART_MOODS := {
+	"cover": "mist", "city": "mist", "highlands": "mist", "river": "rain",
+	"workshop": "embers", "quarry": "embers", "council": "rain",
+	"archive": "mist", "fort": "embers",
+}
+var motion_enabled := true
+var reading_node := ""
+var reading_page := 0
+var actions_expanded := false
+var portraits: Dictionary = {}
+var icons: Dictionary = {}
 var reading_font: Font
 var illustrations: Dictionary = {}
 var game = VeyrathEngine.new()
@@ -34,6 +47,16 @@ var action_confirm: Button
 var proposed_action: Dictionary = {}
 
 func _ready() -> void:
+	var theme_game := Theme.new()
+	theme_game.set_color("font_color","Label",TEXT)
+	theme_game.set_color("font_color","Button",TEXT)
+	theme_game.set_stylebox("normal","Button",style(PANEL,RULE,12))
+	theme_game.set_stylebox("hover","Button",style(Color("263746"),GOLD,12))
+	theme_game.set_stylebox("pressed","Button",style(Color("314345"),GOLD,12))
+	theme_game.set_stylebox("disabled","Button",style(Color("141b25"),Color("434657"),12))
+	theme_game.set_stylebox("normal","LineEdit",style(INK,RULE,12))
+	theme_game.set_stylebox("normal","OptionButton",style(PANEL,RULE,12))
+	theme = theme_game
 	var bg := ColorRect.new()
 	bg.color = INK
 	bg.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
@@ -68,8 +91,11 @@ func style(bg: Color, border: Color, padding: int = 14) -> StyleBoxFlat:
 	var box := StyleBoxFlat.new()
 	box.bg_color = bg
 	box.border_color = border
-	box.set_border_width_all(1)
-	box.set_corner_radius_all(3)
+	box.set_border_width_all(2)
+	box.set_border_width(SIDE_BOTTOM,4)
+	box.set_border_width(SIDE_LEFT,4)
+	box.set_shadow_color(Color("060912a0"))
+	box.set_shadow_size(4)
 	box.set_content_margin_all(padding)
 	return box
 
@@ -91,22 +117,23 @@ func label(value: String, font_size: int = 25, color: Color = TEXT, literary: bo
 	item.add_theme_color_override("font_color",color)
 	column.add_child(item)
 
-func button(value: String, action: Callable, disabled: bool = false) -> Button:
+func button(value: String, action: Callable, disabled: bool = false, parent: Control = column) -> Button:
 	var item := Button.new()
 	item.text = value
 	item.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	item.alignment = HORIZONTAL_ALIGNMENT_LEFT
 	item.custom_minimum_size.y = 74
+	item.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	item.add_theme_font_size_override("font_size",21)
 	item.add_theme_color_override("font_color",TEXT)
 	item.add_theme_color_override("font_disabled_color",Color("7b8382"))
 	item.add_theme_stylebox_override("normal",style(PANEL,RULE,17))
-	item.add_theme_stylebox_override("hover",style(Color("38372e"),GOLD,17))
-	item.add_theme_stylebox_override("pressed",style(Color("44402e"),GOLD,17))
-	item.add_theme_stylebox_override("disabled",style(Color("1a1c1a"),Color("42423a"),17))
+	item.add_theme_stylebox_override("hover",style(Color("263746"),GOLD,17))
+	item.add_theme_stylebox_override("pressed",style(Color("314345"),GOLD,17))
+	item.add_theme_stylebox_override("disabled",style(Color("141b25"),Color("434657"),17))
 	item.disabled = disabled
 	item.pressed.connect(action)
-	column.add_child(item)
+	parent.add_child(item)
 	return item
 
 func card(value: String, font_size: int = 25, literary: bool = false) -> void:
@@ -133,88 +160,118 @@ func divider() -> void:
 	column.add_child(line)
 
 func illustration(which: String) -> Texture2D:
-	if illustrations.has(which):
-		return illustrations[which]
-	if ILLUSTRATIONS.has(which):
-		var path: String = EDITION + ILLUSTRATIONS[which]
-		if ResourceLoader.exists(path):
-			illustrations[which] = load(path)
-			return illustrations[which]
-		if FileAccess.file_exists(path):
-			var decoded := Image.new()
-			if decoded.load_webp_from_buffer(FileAccess.get_file_as_bytes(path)) == OK:
-				illustrations[which] = ImageTexture.create_from_image(decoded)
-				return illustrations[which]
-	if which in ["city","river"]:
-		return load("res://veyrath/assets/val_doria.jpg")
-	return null
+	if not illustrations.has(which) and ILLUSTRATIONS.has(which):
+		var texture := Stage.load_pixel(ILLUSTRATIONS[which])
+		if texture:
+			illustrations[which] = texture
+	return illustrations.get(which)
 
-func scene_art(which: String, height: int = 225) -> void:
-	var texture := illustration(which)
-	if texture != null:
-		var frame := PanelContainer.new()
-		frame.add_theme_stylebox_override("panel",style(INK,RULE,3))
-		var visual := TextureRect.new()
-		visual.texture = texture
-		visual.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
-		visual.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_COVERED
-		visual.custom_minimum_size.y = height
-		frame.add_child(visual)
-		column.add_child(frame)
-		return
-	var visual = Art.new()
-	visual.kind = "scene"
-	visual.scene_id = "workshop" if which == "archive" else which
-	visual.custom_minimum_size.y = height
-	column.add_child(visual)
+func icon(key: String, tint: Color) -> Texture2D:
+	var id := key + tint.to_html()
+	if not icons.has(id):
+		icons[id] = Icons.icon(key,tint,4)
+	return icons[id]
+
+func portrait_texture(role: String) -> Texture2D:
+	if not portraits.has(role):
+		var texture := Stage.load_pixel("npc_%s.png" % role)
+		if texture:
+			portraits[role] = texture
+	return portraits.get(role)
+
+func stage_for(which: String, height: int, role: String = "") -> Control:
+	var view = Stage.new()
+	view.art = illustration(which)
+	view.atmosphere = ART_MOODS.get(which,"mist")
+	view.motion = motion_enabled
+	view.custom_minimum_size.y = height
+	if which == "cover":
+		view.vertical_focus = 0.23
+	if not game.state.is_empty() and which != "cover":
+		view.spark_seed = int(game.state.day)
+		var pressure := int(game.state.get("local_world",{}).get("pressure",0))
+		view.intensity = clampf(0.25 + float(pressure) * 0.15,0.25,1.0)
+		if pressure > 1 and which in ["city","highlands","workshop","river"]:
+			view.atmosphere = "embers"
+			view.light = Color("61bea5")
+		if int(game.state.day) % 3 == 0 and pressure < 2:
+			view.light = Color("6c86a8")
+	if not role.is_empty():
+		view.face = portrait_texture(role)
+		view.subject_pin = game.portrait_variant(role)
+		if int(game.state.people[role].trust) > 1:
+			view.reaction_light = GOLD
+	return view
+
+func scene_art(which: String, height: int = 225, role: String = "") -> void:
+	column.add_child(stage_for(which,height,role))
 
 func portrait(role: String, mood: String = "neutral") -> void:
 	var row := HBoxContainer.new()
 	row.add_theme_constant_override("separation",16)
 	column.add_child(row)
 	var person: Dictionary = game.state.people[role]
-	var portraits := {"artisan_v1":"res://veyrath/assets/artifice_v1.jpg", "researcher_v1":"res://veyrath/assets/pesquisadora_v1.jpg", "leader_v1":"res://veyrath/assets/lider_v1.jpg", "merchant_v1":"res://veyrath/assets/comerciante_v1.jpg", "resident_v1":"res://veyrath/assets/morador_v1.jpg", "community_v1":"res://veyrath/assets/comunidade_v1.jpg"}
-	var portrait_path: String = portraits.get(person.get("portrait_asset", ""), "")
-	if not portrait_path.is_empty():
-		var image := TextureRect.new()
-		image.texture = load(portrait_path)
-		image.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
-		image.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_COVERED
-		image.custom_minimum_size = Vector2(150,150)
-		row.add_child(image)
-	else:
-		var visual = Art.new()
-		visual.kind = "portrait"
-		visual.variant = game.portrait_variant(role)
-		visual.expression = mood
-		visual.custom_minimum_size = Vector2(150,110)
-		row.add_child(visual)
+	var visual = Stage.new()
+	visual.art = portrait_texture(role)
+	visual.light = Color("c6a16b") if mood == "warm" else Color("657b9c")
+	visual.intensity = 0.8 if mood == "warm" else 0.35
+	visual.motion = false
+	visual.subject_pin = game.portrait_variant(role)
+	visual.custom_minimum_size = Vector2(144,144)
+	row.add_child(visual)
 	var info := Label.new()
 	info.text = person.name.to_upper() + "\n" + person.job
 	info.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	info.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	info.add_theme_font_size_override("font_size",20)
+	info.add_theme_font_size_override("font_size",22)
 	info.add_theme_color_override("font_color",GOLD)
 	row.add_child(info)
 
 func menu() -> void:
 	clear()
-	label("C R Ô N I C A S   D O   C É U   P A R T I D O",16,GOLD,false,true)
-	label("Veyrath",78,TEXT,true,true)
-	label("O CÉU SOB FERRO",21,GOLD,false,true)
-	scene_art("city",330)
-	label("Toda cidade tem uma dívida.\nAlgumas são escritas na água.",30,TEXT,true,true)
-	divider()
+	var opening := stage_for("cover",610)
+	column.add_child(opening)
+	var emblem := Label.new()
+	emblem.text = "V E Y R A T H"
+	emblem.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	emblem.add_theme_font_size_override("font_size",68)
+	emblem.add_theme_color_override("font_color",TEXT)
+	emblem.add_theme_color_override("font_shadow_color",INK)
+	emblem.add_theme_constant_override("shadow_offset_x",3)
+	emblem.add_theme_constant_override("shadow_offset_y",4)
+	emblem.add_theme_constant_override("outline_size",5)
+	emblem.add_theme_color_override("font_outline_color",INK)
+	if reading_font:
+		emblem.add_theme_font_override("font",reading_font)
+	emblem.set_anchors_and_offsets_preset(Control.PRESET_TOP_WIDE)
+	emblem.offset_top = 46
+	opening.add_child(emblem)
+	var subtitle := Label.new()
+	subtitle.text = "◆   O CÉU SOB FERRO   ◆"
+	subtitle.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	subtitle.add_theme_font_size_override("font_size",24)
+	subtitle.add_theme_color_override("font_color",GOLD)
+	subtitle.add_theme_constant_override("outline_size",5)
+	subtitle.add_theme_color_override("font_outline_color",INK)
+	subtitle.set_anchors_and_offsets_preset(Control.PRESET_TOP_WIDE)
+	subtitle.offset_top = 127
+	opening.add_child(subtitle)
 	if not notice.is_empty():
 		card(notice,20)
 		notice = ""
-	button("Continuar a crônica",continue_game,not game.valid(game.read_save(game.SAVE)) and not game.valid(game.read_save(game.BACKUP)))
-	button("Escrever uma nova história",creation)
-	button("Mundo compartilhado",multiplayer_screen)
-	button("Configurações",settings)
-	button("Sobre Veyrath",about)
-	button("Cinzas de Éter · campanha anterior",legacy)
-	label("VEYRATH   /   CRÔNICA SOLO OFFLINE",15,MUTED,false,true)
+	var controls := GridContainer.new()
+	controls.columns = 2
+	controls.add_theme_constant_override("h_separation",12)
+	controls.add_theme_constant_override("v_separation",12)
+	column.add_child(controls)
+	var has_save: bool = game.valid(game.read_save(game.SAVE)) or game.valid(game.read_save(game.BACKUP))
+	button("Continuar",continue_game,not has_save,controls).icon = icon("book",GOLD)
+	button("Nova história",creation,false,controls).icon = icon("flow",GOLD)
+	button("Multiplayer",multiplayer_screen,false,controls).icon = icon("shield",GOLD)
+	button("Configurações",settings,false,controls)
+	button("Sobre e créditos",about,false,controls)
+	button("Cinzas de Éter",legacy,false,controls)
+	label("CRÔNICAS DO CÉU PARTIDO   /   312 P.R.",16,GOLD,false,true)
 
 func creation() -> void:
 	clear()
@@ -252,6 +309,7 @@ func start_game() -> void:
 	if name_input.text.strip_edges().is_empty():
 		name_input.placeholder_text = "Digite um nome"
 		return
+	reading_node = ""
 	if game.new_game(name_input.text,game.world.origins[origin_input.selected].id,game.world.cities[city_input.selected].id):
 		show_scene()
 	else:
@@ -259,6 +317,7 @@ func start_game() -> void:
 		menu()
 
 func continue_game() -> void:
+	reading_node = ""
 	if game.load_game():
 		show_scene()
 	else:
@@ -299,52 +358,91 @@ func scene_person(node: String) -> String:
 
 func show_scene() -> void:
 	clear()
-	var scene: Dictionary = game.story[game.state.node]
 	var node: String = game.state.node
-	label(chapter_label(node),17,GOLD)
-	label("%s   ·   DIA %s   ·   312 P.R." % [game.render("{city}"),game.state.day],18,MUTED)
-	scene_art(scene_place(node),270)
-	label(scene.title,48,TEXT,true)
-	divider()
-	card(game.scene_text(),38 if large_text else 32,true)
+	var scene: Dictionary = game.story[node]
+	if reading_node != node:
+		reading_node = node
+		reading_page = 0
+		actions_expanded = false
+	var place := scene_place(node)
+	if place == "city" and game.state.city == "tharvok":
+		place = "highlands"
 	var role := scene_person(node)
+	label(chapter_label(node),17,GOLD)
+	scene_art(place,322,role)
+	label("%s  ·  DIA %s  ·  312 P.R." % [game.render("{city}"),game.state.day],17,MUTED)
+	label(scene.title,44,TEXT,true)
 	if not role.is_empty():
-		portrait(role, "warm" if int(game.state.people[role].trust) > 1 else "neutral")
-	if node == "start":
-		label("SUA ORIGEM  /  " + game.render("{origin}"),19,GOLD)
-		label(game.find_entry(game.world.origins,game.state.origin).detail,20,MUTED)
-	if scene.choices.is_empty():
-		divider()
-		label("DESFECHO DA CRÔNICA",18,GOLD)
-		card(game.reaction(),25,true)
-		label("As decisões desta crônica ficam registradas no diário.",20,MUTED)
-	else:
-		divider()
-		label("SUA DECISÃO",18,GOLD)
-	for i in range(scene.choices.size()):
-		var choice: Dictionary = scene.choices[i]
-		var reason: String = game.choice_block_reason(choice)
-		var suffix := "" if reason.is_empty() else "\n" + reason
-		button("%02d   %s%s" % [i+1,choice.label,suffix],select_choice.bind(i),not reason.is_empty())
-	if not scene.choices.is_empty():
-		label("ESCREVA UMA AÇÃO",18,GOLD)
-		action_input = LineEdit.new()
-		action_input.placeholder_text = "Ex.: escolha 1, descansar, falar com Aren"
-		action_input.custom_minimum_size.y = 70
-		action_input.add_theme_font_size_override("font_size",21)
-		column.add_child(action_input)
-		button("⌕  INTERPRETAR",interpret_input)
-		action_status = Label.new()
-		action_status.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-		action_status.add_theme_font_size_override("font_size",20)
-		action_status.add_theme_color_override("font_color",GOLD)
-		action_status.text = "Comandos simples: escolha 1, descansar, usar curativo, investigar a área ou falar com [nome]."
-		column.add_child(action_status)
-		action_confirm = button("CONFIRMAR AÇÃO",confirm_input,true)
-		proposed_action = {}
+		label("%s  /  %s" % [game.state.people[role].name.to_upper(),game.state.people[role].job],17,GOLD)
+	var pages: PackedStringArray = game.scene_text().split("\n\n",false)
+	reading_page = clampi(reading_page,0,pages.size()-1)
+	card(pages[reading_page],38 if large_text else 32,true)
+	var navigation := HBoxContainer.new()
+	navigation.add_theme_constant_override("separation",10)
+	column.add_child(navigation)
+	button("‹  Anterior",turn_page.bind(-1),reading_page == 0,navigation)
+	button("%d / %d   Próxima ›" % [reading_page+1,pages.size()],turn_page.bind(1),reading_page+1 == pages.size(),navigation)
+	if reading_page + 1 == pages.size():
+		if node == "start":
+			label("ORIGEM  /  " + game.render("{origin}"),18,GOLD)
+			label(game.find_entry(game.world.origins,game.state.origin).detail,20,MUTED)
+		if scene.choices.is_empty():
+			label("DESFECHO DA CRÔNICA",18,GOLD)
+			card(game.reaction(),25,true)
+		else:
+			label("SUA DECISÃO",18,GOLD)
+			for i in range(scene.choices.size()):
+				var choice: Dictionary = scene.choices[i]
+				var reason: String = game.choice_block_reason(choice)
+				var detail := reason if not reason.is_empty() else known_cost(choice)
+				button("%02d  %s\n%s" % [i+1,choice.label,detail],select_choice.bind(i),not reason.is_empty())
+			button("Fechar comando escrito" if actions_expanded else "Escrever uma ação",toggle_actions)
+			if actions_expanded:
+				written_actions()
 	divider()
-	button("Abrir registros da campanha",campaign_records)
+	button("Registros da campanha",campaign_records).icon = icon("book",GOLD)
 	button("‹  Menu principal",menu)
+
+func known_cost(choice: Dictionary) -> String:
+	var effects: Dictionary = choice.get("effects",{})
+	var parts := PackedStringArray()
+	if int(effects.get("time",0)) > 0:
+		parts.append("%d dia(s)" % int(effects.time))
+	var credits := int(effects.get("credits",0))
+	if game.state.origin != "apprentice":
+		credits += int(effects.get("credits_or_origin",0))
+	if credits < 0:
+		parts.append("%d crédito(s)" % -credits)
+	var flow := int(effects.get("flow",0))
+	if flow < 0:
+		parts.append("%d Fluxo" % -flow)
+	return "  ·  ".join(parts)
+
+func turn_page(delta: int) -> void:
+	reading_page += delta
+	show_scene()
+
+func toggle_actions() -> void:
+	actions_expanded = not actions_expanded
+	show_scene()
+	if actions_expanded:
+		action_input.grab_focus()
+
+func written_actions() -> void:
+	action_input = LineEdit.new()
+	action_input.placeholder_text = "Ex.: escolha 1, descansar, falar com Aren"
+	action_input.custom_minimum_size.y = 70
+	action_input.add_theme_font_size_override("font_size",21)
+	column.add_child(action_input)
+	button("Interpretar ação",interpret_input)
+	action_status = Label.new()
+	action_status.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	action_status.add_theme_font_size_override("font_size",20)
+	action_status.add_theme_color_override("font_color",GOLD)
+	action_status.text = "Comandos simples: escolha 1, descansar, usar curativo, investigar a área ou falar com [nome]."
+	column.add_child(action_status)
+	action_confirm = button("Confirmar ação",confirm_input,true)
+	proposed_action = {}
 
 func campaign_records() -> void:
 	clear()
@@ -354,6 +452,8 @@ func campaign_records() -> void:
 	button("◈  FICHA E ATRIBUTOS",character_sheet)
 	button("◉  INVENTÁRIO",inventory)
 	button("◆  BESTIÁRIO",bestiary)
+	button("Grimório",grimoire).icon = icon("book",GOLD)
+	button("Atlas regional",atlas)
 	button("✧  MUNDO E AÇÕES",world_panel)
 	button("▤  DIÁRIO",journal)
 	button("♧  PESSOAS E RELAÇÕES",people)
@@ -429,6 +529,7 @@ func about() -> void:
 
 func defense() -> void:
 	clear()
+	scene_art("fort",238)
 	var screen = DefenseUI.new()
 	screen.configure(game,show_scene)
 	column.add_child(screen)
@@ -444,6 +545,7 @@ func setup_music() -> void:
 	if config.load("user://veyrath_config.cfg") == OK:
 		music_enabled = bool(config.get_value("audio", "music", true))
 		large_text = bool(config.get_value("reading", "large_text", false))
+		motion_enabled = bool(config.get_value("visual", "motion", true))
 	music_player = AudioStreamPlayer.new()
 	var track: AudioStreamOggVorbis = load("res://veyrath/assets/tema_cidade.ogg")
 	track.loop = true
@@ -459,6 +561,7 @@ func settings() -> void:
 	card("Trilha original instrumental: " + ("ativada" if music_enabled else "desativada"),22)
 	button("DESATIVAR MÚSICA" if music_enabled else "ATIVAR MÚSICA",toggle_music)
 	button("TEXTO DA CRÔNICA  ·  " + ("GRANDE" if large_text else "PADRÃO"),toggle_reading_size)
+	button("AMBIENTAÇÃO EM MOVIMENTO  ·  " + ("SIM" if motion_enabled else "NÃO"),toggle_motion)
 	button("ATUALIZAÇÕES E CONTEÚDO",updates_screen)
 	button("‹  MENU PRINCIPAL",menu)
 
@@ -476,11 +579,17 @@ func toggle_reading_size() -> void:
 	save_preferences()
 	settings()
 
+func toggle_motion() -> void:
+	motion_enabled = not motion_enabled
+	save_preferences()
+	settings()
+
 func save_preferences() -> void:
 	var config := ConfigFile.new()
 	config.load("user://veyrath_config.cfg")
 	config.set_value("audio","music",music_enabled)
 	config.set_value("reading","large_text",large_text)
+	config.set_value("visual","motion",motion_enabled)
 	if config.save("user://veyrath_config.cfg") != OK:
 		notice = "Não foi possível salvar as preferências."
 
@@ -489,7 +598,12 @@ func character_sheet() -> void:
 	var p: Dictionary = game.profile()
 	var origin: Dictionary = game.find_entry(game.world.origins,game.state.origin)
 	label("◈  FICHA DE PERSONAGEM",34,GOLD)
-	card("%s  ·  %s\nVIDA  %s / %s    •    FLUXO  %s    •    FADIGA  %s\nAtaque físico básico: %+d  ·  modificador de Força" % [game.state.name,origin.name,p.hp,p.max_hp,game.state.flow,game.state.fatigue,game.modifier(int(p.attributes.forca))],22)
+	scene_art("highlands" if game.state.city == "tharvok" else "city",175)
+	label(game.state.name,43,TEXT,true)
+	label(origin.name + "  ·  " + game.render("{city}"),20,GOLD)
+	meter("Vida",int(p.hp),int(p.max_hp),Color("b95964"))
+	label("Fluxo disponível  %d   ·   Fadiga  %d" % [game.state.flow,game.state.fatigue],21,GOLD)
+	label("Ataque físico  %+d" % game.modifier(int(p.attributes.forca)),21,MUTED)
 	label("ATRIBUTOS",23,GOLD)
 	var names := {"forca":"Força","agilidade":"Agilidade","vigor":"Vigor","intelecto":"Intelecto","percepcao":"Percepção","vontade":"Vontade","presenca":"Presença","tecnica":"Técnica","sintonia":"Sintonia arcana"}
 	for key in names:
@@ -497,12 +611,65 @@ func character_sheet() -> void:
 	label("O ataque é uma referência do atributo; combate de personagem e equipamentos ainda estão em desenvolvimento.",18,MUTED)
 	button("‹  VOLTAR À HISTÓRIA",show_scene)
 
+func meter(title: String, value: int, maximum: int, tint: Color) -> void:
+	label("%s   %d / %d" % [title,value,maximum],21,GOLD)
+	var bar := ProgressBar.new()
+	bar.custom_minimum_size.y = 22
+	bar.max_value = maximum
+	bar.value = value
+	bar.show_percentage = false
+	bar.add_theme_stylebox_override("background",style(INK,RULE,0))
+	bar.add_theme_stylebox_override("fill",style(tint,tint,0))
+	column.add_child(bar)
+
+func grimoire() -> void:
+	clear()
+	scene_art("workshop",230)
+	label("Grimório",48,TEXT,true)
+	label("TRAMA   /   FORMA · FLUXO · ECO",17,GOLD)
+	card("Eco permite buscar resíduos arcanos no núcleo. A prática exige formação de bolsista. Cada tentativa consome 1 Fluxo e causa 1 ponto de fadiga.",24,true)
+	for i in range(game.story[game.state.node].choices.size()):
+		var choice: Dictionary = game.story[game.state.node].choices[i]
+		if choice.id == "echo":
+			var reason: String = game.choice_block_reason(choice)
+			button("Executar leitura de Eco" if reason.is_empty() else reason,select_choice.bind(i),not reason.is_empty()).icon = icon("flow",Color("81cbb1"))
+			break
+	button("‹  Registros",campaign_records)
+
+func atlas() -> void:
+	clear()
+	label("Atlas regional",48,TEXT,true)
+	label("ASSENTAMENTOS DA CRÔNICA   /   312 P.R.",17,GOLD)
+	for city in game.world.cities:
+		var here: bool = city.id == game.state.city
+		scene_art("city" if city.id == "valdor" else "highlands",170)
+		label(city.name + "  ·  " + city.region,30,TEXT,true)
+		label(city.industry.capitalize() + "  /  " + city.water,19,MUTED)
+		if here:
+			var local: Dictionary = game.state.get("local_world",{"supplies":5,"pressure":0})
+			card("VOCÊ ESTÁ AQUI  ·  Suprimentos %s  ·  Pressão %s" % [local.supplies,local.pressure],20)
+	button("‹  Registros",campaign_records)
+
 func inventory() -> void:
 	clear()
 	var p: Dictionary = game.profile()
-	label("◉  INVENTÁRIO",34,GOLD)
-	card("CURATIVO  × %s\nRecupera até 3 pontos de vida." % p.bandages,22)
-	button("USAR CURATIVO",perform_basic.bind("bandage"),int(p.bandages)<=0 or int(p.hp)>=int(p.max_hp))
+	label("INVENTÁRIO   /   PERTENCES",17,GOLD)
+	label("Bolsa de viagem",48,TEXT,true)
+	var item := HBoxContainer.new()
+	item.add_theme_constant_override("separation",20)
+	column.add_child(item)
+	var drawing := TextureRect.new()
+	drawing.texture = Icons.icon("bandage",Color("ead6aa"),11)
+	drawing.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
+	drawing.size_flags_vertical = Control.SIZE_SHRINK_CENTER
+	item.add_child(drawing)
+	var details := Label.new()
+	details.text = "CURATIVO  × %s\nRecupera até 3 pontos de vida." % p.bandages
+	details.add_theme_font_size_override("font_size",23)
+	details.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	details.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	item.add_child(details)
+	button("USAR CURATIVO",perform_basic.bind("bandage"),int(p.bandages)<=0 or int(p.hp)>=int(p.max_hp)).icon = icon("bandage",GOLD)
 	label("Itens e equipamentos adicionais serão integrados à campanha conforme forem implementados.",18,MUTED)
 	button("‹  VOLTAR À HISTÓRIA",show_scene)
 
@@ -510,6 +677,7 @@ func bestiary() -> void:
 	clear()
 	label("◆  BESTIÁRIO",34,GOLD)
 	if game.discovered_dragon():
+		scene_art("quarry",260)
 		card("VÉU-NOTURNO\nDragão feral pequeno e crepuscular, conhecido por imitar sons. O indivíduo observado na pedreira não demonstrou hostilidade.\n\nClassificação: feral. O motivo de sua presença precisa de investigação.",22)
 	else:
 		card("Nenhuma criatura foi registrada ainda. Investigações e encontros podem acrescentar informações a este livro.",22)

@@ -51,6 +51,8 @@ jobs:
         run: godot --headless --path rpg-narrativo --script res://veyrath/systems_tests.gd
       - name: Testar assinatura, atualizacoes e rollback
         run: godot --headless --path rpg-narrativo --script res://veyrath/updates/update_tests.gd
+      - name: Testar historia remota e isolamento do save
+        run: XDG_DATA_HOME="$RUNNER_TEMP/veyrath-update-test" godot --headless --path rpg-narrativo --script res://veyrath/updates/story_tests.gd
       - name: Testar navegacao da interface
         run: godot --headless --path rpg-narrativo --script res://veyrath/ui_tests.gd
       - name: Verificar abertura da cena principal

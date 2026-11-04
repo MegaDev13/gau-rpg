@@ -70,6 +70,20 @@ func test_ui() -> void:
 	await process_frame
 	scene.news()
 	await process_frame
+	scene.region_screen(4)
+	await process_frame
+	scene.travel_screen("namaris-0")
+	await process_frame
+	scene.travel("namaris-0",false)
+	await process_frame
+	scene.open_place("namaris-0/harbor")
+	await process_frame
+	scene.resident_screen(0)
+	await process_frame
+	if scene.game.expedition().place != "namaris-0/harbor":
+		failed = true
+	scene.travel("valdoria-0",false)
+	await process_frame
 	scene.defense()
 	await process_frame
 	scene.multiplayer_screen()

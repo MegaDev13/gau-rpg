@@ -28,4 +28,19 @@ func capture() -> void:
 		quit(1)
 		return
 	screen.defense()
-	quit(0 if await shot("04-defesa") else 1)
+	if not await shot("04-defesa"):
+		quit(1)
+		return
+	screen.region_screen(2)
+	if not await shot("05-khar-duren"):
+		quit(1)
+		return
+	if not screen.game.travel_to("khar-0",false) or not screen.game.enter_place("khar-0/mine"):
+		quit(1)
+		return
+	screen.place_screen()
+	if not await shot("06-galeria"):
+		quit(1)
+		return
+	screen.resident_screen(0)
+	quit(0 if await shot("07-morador") else 1)

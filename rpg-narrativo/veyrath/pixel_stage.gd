@@ -11,6 +11,9 @@ var intensity := 0.4
 var elapsed := 0.0
 var spark_seed := 0
 var subject_pin := -1
+var site_trim := -1
+var site_kind := ""
+var shortage := false
 var vertical_focus := 0.5
 var reaction_light := Color("657b9c")
 
@@ -56,6 +59,8 @@ func _draw() -> void:
 		draw_rect(Rect2(0,size.y * (0.75 + i * 0.0625),size.x,size.y * 0.0625 + 1),band)
 	if motion:
 		_draw_weather(tick)
+	if site_trim >= 0:
+		_draw_site_props()
 	if face:
 		var scale_pixels := clampf(floorf(size.y / float(face.get_height()) * 0.58),1.0,2.0)
 		var portrait_size := face.get_size() * scale_pixels
@@ -99,3 +104,24 @@ func _draw_weather(tick: float) -> void:
 		for i in range(3):
 			var x := fposmod(tick * (10+i*4) + i*187,maxf(1.0,size.x)) - 110.0
 			draw_rect(Rect2(floorf(x/2)*2,size.y * (0.68+i*0.07),224,4),Color("a3b0c21b"))
+
+
+func _draw_site_props() -> void:
+	# Foreground geometry is keyed to the establishment and its available supplies.
+	var count := 1 if shortage else 2 + site_trim % 3
+	for i in range(count):
+		var x := floorf((size.x - 32.0 - i*26.0 - site_trim*4.0)/2.0)*2.0
+		var y := size.y - 27.0 - float(i % 2)*6.0
+		match site_kind:
+			"archive", "lab", "council", "temple":
+				draw_rect(Rect2(x,y,18,15),Color("202635"))
+				draw_rect(Rect2(x+4,y-2,10,4),Color("b39058"))
+				draw_rect(Rect2(x+8,y+5,4,6),Color("85a6a8"))
+			"rail", "fort", "workshop", "mine", "quarry":
+				draw_rect(Rect2(x,y,20,16),Color("3b4146"))
+				draw_rect(Rect2(x,y+2,20,3),Color("a1774e"))
+				draw_rect(Rect2(x+3,y+7,14,2),Color("1b222d"))
+			_:
+				draw_rect(Rect2(x,y,20,14),Color("463b35"))
+				draw_rect(Rect2(x+2,y+2,16,2),Color("9c7752"))
+				draw_rect(Rect2(x+4,y+6,3,7),Color("766047"))

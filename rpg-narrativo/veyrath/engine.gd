@@ -3,6 +3,8 @@ extends RefCounted
 const SAVE := "user://veyrath-campanha-v1.json"
 const BACKUP := "user://veyrath-campanha-v1.backup.json"
 const VERSION := 1
+const Expansion = preload("res://veyrath/expansion/world.gd")
+var expansion = Expansion.new()
 var world: Dictionary = {}
 var story: Dictionary = {}
 var state: Dictionary = {}
@@ -93,6 +95,19 @@ func valid(candidate) -> bool:
 		for key in ["supplies", "pressure"]:
 			if typeof(candidate.local_world[key]) not in [TYPE_INT, TYPE_FLOAT] or candidate.local_world[key] < 0:
 				return false
+	if candidate.has("expedition"):
+		var journey = candidate.expedition
+		if not journey is Dictionary or not journey.has_all(["version","city","place","known","backing"]):
+			return false
+		if journey.version != Expansion.VERSION or not journey.city is String or not journey.place is String or not journey.known is Dictionary or not journey.backing is Dictionary:
+			return false
+		var world_seed := int(candidate.seed)
+		if expansion.city(journey.city,world_seed).is_empty():
+			return false
+		if not journey.place.is_empty():
+			var venue: Dictionary = expansion.place(journey.place,world_seed)
+			if venue.is_empty() or venue.city != journey.city:
+				return false
 	if candidate.has("remote_progress") and not candidate.remote_progress is Dictionary:
 		return false
 	if candidate.has("fort"):
@@ -174,7 +189,7 @@ func choice_block_reason(choice: Dictionary) -> String:
 	return ""
 
 func choose(index: int) -> bool:
-	if not valid(state):
+	if not valid(state) or expedition().city != expansion.home_id(state.city):
 		return false
 	var choices: Array = story[state.node].choices
 	if index < 0 or index >= choices.size():
@@ -496,3 +511,108 @@ func record_content_choice(story_id: String, choice_id: String) -> bool:
 		state = previous
 		return false
 	return true
+
+
+func expedition() -> Dictionary:
+	return state.get("expedition",{"version":Expansion.VERSION,"city":expansion.home_id(state.city),"place":"","known":{},"backing":{}}).duplicate(true)
+
+func expedition_city() -> Dictionary:
+	return expansion.city(expedition().city,int(state.seed))
+
+func expedition_event(journey: Dictionary, previous: Dictionary, days: int, action: String, description: String, credits: int = 0) -> bool:
+	state.expedition = journey
+	state.day += days
+	state.credits -= credits
+	var id := "evt_%d" % (state.history.size()+1)
+	state.history.append({"id":id,"day":state.day,"city":journey.city,"action":action,"description":description,
+		"effects":{"time":days,"credits":-credits}})
+	advance_world(int(previous.day))
+	if not save_game():
+		state = previous
+		return false
+	return true
+
+func travel_to(city_id: String, fast: bool) -> bool:
+	if not valid(state):
+		return false
+	var journey := expedition()
+	if journey.city == city_id:
+		return false
+	var destination: Dictionary = expansion.city(city_id,int(state.seed))
+	if destination.is_empty():
+		return false
+	var passage: Dictionary = expansion.route(expedition_city(),destination,fast)
+	if state.credits < passage.credits:
+		return false
+	var previous := state.duplicate(true)
+	journey.city = city_id
+	journey.place = ""
+	return expedition_event(journey,previous,passage.days,"travel","Chegou a %s. %s." % [destination.name,passage.method],passage.credits)
+
+func enter_place(place_id: String) -> bool:
+	if not valid(state):
+		return false
+	var journey := expedition()
+	if not place_id.is_empty():
+		var site: Dictionary = expansion.place(place_id,int(state.seed))
+		if site.is_empty() or site.city != journey.city:
+			return false
+	var previous := state.duplicate(true)
+	journey.place = place_id
+	state.expedition = journey
+	if not save_game():
+		state = previous
+		return false
+	return true
+
+func meet_resident(staff: int) -> bool:
+	if not valid(state) or staff < 0 or staff >= 4:
+		return false
+	var journey := expedition()
+	var site: Dictionary = expansion.place(journey.place,int(state.seed))
+	if site.is_empty():
+		return false
+	var actor: Dictionary = expansion.person(site,staff,int(state.seed))
+	if not expansion.present(actor,int(state.day)) or journey.known.has(actor.id):
+		return false
+	var previous := state.duplicate(true)
+	var memory := "%s contou por que valoriza %s e como pretende %s." % [actor.name,actor.value,actor.goal]
+	journey.known[actor.id] = {"day":int(state.day),"memory":memory,"site":site.id}
+	return expedition_event(journey,previous,1,"meet",memory)
+
+func back_initiative(expected_id: String) -> bool:
+	if not valid(state):
+		return false
+	var journey := expedition()
+	var initiative: Dictionary = expansion.project(expedition_city(),int(state.seed),int(state.day),journey.backing)
+	if initiative.id != expected_id or initiative.phase != "pedido" or initiative.backed or initiative.self_funded or initiative.site != journey.place or state.credits < initiative.cost:
+		return false
+	var previous := state.duplicate(true)
+	journey.backing[initiative.id] = {"day":int(state.day),"actor":initiative.lead.id,"cost":initiative.cost}
+	return expedition_event(journey,previous,1,"back_initiative","Apoiou %s em %s. O resultado será avaliado no dia %d." % [initiative.lead.name,initiative.site_name,initiative.deadline],initiative.cost)
+
+
+func expedition_service(kind: String) -> bool:
+	if not valid(state):
+		return false
+	var journey := expedition()
+	var site: Dictionary = expansion.place(journey.place,int(state.seed))
+	if site.is_empty():
+		return false
+	var previous := state.duplicate(true)
+	var supplies := profile().duplicate(true)
+	match kind:
+		"bandage":
+			if site.kind not in ["market","temple"] or state.credits < 2:
+				return false
+			supplies.bandages += 1
+			state.profile = supplies
+			return expedition_event(journey,previous,0,"buy_bandage","Comprou um curativo em %s." % site.name,2)
+		"lodging":
+			if site.kind != "inn" or state.credits < 1:
+				return false
+			supplies.hp = mini(int(supplies.hp)+3,int(supplies.max_hp))
+			state.fatigue = maxi(0,int(state.fatigue)-2)
+			state.profile = supplies
+			return expedition_event(journey,previous,1,"lodging","Descansou em %s." % site.name,1)
+	return false

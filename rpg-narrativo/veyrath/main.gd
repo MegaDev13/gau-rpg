@@ -17,6 +17,9 @@ const ILLUSTRATIONS := {
 	"cover": "capa.png", "city": "valdoria.png", "council": "conselho.png",
 	"workshop": "oficina.png", "river": "margem.png", "quarry": "pedreira.png",
 	"archive": "arquivo.png", "highlands": "tharvok.png", "fort": "posto.png",
+	"elarion":"elarion.png","khar":"khar.png","namaris":"namaris.png","nexaria":"nexaria.png",
+	"inn":"inn.png","market":"market.png","lab":"lab.png","temple":"temple.png",
+	"fields":"fields.png","forest":"forest.png","rail":"rail.png","mine":"mine.png",
 }
 const ART_MOODS := {
 	"cover": "mist", "city": "mist", "highlands": "mist", "river": "rain",
@@ -357,6 +360,12 @@ func scene_person(node: String) -> String:
 		_: return ""
 
 func show_scene() -> void:
+	if game.expedition().city != game.expansion.home_id(game.state.city):
+		if game.expedition().place.is_empty():
+			settlement_screen()
+		else:
+			place_screen()
+		return
 	clear()
 	var node: String = game.state.node
 	var scene: Dictionary = game.story[node]
@@ -449,18 +458,23 @@ func campaign_records() -> void:
 	label("REGISTROS DA CAMPANHA",19,GOLD)
 	label("O mundo lembra",49,TEXT,true)
 	divider()
+	var at_home: bool = game.expedition().city == game.expansion.home_id(game.state.city)
 	button("◈  FICHA E ATRIBUTOS",character_sheet)
 	button("◉  INVENTÁRIO",inventory)
 	button("◆  BESTIÁRIO",bestiary)
-	button("Grimório",grimoire).icon = icon("book",GOLD)
+	if at_home:
+		button("Grimório",grimoire).icon = icon("book",GOLD)
 	button("Atlas regional",atlas)
-	button("✧  MUNDO E AÇÕES",world_panel)
+	if at_home:
+		button("✧  MUNDO E AÇÕES",world_panel)
 	button("▤  DIÁRIO",journal)
-	button("♧  PESSOAS E RELAÇÕES",people)
+	if at_home:
+		button("♧  PESSOAS E RELAÇÕES",people)
 	button("▤  JORNAL LOCAL",news)
-	button("⚔  DEFESA DO POSTO",defense)
+	if at_home:
+		button("⚔  DEFESA DO POSTO",defense)
 	button("Configurações",settings)
-	button("‹  Voltar à leitura",show_scene)
+	button("‹  Voltar à leitura" if at_home else "‹  Voltar à expedição",show_scene)
 
 func select_choice(index: int) -> void:
 	if game.choose(index):
@@ -479,7 +493,9 @@ func journal() -> void:
 	if game.state.history.is_empty():
 		label("A primeira página da sua história ainda está em branco.",21,MUTED)
 	for event in game.state.history:
-		card("DIA %s  ·  %s\n%s." % [event.day,game.render("{city}"),event.description.capitalize()],20)
+		var location: Dictionary = game.expansion.city(str(event.get("city","")),int(game.state.seed))
+		var city_name: String = location.get("name",game.render("{city}"))
+		card("DIA %s  ·  %s\n%s" % [event.day,city_name,event.description.capitalize()],20)
 	button("‹  VOLTAR",show_scene)
 
 func people() -> void:
@@ -638,17 +654,190 @@ func grimoire() -> void:
 
 func atlas() -> void:
 	clear()
-	label("Atlas regional",48,TEXT,true)
-	label("ASSENTAMENTOS DA CRÔNICA   /   312 P.R.",17,GOLD)
-	for city in game.world.cities:
-		var here: bool = city.id == game.state.city
-		scene_art("city" if city.id == "valdor" else "highlands",170)
-		label(city.name + "  ·  " + city.region,30,TEXT,true)
-		label(city.industry.capitalize() + "  /  " + city.water,19,MUTED)
-		if here:
-			var local: Dictionary = game.state.get("local_world",{"supplies":5,"pressure":0})
-			card("VOCÊ ESTÁ AQUI  ·  Suprimentos %s  ·  Pressão %s" % [local.supplies,local.pressure],20)
+	label("Atlas de Veyrath",48,TEXT,true)
+	var current: Dictionary = game.expedition_city()
+	label("POSIÇÃO  /  " + current.name.to_upper(),17,GOLD)
+	button("Explorar " + current.name,settlement_screen).icon = icon("shield",GOLD)
+	for index in range(game.expansion.catalog.regions.size()):
+		var region: Dictionary = game.expansion.catalog.regions[index]
+		button("%s   ·   %s" % [region.name,region.economy],region_screen.bind(index))
 	button("‹  Registros",campaign_records)
+
+func region_screen(index: int) -> void:
+	clear()
+	var region: Dictionary = game.expansion.catalog.regions[index]
+	var seed_value := int(game.state.seed)
+	scene_art(expansion_art(region.art),272)
+	label(region.name,48,TEXT,true)
+	card(region.economy + "\n" + region.government,21)
+	for slot in range(region.cities.size()):
+		var city_id := "%s-%d" % [region.id,slot]
+		var entry: Dictionary = game.expansion.city(city_id,seed_value)
+		button("%s   ·   %s" % [entry.name,entry.size],travel_screen.bind(city_id))
+	button("‹  Atlas",atlas)
+
+func expansion_art(key: String) -> String:
+	return {"valdoria":"city","tharvok":"highlands","conselho":"council","oficina":"workshop",
+		"margem":"river","pedreira":"quarry","arquivo":"archive","posto":"fort"}.get(key,key)
+
+func expedition_stage(key: String, conditions: Dictionary, site: Dictionary = {}) -> void:
+	var view := stage_for(expansion_art(key),272)
+	view.atmosphere = conditions.weather
+	if conditions.daylight == 0:
+		view.light = Color("717db1")
+		view.intensity = 0.95
+	elif conditions.daylight == 3:
+		view.light = Color("ce9270")
+		view.intensity = 0.70
+	if not site.is_empty():
+		view.site_trim = site.trim
+		view.site_kind = site.kind
+		view.shortage = int(conditions.supply) < 10
+	column.add_child(view)
+
+func travel_screen(destination_id: String) -> void:
+	var current: Dictionary = game.expedition_city()
+	if destination_id == current.id:
+		settlement_screen()
+		return
+	clear()
+	var destination: Dictionary = game.expansion.city(destination_id,int(game.state.seed))
+	scene_art(expansion_art(destination.art),242)
+	label(destination.name,47,TEXT,true)
+	label(destination.region_name.to_upper() + "   /   " + destination.size,18,GOLD)
+	card("Partida de %s. Você tem %d créditos." % [current.name,game.state.credits],23)
+	for fast in [false,true]:
+		var plan: Dictionary = game.expansion.route(current,destination,fast)
+		button("%s   ·   %d dia(s)   ·   %d créditos" % [plan.method,plan.days,plan.credits],
+			travel.bind(destination_id,fast),int(game.state.credits) < int(plan.credits))
+	button("‹  Região",region_screen.bind(int(destination.region)))
+
+func travel(destination_id: String, fast: bool) -> void:
+	if game.travel_to(destination_id,fast):
+		settlement_screen()
+	else:
+		travel_screen(destination_id)
+		label("A viagem não pôde ser registrada.",20,GOLD)
+
+func settlement_screen() -> void:
+	clear()
+	var city: Dictionary = game.expedition_city()
+	var conditions: Dictionary = game.expansion.condition(city,int(game.state.seed),int(game.state.day),game.expedition().backing)
+	label("%s   /   DIA %s" % [city.region_name.to_upper(),game.state.day],17,GOLD)
+	expedition_stage(city.art,conditions)
+	label(city.name,47,TEXT,true)
+	card("%s · cerca de %s habitantes\nReservas %s   ·   Vigilância %s/10\n%s\n%s" % [city.size,conditions.population,conditions.supply,conditions.security,city.economy,city.government],22)
+	var project: Dictionary = conditions.project
+	card(initiative_text(project),21,true)
+	if not conditions.previous_project.is_empty():
+		label("O CICLO ANTERIOR",17,GOLD)
+		card(initiative_text(conditions.previous_project),20,true)
+	label("DISTRITOS E ESTABELECIMENTOS",17,GOLD)
+	for site in game.expansion.places(city,int(game.state.seed)):
+		button("%s   ·   %s" % [site.name,site.district],open_place.bind(site.id))
+	button("Explorar outras regiões",atlas)
+	button("Registros da campanha",campaign_records).icon = icon("book",GOLD)
+	var home: String = game.expansion.home_id(game.state.city)
+	button("Voltar à crônica" if city.id == home else "Rota de volta à crônica",show_scene if city.id == home else travel_screen.bind(home))
+	button("‹  Menu principal",menu)
+
+func initiative_text(project: Dictionary) -> String:
+	var text := "%s quer %s em %s. %s ajuda a organizar." % [project.lead.name,project.lead.goal,project.site_name,project.partner.name]
+	match project.phase:
+		"realizado": return text + "\nProjeto realizado. As reservas locais aumentaram."
+		"adiado": return text + "\nProjeto adiado por falta de fundos. As reservas ficaram sob pressão."
+		_: return text + ("\nApoio registrado." if project.backed else "\nRecursos próprios reunidos." if project.self_funded else "\nO prazo para reunir os recursos termina no dia %d." % project.deadline)
+
+func open_place(place_id: String) -> void:
+	if game.enter_place(place_id):
+		place_screen()
+	else:
+		label("O local não pôde ser registrado.",20,GOLD)
+
+func place_screen() -> void:
+	var journey: Dictionary = game.expedition()
+	var site: Dictionary = game.expansion.place(journey.place,int(game.state.seed))
+	if site.is_empty():
+		settlement_screen()
+		return
+	clear()
+	var city: Dictionary = game.expedition_city()
+	var conditions: Dictionary = game.expansion.condition(city,int(game.state.seed),int(game.state.day),journey.backing)
+	label("%s   /   %s" % [city.name.to_upper(),site.district.to_upper()],17,GOLD)
+	expedition_stage(site.art,conditions,site)
+	label(site.name,42,TEXT,true)
+	label("SERVIÇOS  /  " + site.goods,20,GOLD)
+	if site.kind in ["market","temple"]:
+		button("Comprar curativo   ·   2 créditos",use_service.bind("bandage"),game.state.credits < 2).icon = icon("bandage",GOLD)
+	elif site.kind == "inn":
+		button("Pernoitar   ·   1 crédito e 1 dia",use_service.bind("lodging"),game.state.credits < 1)
+	var initiative: Dictionary = conditions.project
+	if initiative.site == site.id:
+		card(initiative_text(initiative),22,true)
+		if initiative.phase == "pedido" and not initiative.backed and not initiative.self_funded:
+			button("Apoiar a iniciativa   ·   %d créditos" % initiative.cost,back_project.bind(initiative.id),game.state.credits < initiative.cost)
+	divider()
+	label("QUEM TRABALHA AQUI",17,GOLD)
+	for staff in range(4):
+		var resident: Dictionary = game.expansion.person(site,staff,int(game.state.seed))
+		var present: bool = game.expansion.present(resident,int(game.state.day))
+		button("%s   ·   %s%s" % [resident.name,resident.job,"" if present else "  /  folga"],resident_screen.bind(staff))
+	button("‹  " + city.name,settlement_screen)
+
+func resident_art(actor: Dictionary) -> Texture2D:
+	var bases := {"Humano":[0,6],"Dhorvak":[1],"Aelthari":[2,7],"Nymari":[3],"Varkhen":[4],"Eidrino":[5]}
+	var candidates: Array = bases[actor.people]
+	var key := "world_npc_%d.png" % candidates[int(actor.pin)%candidates.size()]
+	if not portraits.has(key):
+		portraits[key] = Stage.load_pixel(key)
+	return portraits[key]
+
+func resident_screen(staff: int) -> void:
+	clear()
+	var journey: Dictionary = game.expedition()
+	var site: Dictionary = game.expansion.place(journey.place,int(game.state.seed))
+	var actor: Dictionary = game.expansion.person(site,staff,int(game.state.seed))
+	var present: bool = game.expansion.present(actor,int(game.state.day))
+	var view = Stage.new()
+	view.art = illustration(expansion_art(site.art))
+	view.face = resident_art(actor)
+	view.subject_pin = actor.pin
+	view.motion = motion_enabled
+	view.custom_minimum_size.y = 272
+	column.add_child(view)
+	label(actor.name,43,TEXT,true)
+	label("%s  ·  %s  ·  %d anos" % [actor.people,actor.job,actor.age],20,GOLD)
+	var coworker: Dictionary = game.expansion.person(site,(staff+1)%4,int(game.state.seed))
+	var birthplace: Dictionary = game.expansion.city(actor.birthplace,int(game.state.seed))
+	var detail := "%s. Nasceu em %s e trabalha em %s com %s. Valoriza %s e quer %s." % [actor.personality,birthplace.name,site.name,coworker.name,actor.value,actor.goal]
+	if not actor.household.is_empty():
+		var relative: Dictionary = game.expansion.person(site,1-staff,int(game.state.seed))
+		detail += " Divide a casa com %s." % relative.name
+	card(detail,24,true)
+	if journey.known.has(actor.id):
+		card("MEMÓRIA DO DIA %s\n%s" % [journey.known[actor.id].day,journey.known[actor.id].memory],21)
+	elif present:
+		button("Conhecer   ·   1 dia",meet_person.bind(staff))
+	else:
+		label("Hoje está de folga. O turno volta amanhã.",20,MUTED)
+	button("‹  Voltar ao estabelecimento",place_screen)
+
+func meet_person(staff: int) -> void:
+	var success: bool = game.meet_resident(staff)
+	resident_screen(staff)
+	if not success:
+		label("O encontro não pôde ser registrado.",20,GOLD)
+
+func use_service(kind: String) -> void:
+	var success: bool = game.expedition_service(kind)
+	place_screen()
+	label("Serviço registrado no diário." if success else "O serviço não está disponível.",20,GOLD)
+
+func back_project(expected_id: String) -> void:
+	var success: bool = game.back_initiative(expected_id)
+	place_screen()
+	if not success:
+		label("A iniciativa mudou ou faltam créditos.",20,GOLD)
 
 func inventory() -> void:
 	clear()

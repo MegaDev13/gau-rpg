@@ -73,6 +73,26 @@ func valid(candidate) -> bool:
 		var person: Dictionary = candidate.people[role.id]
 		if not person.has_all(["name","job","goal","trust","memories"]) or not person.memories is Array:
 			return false
+	if candidate.has("profile"):
+		if not candidate.profile is Dictionary or not candidate.profile.has_all(["attributes", "hp", "max_hp", "bandages", "last_scout_day"]):
+			return false
+		var p: Dictionary = candidate.profile
+		if not p.attributes is Dictionary or not p.attributes.has_all(["forca", "agilidade", "vigor", "intelecto", "percepcao", "vontade", "presenca", "tecnica", "sintonia"]):
+			return false
+		for key in ["hp", "max_hp", "bandages", "last_scout_day"]:
+			if typeof(p[key]) not in [TYPE_INT, TYPE_FLOAT]:
+				return false
+		for key in p.attributes:
+			if typeof(p.attributes[key]) not in [TYPE_INT, TYPE_FLOAT]:
+				return false
+		if p.hp < 0 or p.hp > p.max_hp or p.max_hp < 1 or p.bandages < 0:
+			return false
+	if candidate.has("local_world"):
+		if not candidate.local_world is Dictionary or not candidate.local_world.has_all(["supplies", "pressure"]):
+			return false
+		for key in ["supplies", "pressure"]:
+			if typeof(candidate.local_world[key]) not in [TYPE_INT, TYPE_FLOAT] or candidate.local_world[key] < 0:
+				return false
 	if candidate.has("fort"):
 		if not candidate.fort is Dictionary or not candidate.fort.has_all(["layout", "supplies", "hp", "wave", "results"]):
 			return false
@@ -173,6 +193,7 @@ func choose(index: int) -> bool:
 	state.people[role].memories.append({"event_id":event_id,"day":state.day,"type":"testemunhado","summary":choice.memory})
 	state.news.append({"event_id":event_id,"day":state.day,"text":choice.news,"source":"Gazeta local"})
 	state.node = choice.next
+	advance_world(int(previous.day))
 	if not save_game():
 		state = previous
 		return false
@@ -208,6 +229,7 @@ func converse(role: String) -> bool:
 	var description: String = "conversou com %s sobre seus objetivos" % person.name
 	person.memories.append({"event_id":event_id,"day":state.day,"type":"testemunhado","kind":"conversation","summary":description})
 	state.history.append({"id":event_id,"day":state.day,"city":state.city,"action":"conversation","description":description,"effects":{"time":1,"trust":1}})
+	advance_world(int(previous.day))
 	if not save_game():
 		state = previous
 		return false
@@ -281,7 +303,146 @@ func fort_finish(expected_wave: int, won: bool, remaining_hp: int, escaped: int)
 	state.fort = fort
 	state.history.append({"id":event_id,"day":state.day,"city":state.city,"action":"fort_defense","description":description,"effects":{"supplies":3 if won else 2,"base_hp":remaining_hp}})
 	state.news.append({"event_id":event_id,"day":state.day,"text":"A defesa local resistiu à investida." if won else "A defesa local foi rompida; reparos foram iniciados.","source":"Gazeta local"})
+	advance_world(int(previous.day))
 	if not save_game():
 		state = previous
 		return false
 	return true
+
+## The profile is lazily initialized to preserve the pre-existing version-1 saves.
+func profile() -> Dictionary:
+	if state.has("profile") and state.profile is Dictionary:
+		return state.profile.duplicate(true)
+	var attributes := {"forca":10,"agilidade":10,"vigor":10,"intelecto":10,"percepcao":10,"vontade":10,"presenca":10,"tecnica":10,"sintonia":10}
+	match state.origin:
+		"apprentice": attributes.tecnica = 14
+		"scholar":
+			attributes.intelecto = 14
+			attributes.sintonia = 12
+		"community":
+			attributes.vigor = 12
+			attributes.percepcao = 14
+		"merchant": attributes.presenca = 14
+	return {"attributes":attributes,"hp":10,"max_hp":10,"bandages":2,"last_scout_day":-99}
+
+func modifier(score: int) -> int:
+	return floori((score - 10) / 2.0)
+
+func advance_world(previous_day: int) -> void:
+	var old_tick := floori(previous_day / 3.0)
+	var new_tick := floori(int(state.day) / 3.0)
+	for tick in range(old_tick + 1,new_tick + 1):
+		var sim: Dictionary = state.get("local_world", {"supplies":5,"pressure":0}).duplicate(true)
+		var description: String
+		if int(state.risk) >= 4:
+			sim.pressure += 1
+			sim.supplies = maxi(0,int(sim.supplies)-1)
+			description = "O risco arcano pressiona as reservas locais; a cidade consome suprimentos de contenção."
+		else:
+			sim.supplies += 1
+			description = "A oficina e os moradores recuperam parte dos suprimentos da cidade."
+		state.local_world = sim
+		var event_id := "evt_%s" % (state.history.size() + 1)
+		state.history.append({"id":event_id,"day":state.day,"city":state.city,"action":"world_tick","description":description,"effects":{"supplies":sim.supplies,"pressure":sim.pressure,"tick":tick}})
+		state.news.append({"event_id":event_id,"day":state.day,"text":description,"source":"Gazeta local"})
+
+func rest() -> bool:
+	if not valid(state):
+		return false
+	var p := profile()
+	var max_flow := 3 if state.origin == "scholar" else 2
+	if p.hp >= p.max_hp and state.flow >= max_flow and state.fatigue <= 0:
+		return false
+	var previous := state.duplicate(true)
+	p.hp = mini(int(p.max_hp),int(p.hp)+2)
+	state.flow = mini(max_flow,int(state.flow)+1)
+	state.fatigue = maxi(0,int(state.fatigue)-1)
+	state.day += 1
+	state.profile = p
+	var id := "evt_%s" % (state.history.size()+1)
+	state.history.append({"id":id,"day":state.day,"city":state.city,"action":"rest","description":"descansou e recuperou forças","effects":{"hp":p.hp,"flow":state.flow}})
+	advance_world(int(previous.day))
+	if not save_game():
+		state = previous
+		return false
+	return true
+
+func use_bandage() -> bool:
+	if not valid(state):
+		return false
+	var p := profile()
+	if p.bandages <= 0 or p.hp >= p.max_hp:
+		return false
+	var previous := state.duplicate(true)
+	p.bandages -= 1
+	p.hp = mini(int(p.max_hp),int(p.hp)+3)
+	state.profile = p
+	var id := "evt_%s" % (state.history.size()+1)
+	state.history.append({"id":id,"day":state.day,"city":state.city,"action":"bandage","description":"usou um curativo","effects":{"hp":p.hp,"bandages":-1}})
+	if not save_game():
+		state = previous
+		return false
+	return true
+
+func scout() -> bool:
+	if not valid(state):
+		return false
+	var p := profile()
+	if p.hp <= 0 or int(state.day) - int(p.last_scout_day) < 3:
+		return false
+	var previous := state.duplicate(true)
+	var rng := RandomNumberGenerator.new()
+	rng.seed = hash("veyrath-scout-v1:%s:%s:%s" % [int(state.seed),int(state.day),state.history.size()])
+	var roll := rng.randi_range(1,20)
+	var bonus := modifier(int(p.attributes.percepcao))
+	var success := roll + bonus >= 12
+	state.day += 1
+	p.last_scout_day = state.day
+	if success:
+		p.bandages += 1
+	else:
+		p.hp = maxi(0,int(p.hp)-2)
+	state.profile = p
+	var id := "evt_%s" % (state.history.size()+1)
+	var desc := "encontrou um curativo em uma inspeção local" if success else "feriu-se ao inspecionar a área"
+	state.history.append({"id":id,"day":state.day,"city":state.city,"action":"scout","description":desc,"effects":{"d20":roll,"bonus":bonus,"difficulty":12,"success":success}})
+	advance_world(int(previous.day))
+	if not save_game():
+		state = previous
+		return false
+	return true
+
+func discovered_dragon() -> bool:
+	if state.node == "dragon":
+		return true
+	for event in state.history:
+		if event.get("action", "") in ["quarry", "quarry_work", "quarry_river", "evidence_quarry"]:
+			return true
+	return false
+
+func normalized(value: String) -> String:
+	var t := value.strip_edges().to_lower()
+	for pair in [["á","a"],["à","a"],["â","a"],["ã","a"],["é","e"],["ê","e"],["í","i"],["ó","o"],["ô","o"],["õ","o"],["ú","u"],["ç","c"]]:
+		t = t.replace(pair[0],pair[1])
+	return t
+
+func interpret_action(sentence: String) -> Dictionary:
+	if not valid(state):
+		return {}
+	var text := normalized(sentence)
+	if text in ["descansar", "repousar", "quero descansar"]:
+		return {"kind":"rest","description":"Descansar um dia para recuperar forças e Fluxo."}
+	if text in ["usar curativo", "aplicar curativo"]:
+		return {"kind":"bandage","description":"Usar um curativo para recuperar vida."}
+	if text in ["investigar a area", "explorar a area", "reconhecer a area"]:
+		return {"kind":"scout","description":"Inspecionar a área: teste de Percepção, dificuldade 12; risco de ferimento."}
+	for role in world.roles:
+		var person_name: String = normalized(state.people[role.id].name)
+		if text == "conversar com " + person_name or text == "falar com " + person_name:
+			return {"kind":"talk","role":role.id,"description":"Conversar com " + state.people[role.id].name + "."}
+	var options: Array = story[state.node].choices
+	for i in range(options.size()):
+		if text == "escolha %s" % (i+1) or text == "opcao %s" % (i+1):
+			if available(options[i]):
+				return {"kind":"choice","index":i,"description":options[i].label}
+	return {}

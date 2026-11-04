@@ -14,6 +14,12 @@ var name_input: LineEdit
 var origin_input: OptionButton
 var city_input: OptionButton
 var notice := ""
+var music_player: AudioStreamPlayer
+var music_enabled := true
+var action_input: LineEdit
+var action_status: Label
+var action_confirm: Button
+var proposed_action: Dictionary = {}
 
 func _ready() -> void:
 	var bg := ColorRect.new()
@@ -35,6 +41,7 @@ func _ready() -> void:
 	column.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	column.add_theme_constant_override("separation",14)
 	margin.add_child(column)
+	setup_music()
 	menu()
 
 func style(bg: Color, border: Color, padding: int = 14) -> StyleBoxFlat:
@@ -60,7 +67,7 @@ func label(value: String, font_size: int = 25, color: Color = TEXT) -> void:
 	item.add_theme_color_override("font_color",color)
 	column.add_child(item)
 
-func button(value: String, action: Callable, disabled: bool = false) -> void:
+func button(value: String, action: Callable, disabled: bool = false) -> Button:
 	var item := Button.new()
 	item.text = value
 	item.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
@@ -76,6 +83,7 @@ func button(value: String, action: Callable, disabled: bool = false) -> void:
 	item.disabled = disabled
 	item.pressed.connect(action)
 	column.add_child(item)
+	return item
 
 func card(value: String, font_size: int = 25) -> void:
 	var panel := PanelContainer.new()
@@ -150,6 +158,7 @@ func menu() -> void:
 	button("◇  MULTIPLAYER",multiplayer_screen)
 	button("▣  CAMPANHA ANTERIOR: CINZAS DE ÉTER",legacy)
 	button("☼  SOBRE O MUNDO",about)
+	button("♫  CONFIGURAÇÕES",settings)
 	label("CAMPANHA SOLO  •  OFFLINE",16,MUTED)
 
 func creation() -> void:
@@ -240,8 +249,28 @@ func show_scene() -> void:
 	for i in range(scene.choices.size()):
 		var choice: Dictionary = scene.choices[i]
 		button("›  " + (choice.label if game.available(choice) else choice.label + " — requisito não atendido"),select_choice.bind(i),not game.available(choice))
+	if not scene.choices.is_empty():
+		label("ESCREVA UMA AÇÃO",18,GOLD)
+		action_input = LineEdit.new()
+		action_input.placeholder_text = "Ex.: escolha 1, descansar, falar com Aren"
+		action_input.custom_minimum_size.y = 70
+		action_input.add_theme_font_size_override("font_size",21)
+		column.add_child(action_input)
+		button("⌕  INTERPRETAR",interpret_input)
+		action_status = Label.new()
+		action_status.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+		action_status.add_theme_font_size_override("font_size",20)
+		action_status.add_theme_color_override("font_color",GOLD)
+		action_status.text = "Comandos simples: escolha 1, descansar, usar curativo, investigar a área ou falar com [nome]."
+		column.add_child(action_status)
+		action_confirm = button("CONFIRMAR AÇÃO",confirm_input,true)
+		proposed_action = {}
 	label("EXPLORAR REGISTROS",18,GOLD)
-	button("◈  PERSONAGEM E DIÁRIO",journal)
+	button("◈  FICHA E ATRIBUTOS",character_sheet)
+	button("◉  INVENTÁRIO",inventory)
+	button("◆  BESTIÁRIO",bestiary)
+	button("✧  MUNDO E AÇÕES",world_panel)
+	button("▤  DIÁRIO",journal)
 	button("♧  PESSOAS E RELAÇÕES",people)
 	button("▤  JORNAL LOCAL",news)
 	button("⚔  DEFESA DO POSTO",defense)
@@ -320,3 +349,120 @@ func multiplayer_screen() -> void:
 	var screen = MultiplayerUI.new()
 	screen.configure(menu)
 	column.add_child(screen)
+
+func setup_music() -> void:
+	var config := ConfigFile.new()
+	if config.load("user://veyrath_config.cfg") == OK:
+		music_enabled = bool(config.get_value("audio", "music", true))
+	music_player = AudioStreamPlayer.new()
+	var track: AudioStreamOggVorbis = load("res://veyrath/assets/tema_cidade.ogg")
+	track.loop = true
+	music_player.stream = track
+	music_player.volume_db = -13.0
+	add_child(music_player)
+	if music_enabled:
+		music_player.play()
+
+func settings() -> void:
+	clear()
+	label("♫  CONFIGURAÇÕES",34,GOLD)
+	card("Trilha original instrumental: " + ("ativada" if music_enabled else "desativada"),22)
+	button("DESATIVAR MÚSICA" if music_enabled else "ATIVAR MÚSICA",toggle_music)
+	button("‹  MENU PRINCIPAL",menu)
+
+func toggle_music() -> void:
+	music_enabled = not music_enabled
+	if music_enabled:
+		music_player.play()
+	else:
+		music_player.stop()
+	var config := ConfigFile.new()
+	config.set_value("audio","music",music_enabled)
+	if config.save("user://veyrath_config.cfg") != OK:
+		notice = "Não foi possível salvar a preferência de música."
+	settings()
+
+func character_sheet() -> void:
+	clear()
+	var p: Dictionary = game.profile()
+	var origin: Dictionary = game.find_entry(game.world.origins,game.state.origin)
+	label("◈  FICHA DE PERSONAGEM",34,GOLD)
+	card("%s  ·  %s\nVIDA  %s / %s    •    FLUXO  %s    •    FADIGA  %s\nAtaque físico básico: %+d  ·  modificador de Força" % [game.state.name,origin.name,p.hp,p.max_hp,game.state.flow,game.state.fatigue,game.modifier(int(p.attributes.forca))],22)
+	label("ATRIBUTOS",23,GOLD)
+	var names := {"forca":"Força","agilidade":"Agilidade","vigor":"Vigor","intelecto":"Intelecto","percepcao":"Percepção","vontade":"Vontade","presenca":"Presença","tecnica":"Técnica","sintonia":"Sintonia arcana"}
+	for key in names:
+		label("%s   %s   (%+d)" % [names[key],p.attributes[key],game.modifier(int(p.attributes[key]))],21)
+	label("O ataque é uma referência do atributo; combate de personagem e equipamentos ainda estão em desenvolvimento.",18,MUTED)
+	button("‹  VOLTAR À HISTÓRIA",show_scene)
+
+func inventory() -> void:
+	clear()
+	var p: Dictionary = game.profile()
+	label("◉  INVENTÁRIO",34,GOLD)
+	card("CURATIVO  × %s\nRecupera até 3 pontos de vida." % p.bandages,22)
+	button("USAR CURATIVO",perform_basic.bind("bandage"),int(p.bandages)<=0 or int(p.hp)>=int(p.max_hp))
+	label("Itens e equipamentos adicionais serão integrados à campanha conforme forem implementados.",18,MUTED)
+	button("‹  VOLTAR À HISTÓRIA",show_scene)
+
+func bestiary() -> void:
+	clear()
+	label("◆  BESTIÁRIO",34,GOLD)
+	if game.discovered_dragon():
+		card("VÉU-NOTURNO\nDragão feral pequeno e crepuscular, conhecido por imitar sons. O indivíduo observado na pedreira não demonstrou hostilidade.\n\nClassificação: feral. O motivo de sua presença precisa de investigação.",22)
+	else:
+		card("Nenhuma criatura foi registrada ainda. Investigações e encontros podem acrescentar informações a este livro.",22)
+	button("‹  VOLTAR À HISTÓRIA",show_scene)
+
+func world_panel() -> void:
+	clear()
+	label("✧  MUNDO E AÇÕES",34,GOLD)
+	var local: Dictionary = game.state.get("local_world", {"supplies":5,"pressure":0})
+	card("%s · dia %s, 312 P.R.\nSuprimentos locais: %s\nPressão arcana acumulada: %s" % [game.render("{city}"),game.state.day,local.supplies,local.pressure],22)
+	label("A cada três dias de ações, a cidade reage às condições locais. O jogo não avança sozinho enquanto estiver fechado.",19,MUTED)
+	button("DESCANSAR · 1 DIA",perform_basic.bind("rest"))
+	button("INSPECIONAR A ÁREA · 1 DIA",perform_basic.bind("scout"))
+	label("Inspeção: teste de Percepção em 1d20, dificuldade 12. Um sucesso encontra um curativo; uma falha causa ferimento. Intervalo mínimo de três dias.",19,MUTED)
+	button("‹  VOLTAR À HISTÓRIA",show_scene)
+
+func perform_basic(kind: String) -> void:
+	var ok := false
+	match kind:
+		"rest": ok = game.rest()
+		"bandage": ok = game.use_bandage()
+		"scout": ok = game.scout()
+	clear()
+	if ok:
+		if kind == "scout":
+			var events: Array = game.state.history.duplicate()
+			events.reverse()
+			for event in events:
+				if event.action == "scout":
+					card("%s\nDado: %s + %s · dificuldade %s" % [event.description.capitalize(),event.effects.d20,event.effects.bonus,event.effects.difficulty],22)
+					break
+		else:
+			card("Ação registrada no diário.",22)
+	else:
+		card("Esta ação não está disponível agora: confira os recursos, a vida ou o intervalo necessário.",22)
+	button("‹  VOLTAR À HISTÓRIA",show_scene)
+
+func interpret_input() -> void:
+	proposed_action = game.interpret_action(action_input.text)
+	if proposed_action.is_empty():
+		action_status.text = "Não reconheci essa ação. Use um dos exemplos ou uma das escolhas numeradas."
+		action_confirm.disabled = true
+	else:
+		action_status.text = "Entendi: " + str(proposed_action.description) + " Confirma?"
+		action_confirm.disabled = false
+
+func confirm_input() -> void:
+	if proposed_action.is_empty():
+		return
+	match proposed_action.kind:
+		"choice": select_choice(int(proposed_action.index))
+		"talk":
+			if game.converse(proposed_action.role):
+				show_scene()
+			else:
+				action_status.text = "Essa conversa já aconteceu ou não está disponível."
+				action_confirm.disabled = true
+		"rest", "bandage", "scout": perform_basic(proposed_action.kind)

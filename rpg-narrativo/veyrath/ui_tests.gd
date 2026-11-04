@@ -16,6 +16,16 @@ func test_ui() -> void:
 	await process_frame
 	scene.journal()
 	await process_frame
+	scene.character_sheet()
+	await process_frame
+	scene.inventory()
+	await process_frame
+	scene.bestiary()
+	await process_frame
+	scene.world_panel()
+	await process_frame
+	scene.settings()
+	await process_frame
 	scene.news()
 	await process_frame
 	scene.defense()

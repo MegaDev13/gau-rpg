@@ -20,6 +20,11 @@ func test_ui() -> void:
 	await process_frame
 	scene.defense()
 	await process_frame
+	scene.multiplayer_screen()
+	await process_frame
+	var online = scene.column.get_child(0)
+	if online.uuid4().length() != 36 or online.request == null:
+		failed = true
 	if not ResourceLoader.exists("res://veyrath/assets/val_doria.jpg"):
 		failed = true
 	print("Interface Veyrath: ", "falhou" if failed else "aberta e navegada")

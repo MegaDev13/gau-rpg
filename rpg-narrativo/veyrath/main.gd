@@ -3,6 +3,7 @@ extends Control
 const VeyrathEngine = preload("res://veyrath/engine.gd")
 const Art = preload("res://veyrath/art.gd")
 const DefenseUI = preload("res://veyrath/defense_ui.gd")
+const MultiplayerUI = preload("res://veyrath/multiplayer_ui.gd")
 const GOLD := Color("d6b47d")
 const TEXT := Color("e7e0d2")
 const MUTED := Color("aeb6b7")
@@ -136,6 +137,7 @@ func menu() -> void:
 		notice = ""
 	button("✦  NOVO JOGO",creation)
 	button("◈  CONTINUAR VEYRATH",continue_game)
+	button("◇  MULTIPLAYER",multiplayer_screen)
 	button("▣  CAMPANHA ANTERIOR: CINZAS DE ÉTER",legacy)
 	button("☼  SOBRE O MUNDO",about)
 	label("CAMPANHA SOLO  •  OFFLINE",16,MUTED)
@@ -301,4 +303,10 @@ func defense() -> void:
 	clear()
 	var screen = DefenseUI.new()
 	screen.configure(game,show_scene)
+	column.add_child(screen)
+
+func multiplayer_screen() -> void:
+	clear()
+	var screen = MultiplayerUI.new()
+	screen.configure(menu)
 	column.add_child(screen)

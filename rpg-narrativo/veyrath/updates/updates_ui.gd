@@ -147,7 +147,7 @@ func play_audio() -> void:
 		audio_preview.stop()
 		status = "Trilha de demonstração pausada."
 	else:
-		was_playing = background.playing
+		was_playing = was_playing or background.playing
 		background.stop()
 		audio_preview.stream = AudioStreamOggVorbis.load_from_buffer(Marshalls.base64_to_raw(current.pack.audio_ogg))
 		audio_preview.play()

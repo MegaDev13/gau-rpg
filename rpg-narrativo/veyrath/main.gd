@@ -111,7 +111,7 @@ func portrait(role: String, mood: String = "neutral") -> void:
 	row.add_theme_constant_override("separation",16)
 	column.add_child(row)
 	var person: Dictionary = game.state.people[role]
-	var portraits := {"artisan_v1":"res://veyrath/assets/artifice_v1.jpg", "researcher_v1":"res://veyrath/assets/pesquisadora_v1.jpg"}
+	var portraits := {"artisan_v1":"res://veyrath/assets/artifice_v1.jpg", "researcher_v1":"res://veyrath/assets/pesquisadora_v1.jpg", "leader_v1":"res://veyrath/assets/lider_v1.jpg", "merchant_v1":"res://veyrath/assets/comerciante_v1.jpg", "resident_v1":"res://veyrath/assets/morador_v1.jpg", "community_v1":"res://veyrath/assets/comunidade_v1.jpg"}
 	var portrait_path: String = portraits.get(person.get("portrait_asset", ""), "")
 	if not portrait_path.is_empty():
 		var image := TextureRect.new()

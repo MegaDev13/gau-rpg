@@ -1,6 +1,6 @@
 {
  "start":{"title":"O custo do fluxo","text":"Em {city}, {artisan} trabalha na {industry} da família. Um Núcleo de Veyr apresenta falhas; ampliar a extração ajudaria a manter empregos, mas {community} teme pelo {water}. {leader}, autoridade municipal, precisa ouvir a comunidade antes de decidir.\n\nSua origem: {origin}. O que você faz?","choices":[
-  {"id":"investigate","label":"Investigar o núcleo com a pesquisadora","next":"investigation","effects":{"time":1},"memory":"investigou o núcleo","npc":"researcher","trust":1,"news":"A pesquisadora iniciou uma inspeção do núcleo."},
+  {"id":"investigate","label":"Investigar o núcleo com a especialista","next":"investigation","effects":{"time":1},"memory":"investigou o núcleo","npc":"researcher","trust":1,"news":"A especialista iniciou uma inspeção do núcleo."},
   {"id":"help","label":"Ajudar a oficina (aprendiz: ferramentas próprias; demais: 2 créditos)","next":"workshop","requirements":{"credits_or_origin":2},"effects":{"credits_or_origin":-2,"time":1},"memory":"ajudou a oficina a fazer um reparo","npc":"artisan","trust":2,"news":"A oficina fez um reparo temporário em seu núcleo."},
   {"id":"listen","label":"Ouvir as famílias do rio","next":"river","effects":{"time":1},"memory":"ouviu as preocupações das famílias do rio","npc":"community","trust":2,"news":"Moradores reuniram relatos sobre a água."},
   {"id":"wait","label":"Cuidar da própria vida e não intervir","next":"aftermath_wait","effects":{"time":1,"risk":1},"memory":"não interveio na crise","npc":"leader","trust":0,"news":"Sem acordo imediato, a extração continuou sob risco maior."}
@@ -15,7 +15,7 @@
   {"id":"quarry_work","label":"Investigar a pedreira antes da audiência","next":"dragon","effects":{"time":1},"memory":"investigou a pedreira após ajudar a oficina","npc":"artisan","trust":0,"news":"Moradores foram verificar as condições da pedreira."}
  ]},
  "river":{"title":"A água e as vozes","text":"{community} relata que a água mudou de cor após o aumento de extração; uma relação causal ainda exige investigação. Alguns moradores também ouviram um animal na pedreira. O sustento da oficina depende do mesmo núcleo.","choices":[
-  {"id":"river_evidence","label":"Examinar os registros com a pesquisadora","next":"evidence","effects":{"time":1,"evidence":1},"memory":"investigou os registros sobre extração","npc":"researcher","trust":1,"news":"Moradores solicitaram análise dos registros de extração."},
+  {"id":"river_evidence","label":"Examinar os registros com a especialista","next":"evidence","effects":{"time":1,"evidence":1},"memory":"investigou os registros sobre extração","npc":"researcher","trust":1,"news":"Moradores solicitaram análise dos registros de extração."},
   {"id":"quarry_river","label":"Verificar o relato da pedreira","next":"dragon","effects":{"time":1},"memory":"investigou o relato vindo da pedreira","npc":"community","trust":1,"news":"Moradores buscaram informações na pedreira."},
   {"id":"petition","label":"Levar as preocupações ao conselho","next":"council","effects":{"time":1},"memory":"levou a preocupação das famílias ao conselho","npc":"community","trust":1,"news":"Uma petição sobre a água chegou ao conselho."}
  ]},

@@ -45,6 +45,10 @@ func new_game(player_name: String, origin_id: String, city_id: String, seed_valu
 	# Existing saves lack portrait_asset and retain their original generated faces.
 	people.artisan["portrait_asset"] = "artisan_v1"
 	people.researcher["portrait_asset"] = "researcher_v1"
+	people.leader["portrait_asset"] = "leader_v1"
+	people.merchant["portrait_asset"] = "merchant_v1"
+	people.resident["portrait_asset"] = "resident_v1"
+	people.community["portrait_asset"] = "community_v1"
 	state = {"version":VERSION,"seed":seed_value,"name":player_name.strip_edges(),"origin":origin.id,"city":city.id,"node":"start","day":1,"credits":origin.credits,"flow":origin.flow,"fatigue":0,"risk":3,"evidence":0,"habitat":0,"people":people,"history":[],"news":[]}
 	return save_game()
 

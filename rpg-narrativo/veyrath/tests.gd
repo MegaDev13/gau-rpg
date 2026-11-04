@@ -11,6 +11,8 @@ func _initialize() -> void:
 	check(game.new_game("Teste", "scholar", "valdor", 123), "Criar campanha")
 	check(game.state.people.size() == 6 and game.state.flow == 3, "NPCs ou recursos iniciais")
 	check(game.state.people.artisan.portrait_asset == "artisan_v1", "Retrato inicial")
+	for role in ["leader", "artisan", "researcher", "community", "merchant", "resident"]:
+		check(game.state.people[role].has("portrait_asset"), "Retrato do personagem " + role)
 	var person_name: String = game.state.people.researcher.name
 	check(game.choose(0), "Investigar")
 	check(game.choose(0), "Conjurar Eco")

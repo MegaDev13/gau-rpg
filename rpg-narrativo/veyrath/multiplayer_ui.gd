@@ -8,6 +8,8 @@ var request: HTTPRequest
 var timer: Timer
 var current_action := ""
 var access_token := ""
+var refresh_token := ""
+var expires_at := 0
 var world_id := ""
 var actor_id := ""
 var town_id := ""
@@ -101,7 +103,7 @@ func send_request(action: String, path: String, method: HTTPClient.Method, paylo
 	if not current_action.is_empty():
 		return
 	var headers := PackedStringArray(["apikey: " + PUBLISHABLE_KEY,"Content-Type: application/json"])
-	if not access_token.is_empty():
+	if not access_token.is_empty() and not path.begins_with("/auth/v1/"):
 		headers.append("Authorization: Bearer " + access_token)
 	current_action = action
 	update_buttons()
@@ -142,7 +144,10 @@ func poll() -> void:
 
 func on_timer() -> void:
 	if not access_token.is_empty() and not actor_id.is_empty() and current_action.is_empty():
-		poll()
+		if not refresh_token.is_empty() and Time.get_unix_time_from_system() >= expires_at - 60:
+			send_request("refresh_session","/auth/v1/token?grant_type=refresh_token",HTTPClient.METHOD_POST,{"refresh_token":refresh_token})
+		else:
+			poll()
 
 func uuid4() -> String:
 	var bytes := Crypto.new().generate_random_bytes(16)
@@ -210,6 +215,7 @@ func on_response(result: int, code: int, _headers: PackedStringArray, body: Pack
 	if code < 200 or code >= 300:
 		if code == 401:
 			access_token = ""
+			refresh_token = ""
 			world_id = ""
 			actor_id = ""
 			town_id = ""
@@ -232,7 +238,19 @@ func on_response(result: int, code: int, _headers: PackedStringArray, body: Pack
 				status.text = "Não foi possível iniciar a sessão."
 			else:
 				access_token = data.access_token
+				refresh_token = data.get("refresh_token", "")
+				expires_at = int(data.get("expires_at", Time.get_unix_time_from_system() + int(data.get("expires_in", 3600))))
 				status.text = "Conectado. Informe o nome e entre no mundo."
+		"refresh_session":
+			if data is Dictionary and data.has("access_token"):
+				access_token = data.access_token
+				refresh_token = data.get("refresh_token", "")
+				expires_at = int(data.get("expires_at", Time.get_unix_time_from_system() + int(data.get("expires_in", 3600))))
+				poll()
+			else:
+				access_token = ""
+				refresh_token = ""
+				status.text = "Sessão expirada. Entre novamente."
 		"world":
 			if data is Array and not data.is_empty():
 				world_id = data[0].id
@@ -276,5 +294,6 @@ func on_response(result: int, code: int, _headers: PackedStringArray, body: Pack
 
 func exit_screen() -> void:
 	access_token = ""
+	refresh_token = ""
 	password.clear()
 	back.call()

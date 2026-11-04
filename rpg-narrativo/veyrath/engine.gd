@@ -66,6 +66,20 @@ func valid(candidate) -> bool:
 		var person: Dictionary = candidate.people[role.id]
 		if not person.has_all(["name","job","goal","trust","memories"]) or not person.memories is Array:
 			return false
+	if candidate.has("fort"):
+		if not candidate.fort is Dictionary or not candidate.fort.has_all(["layout", "supplies", "hp", "wave", "results"]):
+			return false
+		var fort: Dictionary = candidate.fort
+		if not fort.layout is Array or fort.layout.size() != 16 or not fort.results is Array:
+			return false
+		for tile in fort.layout:
+			if tile not in ["", "arcana", "steam"]:
+				return false
+		for key in ["supplies", "hp", "wave"]:
+			if typeof(fort[key]) not in [TYPE_INT, TYPE_FLOAT]:
+				return false
+		if fort.supplies < 0 or fort.hp < 0 or fort.hp > 10 or fort.wave < 1:
+			return false
 	return true
 
 func read_save(path: String):
@@ -202,3 +216,65 @@ func can_converse(role: String) -> bool:
 
 func portrait_variant(role: String) -> int:
 	return absi(hash("veyrath-portrait-v1:%s:%s" % [int(state.seed), role]))
+
+## Fortification values are lazily introduced, preserving pre-defense saves.
+func fort_state() -> Dictionary:
+	if state.has("fort") and state.fort is Dictionary:
+		return state.fort.duplicate(true)
+	var slots: Array = []
+	slots.resize(16)
+	slots.fill("")
+	return {"layout":slots,"supplies":8,"hp":10,"wave":1,"results":[]}
+
+func fort_build(index: int, kind: String) -> bool:
+	if not valid(state) or index < 0 or index >= 16 or kind not in ["arcana", "steam"]:
+		return false
+	var fort := fort_state()
+	var cost := 2 if kind == "arcana" else 3
+	if fort.layout.size() != 16 or fort.layout[index] != "" or fort.supplies < cost:
+		return false
+	var previous := state.duplicate(true)
+	fort.layout[index] = kind
+	fort.supplies -= cost
+	state.fort = fort
+	if not save_game():
+		state = previous
+		return false
+	return true
+
+func fort_repair() -> bool:
+	if not valid(state):
+		return false
+	var fort := fort_state()
+	if fort.hp >= 10 or fort.supplies < 1:
+		return false
+	var previous := state.duplicate(true)
+	fort.hp = mini(10, int(fort.hp) + 3)
+	fort.supplies -= 1
+	state.fort = fort
+	if not save_game():
+		state = previous
+		return false
+	return true
+
+func fort_finish(expected_wave: int, won: bool, remaining_hp: int, escaped: int) -> bool:
+	if not valid(state):
+		return false
+	var fort := fort_state()
+	if fort.wave != expected_wave or remaining_hp < 0 or remaining_hp > fort.hp or escaped < 0 or (won and remaining_hp == 0) or (not won and remaining_hp > 0):
+		return false
+	var previous := state.duplicate(true)
+	fort.hp = remaining_hp
+	fort.supplies += 3 if won else 2
+	fort.wave += 1
+	state.day += 1
+	var description := "defendeu o posto contra a onda %s" % expected_wave if won else "o posto caiu durante a onda %s" % expected_wave
+	var event_id := "evt_%s" % (state.history.size() + 1)
+	fort.results.append({"wave":expected_wave,"won":won,"hp":remaining_hp,"escaped":escaped,"event_id":event_id})
+	state.fort = fort
+	state.history.append({"id":event_id,"day":state.day,"city":state.city,"action":"fort_defense","description":description,"effects":{"supplies":3 if won else 2,"base_hp":remaining_hp}})
+	state.news.append({"event_id":event_id,"day":state.day,"text":"A defesa local resistiu à investida." if won else "A defesa local foi rompida; reparos foram iniciados.","source":"Gazeta local"})
+	if not save_game():
+		state = previous
+		return false
+	return true

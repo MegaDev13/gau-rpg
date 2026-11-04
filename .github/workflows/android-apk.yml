@@ -45,6 +45,8 @@ jobs:
         run: godot --headless --path rpg-narrativo --script res://tests.gd
       - name: Testar campanha Veyrath
         run: godot --headless --path rpg-narrativo --script res://veyrath/tests.gd
+      - name: Testar defesa e persistencia
+        run: godot --headless --path rpg-narrativo --script res://veyrath/defense_tests.gd
       - name: Testar navegacao da interface
         run: godot --headless --path rpg-narrativo --script res://veyrath/ui_tests.gd
       - name: Verificar abertura da cena principal

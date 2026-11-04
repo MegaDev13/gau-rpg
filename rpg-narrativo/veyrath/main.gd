@@ -2,6 +2,7 @@ extends Control
 
 const VeyrathEngine = preload("res://veyrath/engine.gd")
 const Art = preload("res://veyrath/art.gd")
+const DefenseUI = preload("res://veyrath/defense_ui.gd")
 const GOLD := Color("d6b47d")
 const TEXT := Color("e7e0d2")
 const MUTED := Color("aeb6b7")
@@ -231,6 +232,7 @@ func show_scene() -> void:
 	button("◈  PERSONAGEM E DIÁRIO",journal)
 	button("♧  PESSOAS E RELAÇÕES",people)
 	button("▤  JORNAL LOCAL",news)
+	button("⚔  DEFESA DO POSTO",defense)
 	button("‹  MENU PRINCIPAL",menu)
 
 func select_choice(index: int) -> void:
@@ -294,3 +296,9 @@ func about() -> void:
 	card("A Trama é descrita pelos princípios Forma, Fluxo e Eco. Toda transformação arcana exige Compensação. A Grande Ruptura ocorreu no ano zero e a Fenda Celeste permanece visível; suas causas ainda são disputadas.")
 	card("Dragões sapientes têm autonomia; dragões ferais são animais de ecologias diversas. Povos e culturas não determinam moralidade.",22)
 	button("‹  VOLTAR",menu)
+
+func defense() -> void:
+	clear()
+	var screen = DefenseUI.new()
+	screen.configure(game,show_scene)
+	column.add_child(screen)

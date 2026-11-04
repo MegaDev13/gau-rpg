@@ -18,6 +18,8 @@ func test_ui() -> void:
 	await process_frame
 	scene.news()
 	await process_frame
+	scene.defense()
+	await process_frame
 	if not ResourceLoader.exists("res://veyrath/assets/val_doria.jpg"):
 		failed = true
 	print("Interface Veyrath: ", "falhou" if failed else "aberta e navegada")

@@ -182,6 +182,44 @@ func load_game() -> bool:
 	state = saved
 	return true
 
+
+const TRANSFER_PREFIX := "VEY1"
+const TRANSFER_LIMIT := 8000000
+
+func export_campaign() -> String:
+	var saved = read_save(SAVE)
+	if not valid(saved):
+		saved = read_save(BACKUP)
+	if not valid(saved):
+		return ""
+	var body := JSON.stringify(saved)
+	if body.to_utf8_buffer().size() > TRANSFER_LIMIT:
+		return ""
+	return "%s.%s.%s" % [TRANSFER_PREFIX,body.sha256_text(),
+		Marshalls.raw_to_base64(body.to_utf8_buffer().compress(FileAccess.COMPRESSION_GZIP))]
+
+func import_campaign(encoded: String) -> bool:
+	if encoded.length() > TRANSFER_LIMIT:
+		return false
+	var fields := encoded.strip_edges().split(".",false,3)
+	if fields.size() != 3 or fields[0] != TRANSFER_PREFIX or fields[1].length() != 64:
+		return false
+	var bytes := Marshalls.base64_to_raw(fields[2])
+	if bytes.is_empty():
+		return false
+	var body := bytes.decompress_dynamic(TRANSFER_LIMIT,FileAccess.COMPRESSION_GZIP).get_string_from_utf8()
+	if body.sha256_text() != fields[1]:
+		return false
+	var candidate = JSON.parse_string(body)
+	if not valid(candidate):
+		return false
+	var previous := state
+	state = candidate
+	if save_game():
+		return true
+	state = previous
+	return false
+
 func available(choice: Dictionary) -> bool:
 	return choice_block_reason(choice).is_empty()
 
@@ -584,6 +622,17 @@ func enter_place(place_id: String) -> bool:
 		return false
 	return true
 
+func expedition_resident(site: Dictionary, staff: int) -> Dictionary:
+	var person: Dictionary = expansion.person(site,staff,int(state.seed))
+	var updates: Dictionary = state.get("dossier",{}).get("actors",{}).get(person.id,{})
+	person.merge(updates,true)
+	if person.has("employment"):
+		person.off_shift = int(person.employment.shift)
+	return person
+
+func resident_available(person: Dictionary, city: String) -> bool:
+	return person.get("alive",true) and person.home == city and not person.has("move") and expansion.present(person,int(state.day))
+
 func meet_resident(staff: int) -> bool:
 	if not valid(state) or staff < 0 or staff >= 4:
 		return false
@@ -591,8 +640,8 @@ func meet_resident(staff: int) -> bool:
 	var site: Dictionary = expansion.place(journey.place,int(state.seed))
 	if site.is_empty():
 		return false
-	var actor: Dictionary = expansion.person(site,staff,int(state.seed))
-	if not expansion.present(actor,int(state.day)) or journey.known.has(actor.id):
+	var actor := expedition_resident(site,staff)
+	if not resident_available(actor,site.city) or journey.known.has(actor.id):
 		return false
 	var previous := state.duplicate(true)
 	var memory := "%s contou por que valoriza %s e como pretende %s." % [actor.name,actor.value,actor.goal]

@@ -24,17 +24,30 @@ jobs:
         with:
           packages: 'platform-tools'
       - name: Preparar ferramentas Android
+        id: android
         env:
           VEYRATH_DEBUG_KEYSTORE_BASE64: ${{ secrets.VEYRATH_DEBUG_KEYSTORE_BASE64 }}
+          VEYRATH_ANDROID_CERT_SHA256: ${{ vars.VEYRATH_ANDROID_CERT_SHA256 }}
         run: |
           sdkmanager 'platform-tools' 'platforms;android-34' 'build-tools;34.0.0'
           mkdir -p ~/.android
-          if [ -n "$VEYRATH_DEBUG_KEYSTORE_BASE64" ]; then
+          if [ -n "$VEYRATH_DEBUG_KEYSTORE_BASE64" ] || [ -n "$VEYRATH_ANDROID_CERT_SHA256" ]; then
+            test -n "$VEYRATH_DEBUG_KEYSTORE_BASE64" && test -n "$VEYRATH_ANDROID_CERT_SHA256"
+            pin="$(printf '%s' "$VEYRATH_ANDROID_CERT_SHA256" | tr -d ':' | tr '[:upper:]' '[:lower:]')"
+            [[ "$pin" =~ ^[a-f0-9]{64}$ ]]
             umask 077
             printf '%s' "$VEYRATH_DEBUG_KEYSTORE_BASE64" | base64 --decode > ~/.android/debug.keystore
             keytool -list -keystore ~/.android/debug.keystore -storepass android -alias androiddebugkey > /dev/null
+            key_sha="$(keytool -exportcert -keystore ~/.android/debug.keystore -storepass android -alias androiddebugkey | sha256sum | cut -d' ' -f1)"
+            test "$key_sha" = "$pin"
+            echo 'channel=stable' >> "$GITHUB_OUTPUT"
+            echo 'package=com.megadev13.cinzasdeeter' >> "$GITHUB_OUTPUT"
           else
-            echo '::warning::Chave de desenvolvimento efêmera. Esta build pode exigir instalação separada.'
+            echo '::warning::Assinatura estável ausente. Somente APK isolado para teste será publicado.'
+            preview_package="com.megadev13.cinzasdeeter.preview.r${GITHUB_RUN_ID}a${GITHUB_RUN_ATTEMPT}"
+            sed -i "s|^package/unique_name=.*|package/unique_name=\"$preview_package\"|" rpg-narrativo/export_presets.cfg
+            echo 'channel=isolated-preview' >> "$GITHUB_OUTPUT"
+            echo "package=$preview_package" >> "$GITHUB_OUTPUT"
             keytool -genkeypair -keystore ~/.android/debug.keystore -storepass android -alias androiddebugkey -keypass android -keyalg RSA -keysize 2048 -validity 10000 -dname 'CN=Android Debug,O=Android,C=US'
           fi
       - name: Instalar Godot e templates
@@ -68,13 +81,19 @@ jobs:
         run: XDG_DATA_HOME="$RUNNER_TEMP/veyrath-chronicles-test" godot --headless --path rpg-narrativo --script res://veyrath/chronicles/tests.gd
       - name: Testar dossiê, consentimento, guerra e migração offline
         run: XDG_DATA_HOME="$RUNNER_TEMP/veyrath-dossier-test" godot --headless --path rpg-narrativo --script res://veyrath/dossier/tests.gd
+      - name: Testar as 244 escolhas e prazos autônomos
+        run: XDG_DATA_HOME="$RUNNER_TEMP/veyrath-coverage-test" godot --headless --path rpg-narrativo --script res://veyrath/dossier/coverage_tests.gd
+      - name: Testar patrimônio, governo, frentes e transferência de campanha
+        run: XDG_DATA_HOME="$RUNNER_TEMP/veyrath-civic-test" godot --headless --path rpg-narrativo --script res://veyrath/dossier/civic_tests.gd
       - name: Testar navegacao da interface
         run: godot --headless --path rpg-narrativo --script res://veyrath/ui_tests.gd
       - name: Verificar abertura da cena principal
         run: |
           godot --headless --path rpg-narrativo --quit-after 3 2>&1 | tee /tmp/veyrath-start.log
           if grep -E 'SCRIPT ERROR|Parse Error|Failed to load script' /tmp/veyrath-start.log; then exit 1; fi
-      - name: Exportar APK de desenvolvimento
+      - name: Exportar APK e conferir identidade Android
+        env:
+          EXPECTED_PACKAGE: ${{ steps.android.outputs.package }}
         run: |
           mkdir -p "$RUNNER_TEMP/apk"
           godot --headless --path rpg-narrativo --export-debug Android "$RUNNER_TEMP/apk/veyrath-debug.apk"
@@ -83,10 +102,16 @@ jobs:
           signer="$("$ANDROID_HOME/build-tools/34.0.0/apksigner" verify --verbose --print-certs "$RUNNER_TEMP/apk/veyrath-debug.apk")"
           actual="$(printf '%s\n' "$signer" | sed -n 's/^Signer #1 certificate SHA-256 digest: //p')"
           test -n "$expected" && test "$expected" = "$actual"
+          badging="$("$ANDROID_HOME/build-tools/34.0.0/aapt" dump badging "$RUNNER_TEMP/apk/veyrath-debug.apk")"
+          printf '%s\n' "$badging" | grep -F "package: name='$EXPECTED_PACKAGE' versionCode='13' versionName='0.13.0'"
+          printf '%s\n' "$badging" | grep -F "native-code: 'arm64-v8a'"
+          printf '%s\n' "$signer" > "$RUNNER_TEMP/apk/certificate.txt"
       - uses: actions/upload-artifact@v4
         with:
-          name: veyrath-android-debug
-          path: ${{ runner.temp }}/apk/veyrath-debug.apk
+          name: veyrath-android-${{ steps.android.outputs.channel }}
+          path: |
+            ${{ runner.temp }}/apk/veyrath-debug.apk
+            ${{ runner.temp }}/apk/certificate.txt
           if-no-files-found: error
       - name: Capturar telas no Godot com renderização
         continue-on-error: true
@@ -99,7 +124,7 @@ jobs:
           export VEY_SCREENSHOTS="$RUNNER_TEMP/vey-screens"
           export XDG_DATA_HOME="$RUNNER_TEMP/vey-screenshot-save"
           timeout 45 xvfb-run -a -s '-screen 0 900x1440x24' godot --path rpg-narrativo --resolution 540x960 --script res://veyrath/capture_screens.gd
-          test "$(find "$VEY_SCREENSHOTS" -name '*.png' | wc -l)" -eq 12
+          test "$(find "$VEY_SCREENSHOTS" -name '*.png' | wc -l)" -eq 14
       - uses: actions/upload-artifact@v4
         with:
           name: veyrath-capturas-godot

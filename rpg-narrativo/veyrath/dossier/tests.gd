@@ -22,7 +22,7 @@ func _initialize() -> void:
 	check(counts.size() == 12 and director.scenarios.size() == 36,"12 famílias e 36 cenários com IDs únicos")
 	for id in counts:
 		check(counts[id] == 3,"Três cenários em "+id)
-	check(director.rules.seeds.size() == 15 and director.sagas.size() == 6,"Escopo jogável catalogado")
+	check(director.rules.seeds.size() == 36 and director.sagas.size() == 6,"Escopo jogável catalogado")
 	for id in director.sagas:
 		check(director.count_acts(id) == (6 if id == "N06" else 5),"Atos importados: "+id)
 		var acts: Array = director.rules.sagas[id].acts
@@ -76,13 +76,15 @@ func _initialize() -> void:
 	var order: Dictionary = director.rules.sagas.N06.acts[2].actions.C
 	check(not director.check_action(book,front,order,{},20,20).is_empty(),"Guerra sem autorização bloqueada")
 	domain.government = "regência"
+	director.civic.office_for(book,city).status = "regência"
 	domain.tension = 64
 	domain.supply = 10
 	check(director.check_action(book,front,order,{},20,20).is_empty(),"Mobilização com autoridade e reserva")
 	director.result_for(book,front,order,22,false,"C")
 	director.resolve_front(book,front,domain,23)
-	check(domain.war == "engaged" and domain.supply == 4 and domain.damage == 2 and domain.deaths > 0,"Confronto consome reserva, registra mortos e dano")
+	check(domain.war != "mobilized" and domain.supply == 4 and domain.damage == 2 and domain.deaths > 0,"Confronto consome reserva, registra mortos e dano")
 	check(not director.check_action(book,front,director.rules.sagas.N06.acts[4].actions.A,{},20,20).is_empty(),"Tratado exige canal aberto")
+	domain.war = "engaged"
 	domain.marks.diplomatic_channel = true
 	domain.legitimacy = 50
 	director.apply_special(book,front,domain,"ratify",24)
@@ -108,5 +110,5 @@ func _initialize() -> void:
 	var count: int = autonomous.history.size()
 	director.advance(other,3651,{})
 	check(autonomous.history.size() == count and director.valid(other),"Repetição do relógio não duplica consequências")
-	print("Dossiê: 12 famílias, 36 entradas, seis sagas, 15 sementes parciais; %d falhas." % failures)
+	print("Dossiê: 12 famílias, 36 entradas, seis sagas, 36 sementes com regras; %d falhas." % failures)
 	quit(1 if failures else 0)

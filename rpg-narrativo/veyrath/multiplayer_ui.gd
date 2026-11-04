@@ -320,7 +320,7 @@ func reset_chronicles() -> void:
 	chronicle_view.text = ""
 
 func fetch_chronicles() -> void:
-	var query := "/rest/v1/veyrath_chronicle_events?select=seq,world_version,title,published_at&world_id=eq.%s&seq=gt.%d&order=seq.asc&limit=50"
+	var query := "/rest/v1/veyrath_chronicle_events?select=seq,world_version,title,published_at,kind,description&world_id=eq.%s&seq=gt.%d&order=seq.asc&limit=50"
 	send_request("chronicles",query % [world_id,chronicle_cursor],HTTPClient.METHOD_GET)
 
 func merge_chronicles(data: Array) -> bool:
@@ -339,7 +339,8 @@ func merge_chronicles(data: Array) -> bool:
 	if chronicle_rows.is_empty():
 		chronicle_view.text += "Nenhuma abertura publicada."
 	for item in chronicle_rows:
-		chronicle_view.text += "\n%s · versão %d\nAbertura publicada em %s.\n" % [item.title,int(item.world_version),str(item.published_at).substr(0,10)]
+		var summary: String = item.get("description","") if item.get("kind") == "resolution" else "Abertura confirmada."
+		chronicle_view.text += "\n%s · versão %d · %s\n%s\n" % [item.title,int(item.world_version),str(item.published_at).substr(0,10),summary]
 	return chronicle_cursor > previous
 
 func exit_screen() -> void:

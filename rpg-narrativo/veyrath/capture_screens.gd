@@ -64,4 +64,12 @@ func capture() -> void:
 		quit(1)
 		return
 	screen.dossier_detail("valdoria-0:N01")
-	quit(0 if await shot("12-saga") else 1)
+	if not await shot("12-saga"):
+		quit(1)
+		return
+	screen.dossier_register("governo")
+	if not await shot("13-gabinete"):
+		quit(1)
+		return
+	screen.campaign_transfer()
+	quit(0 if await shot("14-transferencia") else 1)

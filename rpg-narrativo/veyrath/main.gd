@@ -109,7 +109,7 @@ func clear() -> void:
 		child.queue_free()
 	scroll.scroll_vertical = 0
 
-func label(value: String, font_size: int = 25, color: Color = TEXT, literary: bool = false, centered: bool = false) -> void:
+func label(value: String, font_size: int = 25, color: Color = TEXT, literary: bool = false, centered: bool = false) -> Label:
 	var item := Label.new()
 	item.text = value
 	if literary and reading_font != null:
@@ -120,6 +120,7 @@ func label(value: String, font_size: int = 25, color: Color = TEXT, literary: bo
 	item.add_theme_font_size_override("font_size",font_size)
 	item.add_theme_color_override("font_color",color)
 	column.add_child(item)
+	return item
 
 func button(value: String, action: Callable, disabled: bool = false, parent: Control = column) -> Button:
 	var item := Button.new()
@@ -523,9 +524,64 @@ func dossier_screen() -> void:
 		var state_text: String = "Prazo: dia %d" % int(story.due) if story.outcome.is_empty() else story.outcome
 		button("%s  ·  %s\n%s  /  %s" % [story.source,content.title.capitalize(),city.name,state_text],dossier_detail.bind(story.id))
 	button("Caderno de evidências",dossier_knowledge)
+	button("Espólios, bens e família",dossier_register.bind("patrimônio"))
+	button("Gabinete político",dossier_register.bind("governo"))
+	button("Frentes e tratados",dossier_register.bind("frentes"))
 	button("Aguardar 1 dia",dossier_wait.bind(1))
 	button("Aguardar 7 dias",dossier_wait.bind(7))
 	button("‹  Crônicas",chronicles_screen)
+
+func dossier_register(section: String) -> void:
+	clear()
+	var book: Dictionary = game.dossier_view()
+	var registry: Dictionary = book.get("civic",{})
+	var city: String = game.expedition().city
+	scene_art({"patrimônio":"archive","governo":"council","frentes":"fort"}[section],205)
+	label(section.capitalize(),42,TEXT,true)
+	var rendered := 0
+	match section:
+		"patrimônio":
+			for record in registry.get("properties",{}).values():
+				if record.city != city:
+					continue
+				rendered += 1
+				var owners := PackedStringArray()
+				for id in record.shares:
+					owners.append("%s · %d%%" % [book.actors.get(id,{}).get("name",id),int(record.shares[id])])
+				card("TÍTULO E CUSTÓDIA\n"+(" · ".join(owners) if not owners.is_empty() else "Titularidade em instrução."),23)
+			for id in registry.get("estates",{}):
+				var entry: Dictionary = registry.estates[id]
+				if not id.begins_with(city+":"):
+					continue
+				card("Espólio %s · dívida %d · contestação até dia %d" % [entry.state,entry.debts,entry.contest_until],23)
+			for person in book.actors.values():
+				if person.home != city or person.get("parents",[]).is_empty():
+					continue
+				var parents := PackedStringArray()
+				for id in person.parents:
+					parents.append(book.actors.get(id,{}).get("name",id))
+				card(person.name+" · filiação registrada: "+", ".join(parents),21)
+		"governo":
+			var office: Dictionary = registry.get("offices",{}).get(city,{})
+			if not office.is_empty():
+				rendered += 1
+				card("%s · %s\nTitular: %s · revisão no dia %d" % [office.method,office.status,book.actors.get(office.incumbent,{}).get("name","cargo vago"),office.review],23)
+			for law in registry.get("laws",{}).values():
+				if law.city == city:
+					rendered += 1
+					card("%s · %s · vigência a partir do dia %d" % [law.scope,law.decision,law.effective],22)
+		"frentes":
+			var front: Dictionary = registry.get("fronts",{}).get(city,{})
+			if not front.is_empty():
+				rendered += 1
+				card("%s · efetivo %d · moral %d · provisões %d" % [front.status,front.strength,front.morale,front.supplies],23)
+				for event in front.battles:
+					card("Dia %d · %s · baixas %d · perdas civis %d" % [event.day,event.result,event.loss,event.civilians],22)
+				if front.has("treaty"):
+					card("Tratado com acesso humanitário · revisão no dia %d" % front.treaty.review,22)
+	if rendered == 0:
+		card("O assentamento ainda não possui registros públicos nesta categoria.")
+	button("‹  Dossiê",dossier_screen)
 
 func dossier_wait(days: int) -> void:
 	var saved: bool = game.chronicle_wait(days)
@@ -779,7 +835,14 @@ func news() -> void:
 	clear()
 	label("▤  A GAZETA LOCAL",36,GOLD)
 	label("%s  ·  312 P.R." % game.render("{city}"),19,MUTED)
-	if game.state.news.is_empty():
+	var registry: Dictionary = game.dossier_view().get("civic",{})
+	for report in registry.get("reports",{}).values():
+		card("DIA %d · %s\n%s" % [report.day,report.kind.to_upper(),report.text],22)
+	var recent: Array = registry.get("ledger",[]).filter(func(event): return event.type=="closure")
+	for event in recent.slice(maxi(0,recent.size()-8)):
+		var title: String = game.dossier.source(event.story.get_slice(":",1)).get("title","Crônica local")
+		card("DIA %d · %s\n%s" % [event.day,title,event.text],22)
+	if game.state.news.is_empty() and recent.is_empty() and registry.get("reports",{}).is_empty():
 		card("Ainda não há notícias desta campanha.")
 	for item in game.state.news:
 		card("DIA %s  /  %s\n\n%s" % [item.day,item.source,item.text],22)
@@ -832,7 +895,30 @@ func settings() -> void:
 	button("TEXTO DA CRÔNICA  ·  " + ("GRANDE" if large_text else "PADRÃO"),toggle_reading_size)
 	button("AMBIENTAÇÃO EM MOVIMENTO  ·  " + ("SIM" if motion_enabled else "NÃO"),toggle_motion)
 	button("ATUALIZAÇÕES E CONTEÚDO",updates_screen)
+	button("TRANSFERIR CAMPANHA SOLO",campaign_transfer)
 	button("‹  MENU PRINCIPAL",menu)
+
+func campaign_transfer() -> void:
+	clear()
+	label("Transferir campanha",39,TEXT,true)
+	card("Use o código para levar seu save solo a outro perfil ou dispositivo. Guarde uma cópia antes de trocar de instalação.",22)
+	var field := TextEdit.new()
+	field.custom_minimum_size.y = 195
+	field.placeholder_text = "Cole aqui o código do save"
+	column.add_child(field)
+	var message := label("",20,GOLD)
+	button("GERAR E COPIAR CÓDIGO",func():
+		field.text = game.export_campaign()
+		if not field.text.is_empty():
+			DisplayServer.clipboard_set(field.text)
+		message.text = "Código gerado." if not field.text.is_empty() else "Nenhuma campanha válida encontrada.")
+	button("COLAR CÓDIGO",func(): field.text = DisplayServer.clipboard_get())
+	button("IMPORTAR E SUBSTITUIR SAVE LOCAL",func():
+		if game.import_campaign(field.text):
+			message.text = "Campanha restaurada. O save anterior foi preservado como backup."
+		else:
+			message.text = "Código inválido, incompatível ou gravação indisponível.")
+	button("‹  Configurações",settings)
 
 func toggle_music() -> void:
 	music_enabled = not music_enabled
@@ -1033,8 +1119,10 @@ func place_screen() -> void:
 	divider()
 	label("QUEM TRABALHA AQUI",17,GOLD)
 	for staff in range(4):
-		var resident: Dictionary = game.expansion.person(site,staff,int(game.state.seed))
-		var present: bool = game.expansion.present(resident,int(game.state.day))
+		var resident: Dictionary = game.expedition_resident(site,staff)
+		if not resident.get("alive",true) or resident.home!=site.city or resident.has("move"):
+			continue
+		var present: bool = game.resident_available(resident,site.city)
 		button("%s   ·   %s%s" % [resident.name,resident.job,"" if present else "  /  folga"],resident_screen.bind(staff))
 	button("‹  " + city.name,settlement_screen)
 
@@ -1050,8 +1138,8 @@ func resident_screen(staff: int) -> void:
 	clear()
 	var journey: Dictionary = game.expedition()
 	var site: Dictionary = game.expansion.place(journey.place,int(game.state.seed))
-	var actor: Dictionary = game.expansion.person(site,staff,int(game.state.seed))
-	var present: bool = game.expansion.present(actor,int(game.state.day))
+	var actor: Dictionary = game.expedition_resident(site,staff)
+	var present: bool = game.resident_available(actor,site.city)
 	var view = Stage.new()
 	view.art = illustration(expansion_art(site.art))
 	view.face = resident_art(actor)

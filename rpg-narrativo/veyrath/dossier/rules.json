@@ -59,6 +59,20 @@
               "fact": "",
               "special": "",
               "bias": 0
+            },
+            "C": {
+              "cost": 0,
+              "flux": 0,
+              "special": "war_order",
+              "delta": {
+                "supply": -4,
+                "tension": 13
+              },
+              "needs": [],
+              "fact": "",
+              "marks": [],
+              "result": "A ordem de militarizar as pontes registrou a pretensão sem decidir a coroa.",
+              "bias": 0
             }
           }
         },
@@ -111,6 +125,20 @@
               "fact": "",
               "special": "",
               "bias": 0
+            },
+            "B": {
+              "cost": 1,
+              "flux": 0,
+              "special": "mediation",
+              "delta": {
+                "tension": -2,
+                "legitimacy": 4
+              },
+              "needs": [],
+              "fact": "",
+              "marks": [],
+              "result": "Os dois ramos da casa receberam minuta de poderes e revisão.",
+              "bias": 0
             }
           }
         },
@@ -148,6 +176,34 @@
               "needs": [],
               "fact": "",
               "special": "",
+              "bias": 0
+            },
+            "C": {
+              "cost": 0,
+              "flux": 0,
+              "special": "offensive",
+              "delta": {
+                "supply": -3,
+                "tension": 12
+              },
+              "needs": [],
+              "fact": "",
+              "marks": [],
+              "result": "O ultimato deslocou tropas existentes e agravou o risco civil.",
+              "bias": 0
+            },
+            "D": {
+              "cost": 1,
+              "flux": 0,
+              "special": "law",
+              "delta": {
+                "route": -1,
+                "legitimacy": 3
+              },
+              "needs": [],
+              "fact": "",
+              "marks": [],
+              "result": "A assembleia examinou uma administração autônoma para a passagem.",
               "bias": 0
             }
           }
@@ -200,6 +256,21 @@
               ],
               "fact": "",
               "special": "recognize_title",
+              "bias": 0
+            },
+            "C": {
+              "cost": 0,
+              "flux": 0,
+              "special": "unilateral",
+              "delta": {
+                "supply": -3,
+                "tension": 18,
+                "legitimacy": -8
+              },
+              "needs": [],
+              "fact": "",
+              "marks": [],
+              "result": "A coroação militar foi submetida à força disponível e à contestação.",
               "bias": 0
             }
           }
@@ -368,6 +439,17 @@
               "fact": "",
               "special": "separate",
               "bias": 0
+            },
+            "C": {
+              "cost": 2,
+              "flux": 0,
+              "special": "relocate",
+              "delta": {},
+              "needs": [],
+              "fact": "",
+              "marks": [],
+              "result": "A mudança foi discutida pelos dois com avaliação dos seus empregos.",
+              "bias": 0
             }
           }
         },
@@ -488,6 +570,19 @@
               "fact": "",
               "special": "",
               "bias": 0
+            },
+            "D": {
+              "cost": 1,
+              "flux": 0,
+              "special": "relocate",
+              "delta": {
+                "tension": 3
+              },
+              "needs": [],
+              "fact": "",
+              "marks": [],
+              "result": "A recusa contratual gerou recurso e uma oferta de trabalho fora da cidade.",
+              "bias": 0
             }
           }
         },
@@ -538,6 +633,22 @@
               "fact": "",
               "special": "",
               "bias": 0
+            },
+            "C": {
+              "cost": 0,
+              "flux": 0,
+              "special": "appeal",
+              "delta": {
+                "tension": 10,
+                "legitimacy": -6
+              },
+              "needs": [],
+              "fact": "",
+              "marks": [
+                "mass_surveillance"
+              ],
+              "result": "A cobertura ampliada registrou detenções contestadas e investigação da privacidade.",
+              "bias": 0
             }
           }
         },
@@ -586,6 +697,21 @@
               "fact": "",
               "special": "",
               "bias": 0
+            },
+            "C": {
+              "cost": 0,
+              "flux": 0,
+              "special": "rumor",
+              "delta": {
+                "tension": 13,
+                "health": -4,
+                "legitimacy": -4
+              },
+              "needs": [],
+              "fact": "",
+              "marks": [],
+              "result": "A propaganda foi tratada como alegação e gerou cisma e protestos.",
+              "bias": 0
             }
           }
         },
@@ -631,6 +757,21 @@
               "needs": [],
               "fact": "",
               "special": "",
+              "bias": 0
+            },
+            "C": {
+              "cost": 0,
+              "flux": 0,
+              "special": "appeal",
+              "delta": {
+                "tension": 4
+              },
+              "needs": [],
+              "fact": "",
+              "marks": [
+                "reform_rejected"
+              ],
+              "result": "A rejeição fundamentada manteve a oposição organizada e abriu recurso.",
               "bias": 0
             }
           }
@@ -840,6 +981,20 @@
               "fact": "",
               "special": "",
               "bias": 0
+            },
+            "D": {
+              "cost": 2,
+              "flux": 0,
+              "special": "contract",
+              "delta": {
+                "supply": 5,
+                "health": 5
+              },
+              "needs": [],
+              "fact": "",
+              "marks": [],
+              "result": "O auxílio inter-regional saiu sob contrato e dívida de transporte.",
+              "bias": 0
             }
           }
         },
@@ -881,6 +1036,35 @@
               ],
               "fact": "",
               "special": "",
+              "bias": 0
+            },
+            "B": {
+              "cost": 3,
+              "flux": 2,
+              "special": "law",
+              "delta": {
+                "river": 9,
+                "legitimacy": 4
+              },
+              "needs": [
+                "proof:n04_water"
+              ],
+              "fact": "",
+              "marks": [],
+              "result": "O controle municipal do reator passou pela votação e controle de descarga.",
+              "bias": 0
+            },
+            "C": {
+              "cost": 3,
+              "flux": 1,
+              "special": "transfer_plant",
+              "delta": {},
+              "needs": [
+                "proof:n04_water"
+              ],
+              "fact": "",
+              "marks": [],
+              "result": "A cidade vizinha avaliou a transferência e os custos da descarga.",
               "bias": 0
             }
           }
@@ -937,6 +1121,38 @@
               "needs": [],
               "fact": "n05_incubation",
               "special": "",
+              "bias": 0
+            },
+            "B": {
+              "cost": 2,
+              "flux": 0,
+              "special": "logistics",
+              "delta": {
+                "habitat": 3,
+                "route": 1
+              },
+              "needs": [],
+              "fact": "",
+              "marks": [
+                "detour"
+              ],
+              "result": "Guardiões avaliaram a remoção e só autorizaram sinalização alternativa enquanto houvesse ovos.",
+              "bias": 0
+            },
+            "C": {
+              "cost": 2,
+              "flux": 0,
+              "special": "hazard",
+              "delta": {
+                "habitat": -11,
+                "tension": 12
+              },
+              "needs": [],
+              "fact": "",
+              "marks": [
+                "capture_attempt"
+              ],
+              "result": "A tentativa de captura encontrou defesa do ninho e abriu disputa territorial.",
               "bias": 0
             }
           }
@@ -1111,6 +1327,22 @@
               "needs": [],
               "fact": "",
               "special": "",
+              "bias": 0
+            },
+            "C": {
+              "cost": 0,
+              "flux": 0,
+              "special": "dragon_refusal",
+              "delta": {
+                "habitat": -3,
+                "tension": 13
+              },
+              "needs": [],
+              "fact": "",
+              "marks": [
+                "coercion_refused"
+              ],
+              "result": "A licença coercitiva provocou recusa dracônica e disputa de jurisdição.",
               "bias": 0
             }
           }
@@ -1450,6 +1682,20 @@
               "fact": "",
               "special": "",
               "bias": 0
+            },
+            "D": {
+              "cost": 2,
+              "flux": 0,
+              "special": "offensive",
+              "delta": {
+                "supply": -3,
+                "tension": 14
+              },
+              "needs": [],
+              "fact": "",
+              "marks": [],
+              "result": "A escalada passou por verificação de suprimentos e comando.",
+              "bias": 0
             }
           }
         },
@@ -1480,6 +1726,49 @@
           "needs": [],
           "fact": "s03_provenance",
           "special": "",
+          "bias": 0
+        },
+        "B": {
+          "cost": 0,
+          "flux": 0,
+          "special": "sell_assets",
+          "delta": {
+            "supply": 1
+          },
+          "needs": [],
+          "fact": "",
+          "marks": [],
+          "result": "Foram postos à venda os itens cujo título privado foi demonstrado.",
+          "bias": 0
+        },
+        "C": {
+          "cost": 0,
+          "flux": 0,
+          "special": "contest_estate",
+          "delta": {
+            "supply": 3,
+            "legitimacy": -8,
+            "tension": 6
+          },
+          "needs": [],
+          "fact": "",
+          "marks": [],
+          "result": "O leilão misto financiou o espólio e abriu pedido de restituição.",
+          "bias": 0
+        },
+        "D": {
+          "cost": 3,
+          "flux": 0,
+          "special": "institution",
+          "delta": {
+            "legitimacy": 6
+          },
+          "needs": [],
+          "fact": "",
+          "marks": [
+            "public_archive"
+          ],
+          "result": "O acervo foi inscrito sob custódia de uma fundação.",
           "bias": 0
         }
       },
@@ -1536,6 +1825,19 @@
           "fact": "",
           "special": "pause",
           "bias": 0
+        },
+        "C": {
+          "cost": 0,
+          "flux": 0,
+          "special": "friends",
+          "delta": {
+            "tension": -2
+          },
+          "needs": [],
+          "fact": "",
+          "marks": [],
+          "result": "Foram registrados limites, expectativas e espaço para recusa.",
+          "bias": 0
         }
       },
       "auto": {
@@ -1575,6 +1877,30 @@
           "needs": [],
           "fact": "",
           "special": "pressure",
+          "bias": 0
+        },
+        "B": {
+          "cost": 1,
+          "flux": 0,
+          "special": "household_agreement",
+          "delta": {},
+          "needs": [],
+          "fact": "",
+          "marks": [],
+          "result": "As despesas da casa passaram a ter revisão e aportes separados.",
+          "bias": 0
+        },
+        "D": {
+          "cost": 0,
+          "flux": 0,
+          "special": "dissolve_household",
+          "delta": {
+            "tension": 2
+          },
+          "needs": [],
+          "fact": "",
+          "marks": [],
+          "result": "A convivência foi encerrada e as despesas apuradas.",
           "bias": 0
         }
       },
@@ -1628,6 +1954,17 @@
           "needs": [],
           "fact": "",
           "special": "friends",
+          "bias": 0
+        },
+        "C": {
+          "cost": 1,
+          "flux": 0,
+          "special": "household_agreement",
+          "delta": {},
+          "needs": [],
+          "fact": "",
+          "marks": [],
+          "result": "Os parceiros receberam um pacto patrimonial revisável.",
           "bias": 0
         }
       },
@@ -1762,6 +2099,20 @@
           "fact": "",
           "special": "",
           "bias": 0
+        },
+        "C": {
+          "cost": 2,
+          "flux": 0,
+          "special": "contract",
+          "delta": {
+            "legitimacy": 5,
+            "river": 2
+          },
+          "needs": [],
+          "fact": "",
+          "marks": [],
+          "result": "Critérios, contratação e custo ambiental entraram no edital público.",
+          "bias": 0
         }
       },
       "auto": {
@@ -1824,6 +2175,20 @@
           "fact": "",
           "special": "",
           "bias": 0
+        },
+        "B": {
+          "cost": 2,
+          "flux": 0,
+          "special": "employment",
+          "delta": {
+            "supply": -2,
+            "health": 10
+          },
+          "needs": [],
+          "fact": "",
+          "marks": [],
+          "result": "A equipe temporária recebeu contrato e insumos para ampliar atendimento.",
+          "bias": 0
         }
       },
       "auto": {
@@ -1883,6 +2248,20 @@
           "fact": "",
           "special": "",
           "bias": 0
+        },
+        "C": {
+          "cost": 0,
+          "flux": 0,
+          "special": "rumor",
+          "delta": {
+            "tension": 4,
+            "health": -2
+          },
+          "needs": [],
+          "fact": "",
+          "marks": [],
+          "result": "O jornal recebeu resultados preliminares com incerteza explícita.",
+          "bias": 0
         }
       },
       "auto": {
@@ -1931,6 +2310,34 @@
           "needs": [],
           "fact": "n05_incubation",
           "special": "",
+          "bias": 0
+        },
+        "B": {
+          "cost": 1,
+          "flux": 0,
+          "special": "logistics",
+          "delta": {
+            "habitat": 6,
+            "route": 1,
+            "tension": -3
+          },
+          "needs": [],
+          "fact": "",
+          "marks": [],
+          "result": "A sinalização foi desviada do ninho, elevando o custo da rota.",
+          "bias": 0
+        },
+        "C": {
+          "cost": 1,
+          "flux": 0,
+          "special": "investigate",
+          "delta": {
+            "habitat": 2
+          },
+          "needs": [],
+          "fact": "n05_incubation",
+          "marks": [],
+          "result": "Guardiões e naturalistas iniciaram avaliação da incubação.",
           "bias": 0
         }
       },
@@ -1991,6 +2398,19 @@
           "needs": [],
           "fact": "",
           "special": "dragon_refusal",
+          "bias": 0
+        },
+        "C": {
+          "cost": 1,
+          "flux": 0,
+          "special": "dragon_consent",
+          "delta": {
+            "tension": -3
+          },
+          "needs": [],
+          "fact": "",
+          "marks": [],
+          "result": "A mediação submeteu a passagem ao aceite independente do Orúnide.",
           "bias": 0
         }
       },
@@ -2053,6 +2473,21 @@
           "fact": "",
           "special": "",
           "bias": 0
+        },
+        "C": {
+          "cost": 2,
+          "flux": 0,
+          "special": "contract",
+          "delta": {
+            "supply": -2,
+            "river": 12,
+            "health": 4
+          },
+          "needs": [],
+          "fact": "",
+          "marks": [],
+          "result": "A descarga foi suspensa e trabalhadores receberam compensação.",
+          "bias": 0
         }
       },
       "auto": {
@@ -2114,6 +2549,19 @@
           "fact": "",
           "special": "",
           "bias": 0
+        },
+        "D": {
+          "cost": 0,
+          "flux": 0,
+          "special": "publication_hold",
+          "delta": {
+            "legitimacy": 2
+          },
+          "needs": [],
+          "fact": "",
+          "marks": [],
+          "result": "A edição foi suspensa com justificativa pública, sem condenação.",
+          "bias": 0
         }
       },
       "auto": {
@@ -2174,6 +2622,22 @@
           "needs": [],
           "fact": "",
           "special": "",
+          "bias": 0
+        },
+        "D": {
+          "cost": 0,
+          "flux": 0,
+          "special": "appeal",
+          "delta": {
+            "legitimacy": 4,
+            "tension": -3
+          },
+          "needs": [],
+          "fact": "",
+          "marks": [
+            "sensor_suspended"
+          ],
+          "result": "A rede de vigilância ficou suspensa enquanto a perícia tramita.",
           "bias": 0
         }
       },
@@ -2238,6 +2702,19 @@
           "fact": "",
           "special": "",
           "bias": 0
+        },
+        "B": {
+          "cost": 1,
+          "flux": 0,
+          "special": "contract",
+          "delta": {
+            "tension": -6
+          },
+          "needs": [],
+          "fact": "",
+          "marks": [],
+          "result": "O calendário por bairros incluiu equipes de segurança e vias livres.",
+          "bias": 0
         }
       },
       "auto": {
@@ -2287,6 +2764,35 @@
           "fact": "",
           "special": "",
           "bias": 0
+        },
+        "B": {
+          "cost": 0,
+          "flux": 0,
+          "special": "repair",
+          "delta": {
+            "supply": -2,
+            "damage": -2,
+            "legitimacy": 4
+          },
+          "needs": [],
+          "fact": "",
+          "marks": [],
+          "result": "Doações e material foram lançados em registro do mutirão.",
+          "bias": 0
+        },
+        "C": {
+          "cost": 3,
+          "flux": 0,
+          "special": "repair",
+          "delta": {
+            "damage": -3,
+            "legitimacy": 3
+          },
+          "needs": [],
+          "fact": "",
+          "marks": [],
+          "result": "A empreiteira foi contratada com fiscalização e emprego local.",
+          "bias": 0
         }
       },
       "auto": {
@@ -2302,6 +2808,1578 @@
         "special": "",
         "bias": 0
       }
+    },
+    "S01": {
+      "when": "estate",
+      "art": "workshop",
+      "place": "workshop",
+      "actions": {
+        "A": {
+          "cost": 1,
+          "flux": 0,
+          "special": "inventory_estate",
+          "delta": {
+            "legitimacy": 4
+          },
+          "needs": [],
+          "fact": "s01_title",
+          "marks": [],
+          "result": "O tabelião abre inventário público, com testemunhas e prazo de contestação.",
+          "bias": 0
+        },
+        "B": {
+          "cost": 2,
+          "flux": 0,
+          "special": "buy_share",
+          "delta": {
+            "legitimacy": 2
+          },
+          "needs": [],
+          "fact": "",
+          "marks": [],
+          "result": "Foi submetida uma compra de quota com dívida contratual.",
+          "bias": 0
+        },
+        "C": {
+          "cost": 0,
+          "flux": 0,
+          "special": "contest_estate",
+          "delta": {
+            "tension": 7
+          },
+          "needs": [],
+          "fact": "",
+          "marks": [],
+          "result": "O apoio à posse precipitou uma contestação de título.",
+          "bias": 0
+        },
+        "D": {
+          "cost": 0,
+          "flux": 0,
+          "special": "settle_estate",
+          "delta": {
+            "legitimacy": 2
+          },
+          "needs": [],
+          "fact": "",
+          "marks": [],
+          "result": "O tabelião decide o uso provisório e preserva o registro para recurso.",
+          "bias": 0
+        }
+      },
+      "auto": {
+        "cost": 0,
+        "flux": 0,
+        "special": "settle_estate",
+        "delta": {
+          "legitimacy": 2
+        },
+        "needs": [],
+        "fact": "",
+        "marks": [],
+        "result": "O tabelião decide o uso provisório e preserva o registro para recurso.",
+        "bias": 0
+      }
+    },
+    "S02": {
+      "when": "adoption",
+      "art": "archive",
+      "place": "archive",
+      "actions": {
+        "A": {
+          "cost": 1,
+          "flux": 0,
+          "special": "adopt",
+          "delta": {
+            "legitimacy": 4
+          },
+          "needs": [],
+          "fact": "s02_adoption",
+          "marks": [],
+          "result": "Perícia e depoimentos confirmaram o vínculo de filiação.",
+          "bias": 0
+        },
+        "B": {
+          "cost": 1,
+          "flux": 0,
+          "special": "buy_share",
+          "delta": {
+            "legitimacy": 2
+          },
+          "needs": [],
+          "fact": "",
+          "marks": [],
+          "result": "A partilha voluntária foi levada aos titulares.",
+          "bias": 0
+        },
+        "C": {
+          "cost": 0,
+          "flux": 0,
+          "special": "rumor",
+          "delta": {
+            "tension": 5
+          },
+          "needs": [],
+          "fact": "",
+          "marks": [],
+          "result": "A carta circulou como alegação ainda não confirmada.",
+          "bias": 0
+        },
+        "D": {
+          "cost": 0,
+          "flux": 0,
+          "special": "settle_estate",
+          "delta": {
+            "legitimacy": 1
+          },
+          "needs": [],
+          "fact": "",
+          "marks": [],
+          "result": "O tribunal conserva o registro e decide a partilha separadamente.",
+          "bias": 0
+        }
+      },
+      "auto": {
+        "cost": 0,
+        "flux": 0,
+        "special": "settle_estate",
+        "delta": {
+          "legitimacy": 1
+        },
+        "needs": [],
+        "fact": "",
+        "marks": [],
+        "result": "O tribunal conserva o registro e decide a partilha separadamente.",
+        "bias": 0
+      }
+    },
+    "S07": {
+      "when": "vacancy",
+      "art": "palace",
+      "place": "palace",
+      "actions": {
+        "A": {
+          "cost": 1,
+          "flux": 0,
+          "special": "succession",
+          "delta": {
+            "legitimacy": 4
+          },
+          "needs": [],
+          "fact": "",
+          "marks": [],
+          "result": "O conselho abriu sucessão e convocou candidatos elegíveis.",
+          "bias": 0
+        },
+        "B": {
+          "cost": 0,
+          "flux": 0,
+          "special": "regency",
+          "delta": {
+            "legitimacy": 5
+          },
+          "needs": [],
+          "fact": "",
+          "marks": [],
+          "result": "O conselho votou poderes temporários e data de revisão.",
+          "bias": 0
+        },
+        "C": {
+          "cost": 0,
+          "flux": 0,
+          "special": "unilateral",
+          "delta": {
+            "tension": 12,
+            "legitimacy": -3
+          },
+          "needs": [],
+          "fact": "",
+          "marks": [],
+          "result": "A aclamação precipitou oposição e exame de legitimidade.",
+          "bias": 0
+        },
+        "D": {
+          "cost": 0,
+          "flux": 0,
+          "special": "succession",
+          "delta": {
+            "tension": 3
+          },
+          "needs": [],
+          "fact": "",
+          "marks": [],
+          "result": "As facções mantiveram a coroa em disputa e convocaram revisão.",
+          "bias": 0
+        }
+      },
+      "auto": {
+        "cost": 0,
+        "flux": 0,
+        "special": "succession",
+        "delta": {
+          "tension": 3
+        },
+        "needs": [],
+        "fact": "",
+        "marks": [],
+        "result": "As facções mantiveram a coroa em disputa e convocaram revisão.",
+        "bias": 0
+      }
+    },
+    "S08": {
+      "when": "adoption",
+      "art": "council",
+      "place": "council",
+      "actions": {
+        "A": {
+          "cost": 1,
+          "flux": 0,
+          "special": "adopt",
+          "delta": {
+            "legitimacy": 3
+          },
+          "needs": [],
+          "fact": "s02_adoption",
+          "marks": [],
+          "result": "O vínculo foi reconhecido sem antecipar a decisão sucessória.",
+          "bias": 0
+        },
+        "B": {
+          "cost": 1,
+          "flux": 0,
+          "special": "law",
+          "delta": {
+            "legitimacy": 4
+          },
+          "needs": [],
+          "fact": "",
+          "marks": [],
+          "result": "A assembleia votou vigência futura para a reforma de filiação.",
+          "bias": 0
+        },
+        "C": {
+          "cost": 0,
+          "flux": 0,
+          "special": "succession",
+          "delta": {
+            "tension": 5
+          },
+          "needs": [],
+          "fact": "",
+          "marks": [],
+          "result": "A defesa da regra anterior foi juntada ao procedimento.",
+          "bias": 0
+        },
+        "D": {
+          "cost": 0,
+          "flux": 0,
+          "special": "law",
+          "delta": {
+            "legitimacy": 2
+          },
+          "needs": [],
+          "fact": "",
+          "marks": [],
+          "result": "A assembleia registrou os votos e a oposição local.",
+          "bias": 0
+        }
+      },
+      "auto": {
+        "cost": 0,
+        "flux": 0,
+        "special": "law",
+        "delta": {
+          "legitimacy": 2
+        },
+        "needs": [],
+        "fact": "",
+        "marks": [],
+        "result": "A assembleia registrou os votos e a oposição local.",
+        "bias": 0
+      }
+    },
+    "S09": {
+      "when": "concession",
+      "art": "council",
+      "place": "council",
+      "actions": {
+        "A": {
+          "cost": 1,
+          "flux": 0,
+          "special": "investigate",
+          "delta": {
+            "legitimacy": 4
+          },
+          "needs": [],
+          "fact": "s09_audit",
+          "marks": [],
+          "result": "Auditores cruzaram recibos e autorizações da concessão.",
+          "bias": 0
+        },
+        "B": {
+          "cost": 1,
+          "flux": 0,
+          "special": "contract",
+          "delta": {
+            "legitimacy": 2,
+            "supply": 2
+          },
+          "needs": [],
+          "fact": "",
+          "marks": [],
+          "result": "O acordo de reparação foi condicionado à prova e à devolução.",
+          "bias": 0
+        },
+        "C": {
+          "cost": 0,
+          "flux": 0,
+          "special": "rumor",
+          "delta": {
+            "tension": 7,
+            "legitimacy": -3
+          },
+          "needs": [],
+          "fact": "",
+          "marks": [],
+          "result": "A suspeita circulou separada da prova, com direito de resposta.",
+          "bias": 0
+        },
+        "D": {
+          "cost": 0,
+          "flux": 0,
+          "special": "contract",
+          "delta": {
+            "route": 2,
+            "legitimacy": -3
+          },
+          "needs": [],
+          "fact": "",
+          "marks": [],
+          "result": "O contrato persistiu e a tarifa absorveu o sobrecusto.",
+          "bias": 0
+        }
+      },
+      "auto": {
+        "cost": 0,
+        "flux": 0,
+        "special": "contract",
+        "delta": {
+          "route": 2,
+          "legitimacy": -3
+        },
+        "needs": [],
+        "fact": "",
+        "marks": [],
+        "result": "O contrato persistiu e a tarifa absorveu o sobrecusto.",
+        "bias": 0
+      }
+    },
+    "S10": {
+      "when": "wages",
+      "art": "workshop",
+      "place": "workshop",
+      "actions": {
+        "A": {
+          "cost": 1,
+          "flux": 0,
+          "special": "employment",
+          "delta": {
+            "supply": 2,
+            "tension": -6
+          },
+          "needs": [],
+          "fact": "",
+          "marks": [],
+          "result": "Trabalhadores e oficina receberam calendário de pagamento.",
+          "bias": 0
+        },
+        "B": {
+          "cost": 0,
+          "flux": 0,
+          "special": "institution",
+          "delta": {
+            "supply": -3,
+            "tension": -4
+          },
+          "needs": [],
+          "fact": "",
+          "marks": [],
+          "result": "O fundo de emergência consumiu reservas da cidade.",
+          "bias": 0
+        },
+        "C": {
+          "cost": 0,
+          "flux": 0,
+          "special": "mandate",
+          "delta": {
+            "legitimacy": -8,
+            "tension": 13,
+            "supply": -2
+          },
+          "needs": [],
+          "fact": "",
+          "marks": [],
+          "result": "A ordem registrada de repressão agravou o conflito trabalhista.",
+          "bias": 0
+        },
+        "D": {
+          "cost": 0,
+          "flux": 0,
+          "special": "employment",
+          "delta": {
+            "supply": -2,
+            "tension": 5
+          },
+          "needs": [],
+          "fact": "",
+          "marks": [],
+          "result": "A disputa seguiu com produção reduzida e mesa de negociação.",
+          "bias": 0
+        }
+      },
+      "auto": {
+        "cost": 0,
+        "flux": 0,
+        "special": "employment",
+        "delta": {
+          "supply": -2,
+          "tension": 5
+        },
+        "needs": [],
+        "fact": "",
+        "marks": [],
+        "result": "A disputa seguiu com produção reduzida e mesa de negociação.",
+        "bias": 0
+      }
+    },
+    "S15": {
+      "when": "rail",
+      "art": "station",
+      "place": "station",
+      "actions": {
+        "A": {
+          "cost": 1,
+          "flux": 0,
+          "special": "logistics",
+          "delta": {
+            "supply": -3,
+            "health": 6,
+            "damage": -1
+          },
+          "needs": [],
+          "fact": "",
+          "marks": [],
+          "result": "O resgate usou equipamento de proteção e consumiu estoques.",
+          "bias": 0
+        },
+        "B": {
+          "cost": 2,
+          "flux": 0,
+          "special": "logistics",
+          "delta": {
+            "supply": 2,
+            "route": 2
+          },
+          "needs": [],
+          "fact": "",
+          "marks": [],
+          "result": "Cargas foram desviadas por transportadora e cronograma alternativos.",
+          "bias": 0
+        },
+        "C": {
+          "cost": 0,
+          "flux": 1,
+          "special": "hazard",
+          "delta": {},
+          "needs": [],
+          "fact": "",
+          "marks": [],
+          "result": "A passagem sem contenção foi submetida ao risco local.",
+          "bias": 0
+        },
+        "D": {
+          "cost": 0,
+          "flux": 0,
+          "special": "logistics",
+          "delta": {
+            "supply": -2,
+            "route": 1,
+            "tension": 5
+          },
+          "needs": [],
+          "fact": "",
+          "marks": [],
+          "result": "A estação aguardou conserto e a reserva perdeu o próximo carregamento.",
+          "bias": 0
+        }
+      },
+      "auto": {
+        "cost": 0,
+        "flux": 0,
+        "special": "logistics",
+        "delta": {
+          "supply": -2,
+          "route": 1,
+          "tension": 5
+        },
+        "needs": [],
+        "fact": "",
+        "marks": [],
+        "result": "A estação aguardou conserto e a reserva perdeu o próximo carregamento.",
+        "bias": 0
+      }
+    },
+    "S19": {
+      "when": "absence",
+      "art": "barge",
+      "place": "barge",
+      "actions": {
+        "A": {
+          "cost": 1,
+          "flux": 0,
+          "special": "investigate",
+          "delta": {
+            "legitimacy": 2
+          },
+          "needs": [],
+          "fact": "s19_timeline",
+          "marks": [],
+          "result": "O depoimento foi cruzado com a linha do tempo da ausência.",
+          "bias": 0
+        },
+        "B": {
+          "cost": 1,
+          "flux": 0,
+          "special": "investigate",
+          "delta": {
+            "tension": -3
+          },
+          "needs": [],
+          "fact": "s19_location",
+          "marks": [],
+          "result": "Investigadores obtiveram acesso à última localização autorizada.",
+          "bias": 0
+        },
+        "C": {
+          "cost": 0,
+          "flux": 0,
+          "special": "rumor",
+          "delta": {
+            "tension": 7
+          },
+          "needs": [],
+          "fact": "",
+          "marks": [],
+          "result": "A versão dramática circulou, aumentando o risco da pessoa procurada.",
+          "bias": 0
+        },
+        "D": {
+          "cost": 0,
+          "flux": 0,
+          "special": "investigate",
+          "delta": {
+            "legitimacy": 1
+          },
+          "needs": [],
+          "fact": "",
+          "marks": [],
+          "result": "Autoridades registraram prazo e diligência de busca.",
+          "bias": 0
+        }
+      },
+      "auto": {
+        "cost": 0,
+        "flux": 0,
+        "special": "investigate",
+        "delta": {
+          "legitimacy": 1
+        },
+        "needs": [],
+        "fact": "",
+        "marks": [],
+        "result": "Autoridades registraram prazo e diligência de busca.",
+        "bias": 0
+      }
+    },
+    "S21": {
+      "when": "observatory",
+      "art": "lab",
+      "place": "lab",
+      "actions": {
+        "A": {
+          "cost": 1,
+          "flux": 0,
+          "special": "investigate",
+          "delta": {
+            "legitimacy": 5
+          },
+          "needs": [],
+          "fact": "s21_clock",
+          "marks": [],
+          "result": "O exame dos relógios fixou a cronologia e descartou álibis incompatíveis.",
+          "bias": 0
+        },
+        "B": {
+          "cost": 0,
+          "flux": 0,
+          "special": "investigate",
+          "delta": {
+            "legitimacy": 2
+          },
+          "needs": [],
+          "fact": "s21_testimony",
+          "marks": [],
+          "result": "As declarações conflitantes foram arquivadas sem condenação.",
+          "bias": 0
+        },
+        "C": {
+          "cost": 0,
+          "flux": 0,
+          "special": "rumor",
+          "delta": {
+            "tension": 8,
+            "legitimacy": -4
+          },
+          "needs": [],
+          "fact": "",
+          "marks": [],
+          "result": "A acusação precipitada se espalhou antes da perícia.",
+          "bias": 0
+        },
+        "D": {
+          "cost": 0,
+          "flux": 0,
+          "special": "investigate",
+          "delta": {
+            "tension": 1
+          },
+          "needs": [],
+          "fact": "",
+          "marks": [],
+          "result": "O processo seguiu com prazo de instrução e possibilidade de arquivamento.",
+          "bias": 0
+        }
+      },
+      "auto": {
+        "cost": 0,
+        "flux": 0,
+        "special": "investigate",
+        "delta": {
+          "tension": 1
+        },
+        "needs": [],
+        "fact": "",
+        "marks": [],
+        "result": "O processo seguiu com prazo de instrução e possibilidade de arquivamento.",
+        "bias": 0
+      }
+    },
+    "S22": {
+      "when": "religious",
+      "art": "temple",
+      "place": "temple",
+      "actions": {
+        "A": {
+          "cost": 1,
+          "flux": 0,
+          "special": "institution",
+          "delta": {
+            "legitimacy": 5,
+            "tension": -4
+          },
+          "needs": [],
+          "fact": "",
+          "marks": [],
+          "result": "O conselho de cultos registrou regras de uso e custódia comunitária.",
+          "bias": 0
+        },
+        "B": {
+          "cost": 0,
+          "flux": 0,
+          "special": "law",
+          "delta": {
+            "tension": 9,
+            "legitimacy": -3
+          },
+          "needs": [],
+          "fact": "",
+          "marks": [],
+          "result": "O culto exclusivo recebeu apoio e gerou contestação de acesso.",
+          "bias": 0
+        },
+        "C": {
+          "cost": 2,
+          "flux": 0,
+          "special": "institution",
+          "delta": {
+            "tension": -5,
+            "legitimacy": 4
+          },
+          "needs": [],
+          "fact": "",
+          "marks": [],
+          "result": "O espaço neutro foi financiado com estatuto de acesso e manutenção.",
+          "bias": 0
+        },
+        "D": {
+          "cost": 0,
+          "flux": 0,
+          "special": "publication_hold",
+          "delta": {
+            "tension": 3
+          },
+          "needs": [],
+          "fact": "",
+          "marks": [],
+          "result": "A disputa por doações permaneceu sujeita a nova mediação.",
+          "bias": 0
+        }
+      },
+      "auto": {
+        "cost": 0,
+        "flux": 0,
+        "special": "publication_hold",
+        "delta": {
+          "tension": 3
+        },
+        "needs": [],
+        "fact": "",
+        "marks": [],
+        "result": "A disputa por doações permaneceu sujeita a nova mediação.",
+        "bias": 0
+      }
+    },
+    "S23": {
+      "when": "implants",
+      "art": "temple",
+      "place": "temple",
+      "actions": {
+        "A": {
+          "cost": 1,
+          "flux": 0,
+          "special": "investigate",
+          "delta": {
+            "legitimacy": 4
+          },
+          "needs": [],
+          "fact": "s23_implants",
+          "marks": [],
+          "result": "A audiência separou acidente demonstrado de alegações de risco universal.",
+          "bias": 0
+        },
+        "B": {
+          "cost": 0,
+          "flux": 0,
+          "special": "law",
+          "delta": {
+            "supply": -2,
+            "tension": 7
+          },
+          "needs": [],
+          "fact": "",
+          "marks": [],
+          "result": "O pedido de proibição seguiu para votação, com efeitos econômicos contestados.",
+          "bias": 0
+        },
+        "C": {
+          "cost": 1,
+          "flux": 0,
+          "special": "law",
+          "delta": {
+            "legitimacy": 6,
+            "tension": -4
+          },
+          "needs": [],
+          "fact": "",
+          "marks": [],
+          "result": "A proposta de segurança e liberdade de consciência passou pela assembleia.",
+          "bias": 0
+        },
+        "D": {
+          "cost": 0,
+          "flux": 0,
+          "special": "law",
+          "delta": {
+            "tension": 2
+          },
+          "needs": [],
+          "fact": "",
+          "marks": [],
+          "result": "As facções votaram sem intervenção e abriram revisão pública.",
+          "bias": 0
+        }
+      },
+      "auto": {
+        "cost": 0,
+        "flux": 0,
+        "special": "law",
+        "delta": {
+          "tension": 2
+        },
+        "needs": [],
+        "fact": "",
+        "marks": [],
+        "result": "As facções votaram sem intervenção e abriram revisão pública.",
+        "bias": 0
+      }
+    },
+    "S24": {
+      "when": "relic",
+      "art": "archive",
+      "place": "archive",
+      "actions": {
+        "A": {
+          "cost": 1,
+          "flux": 0,
+          "special": "investigate",
+          "delta": {
+            "legitimacy": 4
+          },
+          "needs": [],
+          "fact": "s24_origin",
+          "marks": [],
+          "result": "O arquivo catalogou a origem da peça antes de atribuir tradição.",
+          "bias": 0
+        },
+        "B": {
+          "cost": 0,
+          "flux": 0,
+          "special": "custody",
+          "delta": {
+            "legitimacy": 5
+          },
+          "needs": [],
+          "fact": "",
+          "marks": [],
+          "result": "A guarda da peça passou ao representante comunitário habilitado.",
+          "bias": 0
+        },
+        "C": {
+          "cost": 0,
+          "flux": 0,
+          "special": "rumor",
+          "delta": {
+            "supply": 2,
+            "legitimacy": -5
+          },
+          "needs": [],
+          "fact": "",
+          "marks": [],
+          "result": "A autenticidade alegada trouxe doações e contestação pública.",
+          "bias": 0
+        },
+        "D": {
+          "cost": 1,
+          "flux": 0,
+          "special": "custody",
+          "delta": {
+            "tension": -2
+          },
+          "needs": [],
+          "fact": "",
+          "marks": [],
+          "result": "O depósito aceitou a peça sob responsabilidade e prazo de estudo.",
+          "bias": 0
+        }
+      },
+      "auto": {
+        "cost": 1,
+        "flux": 0,
+        "special": "custody",
+        "delta": {
+          "tension": -2
+        },
+        "needs": [],
+        "fact": "",
+        "marks": [],
+        "result": "O depósito aceitou a peça sob responsabilidade e prazo de estudo.",
+        "bias": 0
+      }
+    },
+    "S25": {
+      "when": "border",
+      "art": "fort",
+      "place": "fort",
+      "actions": {
+        "A": {
+          "cost": 0,
+          "flux": 0,
+          "special": "diplomacy",
+          "delta": {
+            "tension": -7,
+            "route": -1
+          },
+          "needs": [],
+          "fact": "",
+          "marks": [
+            "diplomatic_channel"
+          ],
+          "result": "Delegações abriram minuta com jurisdição e trânsito civil.",
+          "bias": 0
+        },
+        "B": {
+          "cost": 0,
+          "flux": 0,
+          "special": "logistics",
+          "delta": {
+            "supply": -2,
+            "tension": -5
+          },
+          "needs": [],
+          "fact": "",
+          "marks": [],
+          "result": "A missão de observação consumiu reserva e reduziu risco na passagem.",
+          "bias": 0
+        },
+        "C": {
+          "cost": 0,
+          "flux": 0,
+          "special": "war_order",
+          "delta": {
+            "supply": -4,
+            "tension": 8
+          },
+          "needs": [],
+          "fact": "",
+          "marks": [],
+          "result": "O comando recebeu ordem de mobilização e requisição limitada.",
+          "bias": 0
+        },
+        "D": {
+          "cost": 0,
+          "flux": 0,
+          "special": "diplomacy",
+          "delta": {
+            "tension": -2
+          },
+          "needs": [],
+          "fact": "",
+          "marks": [
+            "diplomatic_channel"
+          ],
+          "result": "Representantes negociaram o controle da passagem sem ataque automático.",
+          "bias": 0
+        }
+      },
+      "auto": {
+        "cost": 0,
+        "flux": 0,
+        "special": "diplomacy",
+        "delta": {
+          "tension": -2
+        },
+        "needs": [],
+        "fact": "",
+        "marks": [
+          "diplomatic_channel"
+        ],
+        "result": "Representantes negociaram o controle da passagem sem ataque automático.",
+        "bias": 0
+      }
+    },
+    "S26": {
+      "when": "blockade",
+      "art": "fort",
+      "place": "fort",
+      "actions": {
+        "A": {
+          "cost": 1,
+          "flux": 0,
+          "special": "convoy",
+          "delta": {
+            "supply": -3,
+            "route": -1
+          },
+          "needs": [],
+          "fact": "",
+          "marks": [],
+          "result": "O comboio partiu sob escolta após verificar força e reserva.",
+          "bias": 0
+        },
+        "B": {
+          "cost": 0,
+          "flux": 0,
+          "special": "logistics",
+          "delta": {
+            "supply": -2,
+            "health": 6,
+            "tension": -4
+          },
+          "needs": [],
+          "fact": "",
+          "marks": [],
+          "result": "A distribuição de reserva priorizou civis sob auditoria.",
+          "bias": 0
+        },
+        "C": {
+          "cost": 0,
+          "flux": 0,
+          "special": "mandate",
+          "delta": {
+            "supply": 3,
+            "legitimacy": -6,
+            "tension": 9
+          },
+          "needs": [],
+          "fact": "",
+          "marks": [],
+          "result": "A requisição foi registrada para controle de legalidade.",
+          "bias": 0
+        },
+        "D": {
+          "cost": 0,
+          "flux": 0,
+          "special": "blockade",
+          "delta": {
+            "tension": 6,
+            "route": 1
+          },
+          "needs": [],
+          "fact": "",
+          "marks": [],
+          "result": "A cidade preservou sua reserva e a frente perdeu suprimentos externos.",
+          "bias": 0
+        }
+      },
+      "auto": {
+        "cost": 0,
+        "flux": 0,
+        "special": "blockade",
+        "delta": {
+          "tension": 6,
+          "route": 1
+        },
+        "needs": [],
+        "fact": "",
+        "marks": [],
+        "result": "A cidade preservou sua reserva e a frente perdeu suprimentos externos.",
+        "bias": 0
+      }
+    },
+    "S27": {
+      "when": "diplomacy",
+      "art": "council",
+      "place": "council",
+      "actions": {
+        "A": {
+          "cost": 0,
+          "flux": 0,
+          "special": "truce",
+          "delta": {
+            "tension": -7
+          },
+          "needs": [],
+          "fact": "",
+          "marks": [
+            "diplomatic_channel"
+          ],
+          "result": "A minuta de cessar-fogo incluiu observadores e retirada territorial.",
+          "bias": 0
+        },
+        "B": {
+          "cost": 1,
+          "flux": 0,
+          "special": "prisoner_exchange",
+          "delta": {
+            "tension": -4
+          },
+          "needs": [],
+          "fact": "",
+          "marks": [],
+          "result": "As delegações examinaram listas e a troca de prisioneiros.",
+          "bias": 0
+        },
+        "C": {
+          "cost": 0,
+          "flux": 0,
+          "special": "offensive",
+          "delta": {
+            "supply": -3,
+            "tension": 12
+          },
+          "needs": [],
+          "fact": "",
+          "marks": [],
+          "result": "O ultimato militar entrou na ordem de operações.",
+          "bias": 0
+        },
+        "D": {
+          "cost": 0,
+          "flux": 0,
+          "special": "diplomacy",
+          "delta": {
+            "tension": -3
+          },
+          "needs": [],
+          "fact": "",
+          "marks": [
+            "diplomatic_channel"
+          ],
+          "result": "Missões diplomáticas continuaram; a janela de revisão ficou aberta.",
+          "bias": 0
+        }
+      },
+      "auto": {
+        "cost": 0,
+        "flux": 0,
+        "special": "diplomacy",
+        "delta": {
+          "tension": -3
+        },
+        "needs": [],
+        "fact": "",
+        "marks": [
+          "diplomatic_channel"
+        ],
+        "result": "Missões diplomáticas continuaram; a janela de revisão ficou aberta.",
+        "bias": 0
+      }
+    },
+    "S28": {
+      "when": "eidrino",
+      "art": "council",
+      "place": "council",
+      "actions": {
+        "A": {
+          "cost": 0,
+          "flux": 0,
+          "special": "civil_rights",
+          "delta": {
+            "legitimacy": 5
+          },
+          "needs": [],
+          "fact": "",
+          "marks": [
+            "contract_capacity"
+          ],
+          "result": "A capacidade do signatário foi examinada para registro do contrato.",
+          "bias": 0
+        },
+        "B": {
+          "cost": 1,
+          "flux": 0,
+          "special": "investigate",
+          "delta": {
+            "legitimacy": 3
+          },
+          "needs": [],
+          "fact": "s28_capacity",
+          "marks": [],
+          "result": "Uma avaliação independente separou origem e capacidade jurídica.",
+          "bias": 0
+        },
+        "C": {
+          "cost": 0,
+          "flux": 0,
+          "special": "appeal",
+          "delta": {
+            "tension": 8,
+            "legitimacy": -4
+          },
+          "needs": [],
+          "fact": "",
+          "marks": [],
+          "result": "A recusa administrativa gerou recurso e protesto.",
+          "bias": 0
+        },
+        "D": {
+          "cost": 0,
+          "flux": 0,
+          "special": "appeal",
+          "delta": {
+            "tension": 2
+          },
+          "needs": [],
+          "fact": "",
+          "marks": [],
+          "result": "O registro aguarda revisão enquanto a portaria anterior permanece vigente.",
+          "bias": 0
+        }
+      },
+      "auto": {
+        "cost": 0,
+        "flux": 0,
+        "special": "appeal",
+        "delta": {
+          "tension": 2
+        },
+        "needs": [],
+        "fact": "",
+        "marks": [],
+        "result": "O registro aguarda revisão enquanto a portaria anterior permanece vigente.",
+        "bias": 0
+      }
+    },
+    "S29": {
+      "when": "suffrage",
+      "art": "council",
+      "place": "council",
+      "actions": {
+        "A": {
+          "cost": 1,
+          "flux": 0,
+          "special": "citizenship_vote",
+          "delta": {
+            "legitimacy": 5
+          },
+          "needs": [],
+          "fact": "",
+          "marks": [],
+          "result": "O estatuto eleitoral exigiu censo, requisitos públicos e quórum.",
+          "bias": 0
+        },
+        "B": {
+          "cost": 0,
+          "flux": 0,
+          "special": "civil_rights",
+          "delta": {
+            "legitimacy": 3
+          },
+          "needs": [],
+          "fact": "",
+          "marks": [
+            "consultative_vote"
+          ],
+          "result": "A mesa concedeu consulta temporária e marcou revisão.",
+          "bias": 0
+        },
+        "C": {
+          "cost": 0,
+          "flux": 0,
+          "special": "appeal",
+          "delta": {
+            "legitimacy": -3,
+            "tension": 7
+          },
+          "needs": [],
+          "fact": "",
+          "marks": [],
+          "result": "O pedido de exclusão foi contestado pela oposição organizada.",
+          "bias": 0
+        },
+        "D": {
+          "cost": 0,
+          "flux": 0,
+          "special": "succession",
+          "delta": {
+            "legitimacy": 1
+          },
+          "needs": [],
+          "fact": "",
+          "marks": [],
+          "result": "A eleição seguiu segundo a norma e os apoios vigentes.",
+          "bias": 0
+        }
+      },
+      "auto": {
+        "cost": 0,
+        "flux": 0,
+        "special": "succession",
+        "delta": {
+          "legitimacy": 1
+        },
+        "needs": [],
+        "fact": "",
+        "marks": [],
+        "result": "A eleição seguiu segundo a norma e os apoios vigentes.",
+        "bias": 0
+      }
+    },
+    "S31": {
+      "when": "archive",
+      "art": "archive",
+      "place": "archive",
+      "actions": {
+        "A": {
+          "cost": 1,
+          "flux": 0,
+          "special": "investigate",
+          "delta": {
+            "legitimacy": 2
+          },
+          "needs": [],
+          "fact": "s31_eco",
+          "marks": [],
+          "result": "Fragmentos do Eco foram catalogados com origem e incerteza.",
+          "bias": 0
+        },
+        "B": {
+          "cost": 1,
+          "flux": 0,
+          "special": "investigate",
+          "delta": {
+            "legitimacy": 3
+          },
+          "needs": [],
+          "fact": "s31_censorship",
+          "marks": [],
+          "result": "As discrepâncias foram registradas sem fechar causa ou autoria.",
+          "bias": 0
+        },
+        "C": {
+          "cost": 0,
+          "flux": 0,
+          "special": "rumor",
+          "delta": {
+            "legitimacy": -5,
+            "tension": 7
+          },
+          "needs": [],
+          "fact": "",
+          "marks": [],
+          "result": "A versão absoluta circulou como alegação, sujeita a contestação.",
+          "bias": 0
+        },
+        "D": {
+          "cost": 1,
+          "flux": 0,
+          "special": "custody",
+          "delta": {
+            "tension": -2
+          },
+          "needs": [],
+          "fact": "",
+          "marks": [],
+          "result": "O arquivo preservou o acervo e registrou prazo de futura consulta.",
+          "bias": 0
+        }
+      },
+      "auto": {
+        "cost": 1,
+        "flux": 0,
+        "special": "custody",
+        "delta": {
+          "tension": -2
+        },
+        "needs": [],
+        "fact": "",
+        "marks": [],
+        "result": "O arquivo preservou o acervo e registrou prazo de futura consulta.",
+        "bias": 0
+      }
+    },
+    "S32": {
+      "when": "exploration",
+      "art": "highlands",
+      "place": "highlands",
+      "actions": {
+        "A": {
+          "cost": 2,
+          "flux": 0,
+          "special": "survey_route",
+          "delta": {
+            "supply": -2
+          },
+          "needs": [],
+          "fact": "",
+          "marks": [],
+          "result": "A expedição levantou a passagem com provisões e validação em campo.",
+          "bias": 0
+        },
+        "B": {
+          "cost": 1,
+          "flux": 0,
+          "special": "investigate",
+          "delta": {
+            "tension": -2
+          },
+          "needs": [],
+          "fact": "s32_map",
+          "marks": [],
+          "result": "O arquivo entregou cartas para reduzir risco de levantamento posterior.",
+          "bias": 0
+        },
+        "C": {
+          "cost": 0,
+          "flux": 0,
+          "special": "rumor",
+          "delta": {
+            "tension": 6,
+            "supply": 1
+          },
+          "needs": [],
+          "fact": "",
+          "marks": [],
+          "result": "As coordenadas não verificadas circularam e expuseram viajantes a risco.",
+          "bias": 0
+        },
+        "D": {
+          "cost": 0,
+          "flux": 0,
+          "special": "survey_route",
+          "delta": {
+            "supply": -1
+          },
+          "needs": [],
+          "fact": "",
+          "marks": [],
+          "result": "Uma patrulha independente tentou confirmar a rota e registrou o resultado.",
+          "bias": 0
+        }
+      },
+      "auto": {
+        "cost": 0,
+        "flux": 0,
+        "special": "survey_route",
+        "delta": {
+          "supply": -1
+        },
+        "needs": [],
+        "fact": "",
+        "marks": [],
+        "result": "Uma patrulha independente tentou confirmar a rota e registrou o resultado.",
+        "bias": 0
+      }
+    },
+    "S33": {
+      "when": "rupture",
+      "art": "rift",
+      "place": "rift",
+      "actions": {
+        "A": {
+          "cost": 1,
+          "flux": 0,
+          "special": "investigate",
+          "delta": {
+            "legitimacy": 3
+          },
+          "needs": [],
+          "fact": "s33_pulse",
+          "marks": [],
+          "result": "Amostras independentes confirmaram correlação, sem provar a causa da Ruptura.",
+          "bias": 0
+        },
+        "B": {
+          "cost": 1,
+          "flux": 0,
+          "special": "contract",
+          "delta": {
+            "legitimacy": 4
+          },
+          "needs": [],
+          "fact": "",
+          "marks": [],
+          "result": "As regiões firmaram acesso limitado às medições e direito de auditoria.",
+          "bias": 0
+        },
+        "C": {
+          "cost": 0,
+          "flux": 2,
+          "special": "hazard",
+          "delta": {
+            "tension": 6,
+            "river": -4
+          },
+          "needs": [],
+          "fact": "",
+          "marks": [],
+          "result": "A tentativa de extração arcana registrou origem, descarga e risco.",
+          "bias": 0
+        },
+        "D": {
+          "cost": 0,
+          "flux": 0,
+          "special": "appeal",
+          "delta": {
+            "tension": -4,
+            "health": 3
+          },
+          "needs": [],
+          "fact": "",
+          "marks": [],
+          "result": "A interdição temporária preservou a segurança e atrasou os testes.",
+          "bias": 0
+        }
+      },
+      "auto": {
+        "cost": 0,
+        "flux": 0,
+        "special": "appeal",
+        "delta": {
+          "tension": -4,
+          "health": 3
+        },
+        "needs": [],
+        "fact": "",
+        "marks": [],
+        "result": "A interdição temporária preservou a segurança e atrasou os testes.",
+        "bias": 0
+      }
+    },
+    "S34": {
+      "when": "school",
+      "art": "city",
+      "place": "city",
+      "actions": {
+        "A": {
+          "cost": 2,
+          "flux": 0,
+          "special": "institution",
+          "delta": {
+            "supply": -2,
+            "legitimacy": 5
+          },
+          "needs": [],
+          "fact": "",
+          "marks": [],
+          "result": "Foram abertas turmas e reservado orçamento para instalações.",
+          "bias": 0
+        },
+        "B": {
+          "cost": 1,
+          "flux": 0,
+          "special": "institution",
+          "delta": {
+            "legitimacy": 4,
+            "tension": -3
+          },
+          "needs": [],
+          "fact": "",
+          "marks": [],
+          "result": "O acordo de uso compartilhado manteve o gravame e abriu vagas.",
+          "bias": 0
+        },
+        "C": {
+          "cost": 0,
+          "flux": 0,
+          "special": "appeal",
+          "delta": {
+            "tension": 9,
+            "legitimacy": -6
+          },
+          "needs": [],
+          "fact": "",
+          "marks": [],
+          "result": "A exclusão de deslocados gerou recurso e agravou a segregação.",
+          "bias": 0
+        },
+        "D": {
+          "cost": 0,
+          "flux": 0,
+          "special": "institution",
+          "delta": {
+            "tension": 2
+          },
+          "needs": [],
+          "fact": "",
+          "marks": [],
+          "result": "Educadores registraram demanda e buscaram sala provisória.",
+          "bias": 0
+        }
+      },
+      "auto": {
+        "cost": 0,
+        "flux": 0,
+        "special": "institution",
+        "delta": {
+          "tension": 2
+        },
+        "needs": [],
+        "fact": "",
+        "marks": [],
+        "result": "Educadores registraram demanda e buscaram sala provisória.",
+        "bias": 0
+      }
     }
   },
   "truths": {
@@ -2315,6 +4393,20 @@
     "s11_prices": "O fiscal confirmou tarifa e estoque reduzido. Não há prova suficiente de retenção deliberada.",
     "s13_protocol": "O benefício clínico do Núcleo é mensurável, assim como a pressão energética transferida à margem.",
     "s14_replication": "A medição em ar úmido produz falso positivo; o resultado não pode ser extrapolado.",
-    "s20_checks": "Dois envelopes descrevem fraudes, um mal-entendido, um conflito ético e um rumor inventado. A lista não pode ser publicada como cinco fatos."
+    "s20_checks": "Dois envelopes descrevem fraudes, um mal-entendido, um conflito ético e um rumor inventado. A lista não pode ser publicada como cinco fatos.",
+    "s01_title": "O contrato permite usar a oficina. O título de propriedade exige registro separado.",
+    "s02_adoption": "Peritos confirmaram a autenticidade do registro de adoção, sem decidir a herança.",
+    "s09_audit": "A auditoria comparou pagamentos com concessões; a responsabilidade depende de instrução.",
+    "s19_timeline": "O relato de ausência contém horários incompatíveis. A testemunha precisa de proteção.",
+    "s19_location": "A pessoa se abrigou longe da cobrança e continua viva; o endereço é confidencial.",
+    "s21_clock": "A falha de energia reiniciou os relógios em horários distintos. Os acessos precisam ser reordenados.",
+    "s21_testimony": "As testemunhas discordam sobre o minuto da falha; presença no local não é prova de autoria.",
+    "s23_implants": "A perícia identificou um acidente específico, com procedimento de instalação deficiente.",
+    "s24_origin": "A peça é genuína e pertence a uma tradição regional distinta da reivindicação oficial.",
+    "s28_capacity": "A avaliação confirmou que o signatário compreende e negocia as obrigações do contrato.",
+    "s31_eco": "Fragmentos do Eco são registros imperfeitos de memória, com origem catalogada.",
+    "s31_censorship": "Os nomes omitidos comprovam censura, mas não demonstram quem causou a Ruptura.",
+    "s32_map": "As cartas apontam passagem e ocupação comunitária, sem substituir inspeção em campo.",
+    "s33_pulse": "Os observatórios mediram pulsos correlacionados. A causalidade permanece aberta."
   }
 }

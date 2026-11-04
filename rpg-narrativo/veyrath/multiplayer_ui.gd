@@ -27,6 +27,9 @@ var status: Label
 var world_view: Label
 var command_view: Label
 var gm_view: Label
+var chronicle_view: Label
+var chronicle_cursor := 0
+var chronicle_rows: Array[Dictionary] = []
 
 func configure(return_callback: Callable) -> void:
 	back = return_callback
@@ -48,6 +51,7 @@ func _ready() -> void:
 	world_view = text_label("",22,Color("d7dfeb"))
 	command_view = text_label("",19,Color("b7c5c6"))
 	gm_view = text_label("",20,Color("d6b47d"))
+	chronicle_view = text_label("",20,Color("d6b47d"))
 	make_button("VOLTAR AO MENU",exit_screen)
 	request = HTTPRequest.new()
 	request.timeout = 20.0
@@ -221,8 +225,11 @@ func on_response(result: int, code: int, _headers: PackedStringArray, body: Pack
 			world_id = ""
 			actor_id = ""
 			town_id = ""
+			reset_chronicles()
 			password.clear()
 			status.text = "Sessão inválida ou expirada. Entre novamente."
+		elif action == "chronicles":
+			chronicle_view.text = "CRÔNICAS CONFIRMADAS\nConsulta indisponível. Toque em Atualizar agora para tentar novamente."
 		elif action == "contribute" and code >= 400 and code < 500:
 			DirAccess.remove_absolute(ProjectSettings.globalize_path(PENDING_PATH))
 			status.text = "A contribuição foi recusada. Verifique créditos e ações pendentes."
@@ -256,6 +263,7 @@ func on_response(result: int, code: int, _headers: PackedStringArray, body: Pack
 		"world":
 			if data is Array and not data.is_empty():
 				world_id = data[0].id
+				reset_chronicles()
 				send_request("character","/rest/v1/rpc/veyrath_register_character",HTTPClient.METHOD_POST,{"p_world":world_id,"p_name":actor_name})
 			else:
 				status.text = "Mundo não encontrado."
@@ -289,18 +297,50 @@ func on_response(result: int, code: int, _headers: PackedStringArray, body: Pack
 					command_view.text += "Nenhuma ação enviada."
 			send_request("gm_news","/rest/v1/veyrath_gm_events?select=title,narrative,created_at&world_id=eq." + world_id + "&visibility=eq.public&order=created_at.desc&limit=5",HTTPClient.METHOD_GET)
 		"gm_news":
-			gm_view.text = "CRÔNICAS DO MUNDO\n"
+			gm_view.text = "GAZETA DO MUNDO\n"
 			if data is Array:
 				if data.is_empty():
 					gm_view.text += "Nenhum acontecimento público registrado ainda."
 				for item in data:
 					gm_view.text += "\n%s\n%s\n" % [item.title,item.narrative]
+			fetch_chronicles()
+		"chronicles":
+			if data is Array and merge_chronicles(data) and data.size() == 50:
+				fetch_chronicles()
 		"contribute":
 			DirAccess.remove_absolute(ProjectSettings.globalize_path(PENDING_PATH))
 			pending_key = ""
 			status.text = "Contribuição recebida. Ela aguarda o prazo de aplicação."
 			poll()
 	update_buttons()
+
+func reset_chronicles() -> void:
+	chronicle_cursor = 0
+	chronicle_rows.clear()
+	chronicle_view.text = ""
+
+func fetch_chronicles() -> void:
+	var query := "/rest/v1/veyrath_chronicle_events?select=seq,world_version,title,published_at&world_id=eq.%s&seq=gt.%d&order=seq.asc&limit=50"
+	send_request("chronicles",query % [world_id,chronicle_cursor],HTTPClient.METHOD_GET)
+
+func merge_chronicles(data: Array) -> bool:
+	var previous := chronicle_cursor
+	for item in data:
+		if not item is Dictionary or not item.has_all(["seq","world_version","title","published_at"]):
+			continue
+		var seq := int(item.seq)
+		if seq <= chronicle_cursor:
+			continue
+		chronicle_cursor = seq
+		chronicle_rows.push_front(item)
+		if chronicle_rows.size() > 8:
+			chronicle_rows.pop_back()
+	chronicle_view.text = "CRÔNICAS CONFIRMADAS\n"
+	if chronicle_rows.is_empty():
+		chronicle_view.text += "Nenhuma abertura publicada."
+	for item in chronicle_rows:
+		chronicle_view.text += "\n%s · versão %d\nAbertura publicada em %s.\n" % [item.title,int(item.world_version),str(item.published_at).substr(0,10)]
+	return chronicle_cursor > previous
 
 func exit_screen() -> void:
 	access_token = ""

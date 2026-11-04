@@ -56,4 +56,12 @@ func capture() -> void:
 		quit(1)
 		return
 	screen.chronicle_lineage()
-	quit(0 if await shot("10-linhagem") else 1)
+	if not await shot("10-linhagem") or not screen.game.chronicle_wait(7):
+		quit(1)
+		return
+	screen.dossier_screen()
+	if not await shot("11-dossie") or not screen.game.dossier_view().stories.has("valdoria-0:N01"):
+		quit(1)
+		return
+	screen.dossier_detail("valdoria-0:N01")
+	quit(0 if await shot("12-saga") else 1)

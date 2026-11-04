@@ -1,0 +1,1411 @@
+[
+  {
+    "id": "S01",
+    "family": "F01",
+    "title": "AS QUATRO PORTAS DA CASA DO FERRO",
+    "scope": "familiar",
+    "days": [
+      16,
+      36
+    ],
+    "trigger": "morte documentada de proprietária de uma oficina com pelo menos dois pretendentes e estoque positivo.",
+    "roles": [
+      "herdeiro de sangue",
+      "filho adotivo",
+      "aprendiz residente",
+      "tabelião"
+    ],
+    "truth": "existe contrato de uso da oficina, mas não transferência de propriedade; confundir os dois interessa ao herdeiro de sangue.",
+    "opening": "A fuligem ainda se prendia às vigas quando o tabelião chegou. Sobre a bancada havia quatro chaves, cada uma marcada por uma pessoa que mantivera a oficina aberta em algum inverno. “O inventário enumera o que ela possuía”, disse ele. “Não decide sozinho quem a manteve viva.” O aprendiz segurou a chave menor sem se sentar.",
+    "options": [
+      {
+        "id": "A",
+        "text": "Solicitar abertura de inventário com testemunhos: custo de audiência e tempo; valida posse, reduz probabilidade de transferência ilegal; adiciona pista contrato_uso."
+      },
+      {
+        "id": "B",
+        "text": "Financiar a compra da quota contestada: precisa de créditos e acordo dos legitimados; preserva atividade, pode enriquecer vendedor, cria dívida ou sociedade."
+      },
+      {
+        "id": "C",
+        "text": "Apoiar reivindicação unilateral: ganha favor do apoiado; se prova contraditória surgir, gera litígio, queda de reputação e recurso."
+      },
+      {
+        "id": "D",
+        "text": "Não interferir: inventário avança; aprendiz pode sair e abrir oficina concorrente."
+      }
+    ],
+    "autonomy": "tabelião notifica partes; se dívida vence sem acordo, leilão da oficina é possível; não extinguir personagens.",
+    "legacy": "escola de aprendizes, rivalidade familiar, mudança de fornecedor em S13 e S16; conexão com C01 e C02."
+  },
+  {
+    "id": "S02",
+    "family": "F01",
+    "title": "UMA CARTA PARA QUEM NÃO NASCEU AQUI",
+    "scope": "familiar",
+    "days": [
+      12,
+      35
+    ],
+    "trigger": "adoção legal ou informal conhecida em linhagem com transmissão de propriedade.",
+    "roles": [
+      "adotado adulto",
+      "matriarca",
+      "primo contestante",
+      "guardião de registros"
+    ],
+    "truth": "o registro de adoção existe, mas o selo sofreu desgaste e exige verificação; aparência não comprova filiação.",
+    "opening": "A carta estava dobrada dentro de um mapa antigo. A jovem apontou para a assinatura quase apagada. “Nunca precisei de papel para ser filha dela. Preciso agora porque resolveram dizer que nunca fui.” Do corredor, o primo declarou que a família não negociaria a própria história.",
+    "options": [
+      {
+        "id": "A",
+        "text": "Periciar selo e testemunhos: exige arquivo/laboratório; abre prova autenticada e melhora legitimidade sem forçar herança."
+      },
+      {
+        "id": "B",
+        "text": "Negociar partilha voluntária: requer consentimento dos sucessores e regras locais; pode reduzir tensões e criar patrimônio compartilhado."
+      },
+      {
+        "id": "C",
+        "text": "Divulgar carta sem confirmação: produz apoio popular e também risco de contestação; rumor fica marcado como não verificado."
+      },
+      {
+        "id": "D",
+        "text": "Deixar audiência correr: o contestante pode vencer por falta de provas, mas direito de recurso permanece."
+      }
+    ],
+    "autonomy": "defensores apresentam argumentos, tribunal decide conforme lei e provas disponíveis.",
+    "legacy": "cidadania, filiação, sucessão S08, escola S34, cronologia familiar."
+  },
+  {
+    "id": "S03",
+    "family": "F01",
+    "title": "O INVENTÁRIO DAS COISAS QUE NÃO SE VENDEM",
+    "scope": "familiar/local",
+    "days": [
+      9,
+      30
+    ],
+    "trigger": "morte de historiador, artesão ou sacerdote com acervo de relevância pública.",
+    "roles": [
+      "executor testamentário",
+      "parente",
+      "museólogo",
+      "colecionador"
+    ],
+    "truth": "parte dos manuscritos pertence a uma comunidade, embora estivesse guardada em casa particular.",
+    "opening": "O colecionador ofereceu mais pela estante do que pela casa inteira. A bibliotecária permaneceu calada até encontrar, na lombada de um volume, o carimbo do antigo arquivo municipal. “Talvez possamos vender madeira”, disse. “Não tenho certeza de que possamos vender memória.”",
+    "options": [
+      {
+        "id": "A",
+        "text": "Catalogar proveniência: custo de pesquisa; separa propriedade legítima de custódia, libera arquivo e S31."
+      },
+      {
+        "id": "B",
+        "text": "Vender somente itens comprovadamente particulares: receita moderada e preservação de acesso público."
+      },
+      {
+        "id": "C",
+        "text": "Leiloar tudo: receita alta temporária, risco legal e perda de confiança cultural."
+      },
+      {
+        "id": "D",
+        "text": "Criar fundação custodial: exige patronos e mandato legal; novo empregador e instituição persistente."
+      }
+    ],
+    "autonomy": "acervo pode ser disperso; grupos locais tentam comprar itens importantes.",
+    "legacy": "biblioteca pública C02, S31, disputa religiosa S22."
+  },
+  {
+    "id": "S04",
+    "family": "F02",
+    "title": "A PROMESSA À BEIRA DO TRILHO",
+    "scope": "pessoal",
+    "days": [
+      5,
+      28
+    ],
+    "trigger": "dois NPCs adultos com interesse recíproco mas horários/trabalho incompatíveis.",
+    "roles": [
+      "mecânico",
+      "mensageira",
+      "amiga em comum",
+      "chefe de estação"
+    ],
+    "truth": "ambos desejam aproximação, mas nenhum se comprometeu; não existe obrigação de corresponder ao jogador.",
+    "opening": "Sob o relógio parado, a mensageira trazia uma carta que jamais entregara. “Se eu aceitar a viagem, passarei seis semanas fora. Se ficar, talvez perca a promoção.” O mecânico olhou para os próprios sapatos. “Não quero que escolha entre mim e sua vida.”",
+    "options": [
+      {
+        "id": "A",
+        "text": "Propor um encontro com os dois concordando: avança confiança entre eles, sem prometer romance; pode revelar incompatibilidades."
+      },
+      {
+        "id": "B",
+        "text": "Ajudar a negociar turnos: requer influência no trabalho; mantém autonomia de carreira, produz chance de convivência."
+      },
+      {
+        "id": "C",
+        "text": "Entregar carta sem consentimento: viola privacidade, piora confiança e pode encerrar possibilidade de romance."
+      },
+      {
+        "id": "D",
+        "text": "Não intervir: um aceita viagem; podem manter contato, aproximar-se depois ou seguir separados."
+      }
+    ],
+    "autonomy": "ambos decidem conforme valores; resultado não é sempre casamento.",
+    "legacy": "S35 festa, S15 contrato de transporte, S05 vida compartilhada."
+  },
+  {
+    "id": "S05",
+    "family": "F02",
+    "title": "DUAS MESAS, UMA CASA",
+    "scope": "pessoal/familiar",
+    "days": [
+      15,
+      50
+    ],
+    "trigger": "casal adulto convivendo ou negociando residência, com despesas e vínculos de trabalho.",
+    "roles": [
+      "casal A/B",
+      "senhorio",
+      "parente"
+    ],
+    "truth": "despesas de moradia estão desequilibradas; divergência não equivale a falta de amor.",
+    "opening": "A água atravessou a janela durante a noite. Uma das pessoas secou os livros; a outra retirou o fogareiro da parede antes que a umidade alcançasse o Núcleo. “Não precisamos concordar sobre tudo”, disse uma delas. “Mas precisamos decidir de quem é esta casa quando a chuva vier de novo.”",
+    "options": [
+      {
+        "id": "A",
+        "text": "Orçar reparos e partilhar custos de forma pactuada: exige meios ou crédito; confiança pode subir; propriedade não muda por convivência automática."
+      },
+      {
+        "id": "B",
+        "text": "Buscar moradia alternativa: altera residência e rotas, sem forçar separação."
+      },
+      {
+        "id": "C",
+        "text": "Exigir que só um parceiro decida: maior risco de desgaste e término, jamais impede recusa da outra pessoa."
+      },
+      {
+        "id": "D",
+        "text": "Pedir mediação familiar: funciona somente se ambos aceitarem; pode fortalecer rede de apoio."
+      }
+    ],
+    "autonomy": "vazamento piora; casal decide reparar, mudar-se ou separar-se segundo sua história.",
+    "legacy": "S01 heranças, S06 pacto afetivo, nascimento/adoção eventual com regras."
+  },
+  {
+    "id": "S06",
+    "family": "F02",
+    "title": "O ANEL QUE NÃO COMPRA UMA ALIANÇA",
+    "scope": "pessoal/familiar/político",
+    "days": [
+      10,
+      40
+    ],
+    "trigger": "proposta de casamento entre adultos em sociedade onde união pode repercutir em propriedade ou diplomacia.",
+    "roles": [
+      "proponente",
+      "destinatário",
+      "autoridade civil/religiosa",
+      "familiar com objeção"
+    ],
+    "truth": "um dos noivos teme perder liberdade de atuação após casamento; afeto sozinho não resolve contrato.",
+    "opening": "A joia mal cabia dentro do estojo. A pessoa que deveria recebê-la não estendeu a mão. “Eu quero que você permaneça”, disse, “mas não quero que meu nome vire cláusula de um tratado que nunca li.” A testemunha fechou o livro de registros.",
+    "options": [
+      {
+        "id": "A",
+        "text": "Revisar termos com ambos: requisitos de consentimento, idade e legitimidade; reforça confiança e pode viabilizar casamento."
+      },
+      {
+        "id": "B",
+        "text": "Adiar cerimônia: preserva autonomia e abre cenas de negociação; sem penalidade automática."
+      },
+      {
+        "id": "C",
+        "text": "Pressionar por união para fins políticos: destinatário pode rejeitar; piora confiança, risco de escândalo."
+      },
+      {
+        "id": "D",
+        "text": "Encerrar o noivado amigavelmente: relação pode virar amizade ou distância; bens próprios preservados conforme lei."
+      }
+    ],
+    "autonomy": "sujeitos podem decidir adiar, casar, separar ou alterar pacto sem participação externa.",
+    "legacy": "S07 sucessão, S02 adoção, S29 reforma de cidadania."
+  },
+  {
+    "id": "S07",
+    "family": "F03",
+    "title": "O TRONO QUE NÃO SABE ESPERAR",
+    "scope": "regional",
+    "days": [
+      24,
+      70
+    ],
+    "trigger": "morte/abdicação de chefe de estado com sucessão disputável.",
+    "roles": [
+      "pretendente A",
+      "pretendente B",
+      "chanceler",
+      "comandante",
+      "povo organizado"
+    ],
+    "truth": "um documento de legitimação é autêntico mas está incompleto; nenhum lado detém monopólio automático da verdade.",
+    "opening": "O sino da capital tocou às quatro. Quando a quinta badalada deveria soar, alguém mandou fechar os portões. O chanceler apresentou dois nomes e nenhuma certeza. “A lei não conhece a pressa”, disse. O comandante respondeu: “Os quartéis conhecem.”",
+    "options": [
+      {
+        "id": "A",
+        "text": "Convocar junta de sucessão: exige legitimidade institucional, prazo e segurança; reduz chance de guerra imediata."
+      },
+      {
+        "id": "B",
+        "text": "Apoiar um pretendente: altera influência/aliança; pode deflagrar contestação se sem base jurídica."
+      },
+      {
+        "id": "C",
+        "text": "Propor regência temporária: exige quorum e limites; oportunidade de reformas ou manipulação."
+      },
+      {
+        "id": "D",
+        "text": "Reconhecer soberania de cidades: risco de fragmentação; possível reforma constitucional."
+      }
+    ],
+    "autonomy": "cortes avaliam títulos e mobilização; facções podem formar coalizões e desfecho depende de força e prova.",
+    "legacy": "S08, S09, S25 guerra, S30 cidadania, genealogias."
+  },
+  {
+    "id": "S08",
+    "family": "F03",
+    "title": "A LEI QUE MUDOU DE PAI",
+    "scope": "regional",
+    "days": [
+      18,
+      55
+    ],
+    "trigger": "disputa entre sistema hereditário e reforma legal sobre filiação ou sucessão.",
+    "roles": [
+      "legisladora",
+      "herdeiro reconhecido",
+      "candidato excluído",
+      "magistrada"
+    ],
+    "truth": "jurisprudências divergentes; alteração de lei não pode ser retroativa sem norma explícita.",
+    "opening": "Na sala da comissão, o retrato do antigo legislador fora virado para a parede por falta de espaço. “Minha mãe serviu a esta cidade”, disse o candidato excluído. “Mas o registro diz que só o sangue registrado governa.” A magistrada pediu silêncio para ler o texto em vigor.",
+    "options": [
+      {
+        "id": "A",
+        "text": "Propor reforma prospectiva: altera elegibilidade futura, preserva segurança jurídica."
+      },
+      {
+        "id": "B",
+        "text": "Pedir reconhecimento de caso concreto com provas: resolve disputa individual sem mudar regra geral."
+      },
+      {
+        "id": "C",
+        "text": "Impor interpretação retroativa: gera ações judiciais, risco de golpe e perda de confiança institucional."
+      },
+      {
+        "id": "D",
+        "text": "Adiar votação: manutenção provisória e mobilização de facções."
+      }
+    ],
+    "autonomy": "comissão vota sob pressão; julgamento pode ocorrer separadamente.",
+    "legacy": "S02, S07, S29, S06 pactos."
+  },
+  {
+    "id": "S09",
+    "family": "F03",
+    "title": "O MINISTRO QUE VENDIA SILÊNCIO",
+    "scope": "regional",
+    "days": [
+      16,
+      45
+    ],
+    "trigger": "evidência de favorecimento em concessões governamentais.",
+    "roles": [
+      "ministro",
+      "auditor",
+      "fornecedor",
+      "jornalista"
+    ],
+    "truth": "pagamentos ocorreram, mas pode haver explicação legítima; contrato e intenção exigem verificação.",
+    "opening": "O ministro ofereceu chá antes de perguntar pelo relatório. O auditor colocou um recibo sobre a mesa. “Aqui está o pagamento.” O ministro assentiu. “E aqui está a obra.” Entre os dois documentos faltava apenas uma assinatura — justamente a que todos procuravam.",
+    "options": [
+      {
+        "id": "A",
+        "text": "Auditoria independente: bloqueia decisões suspeitas e revela cadeia documental."
+      },
+      {
+        "id": "B",
+        "text": "Publicar acusações sem apuração: aumenta pressão pública mas pode causar injustiça."
+      },
+      {
+        "id": "C",
+        "text": "Negociar renúncia e restituição: exige evidência e aceitação das partes; possível desfecho sem julgamento."
+      },
+      {
+        "id": "D",
+        "text": "Proteger o ministro em troca de favor: conflito ético e reputacional; risco de investigação futura."
+      }
+    ],
+    "autonomy": "auditoria oficial ou encobrimento conforme instituições e aliados.",
+    "legacy": "C04 conselho, S13 escassez, S25 conflito e imprensa."
+  },
+  {
+    "id": "S10",
+    "family": "F04",
+    "title": "A GREVE DOS SINOS CALADOS",
+    "scope": "local/regional",
+    "days": [
+      8,
+      30
+    ],
+    "trigger": "salários atrasados, risco industrial e organização de trabalhadores.",
+    "roles": [
+      "líder operária",
+      "gerente",
+      "mediador",
+      "família de operário"
+    ],
+    "truth": "reservatório de crédito existe, mas seu uso é contestado; há risco de acidente documentado.",
+    "opening": "Na primeira manhã sem apito, a praça pareceu menor. Uma operária segurava o relógio do pai, parado desde o último acidente. “Não pedimos que a fábrica feche”, disse. “Pedimos que alguém volte para casa inteiro.” O gerente trouxe números. Nenhum deles contava os feridos.",
+    "options": [
+      {
+        "id": "A",
+        "text": "Negociar inspeção + escalonamento de salários: custo empresarial, segurança aumenta, possível acordo."
+      },
+      {
+        "id": "B",
+        "text": "Financiar fundo emergencial: reduz fome temporária, não resolve riscos estruturais."
+      },
+      {
+        "id": "C",
+        "text": "Reprimir sem autorização legítima: riscos legais e sociais; violência escalonada somente se plausível."
+      },
+      {
+        "id": "D",
+        "text": "Ignorar: paralisação progride; fábrica reduz produção, famílias buscam alternativas."
+      }
+    ],
+    "autonomy": "sindicatos, donos e governo continuam negociando e decidindo.",
+    "legacy": "C01, C05, S26 logística, S36 reconstrução."
+  },
+  {
+    "id": "S11",
+    "family": "F04",
+    "title": "O PÃO QUE NÃO CRUZOU A PONTE",
+    "scope": "local/regional",
+    "days": [
+      6,
+      25
+    ],
+    "trigger": "preço de alimentos elevado após interrupção de rota, estiagem ou tarifa.",
+    "roles": [
+      "padeiro",
+      "transportadora",
+      "fiscal",
+      "agricultora"
+    ],
+    "truth": "há duas causas simultâneas: estoque menor e tarifa maior.",
+    "opening": "A fila atravessou duas ruas. O padeiro cortava os pães pela metade para vender porções menores. “Podem me chamar de ladrão”, murmurou. “Isso não faz a farinha atravessar a ponte.” O fiscal anotou o preço antes de olhar a carroça vazia.",
+    "options": [
+      {
+        "id": "A",
+        "text": "Abastecimento emergencial transparente: consome reservas, alivia crise sem resolver tarifa."
+      },
+      {
+        "id": "B",
+        "text": "Negociar rota alternativa: custo de viagem, efeito de longo prazo; conecta C04."
+      },
+      {
+        "id": "C",
+        "text": "Impor teto sem garantir fornecimento: pode ampliar mercado paralelo e fechar padarias."
+      },
+      {
+        "id": "D",
+        "text": "Investigar especulação: revela se há retenção deliberada; não presumir culpado."
+      }
+    ],
+    "autonomy": "população muda consumo e deslocamentos; comerciantes podem cooperar ou especular.",
+    "legacy": "C04 route_modifier, S09 contratos, S36 festival ameaçado."
+  },
+  {
+    "id": "S12",
+    "family": "F04",
+    "title": "A SOCIEDADE DOS TRÊS FORNOS",
+    "scope": "local",
+    "days": [
+      12,
+      40
+    ],
+    "trigger": "três oficinas competem por encomenda de equipamento arcano.",
+    "roles": [
+      "artesã independente",
+      "mestre conservador",
+      "investidor",
+      "aprendiz"
+    ],
+    "truth": "orçamento mais barato desloca custo ambiental; a proposta sustentável é mais lenta.",
+    "opening": "Três projetos repousavam na mesa. O primeiro prometia terminar antes do inverno. O segundo reduziria a pressão sobre a Trama. O terceiro custava pouco porque não incluía a mão de obra dos aprendizes. “Escolham uma máquina”, pediu o investidor. “Mas escolham também quem pagará o resto.”",
+    "options": [
+      {
+        "id": "A",
+        "text": "Contrato com cláusula ambiental e trabalhista: preço maior, risco menor, novo mercado para autônomos."
+      },
+      {
+        "id": "B",
+        "text": "Consórcio entre oficinas: exige confiança, divide rendimentos e conhecimento."
+      },
+      {
+        "id": "C",
+        "text": "Contrato mais barato sem garantias: lucros imediatos e risco de crise técnica/social."
+      },
+      {
+        "id": "D",
+        "text": "Recusar contrato: concorrentes escolhem, jogador preserva recursos."
+      }
+    ],
+    "autonomy": "investidor compara custo e reputação, oficinas podem falir/fundir-se.",
+    "legacy": "C01 independent_artisan, C05 calibrated_lens, S16 propriedade intelectual."
+  },
+  {
+    "id": "S13",
+    "family": "F05",
+    "title": "O HOSPITAL DE LUZ FRIA",
+    "scope": "local",
+    "days": [
+      7,
+      28
+    ],
+    "trigger": "surtos de doença tratável, escassez de remédios ou energia de cura.",
+    "roles": [
+      "médica",
+      "pesquisador arcano",
+      "coordenadora do abrigo",
+      "comerciante"
+    ],
+    "truth": "técnica inovadora oferece benefício real mas desloca pressão energética aos arredores.",
+    "opening": "As janelas do hospital estavam cobertas para que a luz azul não assustasse as crianças. A médica esfregou as mãos até ficarem vermelhas. “Consigo salvar mais pessoas com o Núcleo”, disse. “Não consigo garantir o que acontecerá na margem do rio.”",
+    "options": [
+      {
+        "id": "A",
+        "text": "Protocolo controlado com monitoramento: demanda energia, reduz danos e gera evidência."
+      },
+      {
+        "id": "B",
+        "text": "Transferir pacientes e importar suprimentos: depende de transporte e custo; atraso influencia prognóstico."
+      },
+      {
+        "id": "C",
+        "text": "Liberar uso intensivo: recuperações rápidas e risco ambiental acumulado."
+      },
+      {
+        "id": "D",
+        "text": "Suspender tudo: menor risco técnico, pior acesso a tratamento."
+      }
+    ],
+    "autonomy": "equipe prioriza pacientes com recursos e regras locais, não espera diálogo.",
+    "legacy": "C05, S11 abastecimento, S18 ecologia, S34 escola médica."
+  },
+  {
+    "id": "S14",
+    "family": "F05",
+    "title": "O EXPERIMENTO SEM TESTEMUNHA",
+    "scope": "local/regional",
+    "days": [
+      10,
+      40
+    ],
+    "trigger": "cientista apresenta descoberta energética sem dados replicáveis.",
+    "roles": [
+      "pesquisadora",
+      "assistente",
+      "patrocinador",
+      "revisora externa"
+    ],
+    "truth": "experimento às vezes funciona, mas o método de medição produz falso positivo em clima úmido.",
+    "opening": "A bancada brilhou três vezes. O patrocinador aplaudiu na segunda. A revisora guardou a caneta na terceira. “Se funcionar somente quando ninguém mede o resto”, disse, “não é uma revolução: é uma dívida que aprendemos a esconder.”",
+    "options": [
+      {
+        "id": "A",
+        "text": "Replicar em condições diferentes: custa tempo e recursos, revela limite da descoberta."
+      },
+      {
+        "id": "B",
+        "text": "Publicar resultados parciais com ressalvas: pode atrair revisão útil, reduz prestígio imediato."
+      },
+      {
+        "id": "C",
+        "text": "Anunciar solução definitiva: gera financiamento e risco de desastre/reputação quando falhar."
+      },
+      {
+        "id": "D",
+        "text": "Impedir a pesquisa: pode preservar segurança, mas frustra progresso e gera pesquisa clandestina."
+      }
+    ],
+    "autonomy": "patrocinador decide conforme incentivos; revisão independente possível.",
+    "legacy": "S16 patente, S13 hospital, S31 arquivos, C05 lentes."
+  },
+  {
+    "id": "S15",
+    "family": "F05",
+    "title": "O VAPOR DA ÚLTIMA ESTAÇÃO",
+    "scope": "local/regional",
+    "days": [
+      8,
+      32
+    ],
+    "trigger": "locomotiva falha perto de zona de Ruptura, bloqueando suprimentos.",
+    "roles": [
+      "condutora",
+      "engenheiro",
+      "passageira ferida",
+      "autoridade ferroviária"
+    ],
+    "truth": "uma válvula foi reparada com peça incompatível por falta de verba; não há sabotagem comprovada.",
+    "opening": "A máquina parou sem soltar vapor. Os passageiros ouviram primeiro o metal arrefecer, depois uma voz pedindo água no último vagão. O engenheiro retirou a tampa do motor: “Se eu acelerar esta caldeira, salvamos a carga. Talvez não salvemos o trilho.”",
+    "options": [
+      {
+        "id": "A",
+        "text": "Evacuar feridos e reduzir carga: atraso mas diminui risco humano."
+      },
+      {
+        "id": "B",
+        "text": "Contratar reparo sustentável: exige créditos e artesão licenciado; preserva rota."
+      },
+      {
+        "id": "C",
+        "text": "Forçar partida: economiza tempo se funcionar, aumenta chance de ruptura."
+      },
+      {
+        "id": "D",
+        "text": "Abandonar comboio e notificar cidades: prejuízo material, salva pessoas se perigo alto."
+      }
+    ],
+    "autonomy": "equipe toma decisão segundo segurança, combustível e pressão de investidores.",
+    "legacy": "C01 artesão, S11 preço do pão, S25 suprimentos militares."
+  },
+  {
+    "id": "S16",
+    "family": "F06",
+    "title": "O NINHO SOB O RELÓGIO",
+    "scope": "local",
+    "days": [
+      5,
+      26
+    ],
+    "trigger": "dragão feral estabelece ninho numa torre de sinalização usada por comerciantes.",
+    "roles": [
+      "vigia",
+      "naturalista",
+      "criador",
+      "dirigente da estação"
+    ],
+    "truth": "a criatura está protegendo ovos; ruído das máquinas provoca reação defensiva, não ataque por maldade.",
+    "opening": "O relógio deixou de marcar a hora quando uma asa cobriu o ponteiro grande. A naturalista ergueu a luneta e viu três ovos entre cabos de cobre. “Não foi uma invasão”, disse. “A torre foi erguida sobre a rota deles.” A estação queria voltar a tocar o sino antes do amanhecer.",
+    "options": [
+      {
+        "id": "A",
+        "text": "Isolar torre e criar sinalização alternativa: custos e atraso; preserva ninho."
+      },
+      {
+        "id": "B",
+        "text": "Transferir ovos com especialistas: requer conhecimento e condições; risco biológico real."
+      },
+      {
+        "id": "C",
+        "text": "Capturar adulto por força: causa ferimentos, danos e conflitos ecológicos."
+      },
+      {
+        "id": "D",
+        "text": "Aguardar período de incubação: perda comercial, ganho de confiança ambiental."
+      }
+    ],
+    "autonomy": "estação decide por pressão econômica; nascimento e migração ocorrem conforme espécie.",
+    "legacy": "S15 estação, S17 diplomacia, S18 conservação."
+  },
+  {
+    "id": "S17",
+    "family": "F06",
+    "title": "O NOME QUE O DRAGÃO NÃO CONCEDEU",
+    "scope": "regional",
+    "days": [
+      16,
+      60
+    ],
+    "trigger": "comunidade encontra dragão sapiente protegendo território associado a rota mineral.",
+    "roles": [
+      "dragão sapiente",
+      "diplomata",
+      "mineradora",
+      "anciã local"
+    ],
+    "truth": "território contém sítios memoriais dracônicos desconhecidos pelos mapas humanos.",
+    "opening": "A criatura falou sem erguer a cabeça. “Vocês registraram esta montanha como vazia. Eu a registro como cemitério.” A diplomata abriu um mapa cuja tinta ainda cheirava a oficina. “Temos um contrato”, respondeu. O dragão fechou uma garra sobre uma pedra lisa: “Eu também.”",
+    "options": [
+      {
+        "id": "A",
+        "text": "Propor reconhecimento bilateral e zona de conservação: exige representantes legítimos, pode abrir pacto."
+      },
+      {
+        "id": "B",
+        "text": "Oferecer compensação e passagem alternativa: requer recursos, o dragão pode aceitar ou RECUSAR."
+      },
+      {
+        "id": "C",
+        "text": "Declarar licença unilateral válida: provoca bloqueio e possibilidade de hostilidade."
+      },
+      {
+        "id": "D",
+        "text": "Recuar e pesquisar história local: preserva segurança, atrasa exploração."
+      }
+    ],
+    "autonomy": "dragão negocia com outros, migra ou resiste segundo seus valores. NUNCA tornar cativo automático.",
+    "legacy": "C06 dragon, S07 legitimidade, S18 Ruptura, S25 guerra."
+  },
+  {
+    "id": "S18",
+    "family": "F06",
+    "title": "AS ESCAMAS NO RIO NEGRO",
+    "scope": "local/regional",
+    "days": [
+      9,
+      45
+    ],
+    "trigger": "peixes morrem perto de instalação e dragões aquáticos desaparecem.",
+    "roles": [
+      "pesquisadora Nymari",
+      "capataz",
+      "barqueiro",
+      "jovem da comunidade"
+    ],
+    "truth": "descarga de Fluxo e seca sazonal contribuem juntas; responsabilizar só um fator produz solução incompleta.",
+    "opening": "A barca parou onde a água costumava ficar verde. Na palma da pesquisadora havia uma escama que mudava de cor à sombra. “Não é uma mensagem dos deuses”, disse. “É um aviso de que algo mudou. Quero descobrir o quê antes que decidam quem culpar.”",
+    "options": [
+      {
+        "id": "A",
+        "text": "Monitorar água e reduzir extração: melhora ecologia e gera custo industrial."
+      },
+      {
+        "id": "B",
+        "text": "Desviar parte da descarga com barreira: alívio local temporário, risco transferido a jusante."
+      },
+      {
+        "id": "C",
+        "text": "Culpar pescadores sem prova: tensiona comunidades e não corrige causa."
+      },
+      {
+        "id": "D",
+        "text": "Organizar rota de recuperação de fauna: demanda recursos, efeito retardado."
+      }
+    ],
+    "autonomy": "ecossistema continua mudando, pesca e migrações reagem.",
+    "legacy": "C05, S13 hospital, S17 diplomacia e S32 expedições."
+  },
+  {
+    "id": "S19",
+    "family": "F07",
+    "title": "A TESTEMUNHA QUE MUDOU A CHUVA",
+    "scope": "local",
+    "days": [
+      8,
+      27
+    ],
+    "trigger": "desaparecimento de pessoa adulta com depoimentos incompatíveis.",
+    "roles": [
+      "familiar",
+      "testemunha",
+      "investigador",
+      "pessoa desaparecida"
+    ],
+    "truth": "desaparecida se ocultou para fugir de cobrança ilícita; testemunha mentiu por medo, não por ser autora do crime.",
+    "opening": "As três testemunhas lembravam da chuva em horas diferentes. Uma jurava ter visto um casaco vermelho. Outra lembrava somente do barulho de uma porta. O investigador desenhou três linhas sobre a mesa. “Ainda não encontrei uma mentira”, disse. “Encontrei três medos.”",
+    "options": [
+      {
+        "id": "A",
+        "text": "Comparar horários e rotas: revela contradições objetivas sem expor esconderijo de imediato."
+      },
+      {
+        "id": "B",
+        "text": "Oferecer proteção à testemunha: custa recursos e favorece depoimento verdadeiro."
+      },
+      {
+        "id": "C",
+        "text": "Publicar identidade da desaparecida: risco físico e perda de confiança."
+      },
+      {
+        "id": "D",
+        "text": "Concluir crime sem prova: erro judiciário e recurso posterior."
+      }
+    ],
+    "autonomy": "credor procura alvo, investigador pode fracassar ou achar pista conforme capacidade.",
+    "legacy": "S20 imprensa, S21 perícia, S09 corrupção."
+  },
+  {
+    "id": "S20",
+    "family": "F07",
+    "title": "A IMPRENSA DOS CINCO NOMES",
+    "scope": "local/regional",
+    "days": [
+      12,
+      40
+    ],
+    "trigger": "jornal recebe denúncias sobre cinco nomes com indícios de graus diferentes.",
+    "roles": [
+      "editora",
+      "fonte anônima",
+      "figura pública",
+      "verificadora"
+    ],
+    "truth": "dois casos são fraudes, um mal-entendido, um conflito ético e um rumor inventado. A distribuição fica fixa por seed.",
+    "opening": "Cinco envelopes pesavam quase nada. A editora os dispôs em fila e retirou o primeiro: “Este traz uma assinatura.” O segundo: “Uma fotografia.” O terceiro: “Só ódio.” Um aprendiz perguntou se publicar rápido não seria melhor. “Para quem?”, ela respondeu.",
+    "options": [
+      {
+        "id": "A",
+        "text": "Verificar cada afirmação e publicar o grau de evidência: demora e eleva credibilidade."
+      },
+      {
+        "id": "B",
+        "text": "Publicar lista integral: audiência rápida, dano reputacional e risco de ação legal."
+      },
+      {
+        "id": "C",
+        "text": "Proteger fonte e abrir investigação: preserva anonimato com ônus de checagem."
+      },
+      {
+        "id": "D",
+        "text": "Negociar silêncio por vantagem: corrupção, chantagem e vulnerabilidade futura."
+      }
+    ],
+    "autonomy": "jornal escolhe prioridade editorial; denunciados respondem.",
+    "legacy": "S09, S27 propaganda, C03 ledger e S07 poder."
+  },
+  {
+    "id": "S21",
+    "family": "F07",
+    "title": "O CRIME DOS DOIS RELÓGIOS",
+    "scope": "local",
+    "days": [
+      11,
+      32
+    ],
+    "trigger": "furto em observatório durante falha de energia.",
+    "roles": [
+      "curadora",
+      "técnico",
+      "guarda",
+      "testemunha"
+    ],
+    "truth": "relógios foram reiniciados em horários distintos; acusado tinha acesso mas não é necessariamente ladrão; responsável real fixado ao criar trama.",
+    "opening": "Um relógio marcava a hora em que a janela foi aberta. O outro marcava a hora em que o guarda chegou. Entre ambos, vinte e sete minutos haviam sido apagados pelo apagão. “Podemos condenar o ponteiro”, disse a curadora, “mas ele não levou o astrolábio.”",
+    "options": [
+      {
+        "id": "A",
+        "text": "Reconstituir energia e rotas: obtém cronologia verificável."
+      },
+      {
+        "id": "B",
+        "text": "Interrogar acusado com respeito e contraditório: pode revelar álibi e novas provas."
+      },
+      {
+        "id": "C",
+        "text": "Prender suspeito só por acesso: justiça falha, desconfiança no observatório."
+      },
+      {
+        "id": "D",
+        "text": "Recuperar item clandestinamente: equipamento volta, mas autoria pode permanecer oculta."
+      }
+    ],
+    "autonomy": "investigador conduz caso, objeto pode ser vendido/recuperado.",
+    "legacy": "S31 arquivo, S14 ciência, S19 testemunhos."
+  },
+  {
+    "id": "S22",
+    "family": "F08",
+    "title": "OS NOVE SINOS SEM UM TEMPLO",
+    "scope": "local/regional",
+    "days": [
+      15,
+      55
+    ],
+    "trigger": "comunidade deseja erguer oratório ecumênico; uma ordem teme perder função pública.",
+    "roles": [
+      "sacerdotisa",
+      "filosofo ateu",
+      "construtora",
+      "dirigente comunitária"
+    ],
+    "truth": "financiamento está condicionado a ritos exclusivos por um patrocinador oculto.",
+    "opening": "Nove pequenos sinos repousavam num banco sem ninguém para tocá-los. A construtora mediu o terreno; a sacerdotisa perguntou quem definiria a primeira cerimônia. O filósofo olhou para o espaço entre as fundações. “Também precisaremos deixar lugar para aqueles que não querem rezar.”",
+    "options": [
+      {
+        "id": "A",
+        "text": "Criar carta de uso plural: precisa de assembleia e garantias, melhora convivência."
+      },
+      {
+        "id": "B",
+        "text": "Aceitar patrocinador sem divulgar cláusulas: edifício pronto cedo, risco de exclusão."
+      },
+      {
+        "id": "C",
+        "text": "Conceder templo a uma só ordem: favorece facção e marginaliza outras."
+      },
+      {
+        "id": "D",
+        "text": "Destinar terreno a escola pública: pode reduzir conflito religioso mas gera novo debate."
+      }
+    ],
+    "autonomy": "assembléia delibera, patrocinador retira apoio se suas condições falharem.",
+    "legacy": "S03 acervo, S23 cisma, S34 educação."
+  },
+  {
+    "id": "S23",
+    "family": "F08",
+    "title": "A HOMILIA QUE PARTIU A ASSEMBLEIA",
+    "scope": "regional",
+    "days": [
+      18,
+      65
+    ],
+    "trigger": "dirigente de culto exige proibição de implantes arcanomecânicos; membros discordam.",
+    "roles": [
+      "dirigente",
+      "religiosa reformista",
+      "Eidrino fiel",
+      "médico"
+    ],
+    "truth": "argumento usa caso real de acidente, mas atribui indevidamente risco a todas as tecnologias.",
+    "opening": "O pregador apontou para uma prótese quebrada e pediu silêncio. O Eidrino na terceira fileira levantou a mão. “Se a minha fé é sincera, por que meu corpo não pode entrar?” A assembleia entendeu que o problema já não era somente a máquina.",
+    "options": [
+      {
+        "id": "A",
+        "text": "Convocar debate técnico e teológico: reduz desinformação, não garante unidade."
+      },
+      {
+        "id": "B",
+        "text": "Apoiar direito de participar do culto: reforma institucional, resistência conservadora."
+      },
+      {
+        "id": "C",
+        "text": "Impor expulsão: cisma, perda de fiéis e risco de perseguição."
+      },
+      {
+        "id": "D",
+        "text": "Fundar comunidade independente: demanda recursos, preserva liberdade de consciência."
+      }
+    ],
+    "autonomy": "congregações escolhem continuar, reformar-se ou dividir-se.",
+    "legacy": "S28 implantes, S29 cidadania, S22 construção."
+  },
+  {
+    "id": "S24",
+    "family": "F08",
+    "title": "O ÍDOLO QUE NINGUÉM RECONHECEU",
+    "scope": "local/regional",
+    "days": [
+      14,
+      48
+    ],
+    "trigger": "escavação revela objeto ritual atribuído falsamente à Primeira Voz.",
+    "roles": [
+      "arqueóloga",
+      "sacerdotisa",
+      "comerciante",
+      "representante do povo de origem"
+    ],
+    "truth": "objeto é genuíno, mas pertence a tradição regional pouco conhecida, não à religião que reivindicou posse.",
+    "opening": "A pedra tinha o tamanho de uma criança. O comerciante já oferecera uma fortuna por ela quando a arqueóloga apontou sinais de um idioma que ninguém da corte havia estudado. “É antigo”, disse. “Isso não significa que seja nosso.”",
+    "options": [
+      {
+        "id": "A",
+        "text": "Convidar especialistas e guardiões culturais: prova origem, possível restituição."
+      },
+      {
+        "id": "B",
+        "text": "Expor com procedência incerta e aviso: gera renda pública e investigação contínua."
+      },
+      {
+        "id": "C",
+        "text": "Declarar relíquia estatal sem base: tensões culturais e protestos."
+      },
+      {
+        "id": "D",
+        "text": "Vender clandestinamente: receita imediata, perda de patrimônio e investigação."
+      }
+    ],
+    "autonomy": "instituições disputam custódia, comunidade reivindica objeto.",
+    "legacy": "S03 acervo, S31 memória, S33 Ruptura."
+  },
+  {
+    "id": "S25",
+    "family": "F09",
+    "title": "AS SETE BANDEIRAS DE PEDRA ALTA",
+    "scope": "regional",
+    "days": [
+      20,
+      100
+    ],
+    "trigger": "passagem montanhosa é reivindicada por múltiplas jurisdições e existe ameaça militar crível.",
+    "roles": [
+      "comandante",
+      "embaixadora",
+      "representante comercial",
+      "líder de vila",
+      "comandante rival"
+    ],
+    "truth": "mapa de fronteira é anterior ao último tratado; ambas as partes possuem título parcial.",
+    "opening": "Sete bandeiras tremulavam sobre a mesma ponte. Nenhuma precisava de vento para afirmar sua presença. A embaixadora trouxe o mapa de quarenta anos antes. O comandante apontou a estrada construída depois dele: “É uma fronteira que alimenta pessoas. Pode mudar no papel; não deixará de existir no chão.”",
+    "options": [
+      {
+        "id": "A",
+        "text": "Comissão mista de fronteira: exige trégua e acesso; reduz tensão, não garante acordo."
+      },
+      {
+        "id": "B",
+        "text": "Tarifa compartilhada: solução provisória, receitas distribuídas, rivais podem aceitar."
+      },
+      {
+        "id": "C",
+        "text": "Mobilização ofensiva: consome suprimentos e aumenta risco de guerra; não concede vitória instantânea."
+      },
+      {
+        "id": "D",
+        "text": "Reconhecer autonomia da ponte: perde controle fiscal e possibilita neutralidade."
+      }
+    ],
+    "autonomy": "facções mobilizam/negociam conforme logística, desgaste, clima e opinião pública.",
+    "legacy": "S26 abastecimento, S27 paz, S07 sucessão, tower defense territorial."
+  },
+  {
+    "id": "S26",
+    "family": "F09",
+    "title": "A ÚLTIMA CARROÇA DO INVERNO",
+    "scope": "regional",
+    "days": [
+      8,
+      35
+    ],
+    "trigger": "tropa ou cidade sitiada precisa de suprimentos; estradas ameaçadas.",
+    "roles": [
+      "intendente",
+      "transportadora",
+      "comandante",
+      "líder de refugiados"
+    ],
+    "truth": "reserva disponível só atende dois de três grupos; decisão envolve custo humano real.",
+    "opening": "O intendente abriu três livros: soldados, feridos e aldeias. A carroça tinha espaço para dois. A transportadora deixou a pena no chão. “Não vou escolher em nome de todos”, disse, “mas também não vou fingir que o espaço cresce quando fechamos os olhos.”",
+    "options": [
+      {
+        "id": "A",
+        "text": "Priorizar civis e evacuação: reduz mortalidade civil, aumenta risco militar."
+      },
+      {
+        "id": "B",
+        "text": "Priorizar linha de defesa: fortalece resistência, agrava crise humanitária."
+      },
+      {
+        "id": "C",
+        "text": "Dividir cargas e abrir nova rota: requer créditos/segurança, aumenta chance de salvar todos com risco de atraso."
+      },
+      {
+        "id": "D",
+        "text": "Propor cessar-fogo para corredor humanitário: exige diálogo e confiança, pode falhar."
+      }
+    ],
+    "autonomy": "comandante e intendente escolhem conforme valores/leis; perdas limitadas por cálculos válidos.",
+    "legacy": "S11 comércio, S25 campanha, S36 assistência."
+  },
+  {
+    "id": "S27",
+    "family": "F09",
+    "title": "A PAZ ESCRITA COM TINTA EMPRESTADA",
+    "scope": "regional/global",
+    "days": [
+      25,
+      90
+    ],
+    "trigger": "conflito armado prolongado com recursos reduzidos e emissários dispostos a falar.",
+    "roles": [
+      "negociadora",
+      "comandante",
+      "mãe de combatente",
+      "representante de comércio",
+      "observador neutro"
+    ],
+    "truth": "duas cláusulas são incompatíveis com leis locais atuais; precisam de reforma ou exceção expressa.",
+    "opening": "O documento de paz ainda cheirava a tinta fresca quando a representante das famílias pediu uma cópia. “Quero saber quem voltará para casa”, disse. O comandante apontou para as fronteiras. O observador respondeu: “Uma linha não é uma pessoa. Precisaremos negociar as duas coisas.”",
+    "options": [
+      {
+        "id": "A",
+        "text": "Tratado com fiscalização e reparação gradual: custos repartidos, estabilidade cresce; exige aceite de representantes válidos."
+      },
+      {
+        "id": "B",
+        "text": "Armistício temporário sem paz: menos mortes imediatas, conflito pendente."
+      },
+      {
+        "id": "C",
+        "text": "Exigir rendição incondicional: maior chance de impasse e insurgência."
+      },
+      {
+        "id": "D",
+        "text": "Troca de prisioneiros e corredores civis: confiança parcial e novas negociações."
+      }
+    ],
+    "autonomy": "guerra continua ou cessam ataques conforme exaustão, legitimidade e alianças.",
+    "legacy": "S25, S26, S07 política, reconstrução S36."
+  },
+  {
+    "id": "S28",
+    "family": "F10",
+    "title": "A MÃO QUE ASSINAVA SOZINHA",
+    "scope": "pessoal/local",
+    "days": [
+      10,
+      35
+    ],
+    "trigger": "Eidrino consciente procura registrar contrato e órgão se recusa por costume.",
+    "roles": [
+      "Eidrino",
+      "tabelião",
+      "advogado",
+      "empresária"
+    ],
+    "truth": "legislação local é ambígua; uma portaria antiga admite tutela humana, mas constituição mais recente prevê capacidade de todos os conscientes.",
+    "opening": "A pena traçou o nome sem tremor. O tabelião não contestou a assinatura; contestou a mão. “A lei foi feita para pessoas”, disse. O Eidrino respondeu: “E quem escreve a definição?”",
+    "options": [
+      {
+        "id": "A",
+        "text": "Ação de reconhecimento individual: exige prova de consciência e competência; pode gerar precedente."
+      },
+      {
+        "id": "B",
+        "text": "Atualizar norma geral em conselho: caminho político mais demorado, impacto amplo."
+      },
+      {
+        "id": "C",
+        "text": "Usar tutor humano provisório com consentimento: solução prática, risco de dependência jurídica."
+      },
+      {
+        "id": "D",
+        "text": "Rejeitar atendimento: restringe direitos e pode provocar mobilização."
+      }
+    ],
+    "autonomy": "Eidrino procura outra comarca/advogado ou organiza movimento.",
+    "legacy": "S29, S23 fé, S30 vigilância."
+  },
+  {
+    "id": "S29",
+    "family": "F10",
+    "title": "O VOTO DOS NASCIDOS DA FORJA",
+    "scope": "regional",
+    "days": [
+      20,
+      75
+    ],
+    "trigger": "eleição/assembleia debate sufrágio e representação de Eidrinos conscientes.",
+    "roles": [
+      "candidata",
+      "Eidrino ativista",
+      "magistrado",
+      "comerciante conservador"
+    ],
+    "truth": "eleitorado inclui residentes com diferentes condições jurídicas; regras mudam por lei e não apenas por debate.",
+    "opening": "Na praça, uma lista de eleitores terminava com uma linha vazia. O ativista depositou ali uma chapa de metal com seu nome gravado. “Não peço que votem por mim”, disse. “Peço que contem meu voto quando eu escolher.”",
+    "options": [
+      {
+        "id": "A",
+        "text": "Propor registro universal com critérios claros: reforma, fiscalização e oposição."
+      },
+      {
+        "id": "B",
+        "text": "Exigir plebiscito sobre elegibilidade: conflito público, possível avanço ou atraso."
+      },
+      {
+        "id": "C",
+        "text": "Negociar representação consultiva sem voto: mudança parcial, controvérsia continua."
+      },
+      {
+        "id": "D",
+        "text": "Bloquear debate: estabilidade curta, protestos e migração política."
+      }
+    ],
+    "autonomy": "governo decide conforme quorum e pressão; nenhum resultado garantido.",
+    "legacy": "S28 cidadania, S08 lei, S07 sucessão, S30 segurança."
+  },
+  {
+    "id": "S30",
+    "family": "F10",
+    "title": "OS OLHOS SOB A CÚPULA",
+    "scope": "local/regional",
+    "days": [
+      9,
+      45
+    ],
+    "trigger": "governo instala sistema de vigilância arcana para reduzir crimes.",
+    "roles": [
+      "chefe de segurança",
+      "técnica",
+      "comerciante",
+      "morador observado",
+      "defensora pública"
+    ],
+    "truth": "sistema identifica padrões, mas produz falsos positivos em Eidrinos e pessoas com implantes.",
+    "opening": "Um olho de cristal girou sobre a feira. As pessoas passaram a falar mais baixo mesmo sem ordem. A técnica verificou os primeiros registros e encontrou dezenas de suspeitos que nunca estiveram ali. “A máquina viu alguma coisa”, disse. “Não sabemos ainda se viu pessoas.”",
+    "options": [
+      {
+        "id": "A",
+        "text": "Auditoria com acesso restrito e revisão humana: reduz falsos positivos, custo operacional."
+      },
+      {
+        "id": "B",
+        "text": "Suspensão provisória: diminui vigilância, exige segurança substituta."
+      },
+      {
+        "id": "C",
+        "text": "Uso irrestrito: detecções rápidas, injustiças e risco de abuso de dados."
+      },
+      {
+        "id": "D",
+        "text": "Regulação comunitária e prazo de expurgo: exige participação e transparência, aumenta legitimidade."
+      }
+    ],
+    "autonomy": "conselhos e policiais agem, vítimas podem recorrer.",
+    "legacy": "S28, S29, S19 investigação, S09 corrupção."
+  },
+  {
+    "id": "S31",
+    "family": "F11",
+    "title": "O CATÁLOGO DAS VOZES APAGADAS",
+    "scope": "pessoal/regional",
+    "days": [
+      15,
+      52
+    ],
+    "trigger": "arquivo recebe fragmentos de Eco com nomes ausentes da história oficial.",
+    "roles": [
+      "arquivista",
+      "historiador",
+      "testemunha descendente",
+      "patrocinador"
+    ],
+    "truth": "documentos mostram censura institucional, mas não provam autoria ou motivo da Grande Ruptura.",
+    "opening": "Os nomes apareciam nas margens, onde ninguém costumava ler. O arquivista contou quarenta e dois; o livro oficial não continha nenhum. Uma descendente tocou a página e retirou a mão. “Não quero um herói”, disse. “Quero saber por que minha avó deixou de existir nos registros.”",
+    "options": [
+      {
+        "id": "A",
+        "text": "Indexar e abrir pesquisa com proteção de dados: memória coletiva recuperada, investigação futura."
+      },
+      {
+        "id": "B",
+        "text": "Publicar nomes sem consentimento dos vivos: visibilidade e riscos de exposição."
+      },
+      {
+        "id": "C",
+        "text": "Vender pesquisa à corporação: financiamento e conflito de acesso."
+      },
+      {
+        "id": "D",
+        "text": "Ocultar páginas: protege temporariamente descendentes, pode impedir justiça histórica."
+      }
+    ],
+    "autonomy": "comunidade preserva cópias ou documentos se deterioram.",
+    "legacy": "C02 acervo, S03 posse, S24 restituição, S33 Ruptura."
+  },
+  {
+    "id": "S32",
+    "family": "F11",
+    "title": "O CAMINHO QUE O MAPA ESQUECEU",
+    "scope": "regional",
+    "days": [
+      12,
+      64
+    ],
+    "trigger": "expedição encontra indicação de rota antiga em região instável.",
+    "roles": [
+      "cartógrafa",
+      "guia local",
+      "arqueóloga",
+      "capitã",
+      "dragão territorial opcional"
+    ],
+    "truth": "rota existe, mas atravessa habitat e território de comunidade ausente das cartas recentes.",
+    "opening": "No mapa, a estrada terminava numa mancha branca. O guia apontou para as marcas de rodas sob as raízes. “Minha avó dizia que a rota foi fechada para salvar gente”, disse. A capitã quis saber quanto custaria abri-la. A arqueóloga perguntou primeiro: “Quem nos autorizou a entrar?”",
+    "options": [
+      {
+        "id": "A",
+        "text": "Consultar comunidade e planejar expedição segura: custo e demora, melhora legitimidade."
+      },
+      {
+        "id": "B",
+        "text": "Abrir acesso comercial imediato: progresso e conflito territorial/ecológico."
+      },
+      {
+        "id": "C",
+        "text": "Manter rota fechada e preservar sítio: descoberta científica com comércio adiado."
+      },
+      {
+        "id": "D",
+        "text": "Divulgar localização a exploradores: migração desordenada e possível saque."
+      }
+    ],
+    "autonomy": "expedição pode falhar, comunidade negocia ou defende território.",
+    "legacy": "S17 dragon, S18 habitat, S25 fronteira, S31 arquivos."
+  },
+  {
+    "id": "S33",
+    "family": "F11",
+    "title": "A FENDA QUE RESPONDIA AO SINO",
+    "scope": "global latente",
+    "days": [
+      20,
+      110
+    ],
+    "trigger": "instrumentos em diferentes regiões detectam pulsos correlacionados na Fenda Celeste.",
+    "roles": [
+      "astrônoma",
+      "sacerdote",
+      "engenheiro",
+      "observadora dracônica"
+    ],
+    "truth": "correlação é real; causalidade não foi estabelecida. A origem absoluta da Ruptura NÃO será revelada automaticamente.",
+    "opening": "Os sinos não tocaram juntos, mas todos se lembraram de ouvi-los assim. A astrônoma trouxe gráficos em que os pulsos coincidiam. O sacerdote trouxe relatos muito anteriores às máquinas. O engenheiro fez uma pergunta que ninguém gostou: “E se ambos estiverem medindo a mesma coisa sem saber o que é?”",
+    "options": [
+      {
+        "id": "A",
+        "text": "Criar observatórios independentes: acumula evidências, custa recursos, possibilita descobertas futuras."
+      },
+      {
+        "id": "B",
+        "text": "Tornar dados públicos com ressalvas: debate social, revisão científica, rumores."
+      },
+      {
+        "id": "C",
+        "text": "Declarar profecia ou arma certa: fortalece facções, amplia desinformação."
+      },
+      {
+        "id": "D",
+        "text": "Manter estudo confidencial por segurança: acesso restrito, suspeita política."
+      }
+    ],
+    "autonomy": "instrumentos continuam registrando dados, teóricos divergem, não ocorre apocalipse forçado.",
+    "legacy": "C05 pesquisa, S14 replicação, S24 crenças, C06 culturas dracônicas."
+  },
+  {
+    "id": "S34",
+    "family": "F12",
+    "title": "A ESCOLA DAS PORTAS ABERTAS",
+    "scope": "local",
+    "days": [
+      15,
+      60
+    ],
+    "trigger": "cidade recebe crianças deslocadas e precisa ampliar escola sem recursos.",
+    "roles": [
+      "professora",
+      "responsável familiar",
+      "artífice",
+      "representante do conselho"
+    ],
+    "truth": "prédio abandonado pode ser recuperado; contrato de propriedade tem gravame conhecido.",
+    "opening": "As cadeiras estavam empilhadas até a janela. A professora desenhou no chão a planta da nova sala. Uma criança perguntou se a escola também teria lugar para quem não sabia ler. “Especialmente”, respondeu ela, mesmo antes de saber onde arranjaria o telhado.",
+    "options": [
+      {
+        "id": "A",
+        "text": "Restaurar prédio com mutirão e registro: custo comunitário, acesso à educação cresce."
+      },
+      {
+        "id": "B",
+        "text": "Contratar aulas provisórias em casas: resposta rápida, capacidade limitada."
+      },
+      {
+        "id": "C",
+        "text": "Privatizar serviço com bolsa parcial: melhora oferta a parte das famílias, desigualdade possível."
+      },
+      {
+        "id": "D",
+        "text": "Não intervir: professores improvisam, migração educacional e evasão."
+      }
+    ],
+    "autonomy": "conselheiros podem apoiar; crianças crescem, não ficam eternamente alunas.",
+    "legacy": "S02 adoção, S22 templo, S13 medicina, C01 aprendiz."
+  },
+  {
+    "id": "S35",
+    "family": "F12",
+    "title": "A FESTA QUE NÃO CABIA NA PRAÇA",
+    "scope": "local/pessoal",
+    "days": [
+      7,
+      25
+    ],
+    "trigger": "calendário cívico anuncia festa enquanto cidade lida com conflito ou escassez moderada.",
+    "roles": [
+      "organizadora",
+      "músicos",
+      "padeiro",
+      "moradores rivais"
+    ],
+    "truth": "festa pode reforçar laços sem resolver automaticamente problemas estruturais.",
+    "opening": "Alguém pendurou uma faixa entre duas janelas que jamais haviam concordado sobre o barulho. A organizadora deixou a última palavra em branco: “Esta festa não tem dono.” Do outro lado da praça, o padeiro decidiu se abriria sua barraca ou guardaria farinha para a semana.",
+    "options": [
+      {
+        "id": "A",
+        "text": "Festa econômica e inclusiva: custos modestos, coesão e alegria, reservas preservadas."
+      },
+      {
+        "id": "B",
+        "text": "Patrocínio privado com exclusividade: programação luxuosa, tensão comercial."
+      },
+      {
+        "id": "C",
+        "text": "Cancelar por prudência: poupa recursos mas perde oportunidade de reconciliação."
+      },
+      {
+        "id": "D",
+        "text": "Destinar renda a abrigo público: doações, demonstração cívica, possível perda de entretenimento."
+      }
+    ],
+    "autonomy": "moradores organizam em menor escala ou cancelam conforme estoque/clima.",
+    "legacy": "S04 encontro, S11 pão, S36 abrigo, reputação familiar."
+  },
+  {
+    "id": "S36",
+    "family": "F12",
+    "title": "O TELHADO DEPOIS DA TEMPESTADE",
+    "scope": "local/familiar",
+    "days": [
+      6,
+      35
+    ],
+    "trigger": "chuva intensa danifica moradias, oficina ou abrigo.",
+    "roles": [
+      "carpinteira",
+      "morador",
+      "gestora do abrigo",
+      "cobrador",
+      "voluntária"
+    ],
+    "truth": "reparos previnem danos maiores; parte dos contratos emergenciais contém juros abusivos.",
+    "opening": "Ao amanhecer, a chuva deixara de cair, mas a casa ainda pingava. Uma carpinteira desenhou três círculos no chão: madeira, mão de obra, tempo. “Podemos escolher dois agora”, disse. O cobrador estendeu um contrato quando viu o desenho. Ninguém o convidara.",
+    "options": [
+      {
+        "id": "A",
+        "text": "Organizar mutirão e compra coletiva: consome suprimentos, gera vínculos e melhora habitação."
+      },
+      {
+        "id": "B",
+        "text": "Aceitar financiamento com auditoria: crédito e reparação rápida se cláusulas justas."
+      },
+      {
+        "id": "C",
+        "text": "Assinar contrato abusivo por urgência: alívio imediato, dívida e risco de perda de casa."
+      },
+      {
+        "id": "D",
+        "text": "Priorizar abrigo público: ajuda vulneráveis, residências individuais aguardam."
+      }
+    ],
+    "autonomy": "vizinhos se organizam, prejuízos aumentam em imóveis sem reparo.",
+    "legacy": "S10 trabalho, S11 escassez, S34 escola, S35 festa e S05 convivência."
+  }
+]

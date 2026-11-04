@@ -1,0 +1,772 @@
+[
+  {
+    "id": "N01",
+    "title": "AS CINZAS DA COROA ADORMECIDA",
+    "brief": "Composição: F03 S07 + F01 S02 + F09 S25 + F07 S20. Escala: familiar→regional→global eventual. Duração: 60-180 dias. Papéis: governante falecido (histórico), chanceler, herdeira reconhecida, pretendente excluído, magistrada, capitão de fronteira, editora. Verdade fixada: um registro sucessório foi alterado para excluir adoção legítima; a exclusão, contudo, não torna automaticamente ilegítima a herdeira reconhecida. Lei corrente, apoio político, força e prova definem resultado. Exige poder com sucessão contestável; não aciona se governo não tiver cargo hereditário. Personagens podem morrer e ser substituídos apenas por sucessão de função, sem apagamento.",
+    "seeds": [
+      "S02",
+      "S07",
+      "S20",
+      "S25"
+    ],
+    "acts": [
+      {
+        "id": 1,
+        "title": "O SINO SEM QUINTO TOQUE",
+        "window": "dia 0-7",
+        "scene": "A câmara inteira se ergueu para ouvir os sinos. Depois do quarto toque, veio apenas o ruído dos cascos no pátio. O chanceler mostrou dois documentos de herança. “Se lermos só o primeiro, teremos uma rainha. Se lermos os dois, teremos uma questão.” A capitã pediu ordem para fechar as pontes; a magistrada pediu ordem para não fazê-lo.",
+        "options": [
+          {
+            "id": "A",
+            "text": "Solicitar publicação de ambos os títulos (acesso legal; +transparência, conhecimento de testemunhas; -vantagem do grupo dominante)."
+          },
+          {
+            "id": "B",
+            "text": "Propor regência com prazo de 30 dias (requer maioria; adia coroação; cria tensão e clock de investigação)."
+          },
+          {
+            "id": "C",
+            "text": "Reconhecer herdeira e militarizar pontes (apoio a uma facção; custos de defesa e ameaça de confronto)."
+          },
+          {
+            "id": "D",
+            "text": "Negociar audiência reservada com pretendente excluído (abre confiança privada; pode gerar suspeita pública)."
+          }
+        ],
+        "autonomy": "se ninguém age, chanceler nomeia regência ou apoia a corte preferida conforme relação e leis; capitães podem recusar ordens ilegais."
+      },
+      {
+        "id": 2,
+        "title": "A CRIANÇA DO REGISTRO",
+        "window": "dia 7-24",
+        "scene": "O arquivo cheirava a tinta velha e chuva recente. O pretendente colocou diante da magistrada uma cópia incompleta de adoção. “Não quero que me entreguem o trono”, disse. “Quero que parem de fingir que nunca fiz parte desta casa.” A herdeira, do outro lado da sala, não se moveu: “Eu me lembro de você. Não me lembro de termos prometido dividir um reino.”",
+        "options": [
+          {
+            "id": "A",
+            "text": "Perícia do registro e depoimentos (usa recursos/tempo; aumenta prova; risco de revelar segredos familiares reais)."
+          },
+          {
+            "id": "B",
+            "text": "Mediação sucessória com prerrogativas limitadas (requer consentimento; acordo dinástico, possíveis cargos e autonomia)."
+          },
+          {
+            "id": "C",
+            "text": "Desacreditar o excluído publicamente sem prova (ganho político curto, agravamento de injustiça e propaganda)."
+          },
+          {
+            "id": "D",
+            "text": "Apoiar reforma constitucional prospectiva (convoca assembleia; transforma trama em debate nacional)."
+          }
+        ],
+        "autonomy": "editoras publicam versões distintas; movimentos populares escolhem posição segundo interesses, não por script."
+      },
+      {
+        "id": 3,
+        "title": "SETE BANDEIRAS",
+        "window": "dia 24-52",
+        "scene": "A estrada de Pedra Alta fora construída para o trigo, não para exércitos. Agora carroças passavam sob sete estandartes. A embaixadora contou os pedágios em voz alta, um por um. “Toda fronteira parece simples enquanto a desenhamos longe das pessoas”, disse. A capitã perguntou se receberia reforços ou permissão para negociar.",
+        "options": [
+          {
+            "id": "A",
+            "text": "Desmilitarizar estrada sob observadores (custos diplomáticos; pode abrir corredor neutro)."
+          },
+          {
+            "id": "B",
+            "text": "Financiar abastecimento civil e negociações (reduz dano, diminui estoques da coroa)."
+          },
+          {
+            "id": "C",
+            "text": "Concentrar tropas para ultimato (aumenta força imediata, eleva risco de guerra real e perdas)."
+          },
+          {
+            "id": "D",
+            "text": "Reconhecer administração autônoma da passagem (reforma territorial e impacto fiscal)."
+          }
+        ],
+        "autonomy": "vizinhos podem apoiar outra facção; segurança e logística determinam capacidade de mobilização. Se tensão ficar baixa, não forçar batalha."
+      },
+      {
+        "id": 4,
+        "title": "O PREÇO DA LEGITIMIDADE",
+        "window": "dia 52-90",
+        "scene": "Três convites haviam sido enviados ao conselho: um para a herdeira, outro para o pretendente, e o terceiro para as famílias que haviam enterrado seus mortos na fronteira. A magistrada percebeu que o terceiro era o mais difícil de responder. “Uma coroa terá um nome”, disse. “Mas nenhum nome pagará sozinho por esta decisão.”",
+        "options": [
+          {
+            "id": "A",
+            "text": "Pleito ou assembleia constitucional segundo lei (transição institucional; requisitos de quorum)."
+          },
+          {
+            "id": "B",
+            "text": "Pacto de governo partilhado temporário (limita poderes e cria possibilidade de crise futura)."
+          },
+          {
+            "id": "C",
+            "text": "Coroação unilateral com tropas (poder concentrado, insurgência possível)."
+          },
+          {
+            "id": "D",
+            "text": "Tribunal dinástico com reconhecimento de adoção (solução legal possível, não garante paz social)."
+          }
+        ],
+        "autonomy": "se nenhum acordo, instituição ativa mecanismo de emergência; conflito pode se dividir em vários estados jurídicos sem roteiro fixo."
+      },
+      {
+        "id": 5,
+        "title": "AQUILO QUE RESTA",
+        "window": "dia 90-180",
+        "scene": "Quando as bandeiras enfim foram retiradas, suas sombras ainda marcavam o chão. Uma criança perguntou por que haviam sido sete. A embaixadora olhou para o novo mapa e respondeu: “Porque nunca concordamos sobre quem tinha o direito de dizer um.”",
+        "options": [],
+        "autonomy": ""
+      }
+    ],
+    "endings": "(i) Coroa constitucional se reforma + acordos; (ii) Coroa unificada se legitimidade e força; (iii) Regência prolongada com crise pendente; (iv) República/assembleia se apoio social e lei; (v) Federação ou divisão territorial se controle incompatível; (vi) guerra declarada e continuação em sistema militar.",
+    "legacy": "arquivos de parentesco, tratados, novos nomes de governo, monumentos, mudança de preços e reivindicação de descendentes. Evitar renascer governante falecido como vivo. Conecta S07/S08/S20/S25/S27."
+  },
+  {
+    "id": "N02",
+    "title": "A JANELA ENTRE DUAS VIDAS",
+    "brief": "Composição: F02 S04/S05/S06 + F04 S12 + F12 S35. Escala: pessoal→familiar. Duração: 20-120 dias. Papéis: mecânico adulto, mensageira adulta, amigo em comum, senhorio, parente, empregador. Não há par romântico obrigatório. Verdade: ambos têm afinidade inicial e planos profissionais diferentes. O jogador pode ser um dos envolvidos se características permitirem ou apenas mediar/observar. Estados: acquaintance/friendship/interest/courtship/commitment/cohabitation/marriage/separation; nunca aplicar interest→marriage por uma decisão única.",
+    "seeds": [
+      "S04",
+      "S05",
+      "S06",
+      "S12",
+      "S35"
+    ],
+    "acts": [
+      {
+        "id": 1,
+        "title": "A CARTA GUARDADA",
+        "window": "dia 0-9",
+        "scene": "No pátio da estação, a mensageira tinha carvão na ponta dos dedos; passara a noite consertando a motocicleta de carga. O mecânico segurava um bilhete dobrado. “Se eu pedir para ficar”, disse, “parecerá que não acredito em você.” A resposta veio devagar: “E se não pedir nada, talvez eu pense que não se importa.”",
+        "options": [
+          {
+            "id": "A",
+            "text": "Conversar abertamente sobre desejos e limites (+conhecimento recíproco; abre encontro, não garante romance)."
+          },
+          {
+            "id": "B",
+            "text": "Ajudar a encontrar contrato de trabalho flexível (custo/tempo, carreira preservada)."
+          },
+          {
+            "id": "C",
+            "text": "Sugerir sacrifício unilateral sem perguntar (risco de afastamento e desconforto)."
+          },
+          {
+            "id": "D",
+            "text": "Respeitar silêncio (amizade permanece, decisão individual posterior)."
+          }
+        ],
+        "autonomy": ""
+      },
+      {
+        "id": 2,
+        "title": "O JANTAR EM UMA CIDADE ESTRANHA",
+        "window": "dia 9-27",
+        "scene": "O estabelecimento estava quase vazio, e a sopa esfriou enquanto discutiam mapas. “Eu não sonho com uma casa grande”, disse um deles. “Sonho com uma casa à qual consiga voltar.” A outra pessoa sorriu sem promessa. “Eu sonho com a próxima estrada. Talvez exista um lugar entre as duas coisas.”",
+        "options": [
+          {
+            "id": "A",
+            "text": "Planejar encontros periódicos (exige comunicação/rota viável, fortalece confiança e reduz distância)."
+          },
+          {
+            "id": "B",
+            "text": "Tentar morar juntos agora (exige interesse, consentimento e recursos; abre S05)."
+          },
+          {
+            "id": "C",
+            "text": "Declarar incompatibilidade com respeito (pode virar amizade ou pausa afetiva)."
+          },
+          {
+            "id": "D",
+            "text": "Propor exclusividade sem escutar resposta (destinatário pode recusar; confiança cai)."
+          }
+        ],
+        "autonomy": "oferta de promoção, mudanças de turno e deslocamentos podem alterar o contexto; outros relacionamentos não ficam congelados eternamente."
+      },
+      {
+        "id": 3,
+        "title": "QUANDO A CASA CHOVE",
+        "window": "dia 27-55",
+        "scene": "Uma bacia recebia água no centro da sala. Havia duas cadeiras, uma mesa e um mapa de viagens, aberto ao lado de um contrato de aluguel. “Construir uma vida não é escolher a mesma coisa todos os dias”, disse a mensageira. “É conseguir voltar à mesa quando escolhermos coisas diferentes.”",
+        "options": [
+          {
+            "id": "A",
+            "text": "Orçamento e trabalho partilhado (aumenta estabilidade se condições aceitas)."
+          },
+          {
+            "id": "B",
+            "text": "Viver em residências separadas e manter o vínculo (possibilidade válida, não punição)."
+          },
+          {
+            "id": "C",
+            "text": "Negociar mudança para nova cidade (impacta empregos e relações)."
+          },
+          {
+            "id": "D",
+            "text": "Encerrar convivência (regras legais e econômicas, sem romance forçado)."
+          }
+        ],
+        "autonomy": ""
+      },
+      {
+        "id": 4,
+        "title": "O ANEL E O MAPA",
+        "window": "dia 55-90",
+        "scene": "A joalheira mediu um anel diante de dois documentos: uma licença de viagem e um registro civil. “O metal não escolhe por vocês”, disse, devolvendo ambos. A pessoa que receberia a proposta perguntou: “Se eu disser não agora, você ainda ficará para o jantar?”",
+        "options": [
+          {
+            "id": "A",
+            "text": "Propor casamento, explicitando autonomia e consentimento (apenas adultos, interesse/compromisso e compatibilidade; destinatário responde independentemente)."
+          },
+          {
+            "id": "B",
+            "text": "Registrar pacto de união ou convivência alternativo onde legal (regras próprias de propriedade)."
+          },
+          {
+            "id": "C",
+            "text": "Adiar decisão com compromisso afetivo (manter relacionamento sem casamento)."
+          },
+          {
+            "id": "D",
+            "text": "Aceitar recusa e redefinir vínculo (amizade ou separação, conforme valores)."
+          }
+        ],
+        "autonomy": ""
+      },
+      {
+        "id": 5,
+        "title": "ANOS DEPOIS",
+        "window": "legado variável",
+        "scene": "A estação havia trocado o relógio. Ainda havia riscos na parede do pequeno apartamento; alguns lembravam alturas de crianças, outros os dias de mudança de alguém querido. Quando a mesa voltou a ser posta, ficou evidente que nenhuma promessa conservara os dois iguais. O que permanecera tinha sido escolhido mais de uma vez.",
+        "options": [],
+        "autonomy": ""
+      }
+    ],
+    "endings": "casamento voluntário / convivência sem casamento / compromisso à distância / separação respeitosa / parceria de trabalho / amizade duradoura; filhos biológicos ou adotivos só por regras e decisões próprias, nunca recompensa automática.",
+    "legacy": "residências, profissões, custos, genealogias, amizades e memórias sem reduzir casal a +5 afinidade. Conecta S04/S05/S06/S12/S35."
+  },
+  {
+    "id": "N03",
+    "title": "A PELE DA CIDADE",
+    "brief": "Composição: F10 S28/S29/S30 + F08 S23 + F07 S19. Escala: pessoal→regional. Duração: 30-100 dias. Papéis: Eidrino consciente, tabeliã, técnica de vigilância, magistrado, defensor, dirigente religioso. Verdade: sistema de reconhecimento urbano apresenta falso positivo relacionado a assinatura arcana de implantes; um contrato jurídico restritivo é contestável.",
+    "seeds": [
+      "S19",
+      "S23",
+      "S28",
+      "S29",
+      "S30"
+    ],
+    "acts": [
+      {
+        "id": 1,
+        "title": "ASSINATURA SEM CORPO RECONHECIDO",
+        "window": "dia 0-12",
+        "scene": "O Eidrino assinou o contrato sem tremor. A tabeliã não olhou para o nome, mas para os dedos. “O cartório não foi instruído a reconhecer mãos como as suas.” O Eidrino respondeu: “A minha mão aprendeu a escrever. O cartório ainda precisa aprender a ler.”",
+        "options": [
+          {
+            "id": "A",
+            "text": "Protocolar pedido jurídico com provas (+direitos, recurso, custo)."
+          },
+          {
+            "id": "B",
+            "text": "Acordo temporário com representante escolhido pelo Eidrino (viabiliza trabalho sem apagar titularidade)."
+          },
+          {
+            "id": "C",
+            "text": "Publicar denúncia antes de audiência (+apoio social, pode expor dados pessoais)."
+          },
+          {
+            "id": "D",
+            "text": "Abandonar contrato e buscar outra cidade (migração, consequências profissionais)."
+          }
+        ],
+        "autonomy": ""
+      },
+      {
+        "id": 2,
+        "title": "OS OLHOS SOB A CÚPULA",
+        "window": "dia 12-29",
+        "scene": "A luz do sensor marcou vermelho quando um trabalhador atravessou o mercado com pão e ferramentas. Era a terceira detenção naquela semana. A técnica insistia em chamar aquilo de problema estatístico. O defensor apontou para o homem detido: “Estatística não passa a noite em cela.”",
+        "options": [
+          {
+            "id": "A",
+            "text": "Auditoria de algoritmo e transparência responsável (corrige erro, reduz abuso)."
+          },
+          {
+            "id": "B",
+            "text": "Suspender sistema até revisão (pode requerer segurança alternativa)."
+          },
+          {
+            "id": "C",
+            "text": "Expandir cobertura com base em detecções inválidas (mais detenções e reação pública)."
+          },
+          {
+            "id": "D",
+            "text": "Organizar observação cidadã com autorização e limites de privacidade (conhecimento público, pressão institucional)."
+          }
+        ],
+        "autonomy": ""
+      },
+      {
+        "id": 3,
+        "title": "O ALTAR E A OFICINA",
+        "window": "dia 29-55",
+        "scene": "No templo, uma dirigente declarou que metal não era vida. O Eidrino perguntou quem rezava quando a praça estava vazia. Ela hesitou. “Eu”, respondeu. “E eu também”, disse ele. Pela primeira vez, não discutiam apenas corpos: discutiam o sentido de pertencer.",
+        "options": [
+          {
+            "id": "A",
+            "text": "Abrir assembleia de inclusão espiritual (pode reformar culto sem abolir crença)."
+          },
+          {
+            "id": "B",
+            "text": "Defender liberdade individual de crença e convivência laica (reduz tensão em alguns grupos)."
+          },
+          {
+            "id": "C",
+            "text": "Patrocinar propaganda excludente (cisma e dano a civis)."
+          },
+          {
+            "id": "D",
+            "text": "Recusar disputa religiosa e concentrar-se em cidadania jurídica (preserva foco, perde aliados possíveis)."
+          }
+        ],
+        "autonomy": ""
+      },
+      {
+        "id": 4,
+        "title": "O VOTO",
+        "window": "dia 55-85",
+        "scene": "O salão de votação tinha urnas suficientes; o registro de eleitores, não. A magistrada leu a lei duas vezes antes de falar. “Se houver mudança hoje, precisaremos decidir quem responde por cada consequência amanhã.” Um trabalhador da forja ergueu o cartão de residência como resposta.",
+        "options": [
+          {
+            "id": "A",
+            "text": "Reforma de cidadania com critérios aplicáveis a todos os conscientes (+direitos, necessidade de fiscalização e mudanças legais)."
+          },
+          {
+            "id": "B",
+            "text": "Estatuto de direitos civis sem voto imediato (avanço parcial, próxima disputa)."
+          },
+          {
+            "id": "C",
+            "text": "Rejeitar reforma com justificativa pública (status quo, organização de oposição)."
+          },
+          {
+            "id": "D",
+            "text": "Submeter matéria a tribunal constitucional (prazos, possíveis precedentes)."
+          }
+        ],
+        "autonomy": ""
+      },
+      {
+        "id": 5,
+        "title": "DIREITOS COM NOME E ENDEREÇO",
+        "window": "após resolução",
+        "scene": "O primeiro contrato reconhecido ficou pendurado numa oficina pequena, não no parlamento. A pessoa que o assinara fechou as portas ao cair da noite, como sempre fizera. A cidade parecia a mesma. Mas, quando o registro foi consultado, havia ali um nome que antes a lei se recusava a ler.",
+        "options": [],
+        "autonomy": ""
+      }
+    ],
+    "endings": "reconhecimento individual / reforma geral / estatuto parcial / migração para jurisdição acolhedora / derrota legal com movimento continuado. Nenhum final pressupõe que todos os habitantes mudem de opinião.",
+    "legacy": "eleições S29, religião S23, trabalho, direitos digitais, S30 segurança. Nunca transformar Eidrinos em propriedade por uma simples escolha de menu sem estrutura jurídica."
+  },
+  {
+    "id": "N04",
+    "title": "AS ÁGUAS QUE HERDARAM FOGO",
+    "brief": "Composição: F05 S13/S14/S15 + F06 S18 + F04 S11. Escala: local→regional. Duração: 15-90 dias. Papéis: médica, engenheira, pescadora Nymari, dirigente industrial, comerciante, pessoa doente. Verdade: método de cura com Núcleo de Veyr tem efeito benéfico mensurável e dano energético ambiental cumulativo; não existe solução sem trade-off imediato.",
+    "seeds": [
+      "S11",
+      "S13",
+      "S14",
+      "S15",
+      "S18"
+    ],
+    "acts": [
+      {
+        "id": 1,
+        "title": "A LUZ NAS JANELAS",
+        "window": "dia 0-8",
+        "scene": "A lâmpada azul no hospital acendeu três quartos depois da hora. A médica informou que poderia tratar mais doentes se a potência aumentasse. Do lado de fora, uma pescadora entrou com uma garrafa de água turva. “Pode salvar meu filho”, disse. “Mas quem salva o rio onde ele beberá amanhã?”",
+        "options": [
+          {
+            "id": "A",
+            "text": "Tratamento emergencial com monitoramento (recuperação e risco monitorado)."
+          },
+          {
+            "id": "B",
+            "text": "Dividir energia entre hospital e descontaminação (atende menos pacientes, risco reduzido)."
+          },
+          {
+            "id": "C",
+            "text": "Usar plena potência sem medição (salva mais agora, pode agravar contaminação)."
+          },
+          {
+            "id": "D",
+            "text": "Buscar suprimentos por ferrovia (custo e atraso, conecta S15/S11)."
+          }
+        ],
+        "autonomy": ""
+      },
+      {
+        "id": 2,
+        "title": "O PEIXE QUE MUDOU DE COR",
+        "window": "dia 8-23",
+        "scene": "Perto dos pilares, a água carregava escamas prateadas. A pesquisadora Nymari reconheceu duas espécies e uma ausência. “Um rio não grita”, disse, colocando uma rede vazia na margem. “Ele começa a calar coisas que sempre estiveram aqui.”",
+        "options": [
+          {
+            "id": "A",
+            "text": "Periciar contribuição de descarga e estiagem (verdade composta, conhecimento validado)."
+          },
+          {
+            "id": "B",
+            "text": "Fechar a instalação por período seguro (melhora ecologia e pressiona hospital)."
+          },
+          {
+            "id": "C",
+            "text": "Construir barreira sem estudo (pode transferir risco para comunidades abaixo)."
+          },
+          {
+            "id": "D",
+            "text": "Investir em método alternativo com artesão licenciado (ligação C01/C05, custo e progresso)."
+          }
+        ],
+        "autonomy": ""
+      },
+      {
+        "id": 3,
+        "title": "A ESTAÇÃO PARADA",
+        "window": "dia 23-42",
+        "scene": "O comboio de curativos parou diante da ponte sem luz. Em outro vagão, funcionários transportavam lentes novas para a pesquisa. A condutora abriu as portas e disse: “Não temos lugar para tudo. Talvez tenhamos inteligência para decidir o que não pode esperar.”",
+        "options": [
+          {
+            "id": "A",
+            "text": "Priorizar remédios (salva pacientes, atrasa pesquisa)."
+          },
+          {
+            "id": "B",
+            "text": "Priorizar lentes (acelera solução estrutural, prolonga crise médica)."
+          },
+          {
+            "id": "C",
+            "text": "Contratar segunda rota (custo, melhora ambas se recursos)."
+          },
+          {
+            "id": "D",
+            "text": "Negociar auxílio inter-regional (diplomacia e dívida)."
+          }
+        ],
+        "autonomy": ""
+      },
+      {
+        "id": 4,
+        "title": "A CONTA DA COMPENSAÇÃO",
+        "window": "dia 42-70",
+        "scene": "Os registros foram expostos na praça. Havia números para doentes que receberam alta e números para peixes que jamais voltaram. A engenheira disse que as duas colunas eram verdadeiras. A pescadora respondeu: “Então precisamos de uma política que consiga lê-las ao mesmo tempo.”",
+        "options": [
+          {
+            "id": "A",
+            "text": "Regulamento de tratamento e limites de descarga (solução gradual, preços e saúde)."
+          },
+          {
+            "id": "B",
+            "text": "Nacionalização/controle municipal de reator, se legal (governança, custo fiscal)."
+          },
+          {
+            "id": "C",
+            "text": "Transferência de instalações (nova região pode receber custo; exige consentimento ambiental)."
+          },
+          {
+            "id": "D",
+            "text": "Manter operação e fundo de reparação (risco controlado apenas se limites verificáveis)."
+          }
+        ],
+        "autonomy": ""
+      },
+      {
+        "id": 5,
+        "title": "A ÁGUA DE OUTRA ESTAÇÃO",
+        "window": "legado",
+        "scene": "Ao final da estação seca, voltou a haver cardumes perto da ponte, ou não. A médica passou a guardar ao lado dos remédios os gráficos do rio. “Não foi uma escolha entre pessoas e natureza”, disse. “Foi descobrir que nunca tivemos duas coisas separadas.”",
+        "options": [],
+        "autonomy": ""
+      }
+    ],
+    "endings": "tecnologia sustentável / hospital ampliado com controle / crise ecológica e migração / racionamento temporário / descoberta parcial e nova pesquisa. Nenhum desfecho ignora os doentes ou trabalhadores.",
+    "legacy": "geografia ambiental e arte da cidade, estoques, rotas, custos, pesquisas, memória pública. Conecta C05, C01, S11/S13/S14/S15/S18."
+  },
+  {
+    "id": "N05",
+    "title": "O PACTO DO NINHO SILENCIOSO",
+    "brief": "Composição: F06 S16/S17/S18 + F11 S32 + F09 S25. Escala: local→regional. Duração: 20-110 dias. Papéis: naturalista, dragão feral protetor de ninho, dragão sapiente adulto, explorador, autoridade da rota, anciã de comunidade. Verdade: duas comunidades usam locais distintos da mesma rota migratória; sapiente não governa todos os ferais e ferais não obedecem tratado como cidadãos.",
+    "seeds": [
+      "S16",
+      "S17",
+      "S18",
+      "S25",
+      "S32"
+    ],
+    "acts": [
+      {
+        "id": 1,
+        "title": "O RELÓGIO QUE PAROU DE TOCAR",
+        "window": "dia 0-10",
+        "scene": "O sino não tocou porque as engrenagens estavam cheias de folhas. Sob a ponte, uma fêmea de véu-noturno cobria o ninho com o corpo. A naturalista pediu aos guardas que recuassem. “É pequena”, disse um deles. “É mãe”, respondeu ela. “Isso costuma ser maior que o tamanho.”",
+        "options": [
+          {
+            "id": "A",
+            "text": "Interdição curta e sinalização alternativa (+proteção ambiental, custo de rota)."
+          },
+          {
+            "id": "B",
+            "text": "Remoção especializada condicionada a segurança (risco e possibilidade de sucesso)."
+          },
+          {
+            "id": "C",
+            "text": "Força e captura (dano ecológico, reação social, perigo)."
+          },
+          {
+            "id": "D",
+            "text": "Espera monitorada (custo comercial, melhora conhecimento)."
+          }
+        ],
+        "autonomy": ""
+      },
+      {
+        "id": 2,
+        "title": "O CAMINHO ANTIGO",
+        "window": "dia 10-29",
+        "scene": "A guia levou o grupo por uma estrada que nenhum mapa recente continha. O chão estava marcado por garras antigas. “A estrada não foi abandonada”, disse ela. “Foi deixada em paz.” Ao longe, a montanha respondeu com um som que não pertencia ao vento.",
+        "options": [
+          {
+            "id": "A",
+            "text": "Conferir origem histórica e comunidades (conhecimento e legitimidade)."
+          },
+          {
+            "id": "B",
+            "text": "Abrir rota alternativa com autorização (custos e benefícios comerciais)."
+          },
+          {
+            "id": "C",
+            "text": "Explorar sem consulta (tensão territorial)."
+          },
+          {
+            "id": "D",
+            "text": "Recuar para estudos (atraso, preservação)."
+          }
+        ],
+        "autonomy": ""
+      },
+      {
+        "id": 3,
+        "title": "O QUE NÃO SE PODE COMPRAR",
+        "window": "dia 29-55",
+        "scene": "O dragão sapiente desceu diante do acampamento sem se apresentar. A embaixadora ofereceu ouro e passagem. A criatura examinou ambos por longo tempo. “Vocês negociam como se o chão tivesse esquecido quem dorme sob ele”, respondeu. “Se desejam passar, primeiro aprendam o nome dos mortos.”",
+        "options": [
+          {
+            "id": "A",
+            "text": "Reconhecer sítios memoriais e estudar sua história (+confiança e custo de trânsito)."
+          },
+          {
+            "id": "B",
+            "text": "Propor passagem limitada em períodos sem reprodução (depende de aceite; acordo revogável com salvaguardas)."
+          },
+          {
+            "id": "C",
+            "text": "Oferecer vínculo mágico sem autorização: o dragão pode rejeitar, ofensa e risco."
+          },
+          {
+            "id": "D",
+            "text": "Recuar e respeitar recusa (preserva possibilidade diplomática futura)."
+          }
+        ],
+        "autonomy": ""
+      },
+      {
+        "id": 4,
+        "title": "ESCAMAS E ESTRADAS",
+        "window": "dia 55-90",
+        "scene": "O conselho industrial trouxe a contabilidade das rotas. As anciãs trouxeram nomes e datas. A naturalista apresentou a migração dos véus-noturnos. O dragão não compareceu. Deixou um símbolo gravado na pedra, para que ninguém confundisse sua ausência com consentimento.",
+        "options": [
+          {
+            "id": "A",
+            "text": "Corredor ecológico pactuado e infraestrutura alternativa (custo, comércio sustentável)."
+          },
+          {
+            "id": "B",
+            "text": "Santuário absoluto e rota desviada (proteção, prejuízo logístico de curto prazo)."
+          },
+          {
+            "id": "C",
+            "text": "Licença coercitiva (conflito dracônico e territorial sem vitória instantânea)."
+          },
+          {
+            "id": "D",
+            "text": "Regra provisória revisável (acordo instável, exige monitoramento)."
+          }
+        ],
+        "autonomy": ""
+      },
+      {
+        "id": 5,
+        "title": "O CÉU NÃO ASSINA CONTRATOS",
+        "window": "legado",
+        "scene": "Na primavera seguinte, três criaturas novas cruzaram o relógio reparado. Ou talvez o ninho estivesse vazio e a estrada silenciosa. A naturalista anotou a diferença com cuidado: “Nem todo sucesso deixa um troféu. Às vezes, só deixa espaço para que outra coisa exista.”",
+        "options": [],
+        "autonomy": ""
+      }
+    ],
+    "endings": "pacto respeitado / coexistência frágil / rota desviada / ruptura de confiança / conflito territorial; não existe posse automática do dragão sapiente. Concordância só como arco posterior raro, bilateral e revogável.",
+    "legacy": "atlas, notícias, tempo de viagem, reputação, população dracônica, estado ecológico; C06 dragon."
+  },
+  {
+    "id": "N06",
+    "title": "A GUERRA QUE COMEÇOU COM UM LIVRO DE PÃO",
+    "brief": "Composição: F04 S10/S11 + F03 S09 + F09 S25/S26/S27 + F12 S36. Escala: local→regional, global eventual. Duração: 30-150 dias. Papéis: padeiro, dirigente sindical, governadora, intendente, comandante fronteiriço, diplomata, refugiada. Verdade: desabastecimento combina tarifa abusiva, baixa produção e rota cortada; nenhum grupo sozinho causou toda a crise.",
+    "seeds": [
+      "S09",
+      "S10",
+      "S11",
+      "S25",
+      "S26",
+      "S27",
+      "S36"
+    ],
+    "acts": [
+      {
+        "id": 1,
+        "title": "A FILA",
+        "window": "dia 0-9",
+        "scene": "O padeiro erguia cada pão como quem pedia desculpas. “O preço não está na minha faca”, disse, cortando a massa para dividir por três. A mulher na fila tinha uma criança dormindo no ombro. “Se não está em sua faca, está em qual mão?” Ninguém soube responder antes que a fila se movesse.",
+        "options": [
+          {
+            "id": "A",
+            "text": "Fundo de comida comunitário (alívio, reservas -)."
+          },
+          {
+            "id": "B",
+            "text": "Investigar tarifas e estoques (evidência de monopólio e baixa produção)."
+          },
+          {
+            "id": "C",
+            "text": "Impor preço sem abastecimento (risco de mercado paralelo)."
+          },
+          {
+            "id": "D",
+            "text": "Contratar rota alternativa (custo, depende C04 e mapa)."
+          }
+        ],
+        "autonomy": ""
+      },
+      {
+        "id": 2,
+        "title": "A OFICINA EM GREVE",
+        "window": "dia 9-25",
+        "scene": "As fábricas fechadas tornaram o ar mais limpo, mas as mesas das casas ficaram vazias. A dirigente sindical pediu pagamento e segurança. A governadora perguntou de onde viria dinheiro sem produção. “De um acordo”, respondeu a dirigente. “É para isso que governamos, não é?”",
+        "options": [
+          {
+            "id": "A",
+            "text": "Mediação com inspeção e orçamento (aumento de confiança se viável)."
+          },
+          {
+            "id": "B",
+            "text": "Fomento condicionado a direitos (custos fiscais e produção futura)."
+          },
+          {
+            "id": "C",
+            "text": "Reprimir a organização (tensão, possível greve ampliada)."
+          },
+          {
+            "id": "D",
+            "text": "Não negociar (crise prossegue, oposição se organiza)."
+          }
+        ],
+        "autonomy": ""
+      },
+      {
+        "id": 3,
+        "title": "O MAPA DAS SETE BANDEIRAS",
+        "window": "dia 25-45",
+        "scene": "Alguém desenhou uma linha vermelha sobre a estrada principal. O intendente afirmou que a fronteira bloqueada tornava impossível levar farinha até a cidade. A diplomata respondeu: “Impossível ainda não. Caro, sim. E cada dia mais.”",
+        "options": [
+          {
+            "id": "A",
+            "text": "Conferência tarifária interestadual (negociação e eventual abertura)."
+          },
+          {
+            "id": "B",
+            "text": "Comboio civil protegido com consentimento (logística e custo)."
+          },
+          {
+            "id": "C",
+            "text": "Ataque à passagem (inicia guerra sujeita a pré-requisitos, perdas e resultados de defesa)."
+          },
+          {
+            "id": "D",
+            "text": "Reduzir dependência da rota com produção local (progresso demorado)."
+          }
+        ],
+        "autonomy": ""
+      },
+      {
+        "id": 4,
+        "title": "A CARROÇA DO INVERNO",
+        "window": "dia 45-75",
+        "scene": "A última carroça trazia caixas marcadas com três símbolos: remédio, grão e munição. O intendente ergueu os olhos, sem ocultar a escolha. “Uma cidade e um exército estão com fome”, disse. “Não vou contar apenas os soldados.”",
+        "options": [
+          {
+            "id": "A",
+            "text": "Priorizar civis e negociação de cessar-fogo (segurança civil, risco militar)."
+          },
+          {
+            "id": "B",
+            "text": "Priorizar frente militar (resistência imediata, vulnerabilidade civil)."
+          },
+          {
+            "id": "C",
+            "text": "Dividir com rota adicional contratada (alto custo, possibilidade de reduzir dano total)."
+          },
+          {
+            "id": "D",
+            "text": "Abrir corredores humanitários supervisionados (depende diplomacia e aceite inimigo)."
+          }
+        ],
+        "autonomy": ""
+      },
+      {
+        "id": 5,
+        "title": "A TINTA DO ACORDO",
+        "window": "dia 75-105",
+        "scene": "As delegações chegaram sem os mesmos mapas. Em cada versão, o rio tinha largura diferente. Uma mãe de combatente pediu a lista dos vivos. A diplomata espalhou a folha sobre a mesa e disse: “Comecemos pelos nomes; as linhas podem esperar cinco minutos.”",
+        "options": [
+          {
+            "id": "A",
+            "text": "Acordo de paz com garantias e observadores (requer condições, pode encerrar guerra)."
+          },
+          {
+            "id": "B",
+            "text": "Armistício provisório (menor violência, conflito aberto)."
+          },
+          {
+            "id": "C",
+            "text": "Reparações sem acordo militar (economia e paz instáveis)."
+          },
+          {
+            "id": "D",
+            "text": "Escalada militar (custo alto, desfecho incerto e consequências humanas)."
+          }
+        ],
+        "autonomy": ""
+      },
+      {
+        "id": 6,
+        "title": "AS PRIMEIRAS SEMENTES",
+        "window": "legado, 105-150 dias",
+        "scene": "O inverno terminou antes da fome em algumas aldeias. Em outras, moradores voltaram para reerguer os telhados. O padeiro ensinava a uma aprendiz como avaliar farinha nova. “A guerra começou com o preço”, disse ela. Ele negou com a cabeça. “O preço foi só o lugar onde todos conseguimos vê-la.”",
+        "options": [],
+        "autonomy": ""
+      }
+    ],
+    "endings": "paz negociada, guerra prolongada, federação comercial, autossuficiência local, concessão questionada, reconstrução ou êxodo. Resultados dependem de suprimentos, legitimidade, infraestrutura, danos, tratados e decisões reais.",
+    "legacy": "população, preços, ruínas/restauração visual, refugiados, S34 escola, S36 moradia, S10 direitos, S27 tratados."
+  }
+]

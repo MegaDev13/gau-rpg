@@ -66,6 +66,8 @@ jobs:
         run: XDG_DATA_HOME="$RUNNER_TEMP/veyrath-expansion-test" godot --headless --path rpg-narrativo --script res://veyrath/expansion/tests.gd
       - name: Testar diretor de tramas e legados offline
         run: XDG_DATA_HOME="$RUNNER_TEMP/veyrath-chronicles-test" godot --headless --path rpg-narrativo --script res://veyrath/chronicles/tests.gd
+      - name: Testar dossiê, consentimento, guerra e migração offline
+        run: XDG_DATA_HOME="$RUNNER_TEMP/veyrath-dossier-test" godot --headless --path rpg-narrativo --script res://veyrath/dossier/tests.gd
       - name: Testar navegacao da interface
         run: godot --headless --path rpg-narrativo --script res://veyrath/ui_tests.gd
       - name: Verificar abertura da cena principal
@@ -97,7 +99,7 @@ jobs:
           export VEY_SCREENSHOTS="$RUNNER_TEMP/vey-screens"
           export XDG_DATA_HOME="$RUNNER_TEMP/vey-screenshot-save"
           timeout 45 xvfb-run -a -s '-screen 0 900x1440x24' godot --path rpg-narrativo --resolution 540x960 --script res://veyrath/capture_screens.gd
-          test "$(find "$VEY_SCREENSHOTS" -name '*.png' | wc -l)" -eq 10
+          test "$(find "$VEY_SCREENSHOTS" -name '*.png' | wc -l)" -eq 12
       - uses: actions/upload-artifact@v4
         with:
           name: veyrath-capturas-godot

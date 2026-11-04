@@ -5,8 +5,10 @@ const BACKUP := "user://veyrath-campanha-v1.backup.json"
 const VERSION := 1
 const Expansion = preload("res://veyrath/expansion/world.gd")
 const Director = preload("res://veyrath/chronicles/director.gd")
+const Dossier = preload("res://veyrath/dossier/director.gd")
 var expansion = Expansion.new()
 var director = Director.new(expansion)
+var dossier = Dossier.new(expansion)
 var world: Dictionary = {}
 var story: Dictionary = {}
 var state: Dictionary = {}
@@ -55,6 +57,8 @@ func new_game(player_name: String, origin_id: String, city_id: String, seed_valu
 	people.community["portrait_asset"] = "community_v1"
 	state = {"version":VERSION,"seed":seed_value,"name":player_name.strip_edges(),"origin":origin.id,"city":city.id,"node":"start","day":1,"credits":origin.credits,"flow":origin.flow,"fatigue":0,"risk":3,"evidence":0,"habitat":0,"people":people,"history":[],"news":[]}
 	state.chronicle = director.create(seed_value,expansion.home_id(city.id),1)
+	state.dossier = dossier.create(seed_value,1)
+	dossier.observe(state.dossier,expedition_city(),1,state.chronicle.flags)
 	return save_game()
 
 func valid(candidate) -> bool:
@@ -112,6 +116,8 @@ func valid(candidate) -> bool:
 			if venue.is_empty() or venue.city != journey.city:
 				return false
 	if candidate.has("chronicle") and not director.valid(candidate.chronicle):
+		return false
+	if candidate.has("dossier") and (not dossier.valid(candidate.dossier) or candidate.dossier.seed != candidate.seed):
 		return false
 	if candidate.has("remote_progress") and not candidate.remote_progress is Dictionary:
 		return false
@@ -384,6 +390,11 @@ func advance_world(previous_day: int) -> void:
 	if not state.has("chronicle"):
 		state.chronicle = director.create(int(state.seed),expansion.home_id(state.city),maxi(1,previous_day))
 	director.advance(state.chronicle,int(state.day))
+	if not state.has("dossier"):
+		state.dossier = dossier.create(int(state.seed),maxi(1,previous_day))
+		var origin: Dictionary = expansion.city(expansion.home_id(state.city),int(state.seed))
+		dossier.observe(state.dossier,origin,maxi(1,previous_day),state.chronicle.flags)
+	dossier.observe(state.dossier,expedition_city(),int(state.day),state.chronicle.flags)
 
 func rest() -> bool:
 	if not valid(state):
@@ -670,6 +681,12 @@ func expedition_route(from_city: Dictionary, to_city: Dictionary, fast: bool) ->
 	if fast and (from_city.id == home or to_city.id == home):
 		var flags: Dictionary = state.get("chronicle",{}).get("flags",{})
 		passage.credits = maxi(0,int(passage.credits)+int(flags.get("route_modifier",0)))
+	if fast:
+		var places: Dictionary = state.get("dossier",{}).get("places",{})
+		var route_change := int(places.get(from_city.id,{}).get("route",0))+int(places.get(to_city.id,{}).get("route",0))
+		if places.get(from_city.id,{}).get("war","") == "engaged" or places.get(to_city.id,{}).get("war","") == "engaged":
+			route_change += 1
+		passage.credits = maxi(0,int(passage.credits)+route_change)
 	return passage
 
 func expedition_condition(city: Dictionary) -> Dictionary:
@@ -677,9 +694,41 @@ func expedition_condition(city: Dictionary) -> Dictionary:
 	if city.id == expansion.home_id(state.city):
 		var flags: Dictionary = state.get("chronicle",{}).get("flags",{})
 		condition.supply = maxi(0,int(condition.supply)+int(flags.get("reserve_delta",0)))
+	var domain: Dictionary = state.get("dossier",{}).get("places",{}).get(city.id,{})
+	if not domain.is_empty():
+		condition.supply = maxi(0,int(condition.supply)+int(domain.supply)-int(domain.origin_supply))
+		condition.damage = int(domain.damage)
+		condition.river = int(domain.river)
+		condition.war = domain.war
+		condition.government = domain.government
 	return condition
 
 func chronicle_wait(days: int) -> bool:
 	if days not in [1,7] or not valid(state):
 		return false
 	return expedition_event(expedition(),state.duplicate(true),days,"wait_chronicle","Deixou passar %d dia(s) acompanhando os acontecimentos." % days)
+
+
+func dossier_view() -> Dictionary:
+	if state.has("dossier"):
+		return state.dossier.duplicate(true)
+	return dossier.create(int(state.seed),int(state.day))
+
+func dossier_choice(story_id: String, phase: int, option: String) -> bool:
+	if not valid(state) or not state.has("dossier"):
+		return false
+	var previous := state.duplicate(true)
+	var book := dossier_view()
+	var applied: Dictionary = dossier.perform(book,story_id,phase,option,expedition().city,int(state.day),
+		int(state.credits),int(state.flow),chronicle_view().flags)
+	if applied.is_empty():
+		return false
+	state.dossier = book
+	state.credits -= int(applied.cost)
+	state.flow -= int(applied.flux)
+	state.day += 1
+	advance_world(int(previous.day))
+	if not save_game():
+		state = previous
+		return false
+	return true

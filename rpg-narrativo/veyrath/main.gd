@@ -492,6 +492,7 @@ func chronicles_screen() -> void:
 	var origin: Dictionary = game.expansion.city(journal.city,int(game.state.seed))
 	label("HISTÓRIAS EM MOVIMENTO   /   DIA %d" % int(game.state.day),17,GOLD)
 	label("Crônicas",48,TEXT,true)
+	button("Sagas e conflitos do dossiê",dossier_screen).icon = icon("book",GOLD)
 	scene_art(expansion_art(origin.art),210)
 	label("O tempo avança em viagens, ações e espera. Os personagens tomam decisões mesmo quando você está longe.",21,MUTED)
 	for tracked in [true,false]:
@@ -506,6 +507,117 @@ func chronicles_screen() -> void:
 	button("Aguardar 1 dia",chronicle_skip.bind(1))
 	button("Aguardar 7 dias",chronicle_skip.bind(7))
 	button("‹  Registros",campaign_records)
+
+func dossier_screen() -> void:
+	clear()
+	var book: Dictionary = game.dossier_view()
+	label("Dossiê de Veyrath",47,TEXT,true)
+	label("TRAMAS OBSERVADAS  /  DIA %d" % int(game.state.day),18,GOLD)
+	var active: Array = book.stories.values()
+	active.sort_custom(func(left,right): return int(left.opened)>int(right.opened))
+	if active.is_empty():
+		card("Nenhuma saga foi observada ainda. Aguarde alguns dias ou visite outros assentamentos para encontrar as condições da história.",23,true)
+	for story in active:
+		var content: Dictionary = game.dossier.source(story.source)
+		var city: Dictionary = game.expansion.city(story.city,int(book.seed))
+		var state_text: String = "Prazo: dia %d" % int(story.due) if story.outcome.is_empty() else story.outcome
+		button("%s  ·  %s\n%s  /  %s" % [story.source,content.title.capitalize(),city.name,state_text],dossier_detail.bind(story.id))
+	button("Caderno de evidências",dossier_knowledge)
+	button("Aguardar 1 dia",dossier_wait.bind(1))
+	button("Aguardar 7 dias",dossier_wait.bind(7))
+	button("‹  Crônicas",chronicles_screen)
+
+func dossier_wait(days: int) -> void:
+	var saved: bool = game.chronicle_wait(days)
+	dossier_screen()
+	if not saved:
+		label("A passagem de tempo não pôde ser salva.",20,GOLD)
+
+func dossier_detail(story_id: String) -> void:
+	clear()
+	var book: Dictionary = game.dossier_view()
+	if not book.stories.has(story_id):
+		dossier_screen()
+		return
+	var story: Dictionary = book.stories[story_id]
+	var content: Dictionary = game.dossier.source(story.source)
+	var act: Dictionary = game.dossier.act_for(story)
+	var plan: Dictionary = game.dossier.plan_for(story)
+	var city: Dictionary = game.expansion.city(story.city,int(book.seed))
+	var domain: Dictionary = book.places[story.city]
+	var view := stage_for(plan.art,276)
+	view.site_kind = str(plan.place)
+	view.site_trim = int(story.opened)%6
+	view.damage = int(domain.damage)
+	view.shortage = int(domain.supply) < 10
+	if int(domain.damage) > 0:
+		view.light = Color("a76a50")
+		view.intensity = 0.8
+	if not story.cast.is_empty():
+		var actor: Dictionary = book.actors[story.cast[0].id]
+		if actor.alive:
+			view.face = resident_art(actor)
+			view.subject_pin = int(actor.pin)
+	label("%s  /  %s  /  %s" % [story.source,city.name,city.region_name],17,GOLD)
+	column.add_child(view)
+	label(content.title.capitalize(),40,TEXT,true)
+	label(act.title.capitalize(),22,GOLD)
+	card(act.scene,27,true)
+	if story.outcome.is_empty():
+		label("PRAZO  /  DIA %d" % int(story.due),17,GOLD)
+		for option in act.options:
+			var reason: String = game.dossier.validate_player(book,story.id,int(story.stage),option.id,game.expedition().city,
+				int(game.state.day),int(game.state.credits),int(game.state.flow),game.chronicle_view().flags)
+			var action: Dictionary = plan.actions.get(option.id,{})
+			var detail := ""
+			if not action.is_empty():
+				detail = "\n%d crédito(s) · %d Fluxo" % [int(action.cost),int(action.flux)]
+			if not reason.is_empty():
+				detail += "\n" + reason
+			button(option.id + "  /  " + str(option.text) + detail,dossier_decide.bind(story.id,int(story.stage),option.id),not reason.is_empty())
+	else:
+		card(story.outcome,24,true)
+	divider()
+	label("RESERVA %d  /  SAÚDE %d  /  RIO %d  /  TENSÃO %d" % [domain.supply,domain.health,domain.river,domain.tension],16,GOLD)
+	label("Habitat %d  ·  tarifa %+d  ·  danos %d" % [domain.habitat,domain.route,domain.damage],20,MUTED)
+	if story.source in ["N02","S04","S05","S06"]:
+		var pair: Dictionary = game.dossier.relationship(book,story.city)
+		label("Vínculo: %s" % pair.get("state","conhecidos"),20,GOLD)
+		if pair.has("trust"):
+			label("Confiança %d  ·  Respeito %d  ·  Familiaridade %d" % [pair.trust,pair.respect,pair.familiarity],18,MUTED)
+	if story.source in ["N01","N03","N06"]:
+		label("Governo: %s  ·  Legitimidade %d" % [domain.government,domain.legitimacy],18,MUTED)
+		if domain.has("treaty"):
+			label("Tratado ratificado no dia %d" % int(domain.treaty.day),19,GOLD)
+	label("PARTICIPANTES",17,GOLD)
+	for seat in story.cast:
+		var participant: Dictionary = book.actors[seat.id]
+		label("%s  /  %s" % [participant.name,seat.role],19,MUTED)
+	label("REGISTROS DO ATO",17,GOLD)
+	var entries: Array = story.history.duplicate()
+	entries.reverse()
+	for item in entries:
+		card("DIA %d\n%s" % [int(item.day),item.text],21)
+	button("‹  Dossiê",dossier_screen)
+
+func dossier_decide(story_id: String, phase: int, option: String) -> void:
+	var saved: bool = game.dossier_choice(story_id,phase,option)
+	dossier_detail(story_id)
+	if not saved:
+		label("A decisão venceu ou não pôde ser salva.",20,GOLD)
+
+func dossier_knowledge() -> void:
+	clear()
+	var book: Dictionary = game.dossier_view()
+	scene_art("barge",215)
+	label("Evidências do dossiê",43,TEXT,true)
+	if book.known.is_empty():
+		card("Nenhuma evidência foi descoberta.")
+	for entry in book.known.values():
+		if game.dossier.rules.truths.has(entry.id):
+			var city: Dictionary = game.expansion.city(entry.city,int(book.seed))
+			card("DIA %d  /  %s  /  %s\n%s" % [int(entry.day),city.name,entry.type.to_upper(),game.dossier.rules.truths[entry.id]],23,true)
+	button("‹  Dossiê",dossier_screen)
 
 func chronicle_skip(days: int) -> void:
 	var saved: bool = game.chronicle_wait(days)
@@ -824,6 +936,7 @@ func expansion_art(key: String) -> String:
 func expedition_stage(key: String, conditions: Dictionary, site: Dictionary = {}) -> void:
 	var view := stage_for(expansion_art(key),272)
 	view.atmosphere = conditions.weather
+	view.damage = int(conditions.get("damage",0))
 	if conditions.daylight == 0:
 		view.light = Color("717db1")
 		view.intensity = 0.95

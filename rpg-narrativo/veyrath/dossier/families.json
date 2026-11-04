@@ -1,0 +1,62 @@
+[
+  {
+    "id": "F01",
+    "title": "CASA E HERANÇA",
+    "description": "bens, parentesco, adoção, testamentos, patrimônio imaterial, luto, reconciliação. Nunca declarar herdeiro apenas pela vontade do jogador; aplicar lei vigente e provas."
+  },
+  {
+    "id": "F02",
+    "title": "AMOR E CONVIVÊNCIA",
+    "description": "amizade, cortejo, namoro, casamento, desacordo, cuidado, autonomia, separação. Romance apenas entre personagens adultos; consentimento mútuo renovável. Rejeição não é punição e não pode ser burlada por afinidade numérica."
+  },
+  {
+    "id": "F03",
+    "title": "COROA E LEI",
+    "description": "cargos, legitimidade, assembleias, eleições, constituições, crises institucionais, disputa de poder. Pessoas do governo possuem interesses próprios e capacidade limitada."
+  },
+  {
+    "id": "F04",
+    "title": "COMÉRCIO E CLASSES",
+    "description": "contratos, monopólios, salários, escassez, cooperativas, greve, rotas, falência e mobilidade social; relações causais com supply/demand e preços."
+  },
+  {
+    "id": "F05",
+    "title": "CIÊNCIA E TRAMA",
+    "description": "experimentação, autoria, patentes, falsificação de dados, compensação arcana, ética, impactos ambientais."
+  },
+  {
+    "id": "F06",
+    "title": "DRAGÕES E ECOLOGIA",
+    "description": "ninhos, espécies, diplomacia sapiente, rotas migratórias, caça, proteção territorial, vínculo voluntário."
+  },
+  {
+    "id": "F07",
+    "title": "INVESTIGAÇÃO E SEGREDO",
+    "description": "desaparecimento, fraude, testemunhos, prova, erro judiciário, espionagem, falsidade; distinguir truth e known."
+  },
+  {
+    "id": "F08",
+    "title": "RELIGIÃO E FILOSOFIA",
+    "description": "ritos, cismas, fé, descrença, interpretação histórica, reforma, liberdade de culto; culturas múltiplas sem caricatura."
+  },
+  {
+    "id": "F09",
+    "title": "GUERRA E DIPLOMACIA",
+    "description": "fronteiras, ameaças, mobilização, suprimentos, negociações, ocupação, refugiados, paz, reparações; militares autônomos conforme cadeia de comando."
+  },
+  {
+    "id": "F10",
+    "title": "CIDADANIA E TECNOLOGIA",
+    "description": "direitos dos Eidrinos, próteses, vigilância, inteligência artificial, acesso a serviços, identidade jurídica."
+  },
+  {
+    "id": "F11",
+    "title": "MEMÓRIA E RUÍNAS",
+    "description": "arquivos, inscrições, expedições, lacunas históricas, falsos artefatos, apropriação cultural, o mistério aberto da Ruptura."
+  },
+  {
+    "id": "F12",
+    "title": "COTIDIANO E RECONSTRUÇÃO",
+    "description": "ofícios, festivais, educação, cura, amizade, problemas do bairro, acolhimento, pequenas alegrias, desastres moderados e recuperação."
+  }
+]

@@ -14,6 +14,7 @@ var subject_pin := -1
 var site_trim := -1
 var site_kind := ""
 var shortage := false
+var damage := 0
 var vertical_focus := 0.5
 var reaction_light := Color("657b9c")
 
@@ -61,6 +62,8 @@ func _draw() -> void:
 		_draw_weather(tick)
 	if site_trim >= 0:
 		_draw_site_props()
+	if damage > 0:
+		_draw_rubble()
 	if face:
 		var scale_pixels := clampf(floorf(size.y / float(face.get_height()) * 0.58),1.0,2.0)
 		var portrait_size := face.get_size() * scale_pixels
@@ -125,3 +128,12 @@ func _draw_site_props() -> void:
 				draw_rect(Rect2(x,y,20,14),Color("463b35"))
 				draw_rect(Rect2(x+2,y+2,16,2),Color("9c7752"))
 				draw_rect(Rect2(x+4,y+6,3,7),Color("766047"))
+
+
+func _draw_rubble() -> void:
+	for i in range(mini(12, damage * 3)):
+		var x := floorf((size.x - 28.0 - i * 18.0) / 2.0) * 2.0
+		var y := floorf((size.y - 12.0 - float(i % 4) * 8.0) / 2.0) * 2.0
+		draw_rect(Rect2(x,y,16,8),Color("25222a"))
+		draw_rect(Rect2(x+2,y-2,8,4),Color("65534d"))
+		draw_rect(Rect2(x+8,y+4,4,4),Color("382b2b"))

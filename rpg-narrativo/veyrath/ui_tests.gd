@@ -58,6 +58,21 @@ func test_ui() -> void:
 	await process_frame
 	scene.chronicle_lineage()
 	await process_frame
+	if not scene.game.chronicle_wait(7):
+		failed = true
+	scene.dossier_screen()
+	await process_frame
+	var entered := false
+	for entry in scene.column.get_children():
+		if entry is Button and entry.text.begins_with("N01 "):
+			entry.pressed.emit()
+			entered = true
+			break
+	await process_frame
+	if not entered or not scene.game.dossier_view().stories.has("valdoria-0:N01"):
+		failed = true
+	scene.dossier_knowledge()
+	await process_frame
 	scene.atlas()
 	await process_frame
 	scene.people()
@@ -98,6 +113,14 @@ func test_ui() -> void:
 	await process_frame
 	var online = scene.column.get_child(0)
 	if online.uuid4().length() != 36 or online.request == null:
+		failed = true
+	var applied := [{"seq":3,"world_version":1,"title":"Abertura isolada","published_at":"2026-11-04"}]
+	if not online.merge_chronicles(applied) or online.merge_chronicles(applied):
+		failed = true
+	if online.chronicle_rows.size() != 1 or online.chronicle_cursor != 3:
+		failed = true
+	online.reset_chronicles()
+	if online.chronicle_cursor != 0 or not online.chronicle_rows.is_empty():
 		failed = true
 	print("Interface Veyrath: ", "falhou" if failed else "aberta e navegada")
 	scene.queue_free()

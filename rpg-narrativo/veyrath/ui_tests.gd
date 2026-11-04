@@ -38,4 +38,6 @@ func test_ui() -> void:
 	if not ResourceLoader.exists("res://veyrath/assets/val_doria.jpg"):
 		failed = true
 	print("Interface Veyrath: ", "falhou" if failed else "aberta e navegada")
+	scene.queue_free()
+	await process_frame
 	quit(1 if failed else 0)

@@ -1,40 +1,464 @@
 {
- "start":{"title":"O custo do fluxo","text":"Em {city}, {artisan} trabalha na {industry} da família. Um Núcleo de Veyr apresenta falhas; ampliar a extração ajudaria a manter empregos, mas {community} teme pelo {water}. {leader}, autoridade municipal, precisa ouvir a comunidade antes de decidir.\n\nSua origem: {origin}. O que você faz?","choices":[
-  {"id":"investigate","label":"Investigar o núcleo com a especialista","next":"investigation","effects":{"time":1},"memory":"investigou o núcleo","npc":"researcher","trust":1,"news":"A especialista iniciou uma inspeção do núcleo."},
-  {"id":"help","label":"Ajudar a oficina (aprendiz: ferramentas próprias; demais: 2 créditos)","next":"workshop","requirements":{"credits_or_origin":2},"effects":{"credits_or_origin":-2,"time":1},"memory":"ajudou a oficina a fazer um reparo","npc":"artisan","trust":2,"news":"A oficina fez um reparo temporário em seu núcleo."},
-  {"id":"listen","label":"Ouvir as famílias do rio","next":"river","effects":{"time":1},"memory":"ouviu as preocupações das famílias do rio","npc":"community","trust":2,"news":"Moradores reuniram relatos sobre a água."},
-  {"id":"wait","label":"Cuidar da própria vida e não intervir","next":"aftermath_wait","effects":{"time":1,"risk":1},"memory":"não interveio na crise","npc":"leader","trust":0,"news":"Sem acordo imediato, a extração continuou sob risco maior."}
- ]},
- "investigation":{"title":"Rastros e evidências","text":"{researcher} explica que a Trama obedece à Compensação: energia extraída tem custo. A leitura inicial indica desgaste, mas não prova a origem da Grande Ruptura. Um boato sobre um dragão na pedreira ainda não foi confirmado.","choices":[
-  {"id":"echo","label":"Ler os vestígios com Eco (bolsista; custa 1 Fluxo e aumenta a fadiga)","next":"evidence","requirements":{"origin":"scholar","flow":1},"effects":{"flow":-1,"fatigue":1,"evidence":1,"time":1},"memory":"usou Eco e encontrou vestígios de desgaste","npc":"researcher","trust":1,"news":"Uma leitura de Eco apontou desgaste no núcleo."},
-  {"id":"inspect","label":"Examinar os registros de manutenção","next":"evidence","effects":{"evidence":1,"time":1},"memory":"encontrou registros de manutenção incompletos","npc":"researcher","trust":1,"news":"A inspeção encontrou registros de manutenção incompletos."},
-  {"id":"quarry","label":"Verificar o boato na pedreira","next":"dragon","effects":{"time":1},"memory":"buscou a origem do boato sobre a pedreira","npc":"researcher","trust":0,"news":"Uma visita à pedreira foi organizada."}
- ]},
- "workshop":{"title":"A dívida da família","text":"{artisan} e {resident} mantêm a oficina familiar. O conserto garante apenas uma pausa: a dívida continua e o conselho precisará escolher entre produção e contenção. A família não é obrigada a aceitar sua proposta.","choices":[
-  {"id":"worker_report","label":"Pedir que a família apresente o problema ao conselho","next":"council","effects":{"time":1},"memory":"ouviu a família antes de procurar o conselho","npc":"resident","trust":1,"news":"A família da oficina pediu uma audiência."},
-  {"id":"quarry_work","label":"Investigar a pedreira antes da audiência","next":"dragon","effects":{"time":1},"memory":"investigou a pedreira após ajudar a oficina","npc":"artisan","trust":0,"news":"Moradores foram verificar as condições da pedreira."}
- ]},
- "river":{"title":"A água e as vozes","text":"{community} relata que a água mudou de cor após o aumento de extração; uma relação causal ainda exige investigação. Alguns moradores também ouviram um animal na pedreira. O sustento da oficina depende do mesmo núcleo.","choices":[
-  {"id":"river_evidence","label":"Examinar os registros com a especialista","next":"evidence","effects":{"time":1,"evidence":1},"memory":"investigou os registros sobre extração","npc":"researcher","trust":1,"news":"Moradores solicitaram análise dos registros de extração."},
-  {"id":"quarry_river","label":"Verificar o relato da pedreira","next":"dragon","effects":{"time":1},"memory":"investigou o relato vindo da pedreira","npc":"community","trust":1,"news":"Moradores buscaram informações na pedreira."},
-  {"id":"petition","label":"Levar as preocupações ao conselho","next":"council","effects":{"time":1},"memory":"levou a preocupação das famílias ao conselho","npc":"community","trust":1,"news":"Uma petição sobre a água chegou ao conselho."}
- ]},
- "dragon":{"title":"O visitante da pedreira","text":"Um pequeno véu-noturno feral repousa entre pedras aquecidas. A mudança de habitat é plausível, mas você ainda não sabe se o núcleo é a causa. É um animal com necessidades próprias, não uma recompensa.","choices":[
-  {"id":"protect_dragon","label":"Pedir proteção temporária do habitat","next":"council","effects":{"time":1,"habitat":1},"memory":"pediu proteção para o habitat do véu-noturno","npc":"community","trust":1,"news":"Foi solicitada proteção temporária para a pedreira."},
-  {"id":"report_dragon","label":"Relatar a presença sem interferir","next":"council","effects":{"time":1,"evidence":1},"memory":"registrou a presença de um véu-noturno","npc":"researcher","trust":1,"news":"Um véu-noturno foi observado na pedreira."}
- ]},
- "evidence":{"title":"O que os registros mostram","text":"Há evidência de desgaste no núcleo, mas ainda não de todas as causas da mudança no rio. {researcher} recomenda cautela. O conselho ouvirá propostas, e ninguém é obrigado a segui-las apenas porque você as apresenta.","choices":[
-  {"id":"report","label":"Apresentar os dados na audiência","next":"council","effects":{"time":1},"memory":"apresentou evidências ao conselho","npc":"leader","trust":1,"news":"Dados sobre o núcleo foram apresentados ao conselho."},
-  {"id":"evidence_quarry","label":"Verificar o relato da pedreira antes da audiência","next":"dragon","effects":{"time":1},"memory":"foi à pedreira depois de investigar o núcleo","npc":"researcher","trust":0,"news":"A investigação também alcançou a pedreira."}
- ]},
- "council":{"title":"Uma audiência, três caminhos","text":"{leader} abre uma audiência. A oficina precisa de renda e o rio de proteção. Sua voz pode influenciar a decisão, mas não substitui o conselho. Confiança e evidências podem mudar a resposta.","choices":[
-  {"id":"mediate","label":"Propor redução gradual e mediação (exige confiança comunitária ou evidência)","next":"peace","requirements":{"community_or_evidence":1},"effects":{"time":1,"risk":-1},"memory":"propôs uma mediação com redução gradual","npc":"community","trust":1,"news":"O conselho aprovou uma redução gradual após ouvir a comunidade."},
-  {"id":"industrial","label":"Defender continuidade da produção e um reparo temporário","next":"industry","effects":{"time":1,"credits":2,"risk":2},"memory":"defendeu a continuidade da produção","npc":"artisan","trust":1,"news":"O conselho aprovou a continuidade da produção com reparo temporário."},
-  {"id":"environment","label":"Pedir suspensão da extração junto às famílias","next":"environment","effects":{"time":1,"credits":-1,"risk":-2},"requirements":{"credits":1},"memory":"pediu a suspensão da extração","npc":"community","trust":1,"news":"O conselho suspendeu a extração enquanto busca alternativas."},
-  {"id":"withdraw","label":"Retirar-se e deixar o conselho decidir","next":"aftermath_wait","effects":{"time":1,"risk":1},"memory":"deixou a decisão ao conselho","npc":"leader","trust":0,"news":"O conselho adiou uma decisão e manteve a operação."}
- ]},
- "peace":{"title":"Um acordo provisório","text":"Com apoio suficiente, o conselho aprova uma redução gradual da extração. O acordo protege parte da renda e exige acompanhamento; a dívida da oficina não desapareceu.","choices":[]},
- "industry":{"title":"O preço do funcionamento","text":"O conselho mantém a produção após o reparo. A oficina recebe trabalho, mas a extração aumenta o risco para a Trama local; as famílias exigem fiscalização.","choices":[]},
- "environment":{"title":"A pausa","text":"O conselho suspende a extração e procura outra fonte de energia. A pressão sobre a Trama diminui, mas a família da oficina enfrenta perda de renda e a cidade precisa financiar a transição.","choices":[]},
- "aftermath_wait":{"title":"A decisão dos outros","text":"Sem uma proposta sua, o conselho decide manter a operação por enquanto. O núcleo continua sob risco; a família da oficina e as comunidades do rio terão de conviver com a incerteza.","choices":[]}
+  "start": {
+    "title": "O custo do fluxo",
+    "text": "Em {city}, {artisan} trabalha na {industry} da família. Um Núcleo de Veyr apresenta falhas; ampliar a extração ajudaria a manter empregos, mas {community} teme pelo {water}. {leader}, autoridade municipal, precisa ouvir a comunidade antes de decidir.\n\nSua origem: {origin}. O que você faz?",
+    "choices": [
+      {
+        "id": "investigate",
+        "label": "Investigar o núcleo com a especialista",
+        "next": "investigation",
+        "effects": {
+          "time": 1
+        },
+        "memory": "investigou o núcleo",
+        "npc": "researcher",
+        "trust": 1,
+        "news": "A especialista iniciou uma inspeção do núcleo."
+      },
+      {
+        "id": "help",
+        "label": "Ajudar a oficina (aprendiz: ferramentas próprias; demais: 2 créditos)",
+        "next": "workshop",
+        "requirements": {
+          "credits_or_origin": 2
+        },
+        "effects": {
+          "credits_or_origin": -2,
+          "time": 1
+        },
+        "memory": "ajudou a oficina a fazer um reparo",
+        "npc": "artisan",
+        "trust": 2,
+        "news": "A oficina fez um reparo temporário em seu núcleo."
+      },
+      {
+        "id": "listen",
+        "label": "Ouvir as famílias do rio",
+        "next": "river",
+        "effects": {
+          "time": 1
+        },
+        "memory": "ouviu as preocupações das famílias do rio",
+        "npc": "community",
+        "trust": 2,
+        "news": "Moradores reuniram relatos sobre a água."
+      },
+      {
+        "id": "wait",
+        "label": "Cuidar da própria vida e não intervir",
+        "next": "aftermath_wait",
+        "effects": {
+          "time": 1,
+          "risk": 1
+        },
+        "memory": "não interveio na crise",
+        "npc": "leader",
+        "trust": 0,
+        "news": "Sem acordo imediato, a extração continuou sob risco maior."
+      }
+    ]
+  },
+  "investigation": {
+    "title": "Rastros e evidências",
+    "text": "{researcher} explica que a Trama obedece à Compensação: energia extraída tem custo. A leitura inicial indica desgaste, mas não prova a origem da Grande Ruptura. Um boato sobre um dragão na pedreira ainda não foi confirmado.",
+    "choices": [
+      {
+        "id": "echo",
+        "label": "Ler os vestígios com Eco (bolsista; custa 1 Fluxo e aumenta a fadiga)",
+        "next": "evidence",
+        "requirements": {
+          "origin": "scholar",
+          "flow": 1
+        },
+        "effects": {
+          "flow": -1,
+          "fatigue": 1,
+          "evidence": 1,
+          "time": 1
+        },
+        "memory": "usou Eco e encontrou vestígios de desgaste",
+        "npc": "researcher",
+        "trust": 1,
+        "news": "Uma leitura de Eco apontou desgaste no núcleo."
+      },
+      {
+        "id": "inspect",
+        "label": "Examinar os registros de manutenção",
+        "next": "evidence",
+        "effects": {
+          "evidence": 1,
+          "time": 1
+        },
+        "memory": "encontrou registros de manutenção incompletos",
+        "npc": "researcher",
+        "trust": 1,
+        "news": "A inspeção encontrou registros de manutenção incompletos."
+      },
+      {
+        "id": "quarry",
+        "label": "Verificar o boato na pedreira",
+        "next": "dragon",
+        "effects": {
+          "time": 1
+        },
+        "memory": "buscou a origem do boato sobre a pedreira",
+        "npc": "researcher",
+        "trust": 0,
+        "news": "Uma visita à pedreira foi organizada."
+      }
+    ]
+  },
+  "workshop": {
+    "title": "A dívida da família",
+    "text": "{artisan} e {resident} mantêm a oficina familiar. O conserto garante apenas uma pausa: a dívida continua e o conselho precisará escolher entre produção e contenção. A família não é obrigada a aceitar sua proposta.",
+    "choices": [
+      {
+        "id": "worker_report",
+        "label": "Pedir que a família apresente o problema ao conselho",
+        "next": "council",
+        "effects": {
+          "time": 1
+        },
+        "memory": "ouviu a família antes de procurar o conselho",
+        "npc": "resident",
+        "trust": 1,
+        "news": "A família da oficina pediu uma audiência."
+      },
+      {
+        "id": "quarry_work",
+        "label": "Investigar a pedreira antes da audiência",
+        "next": "dragon",
+        "effects": {
+          "time": 1
+        },
+        "memory": "investigou a pedreira após ajudar a oficina",
+        "npc": "artisan",
+        "trust": 0,
+        "news": "Moradores foram verificar as condições da pedreira."
+      }
+    ]
+  },
+  "river": {
+    "title": "A água e as vozes",
+    "text": "{community} relata que a água mudou de cor após o aumento de extração; uma relação causal ainda exige investigação. Alguns moradores também ouviram um animal na pedreira. O sustento da oficina depende do mesmo núcleo.",
+    "choices": [
+      {
+        "id": "river_evidence",
+        "label": "Examinar os registros com a especialista",
+        "next": "evidence",
+        "effects": {
+          "time": 1,
+          "evidence": 1
+        },
+        "memory": "investigou os registros sobre extração",
+        "npc": "researcher",
+        "trust": 1,
+        "news": "Moradores solicitaram análise dos registros de extração."
+      },
+      {
+        "id": "quarry_river",
+        "label": "Verificar o relato da pedreira",
+        "next": "dragon",
+        "effects": {
+          "time": 1
+        },
+        "memory": "investigou o relato vindo da pedreira",
+        "npc": "community",
+        "trust": 1,
+        "news": "Moradores buscaram informações na pedreira."
+      },
+      {
+        "id": "petition",
+        "label": "Levar as preocupações ao conselho",
+        "next": "council",
+        "effects": {
+          "time": 1
+        },
+        "memory": "levou a preocupação das famílias ao conselho",
+        "npc": "community",
+        "trust": 1,
+        "news": "Uma petição sobre a água chegou ao conselho."
+      }
+    ]
+  },
+  "dragon": {
+    "title": "O visitante da pedreira",
+    "text": "Um pequeno véu-noturno feral repousa entre pedras aquecidas. A mudança de habitat é plausível, mas você ainda não sabe se o núcleo é a causa. É um animal com necessidades próprias, não uma recompensa.",
+    "choices": [
+      {
+        "id": "protect_dragon",
+        "label": "Pedir proteção temporária do habitat",
+        "next": "council",
+        "effects": {
+          "time": 1,
+          "habitat": 1
+        },
+        "memory": "pediu proteção para o habitat do véu-noturno",
+        "npc": "community",
+        "trust": 1,
+        "news": "Foi solicitada proteção temporária para a pedreira."
+      },
+      {
+        "id": "report_dragon",
+        "label": "Relatar a presença sem interferir",
+        "next": "council",
+        "effects": {
+          "time": 1,
+          "evidence": 1
+        },
+        "memory": "registrou a presença de um véu-noturno",
+        "npc": "researcher",
+        "trust": 1,
+        "news": "Um véu-noturno foi observado na pedreira."
+      }
+    ]
+  },
+  "evidence": {
+    "title": "O que os registros mostram",
+    "text": "Há evidência de desgaste no núcleo, mas ainda não de todas as causas da mudança no rio. {researcher} recomenda cautela. O conselho ouvirá propostas, e ninguém é obrigado a segui-las apenas porque você as apresenta.",
+    "choices": [
+      {
+        "id": "report",
+        "label": "Apresentar os dados na audiência",
+        "next": "council",
+        "effects": {
+          "time": 1
+        },
+        "memory": "apresentou evidências ao conselho",
+        "npc": "leader",
+        "trust": 1,
+        "news": "Dados sobre o núcleo foram apresentados ao conselho."
+      },
+      {
+        "id": "evidence_quarry",
+        "label": "Verificar o relato da pedreira antes da audiência",
+        "next": "dragon",
+        "effects": {
+          "time": 1
+        },
+        "memory": "foi à pedreira depois de investigar o núcleo",
+        "npc": "researcher",
+        "trust": 0,
+        "news": "A investigação também alcançou a pedreira."
+      }
+    ]
+  },
+  "council": {
+    "title": "Uma audiência, três caminhos",
+    "text": "{leader} abre uma audiência. A oficina precisa de renda e o rio de proteção. Sua voz pode influenciar a decisão, mas não substitui o conselho. Confiança e evidências podem mudar a resposta.",
+    "choices": [
+      {
+        "id": "mediate",
+        "label": "Propor redução gradual e mediação (exige confiança comunitária ou evidência)",
+        "next": "peace",
+        "requirements": {
+          "community_or_evidence": 1
+        },
+        "effects": {
+          "time": 1,
+          "risk": -1
+        },
+        "memory": "propôs uma mediação com redução gradual",
+        "npc": "community",
+        "trust": 1,
+        "news": "O conselho aprovou uma redução gradual após ouvir a comunidade."
+      },
+      {
+        "id": "industrial",
+        "label": "Defender continuidade da produção e um reparo temporário",
+        "next": "industry",
+        "effects": {
+          "time": 1,
+          "credits": 2,
+          "risk": 2
+        },
+        "memory": "defendeu a continuidade da produção",
+        "npc": "artisan",
+        "trust": 1,
+        "news": "O conselho aprovou a continuidade da produção com reparo temporário."
+      },
+      {
+        "id": "environment",
+        "label": "Pedir suspensão da extração junto às famílias",
+        "next": "environment",
+        "effects": {
+          "time": 1,
+          "credits": -1,
+          "risk": -2
+        },
+        "requirements": {
+          "credits": 1
+        },
+        "memory": "pediu a suspensão da extração",
+        "npc": "community",
+        "trust": 1,
+        "news": "O conselho suspendeu a extração enquanto busca alternativas."
+      },
+      {
+        "id": "withdraw",
+        "label": "Retirar-se e deixar o conselho decidir",
+        "next": "aftermath_wait",
+        "effects": {
+          "time": 1,
+          "risk": 1
+        },
+        "memory": "deixou a decisão ao conselho",
+        "npc": "leader",
+        "trust": 0,
+        "news": "O conselho adiou uma decisão e manteve a operação."
+      }
+    ]
+  },
+  "peace": {
+    "title": "Um acordo provisório",
+    "text": "Com apoio suficiente, o conselho aprova uma redução gradual da extração. O acordo protege parte da renda e exige acompanhamento; a dívida da oficina não desapareceu.",
+    "choices": [
+      {
+        "id": "archive_invitation",
+        "label": "Visitar o arquivo municipal com a especialista",
+        "next": "archive",
+        "effects": {
+          "time": 1
+        },
+        "memory": "aceitou conhecer o arquivo municipal",
+        "npc": "researcher",
+        "trust": 0,
+        "news": "O arquivo municipal abriu consulta a registros antigos."
+      }
+    ]
+  },
+  "industry": {
+    "title": "O preço do funcionamento",
+    "text": "O conselho mantém a produção após o reparo. A oficina recebe trabalho, mas a extração aumenta o risco para a Trama local; as famílias exigem fiscalização.",
+    "choices": [
+      {
+        "id": "archive_invitation",
+        "label": "Visitar o arquivo municipal com a especialista",
+        "next": "archive",
+        "effects": {
+          "time": 1
+        },
+        "memory": "aceitou conhecer o arquivo municipal",
+        "npc": "researcher",
+        "trust": 0,
+        "news": "O arquivo municipal abriu consulta a registros antigos."
+      }
+    ]
+  },
+  "environment": {
+    "title": "A pausa",
+    "text": "O conselho suspende a extração e procura outra fonte de energia. A pressão sobre a Trama diminui, mas a família da oficina enfrenta perda de renda e a cidade precisa financiar a transição.",
+    "choices": [
+      {
+        "id": "archive_invitation",
+        "label": "Visitar o arquivo municipal com a especialista",
+        "next": "archive",
+        "effects": {
+          "time": 1
+        },
+        "memory": "aceitou conhecer o arquivo municipal",
+        "npc": "researcher",
+        "trust": 0,
+        "news": "O arquivo municipal abriu consulta a registros antigos."
+      }
+    ]
+  },
+  "aftermath_wait": {
+    "title": "A decisão dos outros",
+    "text": "Sem uma proposta sua, o conselho decide manter a operação por enquanto. O núcleo continua sob risco; a família da oficina e as comunidades do rio terão de conviver com a incerteza.",
+    "choices": [
+      {
+        "id": "archive_invitation",
+        "label": "Visitar o arquivo municipal com a especialista",
+        "next": "archive",
+        "effects": {
+          "time": 1
+        },
+        "memory": "aceitou conhecer o arquivo municipal",
+        "npc": "researcher",
+        "trust": 0,
+        "news": "O arquivo municipal abriu consulta a registros antigos."
+      }
+    ]
+  },
+  "archive": {
+    "title": "O arquivo das versões",
+    "text": "Entre páginas danificadas, {researcher} apresenta dois relatos sobre a Grande Ruptura. Um descreve uma falha industrial; outro fala de uma luz presa sob a terra. Ambos são testemunhos incompletos, e nenhum prova o que aconteceu. O arquivo precisa de recursos, enquanto famílias pedem acesso aos registros.",
+    "choices": [
+      {
+        "id": "archive_public",
+        "label": "Organizar uma leitura pública dos testemunhos",
+        "next": "archive_public_end",
+        "effects": {
+          "time": 1,
+          "credits": -1
+        },
+        "requirements": {
+          "credits": 1
+        },
+        "memory": "ajudou a comunidade a consultar os relatos antigos",
+        "npc": "community",
+        "trust": 1,
+        "news": "Moradores participaram de uma leitura de documentos antigos."
+      },
+      {
+        "id": "archive_private",
+        "label": "Negociar acesso de pesquisa com uma casa comercial",
+        "next": "archive_private_end",
+        "effects": {
+          "time": 1,
+          "credits": 2
+        },
+        "memory": "negociou acesso de pesquisa com uma casa comercial",
+        "npc": "merchant",
+        "trust": 1,
+        "news": "Um contrato de pesquisa foi firmado para o arquivo municipal."
+      },
+      {
+        "id": "archive_preserve",
+        "label": "Pedir que os registros sejam preservados sem escolher uma versão",
+        "next": "archive_preserve_end",
+        "effects": {
+          "time": 1,
+          "evidence": 1
+        },
+        "memory": "pediu a preservação cuidadosa de relatos contraditórios",
+        "npc": "researcher",
+        "trust": 1,
+        "news": "O arquivo separou registros para conservação."
+      },
+      {
+        "id": "archive_decline",
+        "label": "Deixar a decisão para a equipe do arquivo",
+        "next": "archive_independent_end",
+        "effects": {
+          "time": 1
+        },
+        "memory": "deixou que a equipe decidisse o destino dos registros",
+        "npc": "researcher",
+        "trust": 0,
+        "news": "A equipe do arquivo assumiu a organização dos registros."
+      }
+    ]
+  },
+  "archive_public_end": {
+    "title": "Vozes em praça",
+    "text": "Os moradores conhecem versões diferentes da tragédia. O debate aproxima algumas famílias e incomoda quem preferia uma narrativa oficial. A causa última da Ruptura permanece desconhecida.",
+    "choices": []
+  },
+  "archive_private_end": {
+    "title": "O preço do acesso",
+    "text": "A pesquisa recebe financiamento, mas o contrato limita inicialmente a consulta. A decisão poderá influenciar quem terá acesso às próximas descobertas. Nenhum dos relatos foi confirmado como verdade.",
+    "choices": []
+  },
+  "archive_preserve_end": {
+    "title": "Memória sob cuidado",
+    "text": "A equipe cataloga os documentos sem transformar testemunho em prova definitiva. O trabalho será lento, mas as próximas gerações poderão confrontar as versões.",
+    "choices": []
+  },
+  "archive_independent_end": {
+    "title": "Decisão de arquivo",
+    "text": "A equipe segue seu próprio plano de conservação, equilibrando os recursos disponíveis com pedidos de consulta. Você pode acompanhar as notícias e seguir sua vida.",
+    "choices": []
+  }
 }

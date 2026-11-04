@@ -218,14 +218,14 @@ func scene_place(node: String) -> String:
 		return "quarry"
 	if node in ["council","peace","industry","environment","aftermath_wait"]:
 		return "council"
-	if node in ["workshop","investigation","evidence"]:
+	if node in ["workshop","investigation","evidence","archive","archive_public_end","archive_private_end","archive_preserve_end","archive_independent_end"]:
 		return "workshop"
 	return "city"
 
 func scene_person(node: String) -> String:
 	match node:
 		"workshop": return "artisan"
-		"investigation", "evidence", "dragon": return "researcher"
+		"investigation", "evidence", "dragon", "archive": return "researcher"
 		"river", "environment", "peace": return "community"
 		"council", "aftermath_wait": return "leader"
 		"industry": return "artisan"
@@ -466,3 +466,8 @@ func confirm_input() -> void:
 				action_status.text = "Essa conversa já aconteceu ou não está disponível."
 				action_confirm.disabled = true
 		"rest", "bandage", "scout": perform_basic(proposed_action.kind)
+
+func _exit_tree() -> void:
+	if is_instance_valid(music_player):
+		music_player.stop()
+		music_player.stream = null

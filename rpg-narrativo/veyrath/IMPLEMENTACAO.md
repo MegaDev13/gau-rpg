@@ -39,3 +39,11 @@ Um arco opcional no arquivo municipal segue as resoluções da crise inicial, ap
 ## Atualização 0.7 — conteúdo remoto
 
 A primeira base de conteúdo remoto assinado, cache offline, canal beta, verificação de compatibilidade, rollback e histórias opcionais está descrita em `veyrath/updates/README.md`. A chave pública de conteúdo é incorporada ao APK; a chave privada não está no repositório. O app pode ler notícias públicas do Mestre global existente, mas não implementa direção de IA no modo solo nem validação/aplicação de efeitos de IA.
+
+## Atualização 0.8 — Crônicas do Céu Partido
+
+A campanha solo foi reescrita como uma crônica em três capítulos. O terceiro retoma a decisão do arquivo por meio do histórico salvo e oferece três desfechos: coleta pública com apoio ou evidência, barreira financiada pelo jogador e medição conduzida pelos próprios moradores. As duas intervenções alteram evidência ou recursos e risco, além de memória, diário e gazeta. Campanhas salvas em qualquer desfecho do arquivo podem seguir para a margem com os mesmos identificadores e formato de save.
+
+A interface usa seis ilustrações estáticas originais, tipografia Latin Modern Roman, tamanho de leitura ajustável e um menu dedicado aos registros da campanha. A versão do APK subiu para 0.8.0. O nível de compatibilidade dos pacotes remotos permanece 7 porque o formato e as capacidades do instalador não mudaram.
+
+Os testes de sistemas verificam a retomada de um save no arquivo, a reatividade do texto, a condição de acesso à coleta e o custo da barreira. O teste de navegação verifica também o carregamento das seis ilustrações e da fonte. A campanha ainda cobre uma crise local. A expansão para outros arcos, famílias e instituições, a integração do Mestre com consequências mecânicas e a validação em aparelhos Android continuam pendentes.

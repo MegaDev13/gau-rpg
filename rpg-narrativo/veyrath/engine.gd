@@ -157,17 +157,21 @@ func load_game() -> bool:
 	return true
 
 func available(choice: Dictionary) -> bool:
+	return choice_block_reason(choice).is_empty()
+
+func choice_block_reason(choice: Dictionary) -> String:
 	var req: Dictionary = choice.get("requirements", {})
 	if req.has("origin") and state.origin != req.origin:
-		return false
-	for key in ["flow", "credits"]:
-		if req.has(key) and state[key] < req[key]:
-			return false
+		return "Requer a origem " + str(find_entry(world.origins,req.origin).get("name",req.origin)) + "."
+	if req.has("flow") and state.flow < req.flow:
+		return "Requer %d de Fluxo." % req.flow
+	if req.has("credits") and state.credits < req.credits:
+		return "Requer %d crédito(s)." % req.credits
 	if req.has("credits_or_origin") and state.origin != "apprentice" and state.credits < req.credits_or_origin:
-		return false
+		return "Requer %d crédito(s) ou ferramentas de aprendiz." % req.credits_or_origin
 	if req.has("community_or_evidence") and state.people.community.trust < req.community_or_evidence and state.evidence < req.community_or_evidence:
-		return false
-	return true
+		return "Requer confiança das famílias ou evidências."
+	return ""
 
 func choose(index: int) -> bool:
 	if not valid(state):
@@ -208,6 +212,16 @@ func render(value: String) -> String:
 	for role in world.roles:
 		values[role.id] = state.people[role.id].name
 	return value.format(values)
+
+func scene_text() -> String:
+	var scene: Dictionary = story[state.node]
+	var text: String = scene.text
+	for passage in scene.get("recollections", []):
+		for event in state.history:
+			if event.get("action", "") == passage.action:
+				text += "\n\n" + passage.text
+				break
+	return render(text)
 
 func reaction() -> String:
 	var artisan: Dictionary = state.people.artisan

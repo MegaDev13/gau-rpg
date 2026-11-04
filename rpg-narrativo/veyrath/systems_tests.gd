@@ -37,5 +37,16 @@ func _initialize() -> void:
 	check(archive.state.node == "archive_preserve_end" and archive.state.evidence == 1, "Desfecho de investigação persistente")
 	var archive_saved = Game.new()
 	check(archive_saved.load_game() and archive_saved.state.node == "archive_preserve_end", "Desfecho do arquivo salvo")
+	check(archive_saved.choose(0) and archive_saved.state.node == "measures", "Save anterior segue ao capítulo da margem")
+	check(archive_saved.scene_text().contains("cópia em papel seco"), "A margem lembra a preservação no arquivo")
+	check(archive_saved.choose(0) and archive_saved.state.node == "measures_public" and archive_saved.state.evidence == 2, "Evidência abre coleta e produz resultado")
+	var end_save = Game.new()
+	check(end_save.load_game() and end_save.state.node == "measures_public", "Final da margem persiste")
+	check(archive.new_game("Turno", "merchant", "valdor", 39), "Campanha sem evidência para a margem")
+	check(archive.choose(3) and archive.choose(0) and archive.choose(3) and archive.choose(0), "Chegar à margem sem apoio prévio")
+	check(not archive.choose(0), "Coleta exige confiança ou evidência")
+	var credits: int = archive.state.credits
+	var risk: int = archive.state.risk
+	check(archive.choose(1) and archive.state.credits == credits - 2 and archive.state.risk == risk - 1, "Barreira custa créditos e reduz o risco")
 	print("Sistemas narrativos: testes concluídos. Falhas: ",failures)
 	quit(1 if failures else 0)

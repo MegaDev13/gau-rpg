@@ -6,8 +6,18 @@ const DefenseUI = preload("res://veyrath/defense_ui.gd")
 const MultiplayerUI = preload("res://veyrath/multiplayer_ui.gd")
 const UpdatesUI = preload("res://veyrath/updates/updates_ui.gd")
 const GOLD := Color("d6b47d")
-const TEXT := Color("e7e0d2")
-const MUTED := Color("aeb6b7")
+const TEXT := Color("f1e6d3")
+const MUTED := Color("bcb3a3")
+const INK := Color("141615")
+const PANEL := Color("222522")
+const RULE := Color("625340")
+const EDITION := "res://veyrath/assets/edition/"
+const ILLUSTRATIONS := {
+	"city": "veyra.webp", "council": "conselho.webp", "workshop": "oficina.webp",
+	"river": "margem.webp", "quarry": "pedreira.webp", "archive": "arquivo.webp",
+}
+var reading_font: Font
+var illustrations: Dictionary = {}
 var game = VeyrathEngine.new()
 var column: VBoxContainer
 var scroll: ScrollContainer
@@ -17,6 +27,7 @@ var city_input: OptionButton
 var notice := ""
 var music_player: AudioStreamPlayer
 var music_enabled := true
+var large_text := false
 var action_input: LineEdit
 var action_status: Label
 var action_confirm: Button
@@ -24,12 +35,13 @@ var proposed_action: Dictionary = {}
 
 func _ready() -> void:
 	var bg := ColorRect.new()
-	bg.color = Color("101a25")
+	bg.color = INK
 	bg.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	add_child(bg)
 	scroll = ScrollContainer.new()
 	scroll.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
+	scroll.follow_focus = true
 	add_child(scroll)
 	var margin := MarginContainer.new()
 	margin.size_flags_horizontal = Control.SIZE_EXPAND_FILL
@@ -40,8 +52,15 @@ func _ready() -> void:
 	scroll.add_child(margin)
 	column = VBoxContainer.new()
 	column.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	column.add_theme_constant_override("separation",14)
+	column.add_theme_constant_override("separation",16)
 	margin.add_child(column)
+	var font_path := EDITION + "romano.otf"
+	if ResourceLoader.exists(font_path):
+		reading_font = load(font_path)
+	elif FileAccess.file_exists(font_path):
+		var local_font := FontFile.new()
+		local_font.data = FileAccess.get_file_as_bytes(font_path)
+		reading_font = local_font
 	setup_music()
 	menu()
 
@@ -49,8 +68,8 @@ func style(bg: Color, border: Color, padding: int = 14) -> StyleBoxFlat:
 	var box := StyleBoxFlat.new()
 	box.bg_color = bg
 	box.border_color = border
-	box.set_border_width_all(2)
-	box.set_corner_radius_all(4)
+	box.set_border_width_all(1)
+	box.set_corner_radius_all(3)
 	box.set_content_margin_all(padding)
 	return box
 
@@ -60,9 +79,13 @@ func clear() -> void:
 		child.queue_free()
 	scroll.scroll_vertical = 0
 
-func label(value: String, font_size: int = 25, color: Color = TEXT) -> void:
+func label(value: String, font_size: int = 25, color: Color = TEXT, literary: bool = false, centered: bool = false) -> void:
 	var item := Label.new()
 	item.text = value
+	if literary and reading_font != null:
+		item.add_theme_font_override("font",reading_font)
+	if centered:
+		item.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	item.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	item.add_theme_font_size_override("font_size",font_size)
 	item.add_theme_color_override("font_color",color)
@@ -77,42 +100,72 @@ func button(value: String, action: Callable, disabled: bool = false) -> Button:
 	item.add_theme_font_size_override("font_size",21)
 	item.add_theme_color_override("font_color",TEXT)
 	item.add_theme_color_override("font_disabled_color",Color("7b8382"))
-	item.add_theme_stylebox_override("normal",style(Color("243544"),Color("7b6c58"),15))
-	item.add_theme_stylebox_override("hover",style(Color("354a55"),GOLD,15))
-	item.add_theme_stylebox_override("pressed",style(Color("325c5b"),GOLD,15))
-	item.add_theme_stylebox_override("disabled",style(Color("1b252d"),Color("47504f"),15))
+	item.add_theme_stylebox_override("normal",style(PANEL,RULE,17))
+	item.add_theme_stylebox_override("hover",style(Color("38372e"),GOLD,17))
+	item.add_theme_stylebox_override("pressed",style(Color("44402e"),GOLD,17))
+	item.add_theme_stylebox_override("disabled",style(Color("1a1c1a"),Color("42423a"),17))
 	item.disabled = disabled
 	item.pressed.connect(action)
 	column.add_child(item)
 	return item
 
-func card(value: String, font_size: int = 25) -> void:
+func card(value: String, font_size: int = 25, literary: bool = false) -> void:
 	var panel := PanelContainer.new()
 	panel.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	panel.add_theme_stylebox_override("panel",style(Color("1b2934"),Color("725f49"),22))
+	panel.add_theme_stylebox_override("panel",style(PANEL,RULE,24))
 	var content := Label.new()
 	content.text = value
+	if literary and reading_font != null:
+		content.add_theme_font_override("font",reading_font)
+		content.add_theme_constant_override("line_spacing",6)
 	content.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	content.add_theme_font_size_override("font_size",font_size)
 	content.add_theme_color_override("font_color",TEXT)
 	panel.add_child(content)
 	column.add_child(panel)
 
+func divider() -> void:
+	var line := HSeparator.new()
+	var rule := StyleBoxLine.new()
+	rule.color = RULE
+	rule.thickness = 1
+	line.add_theme_stylebox_override("separator",rule)
+	column.add_child(line)
+
+func illustration(which: String) -> Texture2D:
+	if illustrations.has(which):
+		return illustrations[which]
+	if ILLUSTRATIONS.has(which):
+		var path: String = EDITION + ILLUSTRATIONS[which]
+		if ResourceLoader.exists(path):
+			illustrations[which] = load(path)
+			return illustrations[which]
+		if FileAccess.file_exists(path):
+			var decoded := Image.new()
+			if decoded.load_webp_from_buffer(FileAccess.get_file_as_bytes(path)) == OK:
+				illustrations[which] = ImageTexture.create_from_image(decoded)
+				return illustrations[which]
+	if which in ["city","river"]:
+		return load("res://veyrath/assets/val_doria.jpg")
+	return null
+
 func scene_art(which: String, height: int = 225) -> void:
-	if which == "city":
-		var image := TextureRect.new()
-		image.texture = load("res://veyrath/assets/val_doria.jpg")
-		image.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
-		image.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_COVERED
-		image.custom_minimum_size = Vector2(0,height)
-		image.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-		column.add_child(image)
+	var texture := illustration(which)
+	if texture != null:
+		var frame := PanelContainer.new()
+		frame.add_theme_stylebox_override("panel",style(INK,RULE,3))
+		var visual := TextureRect.new()
+		visual.texture = texture
+		visual.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+		visual.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_COVERED
+		visual.custom_minimum_size.y = height
+		frame.add_child(visual)
+		column.add_child(frame)
 		return
 	var visual = Art.new()
 	visual.kind = "scene"
-	visual.scene_id = which
-	visual.custom_minimum_size = Vector2(0,height)
-	visual.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	visual.scene_id = "workshop" if which == "archive" else which
+	visual.custom_minimum_size.y = height
 	column.add_child(visual)
 
 func portrait(role: String, mood: String = "neutral") -> void:
@@ -146,21 +199,22 @@ func portrait(role: String, mood: String = "neutral") -> void:
 
 func menu() -> void:
 	clear()
-	label("CRÔNICAS DO CÉU PARTIDO",17,MUTED)
-	label("VEYRATH",52,GOLD)
-	label("O CÉU SOB FERRO",24,TEXT)
-	scene_art("city",230)
-	label("Um mundo com memória. Um futuro que você ajuda a escrever.",21,MUTED)
+	label("C R Ô N I C A S   D O   C É U   P A R T I D O",16,GOLD,false,true)
+	label("Veyrath",78,TEXT,true,true)
+	label("O CÉU SOB FERRO",21,GOLD,false,true)
+	scene_art("city",330)
+	label("Toda cidade tem uma dívida.\nAlgumas são escritas na água.",30,TEXT,true,true)
+	divider()
 	if not notice.is_empty():
 		card(notice,20)
 		notice = ""
-	button("✦  NOVO JOGO",creation)
-	button("◈  CONTINUAR VEYRATH",continue_game)
-	button("◇  MULTIPLAYER",multiplayer_screen)
-	button("▣  CAMPANHA ANTERIOR: CINZAS DE ÉTER",legacy)
-	button("☼  SOBRE O MUNDO",about)
-	button("♫  CONFIGURAÇÕES",settings)
-	label("CAMPANHA SOLO  •  OFFLINE",16,MUTED)
+	button("Continuar a crônica",continue_game,not game.valid(game.read_save(game.SAVE)) and not game.valid(game.read_save(game.BACKUP)))
+	button("Escrever uma nova história",creation)
+	button("Mundo compartilhado",multiplayer_screen)
+	button("Configurações",settings)
+	button("Sobre Veyrath",about)
+	button("Cinzas de Éter · campanha anterior",legacy)
+	label("VEYRATH   /   CRÔNICA SOLO OFFLINE",15,MUTED,false,true)
 
 func creation() -> void:
 	clear()
@@ -217,17 +271,28 @@ func legacy() -> void:
 func scene_place(node: String) -> String:
 	if node == "dragon":
 		return "quarry"
+	if node == "river" or node.begins_with("measures"):
+		return "river"
 	if node in ["council","peace","industry","environment","aftermath_wait"]:
 		return "council"
-	if node in ["workshop","investigation","evidence","archive","archive_public_end","archive_private_end","archive_preserve_end","archive_independent_end"]:
+	if node.begins_with("archive"):
+		return "archive"
+	if node in ["workshop","investigation","evidence"]:
 		return "workshop"
 	return "city"
+
+func chapter_label(node: String) -> String:
+	if node.begins_with("measures"):
+		return "III   /   O QUE A ÁGUA LEVA"
+	if node.begins_with("archive"):
+		return "II   /   O QUE O PAPEL GUARDA"
+	return "I   /   O QUE O FERRO COBRA"
 
 func scene_person(node: String) -> String:
 	match node:
 		"workshop": return "artisan"
 		"investigation", "evidence", "dragon", "archive": return "researcher"
-		"river", "environment", "peace": return "community"
+		"river", "environment", "peace", "measures", "measures_public", "measures_departure": return "community"
 		"council", "aftermath_wait": return "leader"
 		"industry": return "artisan"
 		_: return ""
@@ -235,21 +300,32 @@ func scene_person(node: String) -> String:
 func show_scene() -> void:
 	clear()
 	var scene: Dictionary = game.story[game.state.node]
-	label("◆ " + game.render("{city}").to_upper() + "   ·   DIA %s   ·   312 P.R." % game.state.day,17,GOLD)
-	scene_art(scene_place(game.state.node),210)
-	label(scene.title,34,GOLD)
-	var role := scene_person(game.state.node)
+	var node: String = game.state.node
+	label(chapter_label(node),17,GOLD)
+	label("%s   ·   DIA %s   ·   312 P.R." % [game.render("{city}"),game.state.day],18,MUTED)
+	scene_art(scene_place(node),270)
+	label(scene.title,48,TEXT,true)
+	divider()
+	card(game.scene_text(),38 if large_text else 32,true)
+	var role := scene_person(node)
 	if not role.is_empty():
 		portrait(role, "warm" if int(game.state.people[role].trust) > 1 else "neutral")
-	card(game.render(scene.text),24)
+	if node == "start":
+		label("SUA ORIGEM  /  " + game.render("{origin}"),19,GOLD)
+		label(game.find_entry(game.world.origins,game.state.origin).detail,20,MUTED)
 	if scene.choices.is_empty():
-		card(game.reaction(),21)
-		label("Esta crise local terminou; o mundo continuará em futuras atualizações.",19,MUTED)
+		divider()
+		label("DESFECHO DA CRÔNICA",18,GOLD)
+		card(game.reaction(),25,true)
+		label("As decisões desta crônica ficam registradas no diário.",20,MUTED)
 	else:
-		label("ESCOLHA SEU CAMINHO",18,GOLD)
+		divider()
+		label("SUA DECISÃO",18,GOLD)
 	for i in range(scene.choices.size()):
 		var choice: Dictionary = scene.choices[i]
-		button("›  " + (choice.label if game.available(choice) else choice.label + " — requisito não atendido"),select_choice.bind(i),not game.available(choice))
+		var reason: String = game.choice_block_reason(choice)
+		var suffix := "" if reason.is_empty() else "\n" + reason
+		button("%02d   %s%s" % [i+1,choice.label,suffix],select_choice.bind(i),not reason.is_empty())
 	if not scene.choices.is_empty():
 		label("ESCREVA UMA AÇÃO",18,GOLD)
 		action_input = LineEdit.new()
@@ -266,7 +342,15 @@ func show_scene() -> void:
 		column.add_child(action_status)
 		action_confirm = button("CONFIRMAR AÇÃO",confirm_input,true)
 		proposed_action = {}
-	label("EXPLORAR REGISTROS",18,GOLD)
+	divider()
+	button("Abrir registros da campanha",campaign_records)
+	button("‹  Menu principal",menu)
+
+func campaign_records() -> void:
+	clear()
+	label("REGISTROS DA CAMPANHA",19,GOLD)
+	label("O mundo lembra",49,TEXT,true)
+	divider()
 	button("◈  FICHA E ATRIBUTOS",character_sheet)
 	button("◉  INVENTÁRIO",inventory)
 	button("◆  BESTIÁRIO",bestiary)
@@ -275,7 +359,8 @@ func show_scene() -> void:
 	button("♧  PESSOAS E RELAÇÕES",people)
 	button("▤  JORNAL LOCAL",news)
 	button("⚔  DEFESA DO POSTO",defense)
-	button("‹  MENU PRINCIPAL",menu)
+	button("Configurações",settings)
+	button("‹  Voltar à leitura",show_scene)
 
 func select_choice(index: int) -> void:
 	if game.choose(index):
@@ -337,6 +422,9 @@ func about() -> void:
 	scene_art("city",200)
 	card("A Trama é descrita pelos princípios Forma, Fluxo e Eco. Toda transformação arcana exige Compensação. A Grande Ruptura ocorreu no ano zero e a Fenda Celeste permanece visível; suas causas ainda são disputadas.")
 	card("Dragões sapientes têm autonomia; dragões ferais são animais de ecologias diversas. Povos e culturas não determinam moralidade.",22)
+	divider()
+	label("CRÉDITOS DA EDIÇÃO",18,GOLD)
+	label("Ilustrações originais criadas para Veyrath. Tipografia Latin Modern Roman, de Bogusław Jackowski e Janusz M. Nowacki, sob GUST Font License.",19,MUTED)
 	button("‹  VOLTAR",menu)
 
 func defense() -> void:
@@ -355,6 +443,7 @@ func setup_music() -> void:
 	var config := ConfigFile.new()
 	if config.load("user://veyrath_config.cfg") == OK:
 		music_enabled = bool(config.get_value("audio", "music", true))
+		large_text = bool(config.get_value("reading", "large_text", false))
 	music_player = AudioStreamPlayer.new()
 	var track: AudioStreamOggVorbis = load("res://veyrath/assets/tema_cidade.ogg")
 	track.loop = true
@@ -369,6 +458,7 @@ func settings() -> void:
 	label("♫  CONFIGURAÇÕES",34,GOLD)
 	card("Trilha original instrumental: " + ("ativada" if music_enabled else "desativada"),22)
 	button("DESATIVAR MÚSICA" if music_enabled else "ATIVAR MÚSICA",toggle_music)
+	button("TEXTO DA CRÔNICA  ·  " + ("GRANDE" if large_text else "PADRÃO"),toggle_reading_size)
 	button("ATUALIZAÇÕES E CONTEÚDO",updates_screen)
 	button("‹  MENU PRINCIPAL",menu)
 
@@ -378,11 +468,21 @@ func toggle_music() -> void:
 		music_player.play()
 	else:
 		music_player.stop()
-	var config := ConfigFile.new()
-	config.set_value("audio","music",music_enabled)
-	if config.save("user://veyrath_config.cfg") != OK:
-		notice = "Não foi possível salvar a preferência de música."
+	save_preferences()
 	settings()
+
+func toggle_reading_size() -> void:
+	large_text = not large_text
+	save_preferences()
+	settings()
+
+func save_preferences() -> void:
+	var config := ConfigFile.new()
+	config.load("user://veyrath_config.cfg")
+	config.set_value("audio","music",music_enabled)
+	config.set_value("reading","large_text",large_text)
+	if config.save("user://veyrath_config.cfg") != OK:
+		notice = "Não foi possível salvar as preferências."
 
 func character_sheet() -> void:
 	clear()

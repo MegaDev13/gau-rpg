@@ -1,7 +1,7 @@
 {
   "start": {
     "title": "O custo do fluxo",
-    "text": "Em {city}, {artisan} trabalha na {industry} da família. Um Núcleo de Veyr apresenta falhas; ampliar a extração ajudaria a manter empregos, mas {community} teme pelo {water}. {leader}, autoridade municipal, precisa ouvir a comunidade antes de decidir.\n\nSua origem: {origin}. O que você faz?",
+    "text": "Na terceira badalada, {city} perdeu a voz. As correias da {industry} pararam. No silêncio, ouviu-se a água passar sob o piso.\n\n{artisan} encostou o ouvido na carcaça do Núcleo de Veyr. “Eu sei o que ele tem. O que não sei é de onde vou tirar o dinheiro.”\n\nDo lado de fora, {community} trazia uma jarra. A água do {water} deixara uma linha de pó escuro na borda. Ninguém sabia dizer se aquilo vinha das máquinas. Amanhã, {leader} ouviria a oficina e as famílias. Hoje, a cidade ainda precisava de água e de trabalho.",
     "choices": [
       {
         "id": "investigate",
@@ -59,8 +59,8 @@
     ]
   },
   "investigation": {
-    "title": "Rastros e evidências",
-    "text": "{researcher} explica que a Trama obedece à Compensação: energia extraída tem custo. A leitura inicial indica desgaste, mas não prova a origem da Grande Ruptura. Um boato sobre um dragão na pedreira ainda não foi confirmado.",
+    "title": "O que o ferro retém",
+    "text": "{researcher} tirou as luvas para abrir o estojo. Dentro havia uma lâmina, três porcas e um pedaço de vidro esverdeado.\n\n“Se eu acender essa máquina, alguma coisa vai esfriar em outro lugar. É só isso que a Compensação promete. Onde, e em quem, são as partes que nos custam o sono.”\n\nA lâmina vibrava perto da junta. A especialista anotou a vibração, deixou um espaço em branco e riscou a palavra ‘causa’. Na pedreira, diziam ter ouvido um bicho repetir o apito do turno.",
     "choices": [
       {
         "id": "echo",
@@ -110,7 +110,7 @@
   },
   "workshop": {
     "title": "A dívida da família",
-    "text": "{artisan} e {resident} mantêm a oficina familiar. O conserto garante apenas uma pausa: a dívida continua e o conselho precisará escolher entre produção e contenção. A família não é obrigada a aceitar sua proposta.",
+    "text": "O reparo segurou. {artisan} ficou ao lado da máquina até a segunda volta, os dedos abertos sobre o botão de corte.\n\nNa mesa, {resident} dividia o pão em fatias mais finas do que a faca permitia. “A prestação vence mesmo se o núcleo parar. O credor conta dias. Nós contamos turnos.”\n\nA família pode pedir audiência. Se pedir, terá de admitir diante dos vizinhos que vinha adiando a troca de uma peça. Se não pedir, amanhã talvez precise ligar a máquina outra vez.",
     "choices": [
       {
         "id": "worker_report",
@@ -140,7 +140,7 @@
   },
   "river": {
     "title": "A água e as vozes",
-    "text": "{community} relata que a água mudou de cor após o aumento de extração; uma relação causal ainda exige investigação. Alguns moradores também ouviram um animal na pedreira. O sustento da oficina depende do mesmo núcleo.",
+    "text": "{community} levou você à margem antes do primeiro balde. Uma mulher lavava uma colher na água clara da superfície. Abaixo dela, as pedras tinham a cor do metal queimado.\n\n“Minha filha tem trabalho na oficina. Se fechar, ela volta para esta margem. Se continuar assim, não sei o que ainda vai ter aqui.”\n\nAs primeiras manchas apareceram depois que aumentaram a extração. É um relato, ainda sem prova de causa. Da pedreira vieram outros: um som semelhante ao apito, repetido depois que todos os operários tinham ido embora.",
     "choices": [
       {
         "id": "river_evidence",
@@ -182,8 +182,8 @@
     ]
   },
   "dragon": {
-    "title": "O visitante da pedreira",
-    "text": "Um pequeno véu-noturno feral repousa entre pedras aquecidas. A mudança de habitat é plausível, mas você ainda não sabe se o núcleo é a causa. É um animal com necessidades próprias, não uma recompensa.",
+    "title": "O apito sem maquinista",
+    "text": "A pedra ainda guardava o calor do dia. Sob uma saliência, uma criatura do tamanho de um gato cobria as narinas com a membrana de uma asa. Quando você pisou no cascalho, ela respondeu com o apito curto que encerra o turno.\n\nUm véu-noturno feral. Perto dele, marcas mais antigas formavam trilhas até as fendas aquecidas da pedreira. Não há como saber ainda se o núcleo mudou seu habitat ou se a espécie já passava por aqui.\n\nA criatura se recolheu quando sua sombra atravessou a pedra.",
     "choices": [
       {
         "id": "protect_dragon",
@@ -214,8 +214,8 @@
     ]
   },
   "evidence": {
-    "title": "O que os registros mostram",
-    "text": "Há evidência de desgaste no núcleo, mas ainda não de todas as causas da mudança no rio. {researcher} recomenda cautela. O conselho ouvirá propostas, e ninguém é obrigado a segui-las apenas porque você as apresenta.",
+    "title": "A coluna vazia",
+    "text": "O mesmo parafuso fora lançado no livro em três meses diferentes. Na quarta página, ninguém assinara. {researcher} passou o dedo pelo espaço em branco.\n\n“Posso afirmar que a junta está gasta. Posso afirmar que faltam registros. Se você juntar essas duas frases com um ‘portanto’, vai dizer mais do que sabemos.”\n\nO conselho quer uma resposta antes do próximo turno. A pedreira ainda espera uma visita.",
     "choices": [
       {
         "id": "report",
@@ -244,8 +244,8 @@
     ]
   },
   "council": {
-    "title": "Uma audiência, três caminhos",
-    "text": "{leader} abre uma audiência. A oficina precisa de renda e o rio de proteção. Sua voz pode influenciar a decisão, mas não substitui o conselho. Confiança e evidências podem mudar a resposta.",
+    "title": "O peso de uma assinatura",
+    "text": "{leader} mandou trazer uma cadeira para as famílias. Alguém trouxe três, e o escrivão precisou empurrar a mesa. Foi o único gesto daquela manhã que pareceu custar alguma coisa à sala.\n\n{artisan} entregou a folha de pagamentos. {community} pôs a jarra ao lado dela. Entre os dois objetos havia espaço suficiente para a mão do escrivão, que esperava o primeiro nome.\n\nAs propostas precisam de apoio para sair do papel. O conselho pode negociar uma redução com a comunidade ou diante de evidências. Suspender a extração exige pagar parte da transição. Manter o turno preserva renda e deixa a carga sobre o núcleo.",
     "choices": [
       {
         "id": "mediate",
@@ -310,8 +310,8 @@
     ]
   },
   "peace": {
-    "title": "Um acordo provisório",
-    "text": "Com apoio suficiente, o conselho aprova uma redução gradual da extração. O acordo protege parte da renda e exige acompanhamento; a dívida da oficina não desapareceu.",
+    "title": "Meio turno",
+    "text": "Ao anoitecer, a oficina passou a trabalhar meio turno. {artisan} riscou seis horas da folha de pagamentos. {community} levou a jarra de volta para casa, ainda cheia.\n\nO acordo reduz a pressão sobre a Trama. Na próxima semana, a oficina terá de negociar a dívida e as famílias terão de voltar à mesa com medidas do rio. A assinatura comprou tempo. Quanto, ninguém ousou escrever.",
     "choices": [
       {
         "id": "archive_invitation",
@@ -329,7 +329,7 @@
   },
   "industry": {
     "title": "O preço do funcionamento",
-    "text": "O conselho mantém a produção após o reparo. A oficina recebe trabalho, mas a extração aumenta o risco para a Trama local; as famílias exigem fiscalização.",
+    "text": "O primeiro apito depois da audiência pareceu mais alto que os outros. Da porta da oficina, {artisan} chamou pelo nome quem voltaria ao turno. Uma família trouxe pão para comemorar. Outra passou direto.\n\nO reparo permite manter a produção. A extração aumenta a pressão sobre a Trama, e {community} recolhe assinaturas para exigir fiscalização. Quem voltou ao trabalho hoje poderá estar dos dois lados da audiência seguinte.",
     "choices": [
       {
         "id": "archive_invitation",
@@ -346,8 +346,8 @@
     ]
   },
   "environment": {
-    "title": "A pausa",
-    "text": "O conselho suspende a extração e procura outra fonte de energia. A pressão sobre a Trama diminui, mas a família da oficina enfrenta perda de renda e a cidade precisa financiar a transição.",
+    "title": "Quando o apito falha",
+    "text": "À hora do turno, {city} ouviu apenas o rio. {artisan} contou quem ainda podia pagar para ficar em casa e guardou a lista antes que alguém visse.\n\nA extração foi suspensa. A pressão local diminui, e a prefeitura terá de financiar a transição. Na manhã seguinte, uma criança na margem perguntou quando as pessoas da oficina voltariam para casa. Já estavam em casa.",
     "choices": [
       {
         "id": "archive_invitation",
@@ -365,7 +365,7 @@
   },
   "aftermath_wait": {
     "title": "A decisão dos outros",
-    "text": "Sem uma proposta sua, o conselho decide manter a operação por enquanto. O núcleo continua sob risco; a família da oficina e as comunidades do rio terão de conviver com a incerteza.",
+    "text": "O conselho deixou a oficina funcionar. A ata chamou a medida de temporária e não marcou data para revê-la.\n\n{resident} levou para casa a roupa de trabalho pendurada no ombro. Na margem, {community} combinou com os vizinhos a hora de buscar água antes do primeiro turno. Enquanto a cidade aguarda um acordo, cada família inventa o seu.",
     "choices": [
       {
         "id": "archive_invitation",
@@ -383,7 +383,7 @@
   },
   "archive": {
     "title": "O arquivo das versões",
-    "text": "Entre páginas danificadas, {researcher} apresenta dois relatos sobre a Grande Ruptura. Um descreve uma falha industrial; outro fala de uma luz presa sob a terra. Ambos são testemunhos incompletos, e nenhum prova o que aconteceu. O arquivo precisa de recursos, enquanto famílias pedem acesso aos registros.",
+    "text": "A água já chegara ao segundo degrau do arquivo no inverno passado. As lombadas guardavam uma marca horizontal, tão regular que parecia feita com régua.\n\n{researcher} abriu duas caixas. Num relato da Grande Ruptura, alguém jurava ter visto uma instalação falhar. No outro, uma testemunha descrevia luz sob a terra. Havia buracos de umidade onde deveriam estar as datas.\n\nUma casa comercial oferece dinheiro para conservar o papel em troca de acesso reservado. As famílias querem saber o que dizem as páginas. A equipe pede tempo para salvar ambas as versões. Cada pedido ocupa a mesma mesa.",
     "choices": [
       {
         "id": "archive_public",
@@ -443,22 +443,206 @@
   },
   "archive_public_end": {
     "title": "Vozes em praça",
-    "text": "Os moradores conhecem versões diferentes da tragédia. O debate aproxima algumas famílias e incomoda quem preferia uma narrativa oficial. A causa última da Ruptura permanece desconhecida.",
-    "choices": []
+    "text": "A leitura terminou, mas as pessoas ficaram. Um homem ouviu na versão da instalação a história que seu avô contava. Outra pessoa reconheceu o relato da luz. Nenhum dos dois saiu com uma prova.\n\nA equipe guardou as caixas depois de escurecer. No batente, ficou um pedido assinado por quem nunca antes tinha entrado no arquivo.",
+    "choices": [
+      {
+        "id": "visit_measures",
+        "label": "Ir à antiga casa de medição",
+        "next": "measures",
+        "effects": {
+          "time": 1
+        },
+        "npc": "community",
+        "trust": 0,
+        "memory": "foi ver a antiga casa de medição",
+        "news": "Famílias abriram a casa de medição à comunidade."
+      },
+      {
+        "id": "leave_measures",
+        "label": "Deixar a medição a cargo dos moradores",
+        "next": "measures_departure",
+        "effects": {
+          "time": 1
+        },
+        "npc": "community",
+        "trust": 0,
+        "memory": "deixou os moradores conduzirem a medição",
+        "news": "Moradores assumiram a medição sem apoio adicional."
+      }
+    ]
   },
   "archive_private_end": {
-    "title": "O preço do acesso",
-    "text": "A pesquisa recebe financiamento, mas o contrato limita inicialmente a consulta. A decisão poderá influenciar quem terá acesso às próximas descobertas. Nenhum dos relatos foi confirmado como verdade.",
-    "choices": []
+    "title": "A chave do armário",
+    "text": "A casa comercial enviou papel, caixas e uma fechadura nova. O arquivo ganhou uma estação de trabalho. Quem quisesse ver os originais teria de fazer um pedido.\n\n{merchant} deixou a chave com a equipe. O contrato, dobrado ao lado dela, determinava quais perguntas poderiam ser feitas antes de abrir o armário.",
+    "choices": [
+      {
+        "id": "visit_measures",
+        "label": "Ir à antiga casa de medição",
+        "next": "measures",
+        "effects": {
+          "time": 1
+        },
+        "npc": "community",
+        "trust": 0,
+        "memory": "foi ver a antiga casa de medição",
+        "news": "Famílias abriram a casa de medição à comunidade."
+      },
+      {
+        "id": "leave_measures",
+        "label": "Deixar a medição a cargo dos moradores",
+        "next": "measures_departure",
+        "effects": {
+          "time": 1
+        },
+        "npc": "community",
+        "trust": 0,
+        "memory": "deixou os moradores conduzirem a medição",
+        "news": "Moradores assumiram a medição sem apoio adicional."
+      }
+    ]
   },
   "archive_preserve_end": {
     "title": "Memória sob cuidado",
-    "text": "A equipe cataloga os documentos sem transformar testemunho em prova definitiva. O trabalho será lento, mas as próximas gerações poderão confrontar as versões.",
-    "choices": []
+    "text": "A equipe estendeu os dois relatos para secar, um de cada lado da mesa. Nas fichas novas, o campo da causa ficou em branco.\n\n{researcher} anotou de onde viera cada caixa. Um dia, alguém poderia comparar datas e testemunhos. Por ora, o trabalho consistia em impedir que o papel decidisse sozinho o que seria esquecido.",
+    "choices": [
+      {
+        "id": "visit_measures",
+        "label": "Ir à antiga casa de medição",
+        "next": "measures",
+        "effects": {
+          "time": 1
+        },
+        "npc": "community",
+        "trust": 0,
+        "memory": "foi ver a antiga casa de medição",
+        "news": "Famílias abriram a casa de medição à comunidade."
+      },
+      {
+        "id": "leave_measures",
+        "label": "Deixar a medição a cargo dos moradores",
+        "next": "measures_departure",
+        "effects": {
+          "time": 1
+        },
+        "npc": "community",
+        "trust": 0,
+        "memory": "deixou os moradores conduzirem a medição",
+        "news": "Moradores assumiram a medição sem apoio adicional."
+      }
+    ]
   },
   "archive_independent_end": {
-    "title": "Decisão de arquivo",
-    "text": "A equipe segue seu próprio plano de conservação, equilibrando os recursos disponíveis com pedidos de consulta. Você pode acompanhar as notícias e seguir sua vida.",
+    "title": "A sala segue aberta",
+    "text": "A equipe reservou as manhãs para conservação e duas tardes para consulta. Foi uma decisão pequena e difícil, feita entre pessoas que conheciam a sala e sabiam quanto papel ainda apodrecia nos fundos.\n\nVocê encontrou o horário na porta quando passou pela rua. Dentro, alguém virava uma página com as duas mãos.",
+    "choices": [
+      {
+        "id": "visit_measures",
+        "label": "Ir à antiga casa de medição",
+        "next": "measures",
+        "effects": {
+          "time": 1
+        },
+        "npc": "community",
+        "trust": 0,
+        "memory": "foi ver a antiga casa de medição",
+        "news": "Famílias abriram a casa de medição à comunidade."
+      },
+      {
+        "id": "leave_measures",
+        "label": "Deixar a medição a cargo dos moradores",
+        "next": "measures_departure",
+        "effects": {
+          "time": 1
+        },
+        "npc": "community",
+        "trust": 0,
+        "memory": "deixou os moradores conduzirem a medição",
+        "news": "Moradores assumiram a medição sem apoio adicional."
+      }
+    ]
+  },
+  "measures": {
+    "title": "A casa das medidas",
+    "text": "Na parede da antiga casa de medição, {community} pendurou um fio de prumo. O peso não batia com a linha riscada na madeira. Entre os dois cabia a largura de uma unha.\n\nA oficina ofereceu vigias para a margem, mas ninguém pode cobrir todos os turnos. Uma coleta pública de amostras pode nascer do que já se sabe ou da confiança de quem mora ali. Uma barreira provisória pode reduzir a pressão na margem, se houver dinheiro para o material. Sem apoio, os moradores começarão com o que têm.",
+    "choices": [
+      {
+        "id": "public_measures",
+        "label": "Organizar uma coleta pública de amostras",
+        "next": "measures_public",
+        "effects": {
+          "time": 1,
+          "evidence": 1
+        },
+        "npc": "community",
+        "trust": 1,
+        "memory": "organizou a coleta pública de amostras",
+        "news": "As famílias abriram um caderno público de amostras.",
+        "requirements": {
+          "community_or_evidence": 1
+        }
+      },
+      {
+        "id": "bank_barrier",
+        "label": "Pagar material para proteger a margem",
+        "next": "measures_barrier",
+        "effects": {
+          "time": 1,
+          "credits": -2,
+          "risk": -1
+        },
+        "npc": "artisan",
+        "trust": 1,
+        "memory": "pagou o material de uma barreira na margem",
+        "news": "Uma barreira provisória foi instalada com apoio da oficina.",
+        "requirements": {
+          "credits": 2
+        }
+      },
+      {
+        "id": "leave_measures",
+        "label": "Respeitar a decisão dos moradores e partir",
+        "next": "measures_departure",
+        "effects": {
+          "time": 1
+        },
+        "npc": "community",
+        "trust": 0,
+        "memory": "deixou os moradores conduzirem a medição",
+        "news": "Moradores assumiram a medição sem apoio adicional."
+      }
+    ],
+    "recollections": [
+      {
+        "action": "archive_public",
+        "text": "Alguém que ouviu a leitura na praça reconheceu o nome de um antigo medidor. Voltou para casa em busca do caderno que ele deixara à família."
+      },
+      {
+        "action": "archive_private",
+        "text": "A casa comercial ofereceu uma régua nova. {community} pediu uma garantia: os números medidos com ela ficariam à vista de quem viesse buscar água."
+      },
+      {
+        "action": "archive_preserve",
+        "text": "{researcher} trouxe uma cópia em papel seco. Dava para comparar o desenho antigo com a régua atual sem arriscar mais uma página do arquivo."
+      },
+      {
+        "action": "archive_decline",
+        "text": "A equipe do arquivo afixou seu horário na porta da casa de medição. Quem quisesse consultar os registros teria de esperar até a próxima tarde aberta."
+      }
+    ]
+  },
+  "measures_public": {
+    "title": "O caderno da margem",
+    "text": "Cada amostra recebeu um número, uma hora e dois nomes. Quando {researcher} chegou, encontrou um caderno que podia contestar ou confirmar o que a cidade achava saber.\n\nO rio corria atrás da parede. No campo reservado para a próxima observação, ninguém escreveu um prazo.",
+    "choices": []
+  },
+  "measures_barrier": {
+    "title": "Madeira contra a água",
+    "text": "Ao fim da tarde, a barreira devolvia parte da corrente ao leito. {artisan} mostrou às famílias como soltar as travas se a chuva subisse. As instruções foram pregadas por dentro da porta, ao alcance de quem chegasse primeiro.\n\nA margem ganhou proteção. Na próxima chuva, alguém ainda terá de acordar.",
+    "choices": []
+  },
+  "measures_departure": {
+    "title": "O turno da madrugada",
+    "text": "Os moradores dividiram as vigílias pelo tempo que cada casa podia ceder. {community} assumiu a primeira e deixou uma lamparina para a seguinte.\n\nQuando você passou de novo, a porta da casa estava aberta. Alguém já tinha anotado a altura da água.",
     "choices": []
   }
 }

@@ -8,9 +8,18 @@ func test_ui() -> void:
 	await process_frame
 	if scene.column.get_child_count() == 0:
 		failed = true
+	if scene.reading_font == null:
+		push_error("Fonte da crônica não carregou.")
+		failed = true
+	for place in scene.ILLUSTRATIONS:
+		if scene.illustration(place) == null or not scene.illustrations.has(place):
+			push_error("Ilustração ausente: " + place)
+			failed = true
 	if not scene.game.new_game("Interface", "scholar", "valdor", 42):
 		failed = true
 	scene.show_scene()
+	await process_frame
+	scene.campaign_records()
 	await process_frame
 	scene.people()
 	await process_frame

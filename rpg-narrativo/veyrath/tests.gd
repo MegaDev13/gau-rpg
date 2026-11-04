@@ -1,0 +1,43 @@
+extends SceneTree
+const EngineScript = preload("res://veyrath/engine.gd")
+var failures := 0
+func check(condition: bool, message: String) -> void:
+	if not condition:
+		push_error(message)
+		failures += 1
+func _initialize() -> void:
+	var game = EngineScript.new()
+	check(game.world.origins.size() == 4 and game.world.cities.size() == 2, "Catálogo de origens ou cidades")
+	check(game.new_game("Teste", "scholar", "valdor", 123), "Criar campanha")
+	check(game.state.people.size() == 6 and game.state.flow == 3, "NPCs ou recursos iniciais")
+	var person_name: String = game.state.people.researcher.name
+	check(game.choose(0), "Investigar")
+	check(game.choose(0), "Conjurar Eco")
+	check(game.state.flow == 2 and game.state.fatigue == 1 and game.state.evidence == 1, "Custo da magia")
+	var loaded = EngineScript.new()
+	check(loaded.load_game(), "Carregar campanha")
+	check(loaded.state.node == "evidence" and loaded.state.people.researcher.name == person_name and loaded.state.people.researcher.memories.size() == 2, "NPC, memória e cena persistem")
+	check(loaded.choose(0) and loaded.choose(0), "Caminho pacífico")
+	check(loaded.state.node == "peace" and loaded.state.risk == 2, "Resultado pacífico")
+	check(loaded.state.news[-1].event_id == loaded.state.history[-1].id, "Notícia referencia evento")
+	var industrial = EngineScript.new()
+	check(industrial.new_game("Teste", "apprentice", "tharvok", 456), "Criar outra cidade")
+	check(industrial.choose(1) and industrial.state.credits == 5, "Origem permite reparo sem custo")
+	check(industrial.choose(0) and industrial.choose(1), "Caminho industrial")
+	check(industrial.state.node == "industry" and industrial.state.risk == 5, "Consequência industrial")
+	var denied = EngineScript.new()
+	check(denied.new_game("Teste", "merchant", "valdor", 123), "Criar mercador")
+	check(denied.state.people.researcher.name == person_name, "Seed reproduz NPCs")
+	check(denied.choose(0) and not denied.choose(0), "Magia exige origem")
+	check(denied.state.flow == 2 and denied.state.node == "investigation", "Escolha recusada não altera estado")
+	var dragon = EngineScript.new()
+	check(dragon.new_game("Teste", "community", "valdor", 78), "Criar morador")
+	check(dragon.choose(2) and dragon.choose(1) and dragon.choose(0), "Caminho dracônico")
+	check(dragon.state.habitat == 1 and dragon.state.people.community.memories.size() >= 2, "Proteção e memória")
+	var file := FileAccess.open("user://veyrath-campanha-v1.json",FileAccess.WRITE)
+	file.store_string("corrompido")
+	file.close()
+	var recovered = EngineScript.new()
+	check(recovered.load_game() and recovered.state.node == "dragon", "Recuperar backup válido")
+	print("Veyrath: testes concluídos. Falhas: ",failures)
+	quit(1 if failures else 0)

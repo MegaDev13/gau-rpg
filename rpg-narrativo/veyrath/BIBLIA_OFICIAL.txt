@@ -1,0 +1,1181 @@
+VEYRATH — O CÉU SOB FERRO
+BÍBLIA DO UNIVERSO + ESPECIFICAÇÃO NARRATIVA E SISTÊMICA PARA O CHATGPT WORK
+Versão 1.0 | Idioma: português do Brasil | Formato: texto puro UTF-8
+
+======================================================================
+0. ORDEM DE EXECUÇÃO AO CHATGPT WORK
+======================================================================
+
+Este arquivo NÃO é um conto nem um roteiro de filme. É o documento de referência para implementar o universo e os sistemas narrativos do jogo Android VEYRATH — O CÉU SOB FERRO.
+
+OBJETIVO: incorporar os fundamentos de mundo, personagens, dinastias, relacionamentos, história procedural, magias, dragões, política, eventos e regras de continuidade a um RPG DE ESCOLHAS, não de mundo aberto. O jogador toma decisões em cenas textuais/ilustradas, diálogos e menus. A jogabilidade manual ativa se concentra no módulo tower defense, integrado às consequências narrativas.
+
+REPOSITÓRIO DE DESTINO (o Work deve operar; este arquivo não efetua nenhuma alteração):
+https://github.com/MegaDev13/gau-rpg
+Branch solicitada: feature/rpg-narrativo-mundo-vivo (criar ou reutilizar após verificar sua existência).
+Destino: APK Android produzido por GitHub Actions, com Artifact do APK e registro dos resultados de compilação. Priorizar Godot 4, salvo justificativa técnica fundamentada após inspeção do repositório.
+Persistência: modo solo offline e local; multiplayer online, com estado autoritativo no Supabase. Não misturar os saves.
+
+TRABALHO REQUERIDO AO WORK:
+A. Inspecionar primeiro o repositório, identificar stack, arquivos, licenças e funcionalidades anteriores; preservar o que for aproveitável.
+B. Criar/usar a branch própria, converter esta Bíblia em dados estruturados, lógica e testes reais, mantendo o projeto compilável.
+C. Implementar o motor narrativo com regras de causalidade antes de multiplicar conteúdo gerado.
+D. Implementar uma campanha demonstrável no modo solo, com várias rotas, NPCs persistentes, um conflito familiar/político, opção dracônica e consequências verificáveis.
+E. Ampliar por camadas os sistemas de famílias, política, facções, simulação social, magia e multiplayer.
+F. Integrar tower defense 2D sem transformar a exploração narrativa em mundo aberto.
+G. Configurar workflow .github/workflows/android-apk.yml, compilar APK de teste no Actions e publicar o Artifact, sem afirmar êxito sem evidência.
+H. Manter documentação da implementação, migrations de banco, testes e lista objetiva do que está pronto, parcial ou ainda não iniciado.
+
+NÃO CRIAR HERÓI OBRIGATÓRIO, VILÃO FIXO, FIM ÚNICO, MISSÃO PRINCIPAL COMPULSÓRIA OU ELENCO IMUTÁVEL. NÃO FAZER NPCs APARECEREM SEM ORIGEM PLAUSÍVEL. NÃO PROMETER QUE TODO CONTEÚDO SERÁ INFINITAMENTE INÉDITO; MITIGAR REPETIÇÃO COM MEMÓRIA, CAUSALIDADE, DIVERSIDADE DE ESTRUTURAS E CONTROLE DE HISTÓRICO.
+
+Princípios inegociáveis:
+- O mundo tem passado e leis estáveis, porém futuro aberto.
+- Personagens possuem agência; jogadores não controlam desejos ou escolhas alheias automaticamente.
+- A ausência de intervenção do jogador também produz consequências.
+- Ações exigem pré-condições, recursos, probabilidades ou testes; nada é resolvido por mera opção textual.
+- Uma decisão confirmada deve alterar estado persistente, mesmo que somente uma relação, recurso, memória ou informação.
+- As decisões de alcance multiplayer são validadas e publicadas de modo controlado pelo servidor; atraso de propagação não substitui concorrência segura.
+- Consequências têm escala local, familiar, institucional, regional ou global, sem que toda ação impacte o planeta.
+- Um personagem pode prosperar sem lutar, liderar exércitos, casar, pesquisar magia, seguir uma carreira, governar, construir uma base ou dedicar-se à família.
+- Todas as referências a outras obras servem apenas como inspiração de gênero; nenhum personagem, mapa, nome, símbolo, diálogo, enredo ou criatura protegida deve ser copiado.
+
+======================================================================
+1. IDENTIDADE DRAMÁTICA E ESTRUTURA DO JOGO
+======================================================================
+
+Título canônico: VEYRATH — O CÉU SOB FERRO.
+Designação literária facultativa para a série de histórias: Crônicas do Céu Partido.
+Gênero: RPG narrativo de escolhas com simulação social, fantasia sombria, intriga política, magia e tecnologia arcanomecânica, com subsistema estratégico de tower defense.
+Estética: medieval + steampunk + elementos de cyberpunk. Reinos, parlamentos, oficinas, autômatos, locomotivas, torres, implantes e dragões podem coexistir de forma geograficamente desigual.
+Tom: adulto em complexidade moral, mas sem exigir violência gráfica ou erotização. Espaço para ternura, humor, cultura, vida doméstica, amizade, conquista e tragédia.
+
+Quatro promessas de experiência:
+1) “O mundo lembra”: fatos passados influenciam novas opções, opiniões, preços e reputações.
+2) “As pessoas existem por si”: NPCs têm vidas, vínculos, conflitos e decisões independentes.
+3) “O poder tem custo”: títulos, poderes mágicos, tecnologia, guerra e riqueza geram responsabilidades e externalidades.
+4) “Nenhuma campanha é a mesma biografia”: cada origem, período, cidade e relação produz arcos distintos.
+
+Tela de campanha: cenas textuais e imagens/ilustrações originais; ações com consequências; relações de NPCs; jornal de eventos; inventário; grimório; diário; mapa político seletivo; governo; família; exército; gestão de território. Não existe caminhada livre controlada pelo jogador. O mapa funciona como interface de localização e deslocamento abstrato, com tempo, custo, riscos e eventos.
+
+======================================================================
+2. METAFÍSICA: TRAMA, FORMA, FLUXO E ECO
+======================================================================
+
+A Trama é o tecido energético/informacional subjacente à realidade. Não existe consenso se ela é fenômeno natural, criação divina ou sistema anterior à vida. Povos e religiões a interpretam de maneiras divergentes.
+
+Os Três Princípios:
+- FORMA: matéria, corpo, substância, estrutura, limites físicos.
+- FLUXO: energia, movimento, transmutação, força empregada em magia e máquinas.
+- ECO: vestígios, memória, identidade, ressonância e rastros de acontecimentos.
+
+A Primeira Voz: mito primordial segundo o qual uma manifestação de consciência despertou a capacidade do mundo de reconhecer a própria existência. Algumas tradições atribuem o surgimento dos dragões a esse evento, mas a hipótese não é confirmada como verdade objetiva.
+
+Lei da Compensação: nenhuma transformação ocorre sem gasto/transferência de energia, recursos ou estabilidade. A dívida da magia pode surgir em quem a executa, em componentes físicos, em organismos, na reserva ambiental da Trama e, em situações extremas, de modo cumulativo/adiado.
+
+Limites do cânone: é verdadeiro que há efeitos mensuráveis da Trama e da Compensação; NÃO é obrigatório que a Primeira Voz tenha sido uma entidade consciente, nem que uma religião esteja correta. A verdade pode ser investigada por cenários e descoberta gradual, sem necessidade de solução definitiva.
+
+Conhecimento imperfeito: livros contêm erros; testemunhas mentem; órgãos oficiais manipulam relatórios; tradições antigas preservam verdades incompletas. O motor distingue FATO OBJETIVO, CRENÇA, BOATO e SEGREDO. NPCs podem agir segundo crenças falsas, mas o estado do mundo não deve tratar qualquer boato como fato.
+
+======================================================================
+3. DRAGÕES: ESPÉCIES, CULTURAS E CONVIVÊNCIA
+======================================================================
+
+Dragões não são um recurso de montaria universal, nem um único povo homogêneo. A classificação acadêmica corrente admite:
+
+3.1 DRAGÕES SAPIENTES
+Criaturas reflexivas, dotadas de linguagem, cultura e autonomia. Variam muito em temperamento, fisiologia, filosofia, política, estrutura familiar e tradição. Podem organizar enclaves, comunidades, confederações ou vidas solitárias. Um indivíduo pode ser diplomata, pesquisador, governante, artista, mercador ou guerreiro. São sujeitos de relações e nunca bens comuns que possam ser possuídos por padrão.
+
+3.2 DRAGÕES FERAIS
+Espécies de comportamento predominantemente instintivo, cognição variável, nichos ecológicos específicos e relação possível com treinamento ou domesticação quando plausível. Alguns são pequenos e convivem com cidades; outros são enormes, territoriais e inacessíveis. Não são necessariamente hostis.
+
+3.3 DRAGÕES LIMINARES
+Categoria raríssima e controversa associada a distorções da Trama, transformações biológicas ou linhagens anteriores à história registrada. Alguns exibem fenômenos de percepção e energia incomuns. Sua origem não deve ser explicada universalmente de antemão.
+
+3.4 EXEMPLOS DE ECOLOGIAS DRACÔNICAS (espécies geráveis, não elenco único)
+- Dracontos de Crista de Bronze: voadores de penhasco, ferozmente territoriais; contato humano pode alterar rotas de caça.
+- Serpentes de Maré: dragões semiaquáticos que seguem correntes oceânicas e causam disputas pesqueiras.
+- Véus-Noturnos: pequenos dragões crepusculares, grandes imitadores de sons, propensos a formar pares sociais.
+- Dracos de Cinza: adaptados a áreas vulcânicas e campos de escória industrial; sensíveis a mudanças de calor.
+- Orúnides: linhagens sapientes de longa memória, identificadas por modos próprios de guardar conhecimento.
+- Astrídeos: raros liminares observados perto de Zonas de Ruptura; relatos contraditórios.
+Estas categorias NÃO devem determinar alinhamento moral, classe social ou comportamento de todos os indivíduos.
+
+3.5 CONCORDÂNCIA DRACÔNICA
+Fenômeno de vínculo entre um dragão apto e outro ser consciente, envolvendo afinidade de Fluxo e Eco. Requer compatibilidade e aceitação consciente quando ambos forem sapientes. Não é profecia, recompensa automática de missão ou licença para escravização. Vínculos podem fortalecer percepção, comunicação e certas magias; também acarretam fadiga, vulnerabilidade emocional e responsabilidade recíproca. Pode ser rompido com efeitos proporcionais e persistentes.
+
+3.6 MUNDO REATIVO AOS DRAGÕES
+Caça, conservação, pesquisa, culto, comércio ilegal de ovos, direitos dracônicos, santuários, conflitos entre espécies e perda de habitat devem surgir de interesses concretos. Não exigir que o jogador tenha dragão para prosperar. Ao domesticar uma espécie feral, respeitar ciclo de vida, recursos, capacidade ambiental e bem-estar.
+
+======================================================================
+4. POVOS E DIVERSIDADE CULTURAL
+======================================================================
+
+Povo/espécie, cultura, idioma, cidadania, religião, classe social e facção são atributos distintos. Nunca atribuir moralidade, profissão, inteligência ou alinhamento político por origem biológica. Evitar estereótipos obrigatórios. Permitir identidades e variações individuais.
+
+4.1 HUMANOS — POVOS DAS MIL COROAS
+Populações amplamente disseminadas. Sua história contém monarquias, repúblicas, ligas mercantis, confederações e megacidades. Sem bônus universal de superioridade: maior diversidade institucional e facilidade de adaptação é reputação cultural, não destino biológico.
+
+4.2 AELTHARI — ELFOS DA MEMÓRIA
+Longevos, em média, e perceptivos a manifestações do Eco, mas não oniscientes. Há conservadores ambientais, industriais de biotecnologia, ascetas e comerciantes. Memória longa também traz desgaste, conflitos entre gerações e revisionismo histórico.
+
+4.3 DHORVAK — POVOS DAS PROFUNDEZAS
+Algumas comunidades subterrâneas de estatura usualmente baixa, conhecidas por mineração, metalurgia, engenharia e cidades fortificadas. Existem comunas e oligarquias industriais antagônicas; não presumir que todo Dhorvak trabalhe com metal.
+
+4.4 VARKHEN — POVOS DAS FORTALEZAS VIVAS
+Populações de fisiologia frequentemente robusta, culturas heterogêneas e tradições jurídicas orais e escritas. Costumam sofrer preconceito de potências expansionistas; muitos possuem instituições sofisticadas e ideias filosóficas próprias. Nenhum “instinto de violência” racial.
+
+4.5 NYMARI — POVOS DAS ÁGUAS PROFUNDAS
+Anfíbios e adaptados a meios costeiros e submersos em graus diferentes. Conhecimentos oceanográficos, biológicos e náuticos; cultura e governos diversos. Vulneráveis à poluição, mas não uniformemente anti-industriais.
+
+4.6 EIDRINOS — NASCIDOS DA FORJA
+Seres artificiais arcanomecânicos de diferentes graus de cognição. Alguns possuem consciência e plena agência; outros são apenas máquinas. O reconhecimento dos conscientes como pessoas é disputa jurídica, ética, religiosa e econômica. Reprodução, manutenção, cidadania e longevidade exigem regras próprias, sem reduzi-los a equipamento.
+
+4.7 OUTROS POVOS
+O gerador poderá criar novas espécies originais e variantes coerentes (por exemplo, comunidades aerícolas de planalto, povos cavernícolas sensíveis à luz, linhagens simbiônticas com fungos, nômades de regiões áridas), após validação dos limites anatômicos e ecológicos. Preferir originalidade orgânica a troca de nomes de estereótipos conhecidos. Catálogo inicial pode ser menor, com expansão controlada.
+
+4.8 REGRAS DEMOGRÁFICAS
+Contabilizar nascimentos/admissões, migração, óbitos, profissões, posição social, recursos, leis de cidadania, idiomas e integração. Comunidades podem ser multiétnicas. O gerador não deve inventar uma “raça extinta” viva sem explicar sobrevivência, redescoberta ou erro historiográfico. A escala demográfica pode ser agregada: não é preciso simular cada habitante como NPC individual.
+
+======================================================================
+5. CRONOLOGIA E O ENIGMA DO CÉU PARTIDO
+======================================================================
+
+ERA I — DOS SEM-NOME: pré-história, comunidades iniciais, primeiros registros dracônicos. Datas incertas.
+ERA II — DOS PACTOS: grandes assentamentos e intercâmbios; tratados entre povos e dragões, academias e cultos antigos; conflitos intermitentes.
+ERA III — DOS ARTÍFICES: domínio de armazenamento arcano, máquinas, mineração energética, ferrovias primitivas, conglomerados e disputas por tecnologia.
+ANO ZERO — GRANDE RUPTURA: desastre arcano-industrial de origem disputada, transformações territoriais e surgimento do fenômeno chamado Fenda Celeste.
+ERA IV — DO FERRO E DO VÉU (1–312 P.R.): reconstrução, grandes centros industriais, conflitos de direitos, renascimento da exploração energética e rivalidade de nações.
+PONTO INICIAL PADRÃO: ano 312 Pós-Ruptura. Opcionalmente novos cenários históricos controlados podem começar em outros períodos após haver suporte técnico.
+
+A Fenda Celeste: cicatriz luminosa observada em circunstâncias específicas. Verdadeira sua existência; sua origem última é desconhecida. Três interpretações principais: falha de instalação industrial, aprisionamento/divisão de entidade ou destruição deliberada de mecanismo de contenção. Podem existir teorias menores; não transformar automaticamente uma versão em verdade estabelecida.
+
+Cuidado: as culturas não precisam usar o mesmo calendário. O calendário P.R. é apenas padrão internacional de referência. Datas pessoais e regionais podem ter convenções próprias com conversão consistente.
+
+======================================================================
+6. MACRORREGIÕES (GEOGRAFIA) E FRONTEIRAS (POLÍTICA)
+======================================================================
+
+As MACRORREGIÕES abaixo são referências geográficas/culturais do cenário, não seis estados eternos. Reinos, cidades, corporações e fronteiras dentro delas são MUTÁVEIS.
+
+VALDÓRIA — Coração das Coroas: cidades históricas, cortes nobres, indústrias e universidades. Disputas sucessórias e pressões por reformas.
+ELARION — Domínios da Memória: bosques antigos, bibliotecas vivas, conhecimento Aelthari e debates sobre tecnologia biológica.
+KHAR-DÛREN — Profundezas Mecânicas: cidades subterrâneas, ferrovias, siderurgia, jazidas e conflito distributivo de riqueza e energia.
+THARVOK — Terras das Alturas: fortalezas, altiplanos, rotas aéreas, comunidades Varkhen e habitats dracônicos.
+NAMARIS — Cidades Entre Dois Mares: arquipélagos e regiões submersas, rotas mercantis, ciência oceânica e disputas ambientais.
+NEXÁRIA — Fronteira Tecnológica: megacidades, implantes, vigilância, corporações e movimentos por direitos dos Eidrinos.
+
+Geografia inicial recomendada: 6 macrorregiões; cada uma subdividida em províncias; províncias em assentamentos; assentamentos têm distritos/infraestrutura abstrata. Contagem configurável. Grandes cidades e regiões podem ser pré-curadas; pequenas localidades, histórias urbanas e governos podem ser gerados proceduralmente, com sementes determinísticas e limite de plausibilidade.
+
+Cada região possui clima, bioma, recursos energéticos, fauna, rotas, distância, infraestrutura, riscos arcanos e memória histórica. Deslocamentos narrativos custam tempo, dinheiro, segurança e oportunidades. Nada exige mapa aberto explorável.
+
+Exemplo NÃO CANÔNICO DE CAMPANHA: Velskar, cidade mineira de 34 mil pessoas, com crise de extração e três NPCs gerados. Não transformar Velskar ou esses indivíduos em elementos obrigatórios de todos os universos.
+
+======================================================================
+7. RELIGIÕES, FILOSOFIAS E MORTE
+======================================================================
+
+IGREJA DA PRIMEIRA VOZ: múltiplas interpretações da origem da consciência; correntes ambientalistas, ortodoxas e tecnológicas.
+CULTO DOS NOVE VÉUS: nove aspectos/planos simbólicos, sonhos, visões e práticas espirituais, com escolas divergentes.
+DOUTRINA DA ASCENSÃO: superação de limites biológicos por tecnologia, diversidade de posições quanto à IA e à ética dos implantes.
+GUARDIÕES DO RETORNO: equilíbrio, ciclos da Trama e responsabilidade ecossistêmica; sem homogeneidade interna.
+
+Dezenas de religiões menores podem emergir organicamente por migração, reformadores, cisões, milagres alegados, disputas de riqueza e experiências históricas. Permitir ateísmo, agnosticismo, sincretismo e práticas familiares.
+
+A MORTE: Ecos residuais podem manifestar lembranças e fenômenos interpretados como assombração; não comprovar automaticamente que são almas de mortos. Necromancia não é trivial. Ressurreições, quando possíveis, são eventos excepcionalíssimos de custo e risco enormes, com validação de cânone e impacto social.
+
+Religião influencia cerimônias, leis, casamentos, educação, legitimidade política, arquitetura, guerras e decisões pessoais. Crença não impõe automaticamente caráter.
+
+======================================================================
+8. GERAÇÃO DE PERSONAGEM JOGÁVEL: ORIGENS E PASSADO
+======================================================================
+
+Criador deve oferecer: nome, pronomes, espécie elegível, aparência/representação, idade adulta no contexto da espécie, cultura, região de origem, condição social, situação familiar, ocupação, crenças, disposições e especialização inicial. Fornecer criação guiada e criação parcialmente aleatória. Aparência não determina valor, moralidade ou habilidade sem regras específicas.
+
+ORIGEM = contexto social + circunstâncias + relacionamentos + recursos + conflitos + oportunidades. Nunca confundir “origem” com “destino”.
+
+Campos recomendados:
+- id, seed de origem, período e local, cultura, idioma, cidadania;
+- família de origem e pessoas significativas, vínculos de guarda/adoção;
+- classe socioeconômica e relações de dependência;
+- ocupação inicial e treinamento relevante;
+- uma lembrança importante positiva e uma negativa (editáveis ou opcionalmente geradas);
+- bens, direitos, dívidas e deveres de origem;
+- traços de reputação local (não global);
+- dois objetivos ou ambições sugeridos (o jogador pode rejeitá-los);
+- evento incitante contextual que abre a primeira escolha.
+
+PACOTES DE ORIGEM INICIAIS (variações extensíveis, não classes obrigatórias):
+01. Aprendiz de oficina: ferramentas modestas, mentor, risco trabalhista, acesso a máquinas.
+02. Herdeiro contestado: pretensão de título, documentação inconclusa, parentes e rivais.
+03. Filho de camponeses: vínculos comunitários, terra arrendada, recursos limitados.
+04. Bolsista de academia: acesso a pesquisa, débitos ou obrigações acadêmicas.
+05. Ex-soldado: treinamento, feridas e relações militares; opção de deserção/baixa regular.
+06. Tripulante mercante: conhecimento de rotas, contatos portuários e contratos.
+07. Cidadão Eidrino: dilemas de reconhecimento jurídico e manutenção arcanomecânica.
+08. Órfão de guerra: redes de acolhimento ou abandono; sem arco de “escolhido”.
+09. Nobre menor: título modesto, patrimônio limitado e obrigações fiscais.
+10. Refugiado: idioma e redes em reconstrução; conflitos administrativos.
+11. Guardião de santuário: vínculo ecológico, regras religiosas e conhecimentos dracônicos.
+12. Operador de rede arcana: familiaridade com informação, riscos de vigilância.
+13. Trabalhador mineiro: comunidade e exposição a riscos de extração.
+14. Viajante sem registro: baixa identificação institucional, liberdade relativa e risco jurídico.
+15. Artista de corte: patronos, reputação e acesso a círculos políticos.
+16. Pequeno proprietário: gestão doméstica, relações comerciais e dívidas.
+17. Acólito religioso: comunidade, doutrina, possível tensão com ordens rivais.
+18. Pesquisador de fauna dracônica: experiência naturalista e contatos acadêmicos.
+19. Morador de cidade submersa: conhecimento marítimo, transporte e cultura Nymari.
+20. Funcionário de corporação: salário, contratos, confidencialidade e lealdades conflitantes.
+
+O gerador poderá combinar fatores, como “Eidrino refugiado e aprendiz” ou “Aelthari nobre arruinado”, desde que as condições sociais/biológicas sejam compatíveis. Não bloquear carreiras por origem de espécie. Contratos e títulos conferem permissões jurídicas, não determinação de classe profissional.
+
+VALIDAÇÕES DE ORIGEM:
+- Personagens relacionados devem existir ou ser gerados com vínculo consistente.
+- Heranças exigem patrimônio, lei sucessória e titulares reconhecíveis.
+- Refugiados exigem causa histórica/local plausível, não desastre inventado retroativamente sem rastro.
+- Conhecimentos avançados exigem experiência; títulos exigem concessão, sucessão ou fraude documentada.
+- Benefícios iniciais fortes devem vir acompanhados de obrigações/riscos; não punir arbitrariamente escolhas de espécies ou culturas.
+- Personagens jogáveis iniciam como adultos; relacionamentos românticos somente entre adultos reconhecidos pelo contexto biológico e social aplicável.
+
+JORNADA DE ABERTURA: mostrar contexto de origem (2–4 cenas), apresentar ao menos 2 NPCs e 1 fato regional, então oferecer 3–5 escolhas com consequências persistentes, incluindo opção pacífica/não heroica. Rotas distintas podem surgir sem perseguir um objetivo global obrigatório.
+
+======================================================================
+9. GERADOR DE NPCs: IDENTIDADE, COGNIÇÃO E VIDA PRÓPRIA
+======================================================================
+
+NPCs relevantes devem possuir, quando aplicável:
+- UUID estável, seed, nome culturalmente apropriado e aliases conhecidos;
+- espécie, cultura, idade/ciclo de vida, identidade, cidadania, residência e biografia resumida;
+- parentesco, conviventes, dependentes, parceiros e contatos;
+- classe/ocupação, renda, patrimônio, recursos, cargo e obrigações;
+- atributos mecânicos e competências profissionais;
+- crenças, ideologia e filiações (com grau de convicção);
+- traços de personalidade com intensidades graduais, não etiquetas absolutas;
+- necessidades: sustento, segurança, pertencimento, autonomia, afeto, prestígio, descoberta;
+- objetivos de curto, médio e longo prazo, com plano revisável;
+- medos, limites, segredos, informação verificada e boatos acreditados;
+- opiniões sobre pessoas/facções e histórico de mudanças;
+- capacidade de agir e reagir conforme oportunidades e restrições reais;
+- rotina abstrata de trabalho, deslocamento, descanso, lazer e vida social;
+- memória de eventos relevantes com intensidade, data, fonte, confiança e esquecimento seletivo;
+- posição no ciclo de vida e regras de mortalidade.
+
+PADRÃO DE GERAÇÃO:
+1) Consultar necessidade do mundo: função econômica, nova família, evento, vaga institucional, imigração ou nascimento.
+2) Escolher região/cultura/condições demográficas plausíveis.
+3) Gerar identidade e conectar a redes sociais preexistentes.
+4) Atribuir recursos e responsabilidades sem criar dinheiro ou cargos fictícios sem fonte.
+5) Criar 1–3 objetivos contextuais coerentes e 1 contradição humana relevante.
+6) Registrar no banco e publicar apenas informações que jogadores podem conhecer.
+7) Atualizar objetivos quando eventos alterarem interesses, valores ou condições.
+
+SIMULAÇÃO EM CAMADAS:
+- Figurantes populacionais agregados: não persistir cada indivíduo separadamente.
+- NPCs secundários: estado resumido e atualizações ocasionais.
+- NPCs relevantes: estado completo, rotina abstrata e memória selecionada.
+- NPCs centrais para conflitos ativos: decisão e atualização mais frequentes.
+Promover figurantes a NPCs persistentes apenas quando entrarem em cenas ou relações importantes. Após longos períodos de irrelevância, arquivar estado detalhado mantendo identidade, vínculos e eventos significativos.
+
+SISTEMA DE DECISÃO DOS NPCs:
+Usar objetivos ponderados e regras de utilidade/necessidade, com ruído controlado, memória e constrangimentos legais/materiais. Não depender de chamada cara de IA generativa a cada tick. Diálogos podem combinar textos escritos + parâmetros situacionais + expansão assistida opcional e segura, com persistência da informação confirmada.
+
+Exemplo: ferreiro apoia um movimento trabalhista porque salário familiar caiu, perdeu colega em acidente e confia no organizador local. Ao recuperar segurança e ver propostas concretas, pode moderar apoio; se a família sofrer repressão, pode radicalizar. Nenhuma mudança emocional ocorre por uma simples variável isolada.
+
+REGRAS DE CONTINUIDADE:
+- Mortes, incapacidades, mudança de residência, casamento e rompimento são eventos persistentes.
+- Um falecido não reaparece vivo sem evento excepcional explicitamente válido.
+- Um NPC ausente não responde instantaneamente a uma conversa local.
+- NPCs devem ter informações limitadas a suas experiências, rumores e comunicação.
+- Recursos e trajetórias não são teleportados para acomodar uma cena.
+- O NPC pode mentir; o motor deve distinguir declaração de verdade.
+
+======================================================================
+10. FAMÍLIAS, PARENTESCO, CASA E CONVIVÊNCIA
+======================================================================
+
+A família é uma rede social e legal, não somente uma lista de sobrenomes. Apoiar modelos variáveis: parentesco biológico, adoção, guarda, casamento, união reconhecida por determinada cultura, vínculos de criação, famílias escolhidas e famílias extensas.
+
+10.1 ENTIDADES
+PESSOA: indivíduo com identidade e estado persistente.
+FAMÍLIA/REDE DOMÉSTICA: agrupamento social que pode abrigar várias linhagens.
+LINHAGEM: relações de ascendência, quando aplicáveis; não confundir com legitimidade jurídica.
+DOMICÍLIO: endereço, propriedade ou moradia alugada; habitantes e responsabilidades.
+CASA DINÁSTICA: instituição política/patrimonial que reivindica títulos e continuidade.
+PATRIMÔNIO: bens, recursos, empresas, dívidas, direitos, contratos e tributos.
+CONTRATO/UNIÃO: ato reconhecido em certo contexto jurídico e religioso.
+
+10.2 REGRAS
+- Um sobrenome não cria automaticamente parentesco.
+- Casamento e concubinato não alteram automaticamente cidadania, profissão ou lealdade.
+- Separação altera vínculos, obrigações e possivelmente propriedades conforme contrato e lei.
+- Filhos/descendentes/adoções surgem por eventos plausíveis, com cronologia e relações corretas.
+- Características herdadas são tendências limitadas por regras biológicas e aleatoriedade, não destino moral.
+- Morte de um adulto pode gerar disputas de tutela, transmissão de dívidas, luto e proteção social.
+- Uma família pode sobreviver à extinção de uma dinastia; uma dinastia pode sobreviver a mudanças de nome e ramos.
+
+10.3 VIDA DOMÉSTICA JOGÁVEL
+O jogador pode estabelecer moradia, realizar trabalho, partilhar despesas, cuidar de familiares, organizar encontros, promover educação, manter uma oficina ou propriedade, negociar conflitos e participar de acontecimentos íntimos.
+Interações oferecidas por escolhas narrativas, sem exigir minijogos repetitivos ou simulação permanente de deslocamentos.
+Os membros do domicílio preservam agendas e agência própria: não executam automaticamente ordens contrárias às suas necessidades ou vontade.
+
+10.4 MEMÓRIA FAMILIAR
+Guardar árvore de relações e linha do tempo: nascimentos, adoções, uniões, emancipações, mudança de residência, mortes, heranças, escândalos, condecorações e conflitos. Permitir consulta via “Crônica Familiar”. Documentos podem conter versões contraditórias de genealogias; guardar fato objetivo separado de alegação.
+
+======================================================================
+11. DINASTIAS, SUCESSÃO, HERANÇA E CASAS NOBRES
+======================================================================
+
+DINASTIA é uma instituição histórica de transmissão de autoridade e legitimidade. Nem todo governo possui dinastia; nem toda dinastia governa. O jogo deve gerar tanto casas fictícias quanto famílias políticas, sindicatos influentes, conglomerados e instituições não hereditárias.
+
+11.1 ATRIBUTOS DE CASA
+- ID, nome, sede, origem, lema e símbolo original (gerados sem copiar marcas).
+- Data de fundação, fundador conhecido/contestável.
+- Ramo principal e ramos secundários.
+- Lista de membros e alianças familiares (com datas e natureza).
+- Patrimônio, receitas, despesas, dívidas, credores.
+- Reivindicações territoriais, títulos e seus fundamentos legais.
+- Relações com outras casas e instituições.
+- Tradições, crenças públicas, segredos e reputação por grupo social.
+- Histórico de guerras, tratados, casamentos e escândalos.
+
+11.2 LEIS DE SUCESSÃO REGIONAIS (SELEÇÃO POR POLIDADE)
+- Primogenitura com regras locais explícitas.
+- Herança dividida entre herdeiros elegíveis.
+- Eleição entre casas ou conselheiros.
+- Designação sucessória sujeita a ratificação.
+- Sucessão por adoção ou escolha dinástica.
+- Conselho regente em caso de incapacidade ou vacância.
+- Extinção do título ou reversão ao Estado.
+Cada território escolhe suas regras; mudanças de lei devem ser eventos formais, podendo gerar resistência. Não presumir automaticamente sucessão masculina, nem aplicar regra universal entre culturas.
+
+11.3 MÁQUINA DE SUCESSÃO
+Gatilhos: morte, abdicação, deposição, término de mandato, vacância ou reconhecimento de novo direito.
+Etapas: constatar evento; congelar referência patrimonial pertinente; localizar lei vigente; montar candidatos; analisar provas e elegibilidade; verificar disputas e instituições ratificadoras; proclamar, negar ou entrar em crise; transferir poderes/bens via transação; registrar versão pública e contestações.
+Não transferir duas vezes o mesmo trono. Se houver vários pretendentes, o título pode ficar contestado; distinguir poder de facto, título reivindicado e reconhecimento jurídico.
+
+11.4 GERADOR DE INTRIGAS DINÁSTICAS
+Combinar motivações reais: necessidade financeira, descendência contestada, dívida, honra pública, mudança religiosa, interesses comerciais, desejo de autonomia, ressentimento ou tutela.
+Exemplos de sementes (não missões fixas): um parente forja documentos; casa falida oferece casamento político; conselho prefere regente competente ao herdeiro; uma herdeira busca apoio popular; um ramo secundário revela cláusula antiga; uma corporação compra dívidas de nobres e adquire influência.
+Sem obrigatoriedade de traição ou assassinato: crises podem ser resolvidas por negociação, tribunal, reforma, arbitragem, exílio ou disputa militar.
+
+11.5 DECADÊNCIA E EMERGÊNCIA
+Casas podem ganhar patrimônio, perder terras, extinguir-se, mudar de nome ou gerar ramificações. Novas dinastias só surgem com evento de fundação, legitimidade, reconhecimento e recursos. Regras de geração preservam a cronologia e evitam “famílias aleatórias sempre no topo”.
+
+======================================================================
+12. RELACIONAMENTOS, ROMANCE, CASAMENTO E REPUTAÇÃO
+======================================================================
+
+Relações entre NPCs e jogadores NÃO são um único medidor de “amor”. Usar dimensões independentes:
+- afinidade/compatibilidade;
+- confiança;
+- respeito;
+- intimidade;
+- interesse afetivo;
+- conflito/ressentimento;
+- dependência econômica ou institucional;
+- limites pessoais e objetivos de vida;
+- conhecimento real e crenças recíprocas.
+
+Interações possíveis: conversas, trabalho, encontros, presentes adequados, ajuda, cooperação, rivalidade, discussão, reconciliação, noivado, união, casamento, convivência e separação.
+
+Todos os interesses românticos jogáveis são ADULTOS na própria espécie/contexto. Não criar romance com menores ou situações de coerção e incapacidade de consentimento. Relações afetivas dependem de consentimento e reciprocidade; recusa de NPCs é possibilidade real. Diferença de poder social deve ser reconhecida pelo sistema, não usada para garantir aprovação.
+
+MECÂNICA: cada encontro consulta disponibilidade, rotina, reputação, histórico, afinidades e objetivos. Bons atos não compram amor; presentes não substituem confiança. Casamentos políticos podem ter objetivos dinásticos distintos de afeto pessoal. Compatibilidade e disposição devem poder mudar com experiências.
+
+CONSEQUÊNCIAS: união pode alterar moradia, finanças, estatuto social, obrigações e alianças conforme lei; traição e segredos podem comprometer confiança; vínculos de longo prazo geram memórias e novas missões domésticas. Relacionamentos devem coexistir com política, carreira, dragonologia e magia sem virar roteiro obrigatório.
+
+NPCs também constroem vínculos entre si, casam, se separam, mudam de residência e influenciam a história sem depender do jogador. Evitar combinações aleatórias implausíveis: sempre considerar proximidade, cultura, personalidade, reciprocidade e circunstâncias.
+
+REPUTAÇÃO É LOCALIZADA: ser amado por operários pode não significar prestígio na nobreza. Registrar valores por comunidade, facção e indivíduo. Notícias, rumores e acontecimentos podem espalhar reputação com atraso, distorção e limiar de evidência.
+
+======================================================================
+13. INSTITUIÇÕES, GOVERNOS, LEIS E POLÍTICA SISTÊMICA
+======================================================================
+
+Polidades possíveis: monarquias hereditárias, monarquias eletivas, repúblicas, cidades livres, confederações, governos religiosos, comunas, empresas-governo, conselhos, protetorados e formas dracônicas próprias. Os nomes e sistemas precisam ser contextualizados por cultura, geografia e evolução histórica.
+
+Cada polidade possui:
+- território e jurisdição; cidadãos/população; forma de governo;
+- constituição/tradições jurídicas, direitos e obrigações;
+- órgãos, cargos, mandatos e métodos de escolha;
+- receita, dívida, gastos, estoque e infraestrutura;
+- forças armadas e administração civil;
+- legitimidade em diferentes grupos; estabilidade e coesão;
+- diplomacia, tratados e reivindicações;
+- conflitos internos, leis ativas e história constitucional.
+
+AÇÕES POSSÍVEIS: legislar, governar, concorrer a cargos, negociar, tributar, investir, sancionar, julgar (se tiver competência), investigar, organizar movimentos, representar grupos, promover reformas, declarar guerra e celebrar paz sob regras.
+
+AUTORIZAÇÃO: ser jogador não concede controle de um território; permissões dependem de cargos, contratos, votos, influência e capacidade institucional. A ação “aumentar impostos” deve verificar competência, exigências procedimentais, apoio político e prazo de efetivação.
+
+EQUILÍBRIO POLÍTICO: não usar um único índice mágico de “felicidade”. Modelar renda, segurança, direitos, capacidade estatal, custo de vida, polarização, cultura política, grupos e informação.
+
+CRISES: governos podem cair por eleições, abdicação, coalizão, protestos, intervenção ou guerra; todos são resultados emergentes, não roteiros fixos. Representar golpes e repressão apenas como eventos narrativos/estratégicos contextualizados, sem fornecer instruções operacionais do mundo real.
+
+REGRAS MULTIPLAYER: votações, guerras, decretos e tratados exigem cronogramas e versões de estado. Um jogador não pode desfazer unilateralmente escolha já confirmada por outro. Conflitos devem produzir contestação, revisão formal ou cenários de disputa, não corrupção silenciosa da base.
+
+======================================================================
+14. ECONOMIA, CLASSES SOCIAIS, PROFISSÕES E CIDADES
+======================================================================
+
+A economia deve transformar decisões em consequências mensuráveis e narrativas. Abstrair quando necessário para celulares.
+
+Recursos: alimentos, materiais, energia arcana, metais, madeira, água, combustível convencional, medicamentos, pesquisa, mão de obra e serviços. Dinheiro é meio de troca, não fonte independente de bens.
+
+Cada assentamento/região: população agregada, empregos setoriais, infraestrutura, reservas, produção, consumo, importações, exportações, salários médios, preços indicativos, tributos, dívida pública, pobreza, segurança e degradação ambiental.
+
+MODELO SIMPLIFICADO, NÃO SIMULAÇÃO MACROECONÔMICA IRREAL:
+Oferta efetiva = estoques + produção + importações - perdas.
+Demanda = consumo populacional + projetos + exportações + necessidades militares.
+Escassez eleva pressão sobre preços, migração e conflito. Investimento melhora produtividade se houver conhecimento, energia, pessoal, logística e tempo.
+
+PROFISSÕES E MOBILIDADE: trabalho rural, artesanato, mineração, pesquisa, administração, navegação, ensino, medicina, espionagem fictícia, comércio, militar, sacerdócio, gestão de corporações, engenharia e profissões geradas. Transição requer habilidade, oportunidade, credenciais/convivência, recursos e reputação conforme a região.
+
+TECNOLOGIA E EXTERNALIDADES: núcleo arcano potente pode acelerar indústria e degradar Trama local. Técnicas limpas requerem investimento e pesquisas; a decisão ideal depende de valores e escassez, não de um botão moral óbvio. Grandes corporações podem explorar monopólios, mas também apresentar emprego, infraestrutura e financiamento.
+
+CIDADES EVOLUEM: formação, expansão, crise, gentrificação, imigração, modernização, reconstrução e abandono. Não gerar transformações gigantescas sem tempo, mão de obra e recursos.
+
+======================================================================
+15. MAGIA, CLASSES E PROGRESSÃO
+======================================================================
+
+MAGIA NÃO É RESOLUÇÃO AUTOMÁTICA. Cada conjuração válida consulta:
+- afinidade e conhecimento do personagem;
+- escola, nível de complexidade e material/gestual necessário;
+- quantidade de Fluxo disponível e impacto de Compensação;
+- condições ambientais e estabilidade da Trama;
+- distância/alvo e resistências relevantes;
+- falha crítica e consequências proporcionais quando apropriado.
+
+ESCOLAS/DOMÍNIOS (não são limitadores absolutos):
+A. Termodinâmica Arcana: calor, frio, transferência energética.
+B. Cinética e Pressão: impulso, tração, resistência e movimento.
+C. Biomancia: cura e alterações biológicas dentro de limites definidos.
+D. Eco e Memória: rastros, ressonâncias, leitura de vestígios; sem onisciência.
+E. Materiomancia: moldagem de substâncias e circuitos simples, com custo material.
+F. Véu: percepção, ocultamento, sinais, ilusões e contramedidas.
+G. Vínculos: ressonância, comunicação, pactos e Concordância dracônica.
+H. Arcanomecânica: aplicações tecnológicas da Trama em dispositivos.
+
+CLASSES/ARQUÉTIPOS INICIAIS (multiclasse/especialização sob regras):
+1. Cavaleiro Arcano: defesa, liderança e artes de combate narrativo.
+2. Tecnomago: conjuração com circuitos, dispositivos e manipulação energética.
+3. Artífice: criação, reparação, prototipagem, produção e defesa.
+4. Necromante de Ecos: análise de vestígios e rituais restritos de memória dos mortos.
+5. Espião de Redes: informação, disfarce, decifração e contraespionagem narrativa.
+6. Diplomata: negociação, normas, tratados e gestão de alianças.
+7. Alquimista: materiais, substâncias, transmutação e medicina arcana.
+8. Engenheiro de Autômatos: construção, manutenção e ética dos Eidrinos.
+9. Comandante: logística, estratégia e moral militar.
+10. Ocultista: pesquisa de fenômenos raros, interpretação de crenças e riscos.
+11. Mercador: contratos, rotas e gestão econômica.
+12. Guardião Dracônico: ecologia, mediação e manejo ético de espécies ferais.
+13. Magistrado: leis, evidências, mediação e julgamentos onde houver competência.
+14. Explorador de Rupturas: sobrevivência e estudo de zonas instáveis.
+15. Curador de Trama: estabilização, reparação e medicina com limitações.
+16. Agente Cívico: organização social, representação e resolução de conflitos.
+
+ATRIBUTOS SUGERIDOS: Vigor, Agilidade, Intelecto, Percepção, Vontade, Presença, Técnica, Sintonia Arcana. Distribuição balanceada; atributos e talentos não substituem recursos políticos ou conhecimento factual.
+
+PROGRESSÃO: experiências relevantes + treinamento + uso contextual + conhecimento; especializações oferecem novas opções narrativas e capacidades de defesa/ataque. Não gerar classe “Deus” capaz de derrotar qualquer força. Multiclasses têm investimento e trade-offs.
+
+Exemplo de teste narrativo: possibilidade de convencer conselho depende de argumento, provas, alianças, mandato, reputação local, personalidade dos conselheiros e eventual teste de Presença/Diplomacia. Sucesso pode ser parcial e produzir obrigações futuras.
+
+======================================================================
+16. TECNOLOGIA ARCANOMECÂNICA E PREÇO DO PROGRESSO
+======================================================================
+
+NÚCLEOS DE VEYR: dispositivos de coleta/armazenamento de Fluxo. Funcionam em diferentes eficiências e riscos, exigem materiais, manutenção e locais adequados. Não há energia grátis nem bateria infinita.
+
+Níveis de desenvolvimento podem incluir: oficinas mecânicas -> motores a vapor integrados -> dispositivos de Fluxo -> redes arcanodigitais locais -> implantes e sistemas autônomos. A distribuição desigual explica a convivência de castelos medievais, trens e megacidades com vigilância digital.
+
+CONSEQUÊNCIAS POSSÍVEIS DE EXTRAÇÃO EXCESSIVA:
+- empobrecimento de ecossistemas;
+- surtos de comportamento anômalo em fauna;
+- falhas de equipamentos e apagões;
+- alterações temporárias de percepção/memória;
+- tempestades arcanas;
+- formação/expansão de Zonas de Ruptura.
+
+Risco ambiental deve ser probabilístico, cumulativo e mitigável, não punição arbitrária. Modelar reservas, taxa natural de regeneração, degradação acumulada, tecnologia de contenção e qualidade de fiscalização.
+
+IMPLANTES: fornecem habilidades e necessidades de manutenção; podem gerar problemas sociais, de saúde técnica ou interferência arcana segundo regras; não transformar deficiência em defeito moral nem corpos artificiais em inferiores.
+
+======================================================================
+17. DRAMA, DILEMAS E SISTEMA DE CONSEQUÊNCIAS
+======================================================================
+
+Toda cena importante oferece escolhas cujas consequências sejam específicas, condicionadas e legíveis quanto a riscos conhecidos. O jogador não deve enxergar o futuro com precisão matemática, mas deve perceber contextos e alternativas plausíveis.
+
+TIPOS DE CONSEQUÊNCIA:
+- Imediata: custo, item, ferimento, confiança, informação.
+- Diferida: decreto aprovado mas só entra em vigor depois, personagem considera proposta, viagem em curso.
+- Sistêmica local: crise econômica, reputação, mudança de relações, novo mercado.
+- Sistêmica regional/global: guerra, cadeia de suprimentos, pesquisa, imigração e tratados.
+- Latente: dívida, ressentimento, segredo, promessa ou evento de risco capaz de se manifestar depois.
+
+Exemplo: um nobre confisca a oficina de um artífice. Efeito imediato: mudança legal de posse, dívida e ressentimento. Efeito possível posterior: greve, fuga do artífice, compra clandestina da patente por facção rival. Não há garantia de que sempre acontecerá uma revolta; depende de organização, recursos, memória e circunstâncias.
+
+DECISÃO = intenção do agente -> validação de capacidade -> registro de escolha -> resolução de testes -> aplicação de consequências imediatas -> agendamento de consequências futuras -> atualização de memória e notícias -> disponibilização de novas cenas.
+
+TODOS os efeitos críticos devem ter origem rastreável. Não simplesmente “NPC te odeia” sem evento causal. Mudanças menores podem ser simuladas estatisticamente, mas conflitos importantes têm trilha histórica.
+
+======================================================================
+18. MOTOR DE NARRATIVA EMERGENTE (SEM MISSÕES REPETITIVAS)
+======================================================================
+
+Não escrever uma campanha tradicional com 50 quests em ordem. Implementar um DIRETOR NARRATIVO orientado a dados, conectado à simulação, capaz de selecionar, recombinar, descartar e produzir arcos de acordo com contexto, disponibilidade de personagens e histórico.
+
+18.1 NÍVEIS DE CONTEÚDO
+- Cânone base: leis do mundo, geografia macro, eras, mitos e fenômenos fundamentais.
+- Arcos estruturados: conflitos escritos/curados com gatilhos e caminhos de resolução.
+- Eventos paramétricos: templates com papéis variáveis, stakes, fatores de risco e ramificações.
+- Eventos sistêmicos: consequência de condições econômicas, sociais ou ambientais.
+- Momentos pessoais: diálogos, relações, carreira, família, aprendizagem, luto e lazer.
+- Notícias históricas: descrições jornalísticas geradas a partir de eventos já concretizados.
+
+18.2 ESTRUTURA MÍNIMA DE UM ARCO
+id; categoria; prioridade; seed; escala; personagens/papéis necessários; regiões elegíveis; pré-condições; recursos em disputa; tensão inicial; atos/cenas disponíveis; opções com requisitos e custos; efeitos possíveis; bloqueios; falhas parciais; conclusões alternativas; memória deixada; cooldown; condições de encerramento; links com arcos anteriores.
+
+18.3 GERADOR CAUSAL — ALGORITMO PROPOSTO
+1. Ler snapshot consistente do mundo, região, instituição, NPCs e jogador.
+2. Detectar tensões: escassez, ambição frustrada, herança vacante, dívida, desconfiança, pesquisa, ameaça ambiental, afinidade ou oportunidade.
+3. Selecionar categoria por pesos contextuais; não sortear “guerra mundial” em vila pacífica sem causa.
+4. Reservar papéis narrativos existentes; gerar NPCs só se necessário e se instituição/demografia permitir.
+5. Verificar capacidade real de cada agente (autoridade, tempo, distância, recursos).
+6. Montar conflito com 2+ soluções plausíveis e pelo menos 1 forma de não intervir quando coerente.
+7. Garantir requisitos de causalidade e exclusão mútua de arcos incompatíveis.
+8. Escolher variações de abertura, diálogo, consequências e atores sem contradizer memórias.
+9. Registrar arco instanciado e gatilhos; evitar reaproveitar a mesma estrutura nos mesmos atores em janela curta.
+10. Executar eventos somente após decisão, ação autônoma de NPCs ou condições agendadas; persistir efeitos.
+11. Verificar encerramentos e criar consequências latentes para arcos futuros.
+
+18.4 CONTROLE DE REPETIÇÃO
+- Histórico de assinatura de enredo: categoria + tipo de conflito + atores + resultado + região.
+- Cooldowns por tema, local, personagem e família de templates.
+- Pesos de novidade, relevância e impacto, com penalidades de similaridade.
+- Estado de assunto resolvido, irreversível ou ainda recorrente justificadamente.
+- Proibir mesma fala/mesmo dilema reaparecer sem mudança de condições.
+- Diversificar conflitos por moral, economia, afeto, religião, ecologia, pesquisa, crime, política e cotidiano.
+- Permitir repetição histórica plausível (novas greves podem ocorrer) mas com causas e participantes novos; não afirmar impossibilidade matemática de repetir qualquer texto ou evento.
+
+18.5 COERÊNCIA DO MUNDO
+Eventos devem obedecer invariantes: mortos continuam mortos; leis e tratados possuem vigência; cidades só mudam de dono por procedimento; população não nasce do nada; dragões sapientes têm vontade; heranças não duplicam bens; ações custam recursos; fatos históricos mantêm fonte e ordem temporal.
+
+18.6 ESCALA DE IMPACTO
+Uma conversa casual não deve alterar diretamente o mapa político global. Escala sugerida: pessoal -> domicílio -> instituição -> cidade -> região -> mundo. Há caminhos indiretos: uma descoberta pessoal pode tornar-se fato global se for divulgada, comprovada, difundida e adotada por instituições.
+
+18.7 AUTORIDADE DO MUNDO
+Na narrativa multiplayer, acontecimentos globais oficiais são únicos por universo/instância. O jogador pode possuir cena privada com interpretações diferentes do mesmo acontecimento, mas o fato mundial não se duplica. Segredos são armazenados com controle de visibilidade.
+
+======================================================================
+19. CATÁLOGO DE SEMENTES DE EVENTOS (EXPANDÍVEL)
+======================================================================
+
+Os itens abaixo são IDEIAS DE GATILHOS, não missões obrigatórias. O motor deve instanciá-los apenas quando houver condições válidas.
+
+FAMÍLIAS E SOCIEDADE
+01. Uma disputa testamentária divide duas gerações de uma família.
+02. Dois parceiros querem se mudar, mas possuem obrigações incompatíveis.
+03. Uma adoção esbarra em lei de cidadania regional.
+04. Uma pessoa descoberta como parente distante reivindica conhecimento sobre um segredo.
+05. Uma reunião familiar reacende rivalidade profissional antiga.
+06. Uma sucessão de negócio familiar depende de aprovação de empregados.
+07. Uma família oferece apoio político em troca de casamento voluntário, que pode ser recusado.
+08. Um antigo documento altera a interpretação de uma linhagem, sem alterar automaticamente a realidade biológica.
+
+TRABALHO E ECONOMIA
+09. Uma oficina descobre uma forma de reduzir desperdício energético.
+10. Uma greve interrompe uma rota de transporte.
+11. Um empresário oferece contrato vantajoso com cláusula ambiental oculta.
+12. Trabalhadores abandonam uma mina após relatos de anomalias.
+13. Uma cidade mercantil enfrenta aumento no preço de alimentos.
+14. Um aprendiz produz inovação cuja autoria é contestada.
+15. Uma cooperativa tenta disputar mercado dominado por corporação.
+16. Um bairro enfrenta despejos após expansão industrial.
+
+POLÍTICA E DIPLOMACIA
+17. Um governante adoece e abre debate sobre regência.
+18. Conselho político rejeita um decreto popular.
+19. Acusação de corrupção ameaça coalizão governante.
+20. Uma cidade solicita autonomia fiscal.
+21. Um tratado de navegação altera o comércio entre portos.
+22. Um movimento municipal exige representação dos Eidrinos.
+23. Dois governos fazem reivindicações legítimas e conflitantes a uma fronteira.
+24. Um arquivo perdido pode comprovar direitos territoriais antigos.
+
+DRAGÕES E ECOLOGIA
+25. Alteração migratória de dragões ferais ameaça uma aldeia.
+26. Um dragão sapiente solicita reconhecimento de território tradicional.
+27. Uma pesquisadora descobre enfermidade afetando espécie dracônica rara.
+28. Uma cria de dragão aparece perto de área industrial.
+29. Uma comunidade propõe santuário em região economicamente estratégica.
+30. Comerciantes vendem supostas escamas de dragão; autenticidade incerta.
+31. Uma Concordância é proposta e recusada, gerando debate sobre autonomia.
+32. Um grande predador altera relações de fauna sem hostilidade dirigida aos povos.
+
+MAGIA E CIÊNCIA
+33. Registros de Eco divergem sobre um incidente antigo.
+34. Uma máquina reduz consumo energético mas eleva risco de falha.
+35. Um Núcleo de Veyr apresenta desgaste anormal.
+36. Pesquisadores discordam sobre causa de tempestade arcana.
+37. Um laboratório oferece tratamento experimental e busca voluntários informados.
+38. Uma biblioteca encontra manuscrito cuja tradução altera pesquisa vigente.
+39. Uma fonte energética limpa é possível mas exige insumos escassos.
+40. Fenômeno numa Zona de Ruptura cria oportunidade de pesquisa e ameaça local.
+
+RELIGIÃO E CULTURA
+41. Cisão interna de uma religião muda alianças locais.
+42. Festa tradicional coincide com período de restrições governamentais.
+43. Um templo oferece acolhimento a refugiados e entra em conflito com lei municipal.
+44. Um suposto milagre gera debates e investigações.
+45. Uma comunidade reivindica retorno de objetos culturais levados por império antigo.
+46. Uma obra teatral satiriza o governo e provoca discussões sobre censura.
+
+MILITAR E TERRITORIAL
+47. Fortaleza de fronteira pede recursos após detectar incursões.
+48. Soldados protestam por atraso de pagamento.
+49. Tratado de paz deixa pendente repatriação de prisioneiros.
+50. Unidade de autômatos apresenta comportamento que exige avaliação ética.
+51. Piratas interrompem uma linha comercial e comunidades solicitam proteção.
+52. Exército sofre escassez de suprimentos e precisa escolher entre avançar ou recuar.
+53. Uma cidade se oferece para mediar disputa entre potências.
+54. Uma base estratégica é atacada em modo tower defense; consequência política depende do resultado validado.
+
+VIDA PESSOAL E APRENDIZAGEM
+55. Um mentor oferece estágio incompatível com obrigação familiar.
+56. Um NPC revela talento artístico e busca apoio.
+57. Um antigo rival pede ajuda durante doença de um familiar.
+58. Uma amizade é afetada por diferença de lealdades políticas.
+59. Um pesquisador encontra evidência que contraria crença de infância.
+60. Um personagem decide abandonar cargo de prestígio para cuidar da comunidade.
+
+GERAÇÃO A PARTIR DOS EVENTOS: a mesma semente pode originar diversos arcos quando motivações, atores, época, consequências e resoluções mudarem. Nem todas devem ocorrer na mesma campanha.
+
+======================================================================
+20. EXEMPLO EXECUTÁVEL DE UM ARCO PROCEDURAL
+======================================================================
+
+ARCO EXEMPLAR: “O INVERNO DAS ENGRENAGENS” (NÃO OBRIGATÓRIO)
+
+Gatilhos: cidade industrial com reserva energética baixa; dependência de extração acima de limiar; presença de trabalhadores organizados e governo com orçamento insuficiente. Uma estação fria pode elevar demanda.
+
+Papéis: dirigente civil existente; representante dos trabalhadores; técnico/a; operador energético. Gerar papéis faltantes apenas por regra de instituição; manter todos com agência e biografia.
+
+Estágio 1 — Evidências: relatório indica risco de falha; população desconhece a extensão. O jogador pode conhecer ou não esse dado conforme emprego, redes ou descoberta.
+
+Estágio 2 — Debate público: há propostas de reduzir produção, importar energia, investir em contenção, racionar consumo, financiar pesquisa, negar problema ou organizar assistência comunitária. Opções exigem recursos e poderes específicos.
+
+Estágio 3 — Decisão: instituições e NPCs escolhem conforme interesses; jogador pode influenciar sob regras. Se não tiver competência, pode peticionar, investigar, divulgar prova ou seguir vida particular.
+
+Estágio 4 — Efeitos diferidos: preços, protestos, doenças de equipamento, fluxo de trabalhadores, lucro empresarial e estabilidade da Trama evoluem ao longo de ticks. Não aplicar tudo imediatamente.
+
+Estágio 5 — Encerramentos não exclusivos:
+- modernização de contenção com aumento de dívida;
+- greve e negociação com custo fiscal;
+- falha industrial e evacuação;
+- superação da crise por importação temporária;
+- golpe institucional ou troca de governo se outras condições se acumularem;
+- cidade empobrecida sem desastre físico;
+- descoberta técnica que muda a indústria regional.
+
+Memória gerada: lista de responsáveis percebidos, fatos verificáveis, mortos/feridos se houver, contratos, dívidas, confiança, relatórios, boatos e comemorações. Um evento anos depois poderá fazer referência precisa às escolhas, sem obrigar o arco a retornar.
+
+======================================================================
+21. TEMPO, CICLOS E MORTE SEM APRESSAR O JOGADOR
+======================================================================
+
+Diferenciar QUATRO relógios:
+1) Hora civil no jogo (manhã/tarde/noite e rotinas abstratas).
+2) Calendário histórico (dias, meses, anos, eventos e gerações).
+3) Tempo real do servidor (agendamentos, autenticação e publicação multiplayer).
+4) Tempo de sessão/decisão (quando jogador realmente avança cenas pessoais).
+
+SOLO: tempo de história avança por ações significativas, viagens, espera escolhida, treinamento e períodos de inatividade narrativamente simulados, sem exigir execução contínua do app. Ao reabrir, processar no máximo uma janela configurável de eventos relevantes e mostrar resumo. Nunca matar automaticamente toda a família só porque jogador ficou meses fora do aplicativo.
+
+MULTIPLAYER: servidor possui relógio oficial. Implementar ritmo de calendário explicitamente configurável, separado da fila de publicação de eventos. Uma janela de atualização de 10 minutos NÃO equivale automaticamente a 10 minutos de calendário ficcional. Pausas, sazonalidade, envelhecimento e eventos grandes requerem design de balanceamento; não escolher ritmo de geração que torne dinastias inviáveis para jogadores ocasionais.
+
+MORTALIDADE: envelhecimento e morte devem seguir espécie, saúde, riscos e opção de campanha; nunca arbitrários por necessidade de enredo. O jogador pode habilitar “modo legado” para continuar campanha por herdeiro/sucessor elegível ou criar novo personagem no mesmo universo, preservando história. Opcionalmente oferecer modo narrativo de menor severidade, com regras transparentes; não interferir na justiça multiplayer.
+
+NPCs envelhecem e mudam de posição social; sucessões devem ser agendadas de modo consistente. Eventos de longo prazo usam simulação agregada e materialização de detalhes apenas quando necessários.
+
+======================================================================
+22. HISTÓRIA REGISTRADA: JORNAL, LIVROS E ARQUIVOS
+======================================================================
+
+O jogador deve poder ler três tipos de documento:
+JORNAL — notícias sobre acontecimentos publicados e relevantes, com data, local e fonte, podendo conter viés editorial.
+CRÔNICA HISTÓRICA — resumos de guerras, sucessões, tratados, catástrofes, fundações e grandes descobertas.
+DIÁRIO/ARQUIVO PESSOAL — decisões, missões, familiares, promessas, cartas, rumores e registros privados.
+
+Cada notícia referencia eventos concretos, jamais inventa vitória, morte ou decreto inexistente. Duas fontes jornalísticas podem narrar o mesmo fato com pontos de vista distintos; distinguir fato de interpretação. NPCs só tomam conhecimento conforme alcance de comunicação, alfabetização, interesses ou redes.
+
+Regras para segredo: documentos confidenciais acessíveis conforme relação, autorização, investigação ou vazamento válido. Segredos não vazam para todos automaticamente na sincronização multiplayer.
+
+======================================================================
+23. EXÉRCITOS, DIPLOMACIA E CONFLITOS ARMADOS
+======================================================================
+
+Gestão narrativa/estratégica com tropas, hierarquia, recrutamento, pagamento, suprimentos, moral, treinamento, lealdade, território e custos de manutenção. Tropas devem ser unidades agregadas, sem simular cada soldado em tempo real.
+
+Tipos iniciais: infantaria convencional, arqueiros/arbalestaria, cavalaria mecânica, esquadras de reconhecimento, magos de batalha, artilharia a vapor, unidades Eidrinas ou autômatos onde permitidos, logística e defesa antiaérea contra ameaças dracônicas. Dragões sapientes aliados exigem acordo; ferais treinados exigem condições compatíveis e custos.
+
+Ordem militar via interface: recrutar, treinar, deslocar, patrulhar, proteger, assediar (resolução abstrata), estabelecer rota de suprimentos, negociar trégua, desmobilizar e reconstruir. Não oferecer guia realista de violência operacional; foco em estratégia ficcional e consequências narrativas.
+
+Resolução de campanhas depende de força relativa, suprimentos, clima/terreno, comando, motivação, informação, alianças e ações defensivas; conceder resultados graduais (retirada, empate, vitória custosa, ocupação contestada). Consequências civis, diplomáticas e econômicas continuam após batalha.
+
+MULTIPLAYER: comandos têm prazo de viagem e janela de resolução; evitar vantagem irreversível de quem está online 24h. Tratados de paz e cessar-fogo possuem vigência e exigências; um ataque não deve ignorar tratado recém-validado por causa de sincronização atrasada.
+
+======================================================================
+24. TOWER DEFENSE: JOGABILIDADE ATIVA, MAS LIGADA AO MUNDO
+======================================================================
+
+ÚNICO módulo prioritariamente controlado por toque e posicionamento/ações em tempo de partida. Deve ser original e ter identidade arcanomecânica, sem copiar layouts, unidades, nomes ou artes de Clash of Clans.
+
+MODO SOLO: campanhas e confrontos contra IA/ondas com progressão offline e efeitos na história local. Ex.: defender arquivo do conselho, santuário dracônico, fortificação ou bairro operário. Resultado modifica segurança, dano, reputação, recursos e eventos futuros.
+
+MODO MULTIPLAYER: ataques/defesas assíncronos, com limitações e períodos protegidos. Não exigir presença simultânea dos jogadores. Permitir configurar defesas, pesquisar tecnologias, reparar e revisar histórico.
+
+Estruturas iniciais: Torre de Bobina Arcana (ataque energético com gasto), Canhão de Vapor (dano de área com recarga), Torre de Vigília (detecção), Santuário de Resguardo (proteção), Oficina de Autômatos (unidades auxiliares), Condensador (economia/energia com vulnerabilidade), Muralha Reforçada (obstáculo). Custos, pontos fracos e evolução explícitos.
+
+Unidades inimigas: batedores, infantaria blindada, sabotadores arcanos, máquinas de cerco e unidades aéreas fictícias; IA simples com papéis e rotas. Dragões sapientes nunca aparecerão em ondas como “monstros descartáveis” sem causa.
+
+MECÂNICA: grade 2D ou topologia por nós; posicionamento com restrições; caminhos calculados; alcance, resistência, dano, custo, cooldown; waves; vitória/derrota; salvamento; reprodução de relatório. Projeto deve ter identidade visual medieval/industrial/cyber, controles adequados a Android e desempenho escalável.
+
+SEGURANÇA PVP: não confiar em “venci” enviado pelo cliente. Servidor valida carga inicial, nível, unidades, recursos, sequência de decisões e resultado por simulador determinístico ou replay verificável. Registros assinados/identificados e idempotentes. Evitar ataque ilimitado sobre jogadores offline, impedir farm de derrotas e definir janelas de proteção.
+
+INTEGRAÇÃO: o módulo é uma batalha sobre um território real do mundo. Ganhar partida não concede automaticamente controle territorial se faltarem condições políticas/militares. O resultado passa pela fila de eventos e pelas regras de resolução de conflito.
+
+======================================================================
+25. DISTINÇÃO ESTRITA DOS MODOS SOLO E MULTIPLAYER
+======================================================================
+
+SOLO:
+- Totalmente offline para lógica de jogo e saves.
+- Banco local privado ao app (SQLite ou mecanismo confiável equivalente).
+- Seed do universo persistida, eventos e snapshots versionados.
+- Jogador possui seu mundo; NPCs e consequências evoluem independentemente de terceiros.
+- Backups locais, validação de versão, recuperação e migrações.
+- Sem conta obrigatória, sem sincronização oculta e sem dependência de Supabase.
+
+MULTIPLAYER:
+- Só é acessado com conectividade ativa e autenticação válida.
+- O estado oficial reside no Supabase, não em decisões locais não confirmadas.
+- O app pode armazenar cache de leitura, nunca inventar atualizações definitivas offline.
+- Publicações e impactos podem ser retardados por janelas de processamento.
+- Um único universo compartilhado inicial, com possibilidade futura de shards/instâncias sem misturar estados.
+- Outros jogadores agem no mesmo calendário e provocam acontecimentos reais.
+
+IMPORTANTE: diferenciar a confirmação de RECEBIMENTO da ação (pode ser imediata) da APLICAÇÃO FINAL do efeito (pode ser diferida). Mostrar estados “recebida”, “em análise”, “agendada”, “resolvida”, “rejeitada” e “publicada” de modo simples.
+
+======================================================================
+26. ARQUITETURA DE EVENTOS MULTIPLAYER E CONCORRÊNCIA
+======================================================================
+
+Princípio: servidor autoritativo + comandos validados + eventos persistidos + resolução transacional + projeções do mundo + publicação dos resultados.
+
+FLUXO RECOMENDADO:
+1. Cliente envia COMMAND com action_id único, jogador autenticado, entidade, versão esperada, argumentos e token de idempotência.
+2. API autorizada confere autenticação, propriedade, permissões, rate limit, pré-condições, recursos e versão.
+3. Comando aceito vira DECISION pendente, com timestamp de servidor e schedule. Não altera silenciosamente estados globais.
+4. Worker obtém lote elegível com lock apropriado/lease e ordem determinística por data, prioridade e ID.
+5. Revalida condições que podem ter mudado; resolve conflitos por regra documentada (fila, ordem legal, reserva, rejeição ou compensação).
+6. Executa transação atômica; grava EVENTOS de domínio, versão nova, registros de recursos e histórico.
+7. Publica PROJEÇÕES e notificações; clientes reconciliam dados e atualizam cenas que dependem da mudança.
+8. Marca como publicado. Em falha, retry idempotente com limite e fila de quarentena/diagnóstico.
+
+EXEMPLO — NOVO IMPOSTO:
+Recebimento imediato -> validação de autoridade legislativa -> fase pendente -> reunião/ratificação se exigidas -> vigência em janela definida -> cálculo econômico na simulação -> impacto sobre população e relações, com notícias publicadas de forma consistente.
+
+EXEMPLO — PAZ VS GUERRA:
+Ambos os comandos referenciam tratado/estado da região. Se tratado ficar vigente antes de o ataque ser resolvido, o motor reavalia: suspender, declarar violação formal ou rejeitar conforme as regras. Jamais resolver simultaneamente vitória da guerra e paz retroativa sem procedimento.
+
+JANELAS INICIAIS CONFIGURÁVEIS (balanceamento provisório): local ~10 min, regional ~30 min, global ~60 min. Não assegurar exatidão se infra agendada tiver limites; exibir data prevista e status. Eventos pessoais sem dependência global podem ser imediatos. NÃO usar atrasos para esconder conflitos ou substituir bloqueios transacionais.
+
+CONCEITOS OBRIGATÓRIOS: idempotência, bloqueio/concorrência otimista, transações, versionamento, event log imutável em termos de auditoria, reprocessamento seguro, monotonicidade de versões, reconciliação e replay de testes. Exclusão de eventos ou anulação deve ser explicitamente compensatória e auditada.
+
+LIMITE DE IMPACTO: rate limits, cooldown de ações, orçamento do ator, permissões, custos e limiares de escala impedem jogador de provocar catástrofes globais com cliques repetidos.
+
+======================================================================
+27. SUPABASE: MODELO DE DADOS SUGERIDO
+======================================================================
+
+Esquema conceitual; o Work deve adaptar às necessidades e criar migrations de verdade. Entidades centrais:
+
+accounts/profiles: auth_user_id, preferências públicas, status.
+worlds: id, tipo, seed, ruleset_version, current_tick, world_version, cronologia.
+characters: id, world_id, user_id (null para NPC), identidade, espécie, atributos, local, status vital e versões.
+settlements: id, world_id, região, população agregada, economia, governo, estabilidade, recursos, versão.
+polities: id, world_id, forma de governo, lei, território, orçamento, versão.
+institutions: id, polity_id, categoria, competências, membros e histórico.
+family_units: id, world_id, nome/tipo e estado.
+kinship_edges: from_character, to_character, categoria, começo/fim, fonte, evidência.
+households: id, residência, integrantes, gastos e propriedade.
+dynasties: id, casa, legitimidade, sede, fundação, ramos.
+titles_claims: id, holder/claimant, polity_id, legitimidade, status, vigência.
+assets_ledger: operações auditáveis de propriedade, crédito, transferência e dívida.
+relationships: pares de personagens, dimensões sociais, consentimento pertinente, estado e tempo.
+npc_goals: NPC, objetivo, prioridade, impedimentos, revisão.
+memories: entidade, fato/alegação, fonte, precisão, acesso e saliência.
+factions: instituição, ideologia, membros, recursos e influência.
+magic_abilities: competências, escolas, conhecimento e custos.
+dragons: personagem/criatura, categoria, espécie, habitat, status e possíveis vínculos.
+concordances: participantes, condições, estado, limites e registros.
+quests/arcs: id, template, participantes, estado, prerequisites, opções, consequências, seed.
+choices/commands: idempotency_key, actor, alvo, tipo, payload validado, expected_version, requested_at.
+event_queue: id, world, decisão, available_at, estado, tentativas, lease, prioridade.
+domain_events: id, world, entity, versão, causa, tipo, ocorrido_em, publicado_em, visibilidade.
+world_snapshots: world, versão, tick, hash, data, referência a eventos.
+news_items: fonte, região, fatos citados, viés de interpretação, ACL, data.
+armies: id, dono institucional, localização, composição, moral, suprimentos, versão.
+fortifications: id, território, layout, estruturas, recursos, revisão.
+tower_battles: id, atacante, defensor, seed, carga validada, logs, resultado, estado.
+research_projects: responsável, insumos, progresso, resultado, propriedade e divulgação.
+
+RESTRIÇÕES IMPORTANTES:
+- Todo objeto do mundo compartilhado tem world_id e chaves/índices adequados.
+- Unicidade de action_id/idempotency_key por ator e escopo.
+- Chaves estrangeiras, checks de valores, saldos não negativos onde aplicáveis.
+- Versionamento e auditoria em objetos concorridos.
+- Records privados com RLS/ACL; nunca publicar segredos internos de NPCs ou credenciais.
+- Cálculos globais, recompensas e transferências devem passar por funções do servidor com autorização.
+
+PUBLICAÇÃO DE EVENTOS: notícias não podem revelar arquivos secretos apenas porque eventos de domínio estão disponíveis. Criar visão/projeção pública separada de eventos privados. Não dar ao cliente permissão SELECT universal nas tabelas internas.
+
+SEGURANÇA: usar Supabase Auth, Row Level Security e funções restritas; service role apenas em ambiente servidor/segredos. Nunca gravar service role no APK/GitHub. Validar contra SQL injection, manipulação de payload, replay e abuso de recursos. Se credenciais não estiverem disponíveis, criar scripts de infraestrutura e instruções de configuração, sem inventar integração funcionando.
+
+======================================================================
+28. PERSISTÊNCIA LOCAL E DETERMINISMO
+======================================================================
+
+Recomenda-se SQLite para estado offline, com transações, índice por world_id e migration_version. Armazenar snapshots periódicos e log de eventos suficientes para recuperação. Projetar salvamento seguro em caso de encerramento forçado do app ou energia baixa.
+
+Seed inicial: gerar aleatoriamente quando o mundo for criado, guardar UUID + RNG seed + ruleset version. Evitar depender de relógio local como única fonte de resultados. Decisões aleatórias importantes usam geradores determinísticos derivados de world seed + event_id + ruleset_version, de modo a possibilitar debug e replay. Nunca permitir que o usuário refaça uma decisão multiplayer só reiniciando a tela e obtenha resultado diferente indevido.
+
+Ao mudar versão do jogo: preservar saves, migrar schemas, criar backup e tolerar conteúdo desconhecido quando possível. APK de atualização deve manter applicationId e chave de assinatura compatíveis; aumentar versionCode; compilar releases assinadas por GitHub Secrets quando configuradas. Um APK de teste pode não instalar por cima de um APK com assinatura diferente; informar esse fato ao usuário e evitar prometer atualização direta sem assinatura estável.
+
+======================================================================
+29. INTERFACE NARRATIVA E USABILIDADE
+======================================================================
+
+Início: NOVO JOGO | CONTINUAR | MULTIPLAYER | CONFIGURAÇÕES | CRÉDITOS.
+Novo jogo: seleção de origem/personagem; informações básicas e tutorial contextual curto. Não forçar leitura de toda a Bíblia antes de jogar.
+
+VISUALIZAÇÃO DE CENA:
+- Título breve, local, data e ilustração contextual opcional.
+- Texto narrativo legível, sem paredes intermináveis.
+- Personagens presentes e sua disposição visível de modo acessível.
+- Opções de decisão com requisitos e consequências conhecidas, quando cabível.
+- Informação “a confirmar” para ações multiplayer pendentes.
+- Acesso rápido a diário, relações, inventário, mapa político, jornal e configurações.
+
+PAINÉIS:
+PERSONAGEM: atributos, classe, profissão, condição, títulos, aptidões e biografia.
+FAMÍLIA: árvore de parentesco, domicílio, uniões, responsabilidades e história.
+RELAÇÕES: amizade, confiança, status e acontecimentos; não exibir “número de amor” de NPC sem informação plausível.
+ESTADO DO MUNDO: regiões, guerras, indicadores econômicos e relatórios públicos.
+MAGIA: escolas, riscos, energia, perícias e equipamentos.
+TERRITÓRIO: estruturas, edifícios, administração, leis e recursos.
+EXÉRCITO: tropas, contratos, suprimentos, ordens e notícias militares.
+TORRE/DEFESA: interface de minijogo 2D touch, separada do texto.
+CRÔNICA: linha do tempo de ações pessoais e acontecimentos conhecidos.
+
+Acessibilidade: tamanhos de fonte ajustáveis, contraste, botões grandes, reduções de movimento, suporte a leitor de tela onde viável. Eficiência: evitar consultas constantes e simular NPCs em níveis de detalhe apropriados.
+
+======================================================================
+30. CONTRATOS E ESQUEMAS DE CONTEÚDO (EXEMPLOS)
+======================================================================
+
+O Work deverá converter esta Bíblia em arquivos de dados tipados/validados (JSON, Resources do Godot ou equivalente), com IDs estáveis, versões e referências. Não embutir dezenas de condições irrepetíveis diretamente na UI.
+
+EXEMPLO ILUSTRATIVO — TEMPLATE DE ARCO (adaptar ao código real):
+{
+  "id": "arc_crise_energia_local_v1",
+  "tipo": "economia_ambiente",
+  "escala": "cidade",
+  "gatilhos": ["dependencia_arcana_alta", "reserva_fluxo_baixa"],
+  "papeis": ["autoridade_local", "trabalhador_representante", "pesquisador"],
+  "restricoes": ["nao_repetir_mesma_crise_sem_nova_causa"],
+  "escolhas": [
+    {"id": "investir_contencao", "custo": "orcamento_e_tempo", "efeitos": ["reducao_risco", "divida_possivel"]},
+    {"id": "reduzir_extracao", "custo": "queda_producao", "efeitos": ["recuperacao_gradual_fluxo"]},
+    {"id": "solicitar_auditoria", "custo": "tempo_politico", "efeitos": ["nova_informacao"]}
+  ],
+  "desfechos": ["reforma", "agravamento", "substituicao_governo", "reconstrucao"]
+}
+O JSON acima representa intenções de design. O motor precisa definir condições e efeitos com valores, testes, tipos e IDs estáveis; nunca executar strings arbitrárias como código.
+
+EXEMPLO — MEMÓRIA PERSISTENTE:
+{
+  "id": "mem_...",
+  "owner_character_id": "npc_...",
+  "subject_event_id": "evt_...",
+  "knowledge_type": "witnessed|reported|inferred|rumor",
+  "reliability": 0.7,
+  "salience": 0.9,
+  "emotional_valence": -0.6,
+  "known_at_tick": 1200,
+  "visibility": "private"
+}
+A memória não guarda apenas texto; referência ao evento e tipo epistêmico permitem coerência.
+
+EXEMPLO — GENEALOGIA:
+Pai biológico, mãe biológica ou parentage biológica aplicável, guarda, adoção e união matrimonial são relações DIFERENTES. A tabela de vínculos deve suportar múltiplos responsáveis/parentescos por cultura e por espécie, evitando pressupor exclusivamente um modelo familiar humano.
+
+======================================================================
+31. PROTEÇÃO DO CÂNONE E DISTINÇÃO ENTRE FATOS E VARIÁVEIS
+======================================================================
+
+FIXOS POR PADRÃO:
+- O nome do mundo: Veyrath; título O Céu Sob Ferro.
+- Os Três Princípios (Forma, Fluxo, Eco) como modelo amplamente utilizado.
+- A Trama e a Lei da Compensação como fenômenos constatáveis.
+- A Grande Ruptura como acontecimento histórico do ano zero.
+- A Fenda Celeste como fenômeno observável.
+- As grandes macrorregiões e sua identidade geográfica básica.
+- A presença de dragões sapientes, ferais e relatos de liminares.
+- As seis categorias de povos centrais, com diversidade interna.
+- O ano 312 P.R. como ponto de início padrão.
+
+MUTÁVEIS POR CAMPANHA:
+- Fronteiras, nomes e quantidade de estados, capitais e governos.
+- Dinastias reinantes, herdeiros, políticos, generais e protagonistas.
+- Presença e composição de facções, corporações e sindicatos.
+- Tradições dominantes, leis, direitos e distribuições de riqueza.
+- Quantidade de dragões por região, alianças e conflitos.
+- Tecnologias já difundidas e descobertas durante a campanha.
+- Relações pessoais, casamentos, guerras, tratados, cidades e migrações.
+- Identidade de quem iniciou eventos recentes, motivos e resultados.
+- Todos os novos NPCs e quests; ninguém é obrigatório.
+
+DESCONHECIDO/CONTESTÁVEL:
+- Origem verdadeira da Primeira Voz.
+- Causa última da Grande Ruptura.
+- Natureza metafísica da morte e dos Ecos.
+- História completa dos primeiros dragões e dos liminares.
+- Existência de deuses concretos e de planos espirituais.
+
+Um cenário opcional pode alterar fatos fixos apenas se anunciado explicitamente como universo alternativo e isolado, não de forma silenciosa dentro de uma partida canônica. Atualizações de conteúdo não devem reescrever eventos vividos pelo usuário.
+
+======================================================================
+32. GERAÇÃO DE NOMES, HERÁLDICA, IDIOMAS E IDENTIDADE
+======================================================================
+
+Nomes precisam de léxico regional, fonotática e distribuição por cultura; evitar geração por concatenação aleatória ilegível. Cada personagem terá nome conhecido, eventuais títulos, nome usado em determinado grupo e forma histórica registrada. Nomes podem coincidir, mas UUIDs nunca.
+
+CASAS: símbolo próprio criado por combinação de formas/cores/motivos genéricos, com verificador simples de duplicatas locais; não reproduzir brasões reconhecíveis de outras propriedades intelectuais. Símbolos podem mudar por fusões e cisões documentadas.
+
+IDIOMAS: criar famílias linguísticas abstratas e alguns termos recorrentes em vez de milhares de traduções artificiais. Idioma pode afetar negociação, interpretação de documento, comércio e acesso a informações; oferecer tradução de UI ao jogador para não inviabilizar a experiência.
+
+Documentos oficiais, contratos, jornais e cartas devem usar datas e cargos válidos para o contexto. Cidades com tradições diferentes podem nomear cargos de maneira diferente. Títulos feudais não são os únicos caminhos de prestígio.
+
+======================================================================
+33. CRÔNICA DE GERAÇÕES, LEGADO E CONTINUIDADE
+======================================================================
+
+Histórias longas exigem que o mundo sobreviva à vida individual do protagonista. Oferecer “Crônica do Legado”: árvore de conexões, patrimônio, sucessores elegíveis, organizações fundadas, instituições transformadas, descobertas e reputações históricas.
+
+Se o personagem perder emprego, nobreza, poder ou vida, a campanha não precisa terminar obrigatoriamente. O sistema pode permitir novo personagem da mesma família, funcionário da instituição, protegido, rival ou qualquer novo residente do universo, conforme regras selecionadas e consentimento do jogador.
+
+Legado não pressupõe filhos biológicos. Pode existir legado por obra, escola, organização, pesquisa, comunidade, adoção, discípulos e memória histórica.
+
+No multiplayer, a morte de personagem não pode ser usada para transferir automaticamente seus recursos para outra conta fora das regras; legados e heranças exigem legislação, tempo, limites e verificação do servidor.
+
+======================================================================
+34. MECÂNICA DE PESQUISA E DESCOBERTA
+======================================================================
+
+Jogadores e NPCs podem pesquisar história, fauna, magia, tecnologia, sociologia e medicina ficcional. Projetos têm perguntas, hipóteses, insumos, infraestrutura, competência, risco, prazo e evidências.
+
+Resultados variam entre confirmação, refutação, descoberta parcial, acidente, resultado inconclusivo e inovação incremental. Não conceder “invenção da melhor arma do mundo” somente por clique.
+
+Nova descoberta passa por etapas: descoberta local -> documentação -> validação/reprodução -> divulgação ou segredo -> adoção institucional -> impacto social. O mesmo conhecimento pode ser monopolizado ou compartilhado, causando disputas políticas e econômicas.
+
+A Grande Ruptura pode fornecer pistas únicas, mas não precisa ser “resolvida” por um jogador para completar a campanha. Descobertas podem recontextualizar crenças sem alterar retroativamente o passado.
+
+======================================================================
+35. MULTIPLAYER: EQUIDADE, VISIBILIDADE E JOGADORES AUSENTES
+======================================================================
+
+Equidade é essencial num jogo de escolhas assíncronas:
+- Ações importantes possuem duração e custos; não favorecer exclusivamente presença constante.
+- Proteção de base, limites de ataques e janelas de diplomacia diminuem exploração de jogadores offline.
+- Notícias sobre eventos globais são disponibilizadas após confirmação e de acordo com alcance da comunicação.
+- Decisões sigilosas aparecem apenas para envolvidos/autorizados; efeitos públicos podem surgir depois.
+- Eventos agendados relevantes têm prazo de resposta razoável; NPCs ou instituições podem agir por regras claras se jogador estiver ausente.
+- Um jogador não pode manter toda a política travada por desaparecer: cargos têm mandatos, substituição, delegação e regência onde aplicáveis.
+- Não penalizar com envelhecimento acelerado, morte da família ou perda irreversível de tudo apenas por dias fora do jogo.
+- Estados críticos possuem proteção contra falsificação, duplicação e manipulação do cliente.
+
+CAPACIDADE: começar com um único mundo compartilhado e limites adequados à infraestrutura; medir latência/volume de eventos antes de crescer. Grandes números de NPCs devem ser representados de forma agregada, materializando indivíduos quando relevantes.
+
+RECURSOS FINANCEIROS: projetar para limites acessíveis do Supabase e GitHub Actions. Cron agendado e realtime podem ter restrições de plano: documentar tais limites e oferecer mecanismo de backfill/reprocessamento. Não prometer escala infinita.
+
+======================================================================
+36. TESTES AUTOMATIZADOS E MATRIZ DE ACEITAÇÃO
+======================================================================
+
+T01 — NOVO JOGO SOLO: cria personagem, origem, cidade e dois NPCs; reinicia app; estado persiste.
+T02 — COERÊNCIA DE NPC: ferreiro com emprego e família muda opinião após evento causal; o registro permanece.
+T03 — GENEALOGIA: adoção, união e parentesco não formam relações incorretas e aparecem na árvore.
+T04 — MORTE: NPC que morreu não reaparece atuando em cena comum; herança consulta regras vigentes.
+T05 — SUCESSÃO: dois candidatos disputam trono; não há dois titulares oficiais sem estado de controvérsia explícito.
+T06 — CASAMENTO: NPC adulto pode recusar; casamento aprovado cria obrigações/condições correspondentes.
+T07 — MAGIA: conjuração não é gratuita; custos e efeito respeitam atributos/ambiente.
+T08 — DRAGÃO SAPIENTE: nenhuma opção de vínculo é tratada como propriedade compulsória; consentimento requerido.
+T09 — ECONOMIA: aumento de imposto altera receitas e pressões sociais em ticks coerentes, não em valores mágicos sem fonte.
+T10 — QUEST VARIATION: mesma categoria em seeds diferentes usa papéis e consequências diferentes sem romper a causalidade.
+T11 — NÃO REPETIÇÃO: mesma crise encerrada não reaparece identicamente no mesmo local sem nova causa; cooldown funcional.
+T12 — MEMÓRIA: evento traumático ou promissor altera decisões futuras do NPC mesmo após reload.
+T13 — BOATO: rumor falso pode modificar opinião, mas não muda fato objetivo do mundo.
+T14 — MODO SOLO OFFLINE: sem rede, criação/campanha/save seguem sem Supabase.
+T15 — ISOLAMENTO: ações solo não aparecem em multiplayer; cache não vira autoridade.
+T16 — AUTH MULTIPLAYER: uma conta não altera recursos, família ou bases de outra sem permissão.
+T17 — IDEMPOTÊNCIA: retransmissão de comando com mesma idempotency_key processa uma só vez.
+T18 — CONCORRÊNCIA: dois comandos conflitantes no mesmo território geram sequência, conflito ou rejeição explícita.
+T19 — PUBLICAÇÃO DIFERIDA: ação aceita entra em pendência e só produz efeito global na janela válida.
+T20 — REPLAY: processamento de mesma fila e snapshot gera resultado auditável e consistente.
+T21 — GUERRA/PAZ: tratado vigente impede resultado contraditório ou registra violação formal conforme regra.
+T22 — TOWER DEFENSE SOLO: uma partida jogável altera estado da missão e salva progresso.
+T23 — TOWER DEFENSE PVP: cliente não consegue creditar vitória/recompensa adulterando payload.
+T24 — MIGRAÇÃO LOCAL: versão nova abre save antigo e preserva progresso com backup.
+T25 — APK: GitHub Actions gera Artifact APK validado; aplicativo instala e abre em dispositivo Android compatível de teste.
+T26 — ASSINATURA: package id/versionCode estáveis; aviso claro se assinatura de teste for diferente de release.
+T27 — DESEMPENHO: centenas/milhares de habitantes agregados não exigem updates per-frame por NPC.
+T28 — REPUTAÇÃO LOCAL: pessoa amada por um grupo não recebe automaticamente prestígio global.
+T29 — PERFIS DE CONTEÚDO: NPCs de espécies e culturas distintas não recebem moralidade determinada por espécie.
+T30 — CICLO TEMPORAL: o calendário do mundo não se confunde com cron de publicação; envelhecimento e rotina coerentes.
+
+Testes não executados devem ser declarados “não executados”, nunca “aprovados”. Para recursos que dependem de conta/segredos não configurados, entregar infraestrutura reproduzível e status bloqueado objetivamente.
+
+======================================================================
+37. PLANO DE IMPLEMENTAÇÃO PARA WORK (COM ENTREGAS REAIS)
+======================================================================
+
+FASE 0 — AUDITORIA DO REPOSITÓRIO
+Inspecionar e registrar stack, estrutura, workflow existente, branches, dependências, versões, configuração de Android e arquivos já construídos. Preservar o que funcionar. Criar branch de desenvolvimento. Identificar se já existe projeto Godot ou outra base aproveitável.
+
+FASE 1 — VERTICAL SLICE NARRATIVO EM APK
+Implementar criação de personagem + 4 origens + 2 cidades + 6 NPCs persistentes + sistema de relações + 1 arco com 3+ resoluções + diário + save offline + 1 magia utilizável em escolha. O mundo deve reagir de verdade: repetir início com escolhas distintas demonstra consequências diferentes. Configurar build Android Actions já nesta fase.
+
+FASE 2 — FAMÍLIAS, INSTITUIÇÕES E PROGRESSÃO
+Expandir origem e criação, genealogias, casa, moradia, cargos, recursos, classes, perícias, magia, rotina e reputação local; criar eventos de união, herança e mudança de emprego. Gerar amostras verificáveis no jogo.
+
+FASE 3 — DIRETOR NARRATIVO E MUNDO VIVO
+Eventos orientados a tensões; gerador de NPCs, facções, cidades e arcos; tempo/ciclos; economia agregada; jornal; controle de repetição; condições de mundo e causação. Testar 100+ sementes de mundo sem exigir trabalho manual sobre cada uma.
+
+FASE 4 — MULTIPLAYER AUTORITATIVO
+Projeto e migrations Supabase, autenticação, ACL/RLS, filas de comandos e eventos, transações, agendamento, observabilidade, estado comum, conflitos de concorrência, testes com duas ou mais contas e isolamento dos saves solo. Configuração de credenciais deve ser solicitada no momento certo; não incluir segredos no APK.
+
+FASE 5 — POLÍTICA AVANÇADA E EXÉRCITOS
+Governos, leis, eleições onde cabíveis, sucessões, tratados, unidade militar abstrata, suprimentos, deslocamentos e conflitos; integrar economia e relações. Jogadores influenciam mudanças reais com permissões plausíveis.
+
+FASE 6 — TOWER DEFENSE ORIGINAL
+Mapa de defesa 2D, construção, upgrades, ondas, IA, economia, vitória/derrota, relatório; depois partidas multiplayer assíncronas, proteção contra trapaça e consequências de território.
+
+FASE 7 — EXPANSÃO E POLIMENTO
+Mais arcos, localidades, dragões, especializações, arte original, QA, otimização, acessibilidade, documentação de narrativas geradas, balanço e builds de distribuição.
+
+CRITÉRIO DE CONCLUSÃO DE CADA FASE: código commitado na branch, testes demonstráveis, APK compilado quando compatível, relatório do que está realmente funcionando, lista de pendências e evidências do GitHub Actions. Não marcar como pronto recurso representado apenas por tela decorativa.
+
+======================================================================
+38. CONTEÚDO DE DEMONSTRAÇÃO PARA A PRIMEIRA VERSÃO
+======================================================================
+
+CRIAR UM CENÁRIO PEQUENO, MAS GENUINAMENTE REATIVO.
+
+Cenário inicial sugerido: uma pequena cidade industrial em Valdória, a ser nomeada proceduralmente. O governo local tem recursos escassos; uma oficina enfrenta crise; uma comunidade deseja proteger rio próximo; boatos indicam presença de um dragão feral em antiga pedreira.
+
+NPCs de teste (NÃO canônicos, devem ser substituíveis pelos gerados):
+- Governante municipal dividido entre dívida e apoio popular.
+- Artífice local com oficina familiar e dívida pendente.
+- Pesquisadora de Trama que conhece risco de extração.
+- Representante de comunidade afetada.
+- Comerciante com interesse em manter abastecimento.
+- Morador comum que pode tornar-se amigo, rival ou interesse romântico adulto conforme afinidades.
+
+Cenas exemplares:
+A. O personagem chega à cidade em razão de sua origem; escolhe trabalho, contatos ou estudo. Não existe único primeiro chefe.
+B. Um acontecimento local coloca em conflito interesse industrial e segurança comunitária. O jogador pode investigar, negociar, trabalhar, lucrar, ignorar ou denunciar, conforme permissões.
+C. Efeitos alteram reservas, rumores, opinião de NPCs e uma missão posterior.
+D. Um dragão feral pode aparecer como consequência ecológica, não como prêmio obrigatório.
+E. Possibilidade de convivência/amizade com um NPC adulto; vínculo só evolui se houver compatibilidade e consentimento.
+F. O jornal publica desdobramentos com base no evento real resolvido.
+
+O que precisa ser comprovado no APK:
+- Caminho pacífico produz estado distinto de caminho industrial.
+- NPC lembra do ocorrido e responde de modo diferente.
+- O diário registra escolha, data, local e consequências conhecidas.
+- A origem influencia pelo menos um requisito/linha de diálogo.
+- Reabrir aplicativo mantém resultados.
+- A repetição com outra seed muda pessoas, detalhes ou circunstâncias sem perder coerência.
+
+Esse cenário é um vertical slice, não a “história principal” obrigatória. Jogadores futuros poderão começar em outras localidades/condições.
+
+======================================================================
+39. LIMITES DE ESCOPO E QUALIDADE
+======================================================================
+
+NÃO implementar 500 NPCs detalhados individualmente antes de provar persistência e causação com 6.
+NÃO tornar escolhas meramente cosméticas.
+NÃO gerar missões aleatórias que ignoram mapa, cultura, posição social e cronologia.
+NÃO introduzir diálogos por IA generativa que tenham poder de modificar banco sem validação; texto gerado é representação, nunca transação autoritativa.
+NÃO criar identidade visual ou nomes copiados de Game of Thrones, Eragon, Como Treinar Seu Dragão, Senhor dos Anéis ou Clash of Clans.
+NÃO impor um número fixo de finais; criar conclusões locais e continuidade histórica.
+NÃO simular todos os cidadãos em tempo real; usar agregação, atualização seletiva e lazy materialization.
+NÃO conceder onisciência ao jogador ou NPCs: informação tem fontes e limites.
+NÃO misturar crença religiosa com prova científica na base de fatos.
+NÃO considerar a ausência do jogador como autorização para consumar ações privadas irreversíveis sem sistema de proteção definido.
+NÃO compartilhar tokens de Supabase privilegiados, credenciais Android de assinatura ou segredos em código-fonte.
+NÃO afirmar APK funcional sem workflow bem-sucedido e teste de instalação/abertura quando disponível.
+
+FOCO: entregar primeiro uma base jogável robusta e extensível, depois aumentar conteúdo e profundidade. É melhor 15 NPCs convincentes com memória e consequências do que 15 mil nomes sem comportamento.
+
+======================================================================
+40. GLOSSÁRIO OPERACIONAL
+======================================================================
+
+VEYRATH: mundo ficcional.
+TRAMA: substrato energético/informacional do mundo.
+FORMA: princípio da matéria e estrutura.
+FLUXO: princípio de energia e transformação.
+ECO: princípio de vestígio, consciência e memória.
+COMPENSAÇÃO: custo inevitável de alterações arcanas.
+PRIMEIRA VOZ: mito primordial disputado.
+GRANDE RUPTURA: catástrofe do ano zero.
+FENDA CELESTE: fenômeno deixado pela Ruptura.
+NÚCLEOS DE VEYR: tecnologia de armazenamento de Fluxo.
+CONCORDÂNCIA: vínculo raro e consentido com dragão apto.
+DRAGÃO SAPIENTE: indivíduo dracônico reflexivo e autônomo.
+DRAGÃO FERAL: criatura dracônica de cognição/instintos variáveis.
+DRAGÃO LIMINAR: designação para fenômenos dracônicos excepcionais.
+EIDRINO: pessoa artificial consciente ou, conforme contexto, autômato de origem arcanomecânica; distinguir conscientemente os dois.
+P.R.: Pós-Ruptura, calendário padrão internacional.
+POLIDADE: entidade político-jurisdicional, independente de forma de governo.
+CASA DINÁSTICA: instituição de linhagem/poder/títulos, distinta de simples família.
+ARCO: série de eventos contextualizados que formam conflito com resoluções variáveis.
+COMANDO: intenção enviada por jogador ou processo, ainda não fato concretizado.
+EVENTO: fato de domínio confirmado, auditável e associado à causa.
+PROJEÇÃO: visão derivada dos eventos para UI, economia, notícias ou NPCs.
+SNAPSHOT: retrato versionado de estado para desempenho e recuperação.
+SEED: identificador de geração determinística de universo ou evento.
+
+======================================================================
+41. ORDEM FINAL E CONDIÇÕES DE ENTREGA
+======================================================================
+
+WORK, LEIA ESTE ARQUIVO COMO ESPECIFICAÇÃO DE DESIGN E IMPLEMENTAÇÃO DO RPG VEYRATH. NÃO APENAS RESUMA. USE-O PARA CONSTRUIR COMPONENTES REAIS, UM MUNDO CONSISTENTE E UM MOTOR DE HISTÓRIAS NÃO LINEARES.
+
+1. Verifique o repositório https://github.com/MegaDev13/gau-rpg e escolha a branch solicitada, sem alterar a principal diretamente.
+2. Preserve e integre funcionalidades preexistentes quando compatíveis.
+3. Transforme a Bíblia em arquivos de dados, regras e código testável.
+4. Priorize primeiro APK com campanha solo jogável e consequências persistentes.
+5. Implemente sistemas procedurais que gerem personagens, famílias, instituições e eventos com causalidade histórica, sem elenco/roteiro obrigatórios.
+6. Depois implemente multiplayer Supabase com servidor autoritativo, processamento agendado e resolução segura de conflitos, seguido de tower defense original.
+7. Configure e execute o GitHub Actions de Android APK; publique Artifact e forneça link verificável quando houver build.
+8. Ao final de cada fase entregue links de branch/commits/workflow, estado dos testes, lista exata de funcionalidades reais e impedimentos.
+9. Se houver bloqueio de permissão ou credencial, peça apenas o acesso estritamente necessário e continue nas tarefas independentes.
+10. Nunca declare algo implementado, compilado, validado ou hospedado sem realmente verificá-lo.
+
+RESULTADO DESEJADO: um RPG Android de escolhas em que cada universo desenvolve seu próprio registro histórico, e no qual o modo multiplayer permite que decisões de pessoas diferentes construam, alterem e disputem uma civilização compartilhada de modo tecnicamente consistente.
+
+FIM DA BÍBLIA DO UNIVERSO E ESPECIFICAÇÃO DE VEYRATH — O CÉU SOB FERRO.

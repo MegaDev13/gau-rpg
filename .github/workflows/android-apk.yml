@@ -43,14 +43,14 @@ jobs:
         run: godot --headless --path rpg-narrativo --editor --import --quit
       - name: Testar campanha e salvamento
         run: godot --headless --path rpg-narrativo --script res://tests.gd
-      - name: Exportar APK de desenvolvimento
+      - name: Testar campanha Veyrath\n        run: godot --headless --path rpg-narrativo --script res://veyrath/tests.gd\n      - name: Verificar abertura da cena principal\n        run: |\n          godot --headless --path rpg-narrativo --quit-after 3 2>&1 | tee /tmp/veyrath-start.log\n          if grep -E 'SCRIPT ERROR|Parse Error|Failed to load script' /tmp/veyrath-start.log; then exit 1; fi\n      - name: Exportar APK de desenvolvimento
         run: |
           mkdir -p "$RUNNER_TEMP/apk"
-          godot --headless --path rpg-narrativo --export-debug Android "$RUNNER_TEMP/apk/cinzas-de-eter-debug.apk"
-          test -s "$RUNNER_TEMP/apk/cinzas-de-eter-debug.apk"
-          "$ANDROID_HOME/build-tools/34.0.0/apksigner" verify --verbose "$RUNNER_TEMP/apk/cinzas-de-eter-debug.apk"
+          godot --headless --path rpg-narrativo --export-debug Android "$RUNNER_TEMP/apk/veyrath-debug.apk"
+          test -s "$RUNNER_TEMP/apk/veyrath-debug.apk"
+          "$ANDROID_HOME/build-tools/34.0.0/apksigner" verify --verbose "$RUNNER_TEMP/apk/veyrath-debug.apk"
       - uses: actions/upload-artifact@v4
         with:
-          name: cinzas-de-eter-android-debug
-          path: ${{ runner.temp }}/apk/cinzas-de-eter-debug.apk
+          name: veyrath-android-debug
+          path: ${{ runner.temp }}/apk/veyrath-debug.apk
           if-no-files-found: error

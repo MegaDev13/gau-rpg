@@ -171,3 +171,34 @@ func reaction() -> String:
 	var a := "%s recorda sua ajuda à oficina." % artisan.name if artisan.trust > 0 else "%s ainda não tem motivos pessoais para confiar em você." % artisan.name
 	var b := "%s recebeu bem sua atenção às famílias." % community.name if community.trust > 0 else "%s mantém distância enquanto avalia suas decisões." % community.name
 	return a + "\n\n" + b
+
+## One optional conversation per character; NPCs keep agency and do not grant romance.
+func converse(role: String) -> bool:
+	if not valid(state) or not state.people.has(role):
+		return false
+	var person: Dictionary = state.people[role]
+	for memory in person.memories:
+		if memory.get("kind", "") == "conversation":
+			return false
+	var previous := state.duplicate(true)
+	state.day += 1
+	person.trust += 1
+	var event_id := "evt_%s" % (state.history.size() + 1)
+	var description: String = "conversou com %s sobre seus objetivos" % person.name
+	person.memories.append({"event_id":event_id,"day":state.day,"type":"testemunhado","kind":"conversation","summary":description})
+	state.history.append({"id":event_id,"day":state.day,"city":state.city,"action":"conversation","description":description,"effects":{"time":1,"trust":1}})
+	if not save_game():
+		state = previous
+		return false
+	return true
+
+func can_converse(role: String) -> bool:
+	if not valid(state) or not state.people.has(role):
+		return false
+	for memory in state.people[role].memories:
+		if memory.get("kind", "") == "conversation":
+			return false
+	return true
+
+func portrait_variant(role: String) -> int:
+	return absi(hash("veyrath-portrait-v1:%s:%s" % [int(state.seed), role]))

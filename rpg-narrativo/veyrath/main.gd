@@ -4,6 +4,7 @@ const VeyrathEngine = preload("res://veyrath/engine.gd")
 const Art = preload("res://veyrath/art.gd")
 const DefenseUI = preload("res://veyrath/defense_ui.gd")
 const MultiplayerUI = preload("res://veyrath/multiplayer_ui.gd")
+const UpdatesUI = preload("res://veyrath/updates/updates_ui.gd")
 const GOLD := Color("d6b47d")
 const TEXT := Color("e7e0d2")
 const MUTED := Color("aeb6b7")
@@ -368,6 +369,7 @@ func settings() -> void:
 	label("♫  CONFIGURAÇÕES",34,GOLD)
 	card("Trilha original instrumental: " + ("ativada" if music_enabled else "desativada"),22)
 	button("DESATIVAR MÚSICA" if music_enabled else "ATIVAR MÚSICA",toggle_music)
+	button("ATUALIZAÇÕES E CONTEÚDO",updates_screen)
 	button("‹  MENU PRINCIPAL",menu)
 
 func toggle_music() -> void:
@@ -471,3 +473,9 @@ func _exit_tree() -> void:
 	if is_instance_valid(music_player):
 		music_player.stop()
 		music_player.stream = null
+
+func updates_screen() -> void:
+	clear()
+	var screen = UpdatesUI.new()
+	screen.configure(game,settings,music_player)
+	column.add_child(screen)

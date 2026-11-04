@@ -26,6 +26,7 @@ var refresh_button: Button
 var status: Label
 var world_view: Label
 var command_view: Label
+var gm_view: Label
 
 func configure(return_callback: Callable) -> void:
 	back = return_callback
@@ -46,6 +47,7 @@ func _ready() -> void:
 	status = text_label("Entre ou crie uma conta para começar.",20,Color("d6b47d"))
 	world_view = text_label("",22,Color("d7dfeb"))
 	command_view = text_label("",19,Color("b7c5c6"))
+	gm_view = text_label("",20,Color("d6b47d"))
 	make_button("VOLTAR AO MENU",exit_screen)
 	request = HTTPRequest.new()
 	request.timeout = 20.0
@@ -285,6 +287,14 @@ func on_response(result: int, code: int, _headers: PackedStringArray, body: Pack
 					command_view.text += "%s · previsão: %s\n" % [stage,cmd.available_at]
 				if data.is_empty():
 					command_view.text += "Nenhuma ação enviada."
+			send_request("gm_news","/rest/v1/veyrath_gm_events?select=title,narrative,created_at&world_id=eq." + world_id + "&visibility=eq.public&order=created_at.desc&limit=5",HTTPClient.METHOD_GET)
+		"gm_news":
+			gm_view.text = "CRÔNICAS DO MUNDO\n"
+			if data is Array:
+				if data.is_empty():
+					gm_view.text += "Nenhum acontecimento público registrado ainda."
+				for item in data:
+					gm_view.text += "\n%s\n%s\n" % [item.title,item.narrative]
 		"contribute":
 			DirAccess.remove_absolute(ProjectSettings.globalize_path(PENDING_PATH))
 			pending_key = ""

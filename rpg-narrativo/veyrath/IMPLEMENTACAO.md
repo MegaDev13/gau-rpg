@@ -35,3 +35,7 @@ A campanha solo inclui ficha com nove atributos e modificadores, vida, Fluxo e f
 Há uma trilha original instrumental sintetizada, com opção de ativar/desativar salva no aparelho. A entrada de texto reconhece somente comandos específicos e escolhas numeradas; pede confirmação e não usa IA nem interpreta linguagem livre. O save anterior é aceito com atributos padrão criados sob demanda; todas as alterações permanecem exclusivamente no modo solo. A campanha online continua separada e não recebe os efeitos da simulação solo.
 
 Um arco opcional no arquivo municipal segue as resoluções da crise inicial, apresenta fontes contraditórias sobre a Ruptura e permite consulta pública, contrato privado, conservação ou não intervenção. Os desfechos alteram recursos, confiança, conhecimento e registros, sem definir a causa da Ruptura.
+
+## Atualização 0.7 — conteúdo remoto
+
+A primeira base de conteúdo remoto assinado, cache offline, canal beta, verificação de compatibilidade, rollback e histórias opcionais está descrita em `veyrath/updates/README.md`. A chave pública de conteúdo é incorporada ao APK; a chave privada não está no repositório. O app pode ler notícias públicas do Mestre global existente, mas não implementa direção de IA no modo solo nem validação/aplicação de efeitos de IA.

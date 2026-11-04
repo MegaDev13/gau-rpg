@@ -93,6 +93,8 @@ func valid(candidate) -> bool:
 		for key in ["supplies", "pressure"]:
 			if typeof(candidate.local_world[key]) not in [TYPE_INT, TYPE_FLOAT] or candidate.local_world[key] < 0:
 				return false
+	if candidate.has("remote_progress") and not candidate.remote_progress is Dictionary:
+		return false
 	if candidate.has("fort"):
 		if not candidate.fort is Dictionary or not candidate.fort.has_all(["layout", "supplies", "hp", "wave", "results"]):
 			return false
@@ -446,3 +448,37 @@ func interpret_action(sentence: String) -> Dictionary:
 			if available(options[i]):
 				return {"kind":"choice","index":i,"description":options[i].label}
 	return {}
+
+## Remote content is verified again here; it can only add a local journal entry.
+func record_content_choice(story_id: String, choice_id: String) -> bool:
+	if not valid(state):
+		return false
+	var updater = load("res://veyrath/updates/content_updater.gd").new()
+	var current: Dictionary = updater.current()
+	if current.is_empty():
+		return false
+	var version := int(current.manifest.version)
+	var progress_key := "%s:%s" % [version,story_id]
+	var progress: Dictionary = state.get("remote_progress",{}).duplicate(true)
+	if progress.has(progress_key):
+		return false
+	var story_found: Dictionary = {}
+	var choice_found: Dictionary = {}
+	for story in current.pack.stories:
+		if story.id == story_id:
+			story_found = story
+			for choice in story.choices:
+				if choice.id == choice_id:
+					choice_found = choice
+			break
+	if story_found.is_empty() or choice_found.is_empty():
+		return false
+	var previous := state.duplicate(true)
+	progress[progress_key] = choice_id
+	state.remote_progress = progress
+	var event_id := "evt_%s" % (state.history.size()+1)
+	state.history.append({"id":event_id,"day":state.day,"city":state.city,"action":"remote_story","description":"%s: %s" % [story_found.title,choice_found.result],"effects":{"content_version":version,"story":story_id,"choice":choice_id}})
+	if not save_game():
+		state = previous
+		return false
+	return true

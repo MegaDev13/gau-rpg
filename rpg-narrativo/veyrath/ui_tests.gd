@@ -26,6 +26,8 @@ func test_ui() -> void:
 	await process_frame
 	scene.settings()
 	await process_frame
+	scene.updates_screen()
+	await process_frame
 	scene.news()
 	await process_frame
 	scene.defense()

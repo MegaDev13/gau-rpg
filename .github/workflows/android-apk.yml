@@ -43,7 +43,13 @@ jobs:
         run: godot --headless --path rpg-narrativo --editor --import --quit
       - name: Testar campanha e salvamento
         run: godot --headless --path rpg-narrativo --script res://tests.gd
-      - name: Testar campanha Veyrath\n        run: godot --headless --path rpg-narrativo --script res://veyrath/tests.gd\n      - name: Verificar abertura da cena principal\n        run: |\n          godot --headless --path rpg-narrativo --quit-after 3 2>&1 | tee /tmp/veyrath-start.log\n          if grep -E 'SCRIPT ERROR|Parse Error|Failed to load script' /tmp/veyrath-start.log; then exit 1; fi\n      - name: Exportar APK de desenvolvimento
+      - name: Testar campanha Veyrath
+        run: godot --headless --path rpg-narrativo --script res://veyrath/tests.gd
+      - name: Verificar abertura da cena principal
+        run: |
+          godot --headless --path rpg-narrativo --quit-after 3 2>&1 | tee /tmp/veyrath-start.log
+          if grep -E 'SCRIPT ERROR|Parse Error|Failed to load script' /tmp/veyrath-start.log; then exit 1; fi
+      - name: Exportar APK de desenvolvimento
         run: |
           mkdir -p "$RUNNER_TEMP/apk"
           godot --headless --path rpg-narrativo --export-debug Android "$RUNNER_TEMP/apk/veyrath-debug.apk"

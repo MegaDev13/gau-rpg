@@ -1,0 +1,23 @@
+{
+  "start": {"title":"A cidade e a máquina", "text":"Em Vespera, as torres de pedra dividem o horizonte com chaminés e anúncios holográficos. Ao chegar ao distrito industrial, você encontra operários diante de uma fábrica: um autômato de vigilância feriu uma jovem, e a guarda está a caminho.", "choices":[
+    {"label":"Socorrer a jovem e ouvir os trabalhadores", "next":"workers", "effects":{"trust":2,"credits":-1,"stability":-1},"memory":"Você socorreu a jovem e ouviu os trabalhadores."},
+    {"label":"Conter a multidão junto à guarda", "next":"guard", "effects":{"trust":-2,"credits":2,"stability":2},"memory":"Você ajudou a guarda a dispersar a multidão."},
+    {"label":"Investigar discretamente o autômato", "next":"machine", "effects":{"insight":1},"memory":"Você examinou o autômato antes de tomar partido."}
+  ]},
+  "workers":{"title":"Uma promessa entre engrenagens","text":"Lia, irmã da jovem, conta que o núcleo do autômato foi substituído por um dispositivo de vigilância corporativa. Ela pede que você leve uma prova ao conselho.","choices":[
+    {"label":"Aceitar e entregar a prova ao conselho", "next":"council", "effects":{"trust":2,"stability":-1},"memory":"Você se comprometeu com Lia."},
+    {"label":"Vender a informação à corporação", "next":"corporation", "effects":{"trust":-3,"credits":5},"memory":"Você vendeu a informação confiada por Lia."}
+  ]},
+  "guard":{"title":"Ordem sob pressão","text":"O capitão agradece, mas Lia testemunhou a repressão. Entre as peças deixadas na praça há um núcleo que parece transmitir informações à corporação local.","choices":[
+    {"label":"Entregar o núcleo ao conselho", "next":"council", "effects":{"stability":-1,"insight":1},"memory":"Você denunciou a vigilância ao conselho."},
+    {"label":"Entregar o núcleo à corporação", "next":"corporation", "effects":{"credits":3,"trust":-1},"memory":"Você devolveu o núcleo à corporação."}
+  ]},
+  "machine":{"title":"O olho de cobre","text":"Sob a couraça do autômato, você descobre uma gravação: a corporação ordenou que ele identificasse líderes sindicais. Lia observa em silêncio; a guarda se aproxima.","choices":[
+    {"label":"Compartilhar a gravação com Lia", "next":"workers", "effects":{"trust":1},"memory":"Você compartilhou a gravação com Lia."},
+    {"label":"Levar a gravação ao conselho", "next":"council", "effects":{"stability":-1},"memory":"Você levou a gravação ao conselho."},
+    {"label":"Vender a gravação à corporação", "next":"corporation", "effects":{"credits":4,"trust":-2},"memory":"Você vendeu a gravação à corporação."}
+  ]},
+  "council":{"title":"O preço da verdade","text":"O conselho abre uma investigação. A notícia se espalha pelas oficinas, enquanto acionistas pressionam o palácio. Lia avalia suas ações anteriores antes de decidir se pode confiar em você.","choices":[{"label":"Encerrar o primeiro capítulo", "next":"ending", "effects":{"insight":1},"memory":"Uma investigação foi aberta contra a corporação."}]},
+  "corporation":{"title":"O preço do silêncio","text":"A corporação apaga os registros e oferece proteção. Nas oficinas, a ausência de provas alimenta suspeitas e a tensão continua a crescer.","choices":[{"label":"Encerrar o primeiro capítulo", "next":"ending", "effects":{"stability":-1},"memory":"A corporação ocultou os registros do incidente."}]},
+  "ending":{"title":"Fim do primeiro capítulo","text":"A cidade segue viva após sua decisão. Consulte o diário para rever as consequências; sua campanha permanece salva neste dispositivo.","choices":[]}
+}

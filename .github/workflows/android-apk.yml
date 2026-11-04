@@ -1,0 +1,54 @@
+name: Android APK
+on:
+  push:
+    branches: [feature/rpg-narrativo-mundo-vivo]
+    paths:
+      - 'rpg-narrativo/**'
+      - '.github/workflows/android-apk.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    env:
+      GODOT_VERSION: '4.3'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - uses: android-actions/setup-android@v3
+      - name: Preparar ferramentas Android
+        run: |
+          sdkmanager 'platform-tools' 'platforms;android-34' 'build-tools;34.0.0'
+          mkdir -p ~/.android
+          keytool -genkeypair -v -keystore ~/.android/debug.keystore -storepass android -alias androiddebugkey -keypass android -keyalg RSA -keysize 2048 -validity 10000 -dname 'CN=Android Debug,O=Android,C=US'
+      - name: Instalar Godot e templates
+        run: |
+          wget -q "https://github.com/godotengine/godot/releases/download/${GODOT_VERSION}-stable/Godot_v${GODOT_VERSION}-stable_linux.x86_64.zip" -O /tmp/godot.zip
+          unzip -q /tmp/godot.zip -d /tmp/godot
+          sudo install /tmp/godot/Godot_v${GODOT_VERSION}-stable_linux.x86_64 /usr/local/bin/godot
+          wget -q "https://github.com/godotengine/godot/releases/download/${GODOT_VERSION}-stable/Godot_v${GODOT_VERSION}-stable_export_templates.tpz" -O /tmp/templates.zip
+          mkdir -p ~/.local/share/godot/export_templates/${GODOT_VERSION}.stable
+          unzip -q /tmp/templates.zip -d /tmp/godot-templates
+          cp -r /tmp/godot-templates/templates/. ~/.local/share/godot/export_templates/${GODOT_VERSION}.stable/
+          mkdir -p ~/.config/godot
+          printf '[gd_resource type="EditorSettings" format=3]\n\n[resource]\nexport/android/android_sdk_path = "%s"\nexport/android/debug_keystore = "%s/.android/debug.keystore"\nexport/android/debug_keystore_user = "androiddebugkey"\nexport/android/debug_keystore_pass = "android"\nexport/android/java_sdk_path = "%s"\n' "$ANDROID_HOME" "$HOME" "$JAVA_HOME" > ~/.config/godot/editor_settings-4.tres
+      - name: Importar e verificar projeto
+        run: godot --headless --path rpg-narrativo --editor --import --quit
+      - name: Testar campanha e salvamento
+        run: godot --headless --path rpg-narrativo --script res://tests.gd
+      - name: Exportar APK de desenvolvimento
+        run: |
+          mkdir -p "$RUNNER_TEMP/apk"
+          godot --headless --path rpg-narrativo --export-debug Android "$RUNNER_TEMP/apk/cinzas-de-eter-debug.apk"
+          test -s "$RUNNER_TEMP/apk/cinzas-de-eter-debug.apk"
+          "$ANDROID_HOME/build-tools/34.0.0/apksigner" verify --verbose "$RUNNER_TEMP/apk/cinzas-de-eter-debug.apk"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: cinzas-de-eter-android-debug
+          path: ${{ runner.temp }}/apk/cinzas-de-eter-debug.apk
+          if-no-files-found: error

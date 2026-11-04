@@ -4,7 +4,9 @@ const SAVE := "user://veyrath-campanha-v1.json"
 const BACKUP := "user://veyrath-campanha-v1.backup.json"
 const VERSION := 1
 const Expansion = preload("res://veyrath/expansion/world.gd")
+const Director = preload("res://veyrath/chronicles/director.gd")
 var expansion = Expansion.new()
+var director = Director.new(expansion)
 var world: Dictionary = {}
 var story: Dictionary = {}
 var state: Dictionary = {}
@@ -52,6 +54,7 @@ func new_game(player_name: String, origin_id: String, city_id: String, seed_valu
 	people.resident["portrait_asset"] = "resident_v1"
 	people.community["portrait_asset"] = "community_v1"
 	state = {"version":VERSION,"seed":seed_value,"name":player_name.strip_edges(),"origin":origin.id,"city":city.id,"node":"start","day":1,"credits":origin.credits,"flow":origin.flow,"fatigue":0,"risk":3,"evidence":0,"habitat":0,"people":people,"history":[],"news":[]}
+	state.chronicle = director.create(seed_value,expansion.home_id(city.id),1)
 	return save_game()
 
 func valid(candidate) -> bool:
@@ -108,6 +111,8 @@ func valid(candidate) -> bool:
 			var venue: Dictionary = expansion.place(journey.place,world_seed)
 			if venue.is_empty() or venue.city != journey.city:
 				return false
+	if candidate.has("chronicle") and not director.valid(candidate.chronicle):
+		return false
 	if candidate.has("remote_progress") and not candidate.remote_progress is Dictionary:
 		return false
 	if candidate.has("fort"):
@@ -376,6 +381,9 @@ func advance_world(previous_day: int) -> void:
 		var event_id := "evt_%s" % (state.history.size() + 1)
 		state.history.append({"id":event_id,"day":state.day,"city":state.city,"action":"world_tick","description":description,"effects":{"supplies":sim.supplies,"pressure":sim.pressure,"tick":tick}})
 		state.news.append({"event_id":event_id,"day":state.day,"text":description,"source":"Gazeta local"})
+	if not state.has("chronicle"):
+		state.chronicle = director.create(int(state.seed),expansion.home_id(state.city),maxi(1,previous_day))
+	director.advance(state.chronicle,int(state.day))
 
 func rest() -> bool:
 	if not valid(state):
@@ -541,7 +549,7 @@ func travel_to(city_id: String, fast: bool) -> bool:
 	var destination: Dictionary = expansion.city(city_id,int(state.seed))
 	if destination.is_empty():
 		return false
-	var passage: Dictionary = expansion.route(expedition_city(),destination,fast)
+	var passage: Dictionary = expedition_route(expedition_city(),destination,fast)
 	if state.credits < passage.credits:
 		return false
 	var previous := state.duplicate(true)
@@ -616,3 +624,62 @@ func expedition_service(kind: String) -> bool:
 			state.profile = supplies
 			return expedition_event(journey,previous,1,"lodging","Descansou em %s." % site.name,1)
 	return false
+
+
+func chronicle_view() -> Dictionary:
+	if state.has("chronicle"):
+		return state.chronicle.duplicate(true)
+	return director.create(int(state.seed),expansion.home_id(state.city),int(state.day))
+
+func chronicle_choice(arc_id: String, phase: int, action_id: String) -> bool:
+	if not valid(state):
+		return false
+	var previous := state.duplicate(true)
+	var journal := chronicle_view()
+	var applied: Dictionary = director.perform(journal,arc_id,phase,action_id,int(state.day),
+		int(state.credits),int(state.flow),expedition().city)
+	if applied.is_empty():
+		return false
+	state.chronicle = journal
+	state.credits -= int(applied.cost)
+	state.flow -= int(applied.flow)
+	state.day += 1
+	advance_world(int(previous.day))
+	if not save_game():
+		state = previous
+		return false
+	return true
+
+func track_chronicle(arc_id: String) -> bool:
+	if not valid(state):
+		return false
+	var journal := chronicle_view()
+	if director.visible(journal,arc_id).is_empty():
+		return false
+	var previous := state.duplicate(true)
+	journal.arcs[arc_id].tracked = not journal.arcs[arc_id].tracked
+	state.chronicle = journal
+	if not save_game():
+		state = previous
+		return false
+	return true
+
+func expedition_route(from_city: Dictionary, to_city: Dictionary, fast: bool) -> Dictionary:
+	var passage: Dictionary = expansion.route(from_city,to_city,fast)
+	var home: String = expansion.home_id(state.city)
+	if fast and (from_city.id == home or to_city.id == home):
+		var flags: Dictionary = state.get("chronicle",{}).get("flags",{})
+		passage.credits = maxi(0,int(passage.credits)+int(flags.get("route_modifier",0)))
+	return passage
+
+func expedition_condition(city: Dictionary) -> Dictionary:
+	var condition: Dictionary = expansion.condition(city,int(state.seed),int(state.day),expedition().backing)
+	if city.id == expansion.home_id(state.city):
+		var flags: Dictionary = state.get("chronicle",{}).get("flags",{})
+		condition.supply = maxi(0,int(condition.supply)+int(flags.get("reserve_delta",0)))
+	return condition
+
+func chronicle_wait(days: int) -> bool:
+	if days not in [1,7] or not valid(state):
+		return false
+	return expedition_event(expedition(),state.duplicate(true),days,"wait_chronicle","Deixou passar %d dia(s) acompanhando os acontecimentos." % days)

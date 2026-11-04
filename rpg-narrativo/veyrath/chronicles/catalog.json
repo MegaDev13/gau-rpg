@@ -1,0 +1,902 @@
+{
+  "arcs": [
+    {
+      "id": "apprentice",
+      "title": "O preço de uma assinatura",
+      "genre": "Formação e lealdade",
+      "scope": "Pessoal",
+      "start": 1,
+      "art": "workshop",
+      "cast": [
+        "maker",
+        "assistant",
+        "witness",
+        "assessor"
+      ],
+      "cause": "{assistant} quer assinar o próprio trabalho. {maker} precisa da mão de obra, mas teme que uma licença independente deixe a oficina sem sucessão.",
+      "stages": [
+        {
+          "title": "O desenho sem nome",
+          "days": 8,
+          "text": "{assistant} riscou o nome do mestre de um desenho e deixou o espaço em branco. {witness} viu a rasura.",
+          "routes": [
+            {
+              "outcome": "próxima",
+              "text": "A oficina aceitou uma banca aberta.",
+              "when": {
+                "apprentice_witness": true
+              },
+              "sets": {
+                "open_exam": true
+              }
+            },
+            {
+              "outcome": "próxima",
+              "text": "A banca foi marcada a portas fechadas. A dúvida sobre o desenho circulou.",
+              "when": {},
+              "sets": {}
+            }
+          ],
+          "actions": [
+            {
+              "id": "witness",
+              "label": "Garantir uma testemunha para a banca",
+              "text": "{witness} aceitou comparecer se a oficina registrar a autoria.",
+              "cost": 0,
+              "sets": {
+                "apprentice_witness": true
+              },
+              "clue": "",
+              "need": "",
+              "participant": "witness",
+              "flow": 0
+            }
+          ]
+        },
+        {
+          "title": "A banca",
+          "days": 12,
+          "text": "{maker} oferece um salário para que {assistant} deixe a autoria com a oficina. A proposta paga uma dívida que a licença não cobre. {assessor} só reconhece autoria se houver registro e exame com testemunhas.",
+          "routes": [
+            {
+              "outcome": "próxima",
+              "text": "A autoria foi registrada. A licença terá exame público.",
+              "when": {
+                "open_exam": true
+              },
+              "sets": {
+                "licensed_candidate": true
+              }
+            },
+            {
+              "outcome": "próxima",
+              "text": "O contrato de salário foi assinado. O nome do aprendiz não entrou no registro.",
+              "when": {},
+              "sets": {
+                "licensed_candidate": false
+              }
+            }
+          ],
+          "actions": [
+            {
+              "id": "independent",
+              "label": "Pagar a taxa de exame independente",
+              "text": "A taxa garante uma banca com testemunhas. A decisão do candidato continua em aberto.",
+              "cost": 2,
+              "sets": {
+                "open_exam": true
+              },
+              "clue": "",
+              "need": "",
+              "participant": "assistant",
+              "flow": 0
+            }
+          ]
+        },
+        {
+          "title": "Porta própria",
+          "days": 17,
+          "text": "O prazo da licença termina. {assistant} precisa escolher entre renda garantida e trabalho sob o próprio nome.",
+          "routes": [
+            {
+              "outcome": "Licença independente",
+              "text": "{assistant} aceitou a licença. O laboratório passa a ter uma alternativa para calibrar suas lentes.",
+              "when": {
+                "licensed_candidate": true
+              },
+              "sets": {
+                "independent_artisan": true
+              }
+            },
+            {
+              "outcome": "Contrato renovado",
+              "text": "{assistant} renovou o contrato da oficina e passou a exigir crédito por escrito.",
+              "when": {},
+              "sets": {
+                "independent_artisan": false
+              }
+            }
+          ],
+          "actions": []
+        }
+      ]
+    },
+    {
+      "id": "inheritance",
+      "title": "A casa com duas chaves",
+      "genre": "Herança e memória",
+      "scope": "Familiar",
+      "start": 2,
+      "art": "archive",
+      "cast": [
+        "elder",
+        "caretaker",
+        "heir",
+        "registrar",
+        "custodian"
+      ],
+      "cause": "Três gerações têm histórias diferentes sobre quem manteve aberta a casa de leitura. Uma delas guarda a chave, outra paga os reparos.",
+      "stages": [
+        {
+          "title": "A mesa da guardiã",
+          "days": 11,
+          "text": "{elder} está gravemente doente. Pede que {caretaker} conte os livros e que {heir} conte as pessoas que ainda os consultam.",
+          "routes": [
+            {
+              "outcome": "próxima",
+              "text": "{elder} morreu. A sala foi fechada até o inventário. {caretaker} responde pela guarda provisória.",
+              "when": {},
+              "sets": {
+                "elder_dead": true
+              }
+            }
+          ],
+          "actions": [
+            {
+              "id": "copy",
+              "label": "Pedir que o arquivo copie a cessão",
+              "text": "{registrar} mostrou a cópia. A guarda da casa e a propriedade dos livros foram tratadas separadamente.",
+              "cost": 0,
+              "sets": {},
+              "clue": "deed",
+              "need": "",
+              "participant": "registrar",
+              "flow": 0
+            }
+          ]
+        },
+        {
+          "title": "O inventário",
+          "days": 14,
+          "text": "{caretaker} reivindica reembolso. {heir} quer preservar o acesso dos leitores. O inventário abre espaço para negociar.",
+          "routes": [
+            {
+              "outcome": "próxima",
+              "text": "A cessão foi registrada e a comissão ouviu os leitores.",
+              "when": {
+                "deed_filed": true
+              },
+              "sets": {
+                "public_house_claim": true
+              }
+            },
+            {
+              "outcome": "próxima",
+              "text": "O reembolso entrou como dívida do espólio. Os leitores perderam prioridade.",
+              "when": {},
+              "sets": {}
+            }
+          ],
+          "actions": [
+            {
+              "id": "file",
+              "label": "Anexar a cessão à audiência",
+              "text": "O arquivo recebeu a cópia e notificou as duas gerações vivas.",
+              "cost": 0,
+              "sets": {
+                "deed_filed": true
+              },
+              "clue": "",
+              "need": "deed",
+              "participant": "heir",
+              "flow": 0
+            }
+          ]
+        },
+        {
+          "title": "A segunda chave",
+          "days": 25,
+          "text": "O espólio precisa pagar a conservação sem vender duas vezes os mesmos livros. {custodian} aceita manter o acervo se a comissão garantir acesso ao inventário.",
+          "routes": [
+            {
+              "outcome": "Casa comunitária",
+              "text": "{heir} assumiu a guarda pública. O reembolso fica limitado à renda da casa; os livros permanecem no acervo.",
+              "when": {
+                "public_house_claim": true
+              },
+              "sets": {
+                "public_house": true
+              }
+            },
+            {
+              "outcome": "Locação privada",
+              "text": "{caretaker} cedeu a sala por prazo certo para quitar reparos. Os livros permanecem inventariados.",
+              "when": {},
+              "sets": {
+                "public_house": false
+              }
+            }
+          ],
+          "actions": []
+        }
+      ]
+    },
+    {
+      "id": "ledger",
+      "title": "A barca sem manifesto",
+      "genre": "Investigação e reputação",
+      "scope": "Local",
+      "start": 4,
+      "art": "river",
+      "cast": [
+        "boat",
+        "clerk",
+        "witness",
+        "registrar",
+        "inspector"
+      ],
+      "cause": "Uma barca deixou o cais sem despacho registrado. O conselho pressiona a guarda a apontar um culpado antes da próxima inspeção.",
+      "stages": [
+        {
+          "title": "A acusação corre antes da barca",
+          "days": 10,
+          "text": "Dizem que {boat} recebeu pagamento clandestino. {clerk} afirma que a lista de partida não prova o destino da carga.",
+          "routes": [
+            {
+              "outcome": "próxima",
+              "text": "O boato virou denúncia formal, sem documento de destino.",
+              "when": {
+                "unsupported_charge": true
+              },
+              "sets": {
+                "public_suspicion": true
+              }
+            },
+            {
+              "outcome": "próxima",
+              "text": "A guarda solicitou os livros de rota e adiou a acusação.",
+              "when": {},
+              "sets": {}
+            }
+          ],
+          "actions": [
+            {
+              "id": "register",
+              "label": "Conferir o livro de rota",
+              "text": "{clerk} mostrou a rasura e deixou claro o que o livro não comprova.",
+              "cost": 0,
+              "sets": {},
+              "clue": "register",
+              "need": "",
+              "participant": "clerk",
+              "flow": 0
+            },
+            {
+              "id": "accuse",
+              "label": "Acusar o responsável sem prova conclusiva",
+              "text": "A guarda recebeu uma acusação. A publicação afeta a reputação do operador.",
+              "cost": 0,
+              "sets": {
+                "unsupported_charge": true
+              },
+              "clue": "",
+              "need": "",
+              "participant": "witness",
+              "flow": 0
+            }
+          ]
+        },
+        {
+          "title": "O destino da carga",
+          "days": 15,
+          "text": "{registrar} encontrou o recibo de destino. Só pode entregá-lo a quem consultou o livro de rota.",
+          "routes": [
+            {
+              "outcome": "próxima",
+              "text": "A guarda juntou o laudo ao processo.",
+              "when": {
+                "proof_filed": true
+              },
+              "sets": {
+                "verified_report": true
+              }
+            },
+            {
+              "outcome": "próxima",
+              "text": "O conselho iniciou a audiência sem laudo conclusivo.",
+              "when": {},
+              "sets": {}
+            }
+          ],
+          "actions": [
+            {
+              "id": "receipt",
+              "label": "Confrontar o recibo com o livro de rota",
+              "text": "A conferência reúne a prova de destino.",
+              "cost": 0,
+              "sets": {},
+              "clue": "receipt",
+              "need": "register",
+              "participant": "registrar",
+              "flow": 0
+            },
+            {
+              "id": "report",
+              "label": "Entregar a prova de destino à guarda",
+              "text": "O resultado será publicado após o contraditório.",
+              "cost": 0,
+              "sets": {
+                "proof_filed": true
+              },
+              "clue": "",
+              "need": "receipt",
+              "participant": "witness",
+              "flow": 0
+            }
+          ]
+        },
+        {
+          "title": "O contraditório",
+          "days": 13,
+          "text": "Quem acusou e quem conferiu os papéis são chamados a sustentar suas versões. {inspector} exige que o operador possa responder à acusação.",
+          "routes": [
+            {
+              "outcome": "Desvio comprovado",
+              "text": "A guarda comprovou revenda indevida. O contrato do operador foi suspenso e a negociação regional perdeu seu fornecedor.",
+              "when": {
+                "verified_report": true,
+                "cause_diverted": true
+              },
+              "sets": {
+                "supply_suspended": true
+              }
+            },
+            {
+              "outcome": "Acusação desfeita",
+              "text": "Os registros comprovaram que a carga foi entregue ao abrigo da cheia. {boat} recebeu direito de resposta.",
+              "when": {
+                "verified_report": true,
+                "cause_diverted": false
+              },
+              "sets": {
+                "ferryman_cleared": true
+              }
+            },
+            {
+              "outcome": "Dano sem prova",
+              "text": "A acusação sem lastro afastou {boat} da rota. O conselho terá de substituir o operador.",
+              "when": {
+                "public_suspicion": true
+              },
+              "sets": {
+                "supply_suspended": true
+              }
+            },
+            {
+              "outcome": "Processo arquivado",
+              "text": "O prazo acabou sem prova suficiente. A dúvida não se torna fato.",
+              "when": {},
+              "sets": {}
+            }
+          ],
+          "actions": []
+        }
+      ]
+    },
+    {
+      "id": "council",
+      "title": "As cartas da passagem",
+      "genre": "Política e instituições",
+      "scope": "Regional",
+      "start": 6,
+      "art": "council",
+      "cast": [
+        "delegate",
+        "boat",
+        "clerk",
+        "guild",
+        "registrar",
+        "carrier"
+      ],
+      "cause": "O conselho quer regular as travessias. A guilda oferece frota em troca de exclusividade. O arquivo exige que os contratos sejam consultáveis.",
+      "stages": [
+        {
+          "title": "Três bancadas",
+          "days": 18,
+          "text": "{delegate} apresenta a carta. {guild} traz garantias financeiras; {registrar} pede cláusula de fiscalização.",
+          "routes": [
+            {
+              "outcome": "próxima",
+              "text": "Os registros ficarão acessíveis à comissão.",
+              "when": {
+                "audit_clause": true
+              },
+              "sets": {
+                "audit_agreed": true
+              }
+            },
+            {
+              "outcome": "próxima",
+              "text": "A comissão ouviu o financiamento privado sem exigir acesso público.",
+              "when": {},
+              "sets": {}
+            }
+          ],
+          "actions": [
+            {
+              "id": "clause",
+              "label": "Defender uma cláusula de auditoria",
+              "text": "A comissão aceitou levar a emenda a voto.",
+              "cost": 0,
+              "sets": {
+                "audit_clause": true
+              },
+              "clue": "",
+              "need": "",
+              "participant": "delegate",
+              "flow": 0
+            }
+          ]
+        },
+        {
+          "title": "O crédito muda de mãos",
+          "days": 30,
+          "text": "A condição da travessia e as disputas pelo arquivo chegaram à mesa de negociação. {carrier} alerta que o atraso da votação encarece a alternativa para pequenos operadores.",
+          "routes": [
+            {
+              "outcome": "próxima",
+              "text": "A suspensão de um fornecedor forçou a comissão a buscar uma rota comunitária.",
+              "when": {
+                "supply_suspended": true
+              },
+              "sets": {
+                "route_contested": true
+              }
+            },
+            {
+              "outcome": "próxima",
+              "text": "A casa de leitura ofereceu sua sala para acompanhar os contratos.",
+              "when": {
+                "public_house": true
+              },
+              "sets": {
+                "audit_agreed": true
+              }
+            },
+            {
+              "outcome": "próxima",
+              "text": "A guilda manteve a oferta. A comissão consultará os trabalhadores antes de decidir.",
+              "when": {},
+              "sets": {}
+            }
+          ],
+          "actions": [
+            {
+              "id": "charter",
+              "label": "Financiar a elaboração de uma alternativa comunitária",
+              "text": "{delegate} registrou a contraproposta para votação.",
+              "cost": 2,
+              "sets": {
+                "route_contested": true
+              },
+              "clue": "",
+              "need": "",
+              "participant": "delegate",
+              "flow": 0
+            }
+          ]
+        },
+        {
+          "title": "A votação",
+          "days": 20,
+          "text": "A comissão decide com o que restou de recursos e legitimidade. {clerk} publicará o procedimento.",
+          "routes": [
+            {
+              "outcome": "Corredor fiscalizado",
+              "text": "O conselho aprovou rota aberta com fiscalização. A conexão contratada passa a custar menos.",
+              "when": {
+                "audit_agreed": true,
+                "route_contested": true
+              },
+              "sets": {
+                "route_modifier": -1
+              }
+            },
+            {
+              "outcome": "Corredor concedido",
+              "text": "A guilda recebeu concessão temporária. As tarifas de transporte contratado sobem enquanto durar a carta.",
+              "when": {},
+              "sets": {
+                "route_modifier": 1
+              }
+            }
+          ],
+          "actions": []
+        }
+      ]
+    },
+    {
+      "id": "flux",
+      "title": "As lentes do silêncio",
+      "genre": "Magia e responsabilidade",
+      "scope": "Local",
+      "start": 8,
+      "art": "lab",
+      "cast": [
+        "scholar",
+        "assistant",
+        "maker",
+        "warden",
+        "keeper"
+      ],
+      "cause": "{scholar} quer medir variações da Trama sem deslocar o custo para a água. O laboratório disputa acesso a lentes e ao registro dos ensaios.",
+      "stages": [
+        {
+          "title": "O custo da amostra",
+          "days": 14,
+          "text": "O aparato exige Fluxo. Sem contenção, o experimento deslocará pressão para a região de coleta. {keeper} anota quem forneceu o Fluxo e onde o experimento descarregaria a pressão.",
+          "routes": [
+            {
+              "outcome": "próxima",
+              "text": "A amostra foi isolada. A equipe pode comparar as medições.",
+              "when": {
+                "sealed_sample": true
+              },
+              "sets": {}
+            },
+            {
+              "outcome": "próxima",
+              "text": "A equipe reduziu o tamanho da amostra, mas os dados ficaram incompletos.",
+              "when": {},
+              "sets": {}
+            }
+          ],
+          "actions": [
+            {
+              "id": "seal",
+              "label": "Ceder 1 Fluxo para conter a amostra",
+              "text": "O laboratório anotou de onde veio a energia e isolou a amostra.",
+              "cost": 0,
+              "sets": {
+                "sealed_sample": true
+              },
+              "clue": "",
+              "need": "",
+              "participant": "scholar",
+              "flow": 1
+            }
+          ]
+        },
+        {
+          "title": "A lente disputada",
+          "days": 19,
+          "text": "{scholar} aguarda uma lente calibrada. {assistant} pode oferecê-la se tiver licença ou encomenda paga.",
+          "routes": [
+            {
+              "outcome": "próxima",
+              "text": "A lente de trabalho independente chegou ao laboratório.",
+              "when": {
+                "independent_artisan": true
+              },
+              "sets": {
+                "calibrated_lens": true
+              }
+            },
+            {
+              "outcome": "próxima",
+              "text": "A oficina entregou a lente encomendada.",
+              "when": {
+                "commission_lens": true
+              },
+              "sets": {
+                "calibrated_lens": true
+              }
+            },
+            {
+              "outcome": "próxima",
+              "text": "A equipe teve de trabalhar com a lente antiga.",
+              "when": {},
+              "sets": {}
+            }
+          ],
+          "actions": [
+            {
+              "id": "lens",
+              "label": "Encomendar uma lente à oficina",
+              "text": "O custo cobre o material e garante uma lente registrada.",
+              "cost": 2,
+              "sets": {
+                "commission_lens": true
+              },
+              "clue": "",
+              "need": "",
+              "participant": "maker",
+              "flow": 0
+            }
+          ]
+        },
+        {
+          "title": "A Compensação",
+          "days": 21,
+          "text": "O relatório deve distinguir observação, custo arcano e conjectura sobre a Fenda.",
+          "routes": [
+            {
+              "outcome": "Medição responsável",
+              "text": "A comparação foi publicada com método e custo. A equipe compartilhou o estudo com os guardiões.",
+              "when": {
+                "sealed_sample": true,
+                "calibrated_lens": true
+              },
+              "sets": {
+                "arcane_map": true,
+                "reserve_delta": 2
+              }
+            },
+            {
+              "outcome": "Pesquisa suspensa",
+              "text": "{warden} encerrou a coleta para conter a pressão. A hipótese sobre a Fenda permanece aberta.",
+              "when": {},
+              "sets": {
+                "arcane_map": false,
+                "reserve_delta": -2
+              }
+            }
+          ],
+          "actions": []
+        }
+      ]
+    },
+    {
+      "id": "dragon",
+      "title": "A margem que escuta",
+      "genre": "Diplomacia dracônica",
+      "scope": "Global",
+      "start": 12,
+      "art": "quarry",
+      "cast": [
+        "dragon",
+        "warden",
+        "scholar",
+        "delegate",
+        "scout"
+      ],
+      "cause": "Um registro de travessias sugere que um dragão sapiente acompanha a Fenda. O guardião teme que uma expedição atravesse habitat de ferais.",
+      "stages": [
+        {
+          "title": "O corredor dos ferais",
+          "days": 20,
+          "text": "{scout} viu ferais recuarem para as alturas. O brilho sobre a pedreira é relato, não confirmação de um liminar.",
+          "routes": [
+            {
+              "outcome": "próxima",
+              "text": "O corredor de fauna foi preservado. Os guardiões aceitaram levar um convite.",
+              "when": {
+                "habitat_boundary": true
+              },
+              "sets": {
+                "invite_carried": true
+              }
+            },
+            {
+              "outcome": "próxima",
+              "text": "A expedição tomou a rota curta. Os guardiões registraram a perturbação dos ferais.",
+              "when": {},
+              "sets": {}
+            }
+          ],
+          "actions": [
+            {
+              "id": "boundary",
+              "label": "Apoiar uma rota fora do corredor dos ferais",
+              "text": "{warden} marcou a rota alternativa, preservando as áreas de repouso.",
+              "cost": 0,
+              "sets": {
+                "habitat_boundary": true
+              },
+              "clue": "",
+              "need": "",
+              "participant": "warden",
+              "flow": 0
+            }
+          ]
+        },
+        {
+          "title": "O convite",
+          "days": 34,
+          "text": "O convite pode circular, mas o destinatário decide se responde. {scholar} quer compartilhar apenas observações verificadas.",
+          "routes": [
+            {
+              "outcome": "próxima",
+              "text": "{dragon} respondeu que aceita conversar se os mapas não incluírem seus abrigos.",
+              "when": {
+                "invite_carried": true,
+                "arcane_map": true
+              },
+              "sets": {
+                "dragon_contact": true
+              }
+            },
+            {
+              "outcome": "próxima",
+              "text": "Não houve encontro. A falta de resposta não autoriza perseguir o dragão.",
+              "when": {},
+              "sets": {}
+            }
+          ],
+          "actions": [
+            {
+              "id": "privacy",
+              "label": "Oferecer cláusula de sigilo dos abrigos",
+              "text": "O convite será revisto com garantia de autonomia e sigilo.",
+              "cost": 0,
+              "sets": {
+                "den_privacy": true
+              },
+              "clue": "",
+              "need": "",
+              "participant": "warden",
+              "flow": 0
+            }
+          ]
+        },
+        {
+          "title": "A resposta da margem",
+          "days": 30,
+          "text": "{delegate} pode reconhecer o corredor e o direito de recusa. A decisão do dragão não se compra.",
+          "routes": [
+            {
+              "outcome": "Pacto de observação",
+              "text": "{dragon} aceitou trocar medições com os guardiões. O pacto é revogável e não concede posse, montaria ou acesso a abrigos.",
+              "when": {
+                "dragon_contact": true,
+                "den_privacy": true
+              },
+              "sets": {
+                "draconic_pact": true
+              }
+            },
+            {
+              "outcome": "Coexistência à distância",
+              "text": "Os guardiões interromperam o contato. O corredor permanece sujeito às decisões locais.",
+              "when": {},
+              "sets": {
+                "draconic_pact": false
+              }
+            }
+          ],
+          "actions": []
+        }
+      ]
+    }
+  ],
+  "clues": {
+    "deed": {
+      "label": "Cessão da casa de leitura",
+      "kind": "documento",
+      "text": "A cópia separa a guarda do acervo do direito de propriedade."
+    },
+    "register": {
+      "label": "Livro de rota rasurado",
+      "kind": "indício",
+      "text": "A rasura indica mudança de destino. Sozinha, não prova desvio."
+    },
+    "receipt": {
+      "label": "Recibo e confronto de assinaturas",
+      "kind": "prova",
+      "text": "O recibo confirma a entrega no abrigo da cheia. A mudança foi autorizada.",
+      "alternate": "O recibo e o livro de estoque confirmam venda da carga a um intermediário. A carga não chegou ao abrigo."
+    }
+  },
+  "profiles": {
+    "maker": [
+      "Manter a oficina aberta e conservar o aprendiz.",
+      "Endividar a oficina de novo.",
+      "Recusa falsificar uma conta, mas prefere contratos sem audiência."
+    ],
+    "assistant": [
+      "Ser reconhecido como autor do desenho.",
+      "Que a licença termine sem renda para casa.",
+      "Aceita ajuda para a taxa e reserva para si a decisão sobre o contrato."
+    ],
+    "witness": [
+      "Preservar a confiança da guarda nas testemunhas.",
+      "Confundir pressão política com evidência.",
+      "Não registra como comprovado o que ouviu no cais."
+    ],
+    "boat": [
+      "Preservar o direito de trabalhar na travessia.",
+      "Perder a rota antes de ser ouvido.",
+      "Exige contraditório antes de mudar de operador."
+    ],
+    "clerk": [
+      "Deixar cada ordem identificada no livro.",
+      "Receber culpa por uma decisão de outra pessoa.",
+      "Distingue rasura, indício e prova."
+    ],
+    "registrar": [
+      "Proteger a integridade dos registros públicos.",
+      "Perder a autonomia diante de quem financia o arquivo.",
+      "Mostra originais somente quando o procedimento permite."
+    ],
+    "delegate": [
+      "Conseguir uma carta de travessia que sobreviva à votação.",
+      "Perder apoio público e deixar a rota sem serviço.",
+      "Aceita negociar taxas, mas requer uma votação."
+    ],
+    "guild": [
+      "Garantir uma rota que cubra o custo da frota.",
+      "Financiar um trajeto que outros operadores capturem.",
+      "Quer exclusividade e aceita publicar os custos se a comissão exigir."
+    ],
+    "scholar": [
+      "Medir a Trama sem deslocar custos para a água.",
+      "Descobrir que o próprio método prejudicou a margem.",
+      "Separa hipótese de observação antes de publicar."
+    ],
+    "warden": [
+      "Proteger o corredor dos ferais.",
+      "Que a expedição transforme proteção em caça.",
+      "Recusa levar convites que impliquem acesso obrigatório aos abrigos."
+    ],
+    "scout": [
+      "Registrar os deslocamentos dos ferais.",
+      "Ter seus relatos confundidos com prova de um liminar.",
+      "Descreve o que viu e informa quando a distância impediu confirmação."
+    ],
+    "elder": [
+      "Registrar como as três gerações mantiveram a casa.",
+      "Que a herança transforme o acervo em mercadoria.",
+      "Distingue o cuidado do acervo da propriedade dos livros."
+    ],
+    "caretaker": [
+      "Recuperar o que gastou mantendo a casa aberta.",
+      "Ser lembrado apenas como cobrador.",
+      "Aceita renda parcelada se o acordo reconhecer os reparos."
+    ],
+    "heir": [
+      "Garantir que os leitores possam voltar à sala.",
+      "Herdar uma dívida sem poder manter o acervo.",
+      "Aceita a guarda pública quando há cessão e audiência registradas."
+    ],
+    "dragon": [
+      "Trocar observações sem expor os abrigos.",
+      "Que informação sobre os ferais seja usada para perseguição.",
+      "Qualquer pacto exige sigilo e pode ser revogado."
+    ],
+    "assessor": [
+      "Verificar a autoria sem favorecer a oficina.",
+      "Assinar uma licença baseada apenas em reputação.",
+      "Aceita testemunhas de fora da guilda."
+    ],
+    "custodian": [
+      "Impedir que o acervo desapareça entre acordos de aluguel.",
+      "Não conseguir manter os livros secos durante o fechamento.",
+      "Distingue a guarda dos bens da apropriação."
+    ],
+    "inspector": [
+      "Separar infração de erro administrativo.",
+      "Assumir uma acusação quando não há recibo.",
+      "Garante o direito de resposta."
+    ],
+    "carrier": [
+      "Manter acesso dos pequenos transportadores à travessia.",
+      "Perder a clientela durante a negociação.",
+      "Aceita pagar tarifa quando a regra for comum."
+    ],
+    "keeper": [
+      "Deixar rastreável o custo da coleta.",
+      "Descobrir uma descarga que ninguém registrou.",
+      "Não aprova amostras sem origem de energia documentada."
+    ]
+  }
+}

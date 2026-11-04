@@ -50,6 +50,14 @@ func test_ui() -> void:
 		failed = true
 	scene.campaign_records()
 	await process_frame
+	scene.chronicles_screen()
+	await process_frame
+	scene.chronicle_detail("apprentice")
+	await process_frame
+	scene.chronicle_person("apprentice","assistant")
+	await process_frame
+	scene.chronicle_lineage()
+	await process_frame
 	scene.atlas()
 	await process_frame
 	scene.people()

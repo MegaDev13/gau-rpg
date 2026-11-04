@@ -64,6 +64,8 @@ jobs:
         run: XDG_DATA_HOME="$RUNNER_TEMP/veyrath-update-test" godot --headless --path rpg-narrativo --script res://veyrath/updates/story_tests.gd
       - name: Testar expansão procedural e viagens offline
         run: XDG_DATA_HOME="$RUNNER_TEMP/veyrath-expansion-test" godot --headless --path rpg-narrativo --script res://veyrath/expansion/tests.gd
+      - name: Testar diretor de tramas e legados offline
+        run: XDG_DATA_HOME="$RUNNER_TEMP/veyrath-chronicles-test" godot --headless --path rpg-narrativo --script res://veyrath/chronicles/tests.gd
       - name: Testar navegacao da interface
         run: godot --headless --path rpg-narrativo --script res://veyrath/ui_tests.gd
       - name: Verificar abertura da cena principal
@@ -75,7 +77,10 @@ jobs:
           mkdir -p "$RUNNER_TEMP/apk"
           godot --headless --path rpg-narrativo --export-debug Android "$RUNNER_TEMP/apk/veyrath-debug.apk"
           test -s "$RUNNER_TEMP/apk/veyrath-debug.apk"
-          "$ANDROID_HOME/build-tools/34.0.0/apksigner" verify --verbose "$RUNNER_TEMP/apk/veyrath-debug.apk"
+          expected="$(keytool -exportcert -keystore ~/.android/debug.keystore -storepass android -alias androiddebugkey | sha256sum | cut -d' ' -f1)"
+          signer="$("$ANDROID_HOME/build-tools/34.0.0/apksigner" verify --verbose --print-certs "$RUNNER_TEMP/apk/veyrath-debug.apk")"
+          actual="$(printf '%s\n' "$signer" | sed -n 's/^Signer #1 certificate SHA-256 digest: //p')"
+          test -n "$expected" && test "$expected" = "$actual"
       - uses: actions/upload-artifact@v4
         with:
           name: veyrath-android-debug
@@ -92,7 +97,7 @@ jobs:
           export VEY_SCREENSHOTS="$RUNNER_TEMP/vey-screens"
           export XDG_DATA_HOME="$RUNNER_TEMP/vey-screenshot-save"
           timeout 45 xvfb-run -a -s '-screen 0 900x1440x24' godot --path rpg-narrativo --resolution 540x960 --script res://veyrath/capture_screens.gd
-          test "$(find "$VEY_SCREENSHOTS" -name '*.png' | wc -l)" -eq 7
+          test "$(find "$VEY_SCREENSHOTS" -name '*.png' | wc -l)" -eq 10
       - uses: actions/upload-artifact@v4
         with:
           name: veyrath-capturas-godot

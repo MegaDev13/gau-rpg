@@ -43,4 +43,17 @@ func capture() -> void:
 		quit(1)
 		return
 	screen.resident_screen(0)
-	quit(0 if await shot("07-morador") else 1)
+	if not await shot("07-morador"):
+		quit(1)
+		return
+	screen.game.travel_to("valdoria-0",false)
+	screen.chronicles_screen()
+	if not await shot("08-cronicas"):
+		quit(1)
+		return
+	screen.chronicle_detail("ledger")
+	if not await shot("09-investigacao"):
+		quit(1)
+		return
+	screen.chronicle_lineage()
+	quit(0 if await shot("10-linhagem") else 1)

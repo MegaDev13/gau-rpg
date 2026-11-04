@@ -20,6 +20,7 @@ const ILLUSTRATIONS := {
 	"elarion":"elarion.png","khar":"khar.png","namaris":"namaris.png","nexaria":"nexaria.png",
 	"inn":"inn.png","market":"market.png","lab":"lab.png","temple":"temple.png",
 	"fields":"fields.png","forest":"forest.png","rail":"rail.png","mine":"mine.png",
+	"orunide":"cron_orunide.png","lineage":"cron_linhagem.png","barge":"cron_barca.png","vault":"cron_cofre.png",
 }
 const ART_MOODS := {
 	"cover": "mist", "city": "mist", "highlands": "mist", "river": "rain",
@@ -465,6 +466,7 @@ func campaign_records() -> void:
 	if at_home:
 		button("Grimório",grimoire).icon = icon("book",GOLD)
 	button("Atlas regional",atlas)
+	button("Crônicas",chronicles_screen).icon = icon("book",GOLD)
 	if at_home:
 		button("✧  MUNDO E AÇÕES",world_panel)
 	button("▤  DIÁRIO",journal)
@@ -483,6 +485,145 @@ func select_choice(index: int) -> void:
 		clear()
 		card("Não foi possível salvar a decisão. Tente novamente.")
 		button("‹  VOLTAR",show_scene)
+
+func chronicles_screen() -> void:
+	clear()
+	var journal: Dictionary = game.chronicle_view()
+	var origin: Dictionary = game.expansion.city(journal.city,int(game.state.seed))
+	label("HISTÓRIAS EM MOVIMENTO   /   DIA %d" % int(game.state.day),17,GOLD)
+	label("Crônicas",48,TEXT,true)
+	scene_art(expansion_art(origin.art),210)
+	label("O tempo avança em viagens, ações e espera. Os personagens tomam decisões mesmo quando você está longe.",21,MUTED)
+	for tracked in [true,false]:
+		for arc in game.director.catalog.arcs:
+			var entry: Dictionary = journal.arcs[arc.id]
+			if int(entry.phase) < 0 or entry.tracked != tracked:
+				continue
+			var status: String = ("Dia %d" % int(entry.due)) if entry.outcome.is_empty() else entry.outcome
+			button(("%s   /   %s\n%s" % [arc.title,arc.scope,status]),chronicle_detail.bind(arc.id)).icon = icon("book",GOLD if tracked else MUTED)
+	if not journal.known.is_empty():
+		button("Caderno de pistas",chronicle_clues)
+	button("Aguardar 1 dia",chronicle_skip.bind(1))
+	button("Aguardar 7 dias",chronicle_skip.bind(7))
+	button("‹  Registros",campaign_records)
+
+func chronicle_skip(days: int) -> void:
+	var saved: bool = game.chronicle_wait(days)
+	chronicles_screen()
+	if not saved:
+		label("A passagem de tempo não pôde ser salva.",20,GOLD)
+
+func chronicle_detail(arc_id: String) -> void:
+	clear()
+	var journal: Dictionary = game.chronicle_view()
+	var arc: Dictionary = game.director.visible(journal,arc_id)
+	if arc.is_empty():
+		chronicles_screen()
+		return
+	var entry: Dictionary = journal.arcs[arc_id]
+	var stage: Dictionary = arc.stages[int(entry.phase)]
+	var art_key: String = {"inheritance":"lineage","ledger":"barge","flux":"vault","dragon":"orunide" if journal.flags.get("dragon_contact",false) else "quarry"}.get(arc_id,arc.art)
+	var shot := stage_for(art_key,280)
+	for role in arc.cast:
+		if role == "dragon" or (role == "elder" and journal.flags.get("elder_dead",false)):
+			continue
+		var actor: Dictionary = journal.cast[role]
+		shot.face = resident_art(actor)
+		shot.subject_pin = int(actor.pin)
+		break
+	label(arc.scope.to_upper() + "   /   " + arc.genre.to_upper(),17,GOLD)
+	column.add_child(shot)
+	label(arc.title,42,TEXT,true)
+	if entry.outcome.is_empty():
+		label("%s   ·   PRAZO: DIA %d" % [stage.title,int(entry.due)],19,GOLD)
+		card(game.director.render(journal,stage.text),26,true)
+		for action in stage.actions:
+			var reason: String = game.director.block_reason(journal,arc_id,action,int(game.state.credits),int(game.state.flow),game.expedition().city)
+			var cost := "1 dia"
+			if int(action.cost) > 0:
+				cost += "  ·  %d crédito(s)" % int(action.cost)
+			if int(action.flow) > 0:
+				cost += "  ·  %d Fluxo" % int(action.flow)
+			button(action.label + "\n" + (reason if not reason.is_empty() else cost),chronicle_decide.bind(arc_id,int(entry.phase),action.id),not reason.is_empty())
+	else:
+		label("LEGADO  /  " + entry.outcome.to_upper(),19,GOLD)
+	divider()
+	label("PARTICIPANTES",17,GOLD)
+	for role in arc.cast:
+		if role == "dragon" and not journal.flags.get("dragon_contact",false):
+			continue
+		button(journal.cast[role].name + "  ·  " + journal.cast[role].job,chronicle_person.bind(arc_id,role))
+	if arc_id == "inheritance":
+		button("Ver as três gerações",chronicle_lineage)
+	divider()
+	label("HISTÓRICO",17,GOLD)
+	var events: Array = journal.events.duplicate()
+	events.reverse()
+	for event in events:
+		if event.arc == arc_id:
+			card("DIA %d\n%s" % [int(event.day),event.text],21)
+	button("Deixar de acompanhar" if entry.tracked else "Acompanhar crônica",chronicle_track.bind(arc_id))
+	button("‹  Crônicas",chronicles_screen)
+
+func chronicle_person(arc_id: String, role: String) -> void:
+	clear()
+	var journal: Dictionary = game.chronicle_view()
+	var actor: Dictionary = journal.cast[role]
+	var deceased: bool = role == "elder" and journal.flags.get("elder_dead",false)
+	var view := stage_for("orunide" if role == "dragon" else "lineage",260)
+	if role != "dragon":
+		view.face = resident_art(actor)
+		view.subject_pin = int(actor.pin)
+	column.add_child(view)
+	label(actor.name,43,TEXT,true)
+	label(actor.job + ("   ·   FALECIDA" if deceased else ""),19,GOLD)
+	if not deceased:
+		var goal: String = game.director.goal_for(journal,actor)
+		if not goal.is_empty():
+			card("Objetivo atual   /   " + goal,24,true)
+		if actor.has("dramatic"):
+			card("Posição declarada   /   " + actor.dramatic.stance,22)
+		if actor.has("value"):
+			card("Valor declarado   /   " + actor.value,22)
+	if role == "dragon":
+		card("A troca de observações depende de consentimento e sigilo. O pacto pode ser encerrado pelo próprio dragão.",23,true)
+	button("‹  Voltar à crônica",chronicle_detail.bind(arc_id))
+
+func chronicle_lineage() -> void:
+	clear()
+	var journal: Dictionary = game.chronicle_view()
+	scene_art("lineage",252)
+	label("A casa em três gerações",43,TEXT,true)
+	for i in range(3):
+		var role: String = ["elder","caretaker","heir"][i]
+		var actor: Dictionary = journal.cast[role]
+		var relation: String = ["Fundadora","Descendente da fundadora","Descendente da segunda geração"][i]
+		card("%s  /  %s\nNascimento: %d P.R.%s" % [relation,actor.name,312-int(actor.age),
+			"  ·  Morte registrada no dia %d" % int(actor.died_day) if actor.has("died_day") else ""],22)
+	button("‹  Casa com duas chaves",chronicle_detail.bind("inheritance"))
+
+func chronicle_clues() -> void:
+	clear()
+	var journal: Dictionary = game.chronicle_view()
+	scene_art("barge",215)
+	label("Caderno de pistas",43,TEXT,true)
+	for id in journal.known:
+		var evidence: String = game.director.clue_text(journal,id)
+		if not evidence.is_empty():
+			card(evidence,24,true)
+	button("‹  Crônicas",chronicles_screen)
+
+func chronicle_decide(arc_id: String, phase: int, action_id: String) -> void:
+	var saved: bool = game.chronicle_choice(arc_id,phase,action_id)
+	chronicle_detail(arc_id)
+	if not saved:
+		label("A decisão não está mais disponível ou não pôde ser salva.",20,GOLD)
+
+func chronicle_track(arc_id: String) -> void:
+	var saved: bool = game.track_chronicle(arc_id)
+	chronicle_detail(arc_id)
+	if not saved:
+		label("Não foi possível salvar o acompanhamento.",20,GOLD)
 
 func journal() -> void:
 	clear()
@@ -707,7 +848,7 @@ func travel_screen(destination_id: String) -> void:
 	label(destination.region_name.to_upper() + "   /   " + destination.size,18,GOLD)
 	card("Partida de %s. Você tem %d créditos." % [current.name,game.state.credits],23)
 	for fast in [false,true]:
-		var plan: Dictionary = game.expansion.route(current,destination,fast)
+		var plan: Dictionary = game.expedition_route(current,destination,fast)
 		button("%s   ·   %d dia(s)   ·   %d créditos" % [plan.method,plan.days,plan.credits],
 			travel.bind(destination_id,fast),int(game.state.credits) < int(plan.credits))
 	button("‹  Região",region_screen.bind(int(destination.region)))
@@ -722,7 +863,7 @@ func travel(destination_id: String, fast: bool) -> void:
 func settlement_screen() -> void:
 	clear()
 	var city: Dictionary = game.expedition_city()
-	var conditions: Dictionary = game.expansion.condition(city,int(game.state.seed),int(game.state.day),game.expedition().backing)
+	var conditions: Dictionary = game.expedition_condition(city)
 	label("%s   /   DIA %s" % [city.region_name.to_upper(),game.state.day],17,GOLD)
 	expedition_stage(city.art,conditions)
 	label(city.name,47,TEXT,true)
@@ -762,7 +903,7 @@ func place_screen() -> void:
 		return
 	clear()
 	var city: Dictionary = game.expedition_city()
-	var conditions: Dictionary = game.expansion.condition(city,int(game.state.seed),int(game.state.day),journey.backing)
+	var conditions: Dictionary = game.expedition_condition(city)
 	label("%s   /   %s" % [city.name.to_upper(),site.district.to_upper()],17,GOLD)
 	expedition_stage(site.art,conditions,site)
 	label(site.name,42,TEXT,true)
@@ -809,7 +950,8 @@ func resident_screen(staff: int) -> void:
 	label("%s  ·  %s  ·  %d anos" % [actor.people,actor.job,actor.age],20,GOLD)
 	var coworker: Dictionary = game.expansion.person(site,(staff+1)%4,int(game.state.seed))
 	var birthplace: Dictionary = game.expansion.city(actor.birthplace,int(game.state.seed))
-	var detail := "%s. Nasceu em %s e trabalha em %s com %s. Valoriza %s e quer %s." % [actor.personality,birthplace.name,site.name,coworker.name,actor.value,actor.goal]
+	var goal: String = game.director.goal_for(game.chronicle_view(),actor)
+	var detail := "%s. Nasceu em %s e trabalha em %s com %s. Valoriza %s e quer %s." % [actor.personality,birthplace.name,site.name,coworker.name,actor.value,goal]
 	if not actor.household.is_empty():
 		var relative: Dictionary = game.expansion.person(site,1-staff,int(game.state.seed))
 		detail += " Divide a casa com %s." % relative.name

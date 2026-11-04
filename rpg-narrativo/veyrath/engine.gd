@@ -42,6 +42,9 @@ func new_game(player_name: String, origin_id: String, city_id: String, seed_valu
 		var pos := rng.randi_range(0, names.size() - 1)
 		var person_name: String = names.pop_at(pos)
 		people[role.id] = {"id":role.id, "name":person_name, "job":role.job, "goal":role.goal, "age":"adulto", "home":city.id, "trust":1 if origin_id == "community" and role.id == "community" else 0, "memories":[]}
+	# Existing saves lack portrait_asset and retain their original generated faces.
+	people.artisan["portrait_asset"] = "artisan_v1"
+	people.researcher["portrait_asset"] = "researcher_v1"
 	state = {"version":VERSION,"seed":seed_value,"name":player_name.strip_edges(),"origin":origin.id,"city":city.id,"node":"start","day":1,"credits":origin.credits,"flow":origin.flow,"fatigue":0,"risk":3,"evidence":0,"habitat":0,"people":people,"history":[],"news":[]}
 	return save_game()
 

@@ -110,13 +110,23 @@ func portrait(role: String, mood: String = "neutral") -> void:
 	var row := HBoxContainer.new()
 	row.add_theme_constant_override("separation",16)
 	column.add_child(row)
-	var visual = Art.new()
-	visual.kind = "portrait"
-	visual.variant = game.portrait_variant(role)
-	visual.expression = mood
-	visual.custom_minimum_size = Vector2(150,110)
-	row.add_child(visual)
 	var person: Dictionary = game.state.people[role]
+	var portraits := {"artisan_v1":"res://veyrath/assets/artifice_v1.jpg", "researcher_v1":"res://veyrath/assets/pesquisadora_v1.jpg"}
+	var portrait_path: String = portraits.get(person.get("portrait_asset", ""), "")
+	if not portrait_path.is_empty():
+		var image := TextureRect.new()
+		image.texture = load(portrait_path)
+		image.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+		image.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_COVERED
+		image.custom_minimum_size = Vector2(150,150)
+		row.add_child(image)
+	else:
+		var visual = Art.new()
+		visual.kind = "portrait"
+		visual.variant = game.portrait_variant(role)
+		visual.expression = mood
+		visual.custom_minimum_size = Vector2(150,110)
+		row.add_child(visual)
 	var info := Label.new()
 	info.text = person.name.to_upper() + "\n" + person.job
 	info.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART

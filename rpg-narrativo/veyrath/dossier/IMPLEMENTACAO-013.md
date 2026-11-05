@@ -100,3 +100,28 @@ N05.1 B/C, N05.4 C e N06.5 D seguem a ação descrita no texto autoral. Há dive
 | Android | **Separação dos canais.** A distribuição com package original exige `VEYRATH_DEBUG_KEYSTORE_BASE64` e `VEYRATH_ANDROID_CERT_SHA256` correspondente. Sem os dois, a build de teste usa outro package por execução. Essa instalação pode coexistir com a 0.12 e não transfere automaticamente o save. Sem configuração do segredo e duas execuções verificadas, a estabilidade do certificado não está comprovada. |
 
 Ver também [mecanismos do motor](civic.gd), [teste de publicação SQL](../../supabase/test_gm_arc_resolution.sql) e [GitHub Actions](https://github.com/MegaDev13/gau-rpg/actions/workflows/android-apk.yml). O teste headless e as capturas em CI não comprovam instalação em dispositivo físico.
+
+## Continuação 0.13.1
+
+Base do incremento `e7b02e1504cba498cc412bbbc996fca0e9169476`. Código Android 14. Os textos autorais e as 244 escolhas da 0.13 foram preservados.
+
+| Funcionalidade | Mudança e evidência |
+|---|---|
+| S01, S03 e S08 · patrimônio | Recurso suspende a partilha até a data da audiência. Posse não altera o título. O testamento de S03 reparte a participação do espólio em 60/40, sem confundir custódia com propriedade. A lei de S08 vale a partir da data registrada e não reabre partilhas anteriores. [Teste Godot](campaign_tests.gd) |
+| N01 · sucessão | O tribunal pode reconhecer o pretendente adotado mediante prova, mesmo quando a casa rival conserva o controle de fato. A morte do titular abre vacância. O gabinete mostra os dois papéis quando divergem. [Teste Godot](campaign_tests.gd) |
+| N06, S25 e S27 · campanhas | Ofensiva requer mandato, força existente e provisões. O exército gasta suprimentos, cruza a rota em data calculada, resolve a ordem uma vez e aplica dano no assentamento atingido. Tratado ratificado protege a rota entre signatários. O teste atravessa save/reload entre partida e chegada. [Teste Godot](campaign_tests.gd) |
+| N01–N06 · multiplayer | O publicador existente aceita uma consequência revisada por saga. Valida fonte pública de decisão, saga, assentamento, versão e reservas. Grava estado do assentamento, débito, auditoria e feed na mesma transação. [Migração](../../supabase/migrations/20261105022810_veyrath_multiplayer_saga_outcomes.sql) · [Teste SQL revertido](../../supabase/test_multiplayer_saga_outcomes.sql) |
+| Android | O workflow compara package, ABI, versão e assinatura com a configuração. O canal do package original continua condicionado ao keystore e SHA-256 cadastrados no GitHub. O canal de teste usa um package separado. |
+
+| Saga | Consequência multiplayer disponível | Reserva |
+|---|---|---:|
+| N01 | Conselho interino por 30 dias | −1 |
+| N02 | Mediação familiar voluntária por 30 dias | −1 |
+| N03 | Registro civil com pedidos individuais | −1 |
+| N04 | Recuperação do rio, com medida acumulável e limitada | −2 |
+| N05 | Reserva de habitat por 90 dias | −1 |
+| N06 | Corredor humanitário por 15 dias | −2 |
+
+O teste SQL percorreu abertura, revisão e resolução das seis sagas em mundos de teste revertidos. Validou a rejeição de fonte genérica, de assentamento errado e de escrita pelo cliente. Nenhum desfecho novo foi aplicado a `veyrath-primordial` durante a validação.
+
+Continuam parciais a sucessão por diferentes jurisdições, o inventário de todos os bens e credores, o ciclo completo de nascimento, guarda e dissolução, a administração de ocupações e a coordenação de grandes guerras. A automação do Mestre ainda precisa produzir os eventos decisórios específicos de cada saga, e os demais desfechos multiplayer e o solo online privado continuam pendentes.

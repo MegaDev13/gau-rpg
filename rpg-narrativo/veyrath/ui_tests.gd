@@ -119,8 +119,11 @@ func test_ui() -> void:
 		failed = true
 	if online.chronicle_rows.size() != 1 or online.chronicle_cursor != 3:
 		failed = true
+	online.render_saga_state([{"saga":"n04","outcome":"river_cleanup","measure":10,"expires_at":"2026-12-04"}])
+	if not online.saga_view.text.contains("10 pontos de recuperação"):
+		failed = true
 	online.reset_chronicles()
-	if online.chronicle_cursor != 0 or not online.chronicle_rows.is_empty():
+	if online.chronicle_cursor != 0 or not online.chronicle_rows.is_empty() or not online.saga_view.text.is_empty():
 		failed = true
 	print("Interface Veyrath: ", "falhou" if failed else "aberta e navegada")
 	scene.queue_free()

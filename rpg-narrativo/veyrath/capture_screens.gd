@@ -72,4 +72,15 @@ func capture() -> void:
 		quit(1)
 		return
 	screen.campaign_transfer()
-	quit(0 if await shot("14-transferencia") else 1)
+	if not await shot("14-transferencia"):
+		quit(1)
+		return
+	var book: Dictionary = screen.game.state.dossier
+	var city: Dictionary = screen.game.expedition_city()
+	var day: int = screen.game.state.day
+	screen.game.dossier.open_story(book,city,"N06",day)
+	var story: Dictionary = book.stories[city.id+":N06"]
+	screen.game.dossier.civic.mobilize(book,story,day)
+	screen.game.dossier.civic.begin_march(book,story,day)
+	screen.dossier_register("frentes")
+	quit(0 if await shot("15-marcha") else 1)

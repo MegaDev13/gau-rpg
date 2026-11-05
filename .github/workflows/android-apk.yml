@@ -85,6 +85,8 @@ jobs:
         run: XDG_DATA_HOME="$RUNNER_TEMP/veyrath-coverage-test" godot --headless --path rpg-narrativo --script res://veyrath/dossier/coverage_tests.gd
       - name: Testar patrimônio, governo, frentes e transferência de campanha
         run: XDG_DATA_HOME="$RUNNER_TEMP/veyrath-civic-test" godot --headless --path rpg-narrativo --script res://veyrath/dossier/civic_tests.gd
+      - name: Testar marcha entre cidades, testamento e recurso
+        run: XDG_DATA_HOME="$RUNNER_TEMP/veyrath-campaign-test" godot --headless --path rpg-narrativo --script res://veyrath/dossier/campaign_tests.gd
       - name: Testar navegacao da interface
         run: godot --headless --path rpg-narrativo --script res://veyrath/ui_tests.gd
       - name: Verificar abertura da cena principal
@@ -103,7 +105,10 @@ jobs:
           actual="$(printf '%s\n' "$signer" | sed -n 's/^Signer #1 certificate SHA-256 digest: //p')"
           test -n "$expected" && test "$expected" = "$actual"
           badging="$("$ANDROID_HOME/build-tools/34.0.0/aapt" dump badging "$RUNNER_TEMP/apk/veyrath-debug.apk")"
-          printf '%s\n' "$badging" | grep -F "package: name='$EXPECTED_PACKAGE' versionCode='13' versionName='0.13.0'"
+          version_code="$(sed -n 's/^version\/code=//p' rpg-narrativo/export_presets.cfg)"
+          version_name="$(sed -n 's|^version/name=||p' rpg-narrativo/export_presets.cfg | tr -d '"')"
+          test -n "$version_code" && test -n "$version_name"
+          printf '%s\n' "$badging" | grep -F "package: name='$EXPECTED_PACKAGE' versionCode='$version_code' versionName='$version_name'"
           printf '%s\n' "$badging" | grep -F "native-code: 'arm64-v8a'"
           printf '%s\n' "$signer" > "$RUNNER_TEMP/apk/certificate.txt"
       - uses: actions/upload-artifact@v4
@@ -124,7 +129,7 @@ jobs:
           export VEY_SCREENSHOTS="$RUNNER_TEMP/vey-screens"
           export XDG_DATA_HOME="$RUNNER_TEMP/vey-screenshot-save"
           timeout 45 xvfb-run -a -s '-screen 0 900x1440x24' godot --path rpg-narrativo --resolution 540x960 --script res://veyrath/capture_screens.gd
-          test "$(find "$VEY_SCREENSHOTS" -name '*.png' | wc -l)" -eq 14
+          test "$(find "$VEY_SCREENSHOTS" -name '*.png' | wc -l)" -eq 15
       - uses: actions/upload-artifact@v4
         with:
           name: veyrath-capturas-godot

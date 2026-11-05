@@ -28,6 +28,7 @@ var world_view: Label
 var command_view: Label
 var gm_view: Label
 var chronicle_view: Label
+var saga_view: Label
 var chronicle_cursor := 0
 var chronicle_rows: Array[Dictionary] = []
 
@@ -52,6 +53,7 @@ func _ready() -> void:
 	command_view = text_label("",19,Color("b7c5c6"))
 	gm_view = text_label("",20,Color("d6b47d"))
 	chronicle_view = text_label("",20,Color("d6b47d"))
+	saga_view = text_label("",20,Color("d6b47d"))
 	make_button("VOLTAR AO MENU",exit_screen)
 	request = HTTPRequest.new()
 	request.timeout = 20.0
@@ -307,6 +309,12 @@ func on_response(result: int, code: int, _headers: PackedStringArray, body: Pack
 		"chronicles":
 			if data is Array and merge_chronicles(data) and data.size() == 50:
 				fetch_chronicles()
+			else:
+				var query := "/rest/v1/veyrath_saga_settlement_state?select=saga,outcome,expires_at,measure&world_id=eq.%s&settlement_id=eq.%s&order=saga"
+				send_request("saga_state",query % [world_id,town_id],HTTPClient.METHOD_GET)
+		"saga_state":
+			if data is Array:
+				render_saga_state(data)
 		"contribute":
 			DirAccess.remove_absolute(ProjectSettings.globalize_path(PENDING_PATH))
 			pending_key = ""
@@ -318,6 +326,20 @@ func reset_chronicles() -> void:
 	chronicle_cursor = 0
 	chronicle_rows.clear()
 	chronicle_view.text = ""
+	saga_view.text = ""
+
+func render_saga_state(rows: Array) -> void:
+	var names := {"interim_council":"Conselho interino","household_mediation":"Mediação familiar",
+		"civil_registry":"Registro civil aberto","river_cleanup":"Recuperação do rio",
+		"habitat_reserve":"Reserva de habitat","humanitarian_passage":"Passagem humanitária"}
+	saga_view.text = "REGISTRO DAS SAGAS DO ASSENTAMENTO\n" if not rows.is_empty() else ""
+	for row in rows:
+		if not row is Dictionary or not names.has(row.get("outcome")):
+			continue
+		var details := " · %d pontos de recuperação" % int(row.get("measure",0)) if row.outcome=="river_cleanup" else ""
+		if row.get("expires_at") is String:
+			details += " · revisão em %s" % row.expires_at.substr(0,10)
+		saga_view.text += "%s%s\n" % [names[row.outcome],details]
 
 func fetch_chronicles() -> void:
 	var query := "/rest/v1/veyrath_chronicle_events?select=seq,world_version,title,published_at,kind,description&world_id=eq.%s&seq=gt.%d&order=seq.asc&limit=50"

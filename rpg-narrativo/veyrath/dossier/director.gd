@@ -77,13 +77,7 @@ func is_integer(value) -> bool:
 	return (typeof(value) == TYPE_INT or typeof(value) == TYPE_FLOAT) and int(value) == value
 
 func setup_place(book: Dictionary, city: Dictionary) -> Dictionary:
-	if not book.places.has(city.id):
-		book.places[city.id] = {
-			"supply":int(city.supply),"origin_supply":int(city.supply),"health":50,"river":55,"habitat":55,"legitimacy":45,
-			"tension":32,"route":0,"damage":0,"marks":{},"government":"inicial",
-			"war":"calm","flux":4,"civil":0,"deaths":0,"duty":0,
-		}
-	return book.places[city.id]
+	return civic.setup_place(book,city)
 
 func source(source_id: String) -> Dictionary:
 	return sagas.get(source_id,scenarios.get(source_id,{}))
@@ -335,7 +329,7 @@ func apply_special(book: Dictionary, story: Dictionary, domain: Dictionary, spec
 			var office := civic.office_for(book,story.city)
 			office.incumbent = civic.actor_id(story,0)
 			office.status = "regência"
-			office.review = day+38
+			office.review = day+(30 if story.source=="N01" and int(story.stage)==0 else 38)
 		"constitutional_vote":
 			domain.government = "constitucional"
 			var office := civic.office_for(book,story.city)
@@ -345,11 +339,15 @@ func apply_special(book: Dictionary, story: Dictionary, domain: Dictionary, spec
 			office.review = day+180
 		"recognize_title":
 			var office := civic.office_for(book,story.city)
-			var claimant := civic.actor_id(story,1)
-			if book.actors[claimant].alive and int(domain.legitimacy) >= 49:
+			var claimant := civic.actor_id(story,2)
+			if book.actors[claimant].alive and domain.marks.get("adoption",false):
 				domain.government = "título reconhecido"
 				office.incumbent = claimant
 				office.status = "titular"
+				office.review = 0
+				office.de_jure = claimant
+				office.de_facto = civic.actor_id(story,1) if int(domain.tension)>=60 or int(domain.legitimacy)<55 else claimant
+				office.opposition += 1 if office.de_facto != claimant else 0
 			else:
 				office.claimant = claimant
 				office.opposition += 1
@@ -368,20 +366,34 @@ func apply_special(book: Dictionary, story: Dictionary, domain: Dictionary, spec
 			domain.duty = 6
 			civic.mobilize(book,story,day)
 		"ratify","truce":
+			var front := civic.front_for(book,story.city)
 			var domestic: bool = domain.legitimacy >= 45
 			var other: bool = domain.tension <= 54
+			if not front.is_empty():
+				var target: Dictionary = expansion.city(front.enemy,int(book.seed))
+				var rival := civic.setup_place(book,target)
+				other = other and int(rival.tension)<=54 and int(rival.legitimacy)>=35
 			if not domestic or not other:
 				return "Pelo menos uma delegação recusou ratificar. O conflito permanece aberto."
 			domain.war = "peace" if special == "ratify" else "truce"
 			domain.treaty = {"id":story.id+":tratado:"+str(day),"day":day,"party_a":true,"party_b":true,
 				"ratified":true,"scope":domain.war}
-			var front := civic.front_for(book,story.city)
 			if not front.is_empty():
 				front.status = "paz" if special=="ratify" else "trégua"
 				front.treaty = domain.treaty.duplicate(true)
 				front.treaty.territory = story.city
 				front.treaty.review = day+30
 				front.treaty.humanitarian_access = true
+				front.treaty.signatories = [story.city,front.enemy]
+				front.erase("march")
+				var opposite: Dictionary = civic.front_for(book,front.enemy)
+				if opposite.get("enemy") == story.city:
+					opposite.status = front.status
+					opposite.treaty = front.treaty.duplicate(true)
+					opposite.erase("march")
+				if book.places.has(front.enemy):
+					book.places[front.enemy].war = domain.war
+					book.places[front.enemy].erase("occupation")
 			return "O registro recebeu os dois aceites."
 		"talk","pause","date","cohabit","friends","pressure","apart","separate","marriage","union":
 			return relationship_action(book,story,special,day)
@@ -554,8 +566,8 @@ func conclude(book: Dictionary, story: Dictionary, domain: Dictionary) -> String
 			var office := civic.office_for(book,story.city)
 			if office.status == "vacância":
 				return "A coroa segue vaga; o conselho convocou revisão."
-			if office.status == "contestada":
-				return "O poder foi fragmentado e o título continua sob contestação."
+			if office.status == "contestada" or office.get("de_jure","")==office.incumbent and office.get("de_facto",office.incumbent)!=office.incumbent:
+				return "O poder foi fragmentado. A decisão judicial e o controle de fato divergem."
 			return "Legado institucional — " + str(office.status)
 		"N02": return "Vínculo ao longo dos anos — " + relationship(book,story.city).get("state","vidas independentes")
 		"N03":

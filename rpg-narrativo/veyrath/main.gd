@@ -565,7 +565,11 @@ func dossier_register(section: String) -> void:
 			var office: Dictionary = registry.get("offices",{}).get(city,{})
 			if not office.is_empty():
 				rendered += 1
-				card("%s · %s\nTitular: %s · revisão no dia %d" % [office.method,office.status,book.actors.get(office.incumbent,{}).get("name","cargo vago"),office.review],23)
+				var review: String = " · revisão no dia %d" % office.review if int(office.review)>0 else ""
+				card("%s · %s\nTitular: %s%s" % [office.method,office.status,book.actors.get(office.incumbent,{}).get("name","cargo vago"),review],23)
+				var controller: String = office.get("de_facto",office.incumbent)
+				if not controller.is_empty() and controller!=office.incumbent:
+					card("Administração de fato · "+book.actors.get(controller,{}).get("name","disputada"),22)
 			for law in registry.get("laws",{}).values():
 				if law.city == city:
 					rendered += 1
@@ -575,6 +579,9 @@ func dossier_register(section: String) -> void:
 			if not front.is_empty():
 				rendered += 1
 				card("%s · efetivo %d · moral %d · provisões %d" % [front.status,front.strength,front.morale,front.supplies],23)
+				if front.has("march"):
+					var destination: Dictionary = game.expansion.city(front.march.to,int(book.seed))
+					card("Marcha a %s · dia %d · %d provisão(ões) destacadas" % [destination.name,front.march.arrival,front.march.provisions],22)
 				for event in front.battles:
 					card("Dia %d · %s · baixas %d · perdas civis %d" % [event.day,event.result,event.loss,event.civilians],22)
 				if front.has("treaty"):
@@ -838,7 +845,7 @@ func news() -> void:
 	var registry: Dictionary = game.dossier_view().get("civic",{})
 	for report in registry.get("reports",{}).values():
 		card("DIA %d · %s\n%s" % [report.day,report.kind.to_upper(),report.text],22)
-	var recent: Array = registry.get("ledger",[]).filter(func(event): return event.type=="closure")
+	var recent: Array = registry.get("ledger",[]).filter(func(event): return event.type in ["closure","battle"])
 	for event in recent.slice(maxi(0,recent.size()-8)):
 		var title: String = game.dossier.source(event.story.get_slice(":",1)).get("title","Crônica local")
 		card("DIA %d · %s\n%s" % [event.day,title,event.text],22)
